@@ -1,0 +1,12 @@
+
+.sidebar {
+  text-align: left;
+}
+
+.content blockquote {
+  margin-left: 1em;
+}
+
+.content blockquote:before {
+  content: none;
+}
