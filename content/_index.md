@@ -1,8 +1,12 @@
 ---
-title: 'Hugo Whisper Docs'
+title: 'Prooftoys - Home'
 date: 2018-11-28T15:14:39+10:00
 ---
 
-### Whisper Theme
+Welcome to Prooftoys, an online tool for learning math
+and and exploring mathematical reasoning.
+Prooftoys is proudly free and open source.
 
-Whisper is a documentation theme built with Hugo. The design and functionality is intentionally minimal. 
+To begin learning, try the
+[Introduction](/1-introduction).
+

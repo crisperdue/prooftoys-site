@@ -4,36 +4,40 @@ date: 2019-02-11T19:27:37+10:00
 weight: 4
 ---
 
-# Introducing Prooftoys proofs
+# Prooftoys proofs
 
 The logic underlying proofs in Prooftoys (and Mathtoys) use a very small number
 of primitive concepts, with one simple rule of inference
 and a bare handful of
-axioms.  This is a very simple system, but the fundamental deductive steps
-are small, so almost any proof needs many of these small steps.
+axioms.  This has the advantage of simplicity, but the deductive steps
+are small, so almost any proof needs many steps.
 
 Proofs that you will actually work with also use a small number
 of different concepts and operations, but they are at a higher level
 so you can reason in bigger but still understandable steps.  The higher-level
-deduction steps you use in a proof actually do their work using
+deduction steps you use in a proof do their work using
 the low-level primitives, so the correctness of proofs in Prooftoys
-only depends on correct use of the basic primitives.
+only depends on correct implementation of the basic primitives.
 
 Most proof steps are of one of the following kinds, or combinations
-of a handful of these.  They are: _proving a tautology_; _substitution_;
-and _rewriting_ (which combines finding a substitution and then replacing
-part of a statement with something equal to it).
+of a handful of these.  They are: 
+
+- proving a tautology
+- substitution; and
+- rewriting_ (finding a substitution, followed by replacement)_
 
 When you understand how Mathtoys uses pattern matching to find and
 apply substitutions, and follows them with replacement using equations,
 you will understand at least 80% of Mathtoys inference steps.
 
-## Inference by replacement and rewriting
+## Replacement and rewriting
 
 Inference by replacement allows an arbitrary term appearing anywhere in a proof step to
 be replaced by another term known to be equal to it.  Equality
 applies to individuals, functions, predicates, et cetera, and also to
 boolean values.  Logical equivalence ("≡") is equality of truth values.
+
+### Replacement
 
 In the simplest case, we have an equality that is known to be true that looks like
 
@@ -69,7 +73,7 @@ the commutative law, deducing that `x * 3 = 3 * x`.  Then we replace `x * 3`
 in the example equation with `3 * x`, giving the textbook result.
 
 In the actual Prooftoys system, axioms such as commutativity are expressed
-as conditionals, e.g. `R x => x * y = y * x`, so the rewriting is conditional,
+as conditionals, e.g. `R x ⇒ x * y = y * x`, so the rewriting is conditional,
 but the effect is essentially the same.
 
 ## Sample proofs
@@ -91,18 +95,17 @@ another proved statement, the occurrence can be replaced with T.
 
 So if we have both:
 
-> (1) A<br>
-> (2) A ⇒ B
+> (1) A<br>(2) A ⇒ B
 
 We can replace the `A` in step 2 with T, giving:
 
-> ⊢ T ⇒ B
+> (3) T ⇒ B
 
 which is equivalent to just:
 
-> ⊢ B
+> (4) B
 
-using the tautology (equation!) `(T => a) ≡ a`.
+using the tautology (equation!) `(T ⇒ a) ≡ a`.
 
 ### Modus Ponens under assumptions
 
@@ -117,13 +120,13 @@ and will prove that
 
 We can proceed as follows:
 
-| Step | Replace | Using
-| ---- | ------- | -----
-| (3) A ⇒ (B ≡ T) | _all of step 1_ | (A ⇒ B) ≡ (A ⇒ (B ≡ T)) (_tautology_)
-| (4) A ⇒ (T ⇒ C) | _B in step 2_ | _step 3_
-| (5) A ⇒ C | T ⇒ C in step 4 | (T ⇒ C) ≡ C (_tautology_)
+| Step | Replace | Using |
+| ---- | ------- | ----- |
+| (3) A ⇒ (B ≡ T) | _all of step 1_ | (A ⇒ B) ≡ (A ⇒ (B ≡ T)) (_tautology_) |
+| (4) A ⇒ (T ⇒ C) | _B in step 2_ | _step 3_ |
+| (5) A ⇒ C | T ⇒ C in step 4 | (T ⇒ C) ≡ C (_tautology_) |
 
-In step 3, `B` is equivalent to `T` conditionally ("_if A_"), so step 4 is
+In step 3, `B` is equivalent to `T` conditionally ("_if A then B ≡ T_"), so step 4 is
 conditional on `A`.
 
 ## About the notation
@@ -141,19 +144,22 @@ pattern variables, for arbitrary terms of any type.
 Here are some useful derived rules of inference.  They are all implemented
 by repeated use of the fundamental rules of inference.
 
-### Rules that do substitution
+### Substitution
 
 #### Substitution for free variable(s)
-> _From:_ any proof step with one or more free variables\
+
+> _From:_ any proof step with one or more free variables.  
 > _To:_ a similar proof step with arbitrary terms substituted for
->    each variable. 
+> each variable. 
 
 #### Universal instantiation
-> _From:_ forall {x. A}\
+
+> _From:_ forall {x. A}.  
 > _To:_ A with a term of your choice substituted for `x`.
 
 #### Beta reduction (substitution into a function body)
-> _From:_ {x. A}  X\
+
+> _From:_ {x. A}  X.  
 > _To:_ `A`, with term `X` substituted for `x` throughout
 
 This can be done anywhere in any formula.
@@ -196,8 +202,8 @@ This is useful for converting a definition from the basic
 form to the usual form seen in first-order logics.
 
 #### Universal quantifier introduction
-> _From:_ B\
-> _To:_ forall {x. B}
+> _From:_ B  
+> To: forall {x. B}
 
 ## Using what you have learned
 

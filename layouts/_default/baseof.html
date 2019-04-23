@@ -9,11 +9,11 @@
   <link rel="icon" href="{{ "favicon.png" | absURL}}">
 
   {{ if or true .Site.IsServer }}
-  {{ $style := resources.Get "scss/style.scss" | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" true) }}
-  <link rel="stylesheet" href="{{ ($style).RelPermalink }}">
+    {{ $style := resources.Get "scss/style.scss" | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" true) }}
+    <link rel="stylesheet" href="{{ ($style).RelPermalink }}">
   {{ else }}
-  {{ $style := resources.Get "scss/style.scss" | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" false) }}
-  <link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">
+    {{ $style := resources.Get "scss/style.scss" | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" false) }}
+    <link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">
   {{ end }}
   <link rel=stylesheet href="/css/custom.css">
   {{ block "header_css" . }}{{ end }}
@@ -21,47 +21,60 @@
 </head>
 
 <body class='page {{ block "body_classes" . }}{{ end }}'>
-  {{ partial "main-menu-mobile.html" . }}
-  <div class="wrapper">
-    {{ partial "header.html" . }}
 
-    {{ $displaySidebar := true }}
-    {{ range .Site.Params.mainSections }}
-      {{ if eq $.Section . }}
-        {{ $displaySidebar = true }}
-      {{ end }}
+{{ partial "main-menu-mobile.html" . }}
+<div class="wrapper">
+  {{ partial "header.html" . }}
+
+  {{ $displaySidebar := true }}
+  {{ range .Site.Params.mainSections }}
+    {{ if eq $.Section . }}
+      {{ $displaySidebar = true }}
     {{ end }}
-
-    {{ if $displaySidebar }}
-    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
-      <div class="row">
-        <div class="col-12 col-md-3 mb-3">
-          <div class="sidebar">
-            {{ partial "sidebar.html" . }}
-          </div>
-        </div>
-        <div class="col-12 col-md-9">
-          {{ block "main" . }}
-          {{ end }}
-        </div>
-	{{ partial "pre-footer.html" . }}
-      </div>
-    </div>
-    {{ else }}
-    {{ block "main" . }}
-    {{ end }}
-    {{ end}}
-  </div>
-
-  {{ $scripts := resources.Get "js/scripts.js" }}
-
-  {{ block "footer_js" . }}
   {{ end }}
 
-  {{ if .Site.IsServer }}
-  <script type="text/javascript" src="{{ $scripts.RelPermalink }}"></script>
+  {{ if $displaySidebar }}
+  <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+    <div class="row">
+      <div class="col-12 col-md-3 mb-3">
+	<div class="sidebar">
+	  {{ partial "sidebar.html" . }}
+	</div>
+      </div>
+      <div class="col-12 col-md-9">
+	{{ block "main" . }}{{ end }}
+      </div>
+      {{ if ne .File.Path "_index.md" }}
+        {{ partial "comments.html" . }}
+      {{ end }}
+    </div>
+  </div>
   {{ else }}
-  <script type="text/javascript" src="{{ ($scripts | minify | fingerprint).RelPermalink }}"></script>
+    {{ block "main" . }}{{ end }}
+  {{ end }}
+
+</div>
+
+  {{ block "footer_js" . }}{{ end }}
+
+  {{ $si := resources.Get "/pt/js/site.js" }}
+  {{ $ut := resources.Get "/pt/js/util.js" }}
+  {{ $pre := resources.Get "/pt/js/prelim.js" }}
+  {{ $ex := resources.Get "/pt/js/expr.js" }}
+  {{ $xu := resources.Get "/pt/js/xutil.js" }}
+  {{ $st := resources.Get "/pt/js/step-editor.js" }}
+  {{ $re := resources.Get "/pt/js/rendering.js" }}
+  {{ $so := resources.Get "/pt/js/solution-status.js" }}
+  {{ $en := resources.Get "/pt/js/engine.js" }}
+  {{ $lo := resources.Get "/pt/js/logic.js" }}
+  {{ $nu := resources.Get "/pt/js/numbers.js" }}
+  {{ range (slice $si $ut $pre $ex $xu $st $re $so $en $lo $nu) }}
+    {{ if $.Site.IsServer }}
+      <script type="text/javascript" src="{{ .RelPermalink }}"></script>
+    {{ else }}
+      <script type="text/javascript"
+       src="{{ ( minify . | fingerprint).RelPermalink }}"></script>
+    {{ end }}
   {{ end }}
 
   {{ partial "google-analytics.html" . }}

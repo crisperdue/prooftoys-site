@@ -27,4 +27,5 @@ high school algebra problems, with ready-made examples
 To understand more about what is going on with Prooftoys
 proofs and the Prooftoys system, you may want to read more of
 this series of Wiki pages.  See the table of contents on the right,
-probably starting with [Prooftoys logic concepts](2+Prooftoys+logic+concepts).
+probably starting with [Prooftoys logic concepts](/2-prooftoys-logic-concepts).
+

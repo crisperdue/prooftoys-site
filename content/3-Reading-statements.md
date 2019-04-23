@@ -139,4 +139,4 @@ and in some situations you will see a statement such as:
 ## Next steps
 
 At this point you are ready to introduce yourself
-to [proofs in Prooftoys](4+Introduction+to+Prooftoys+proofs).
+to [proofs in Prooftoys](/4-introduction-to-prooftoys-proofs).

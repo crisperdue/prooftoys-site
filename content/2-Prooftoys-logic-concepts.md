@@ -31,4 +31,4 @@ a relation.
 There can also be functions that have functions
 as inputs and even functions or collections as outputs.
 
-The next step is [Reading statements](3+Reading+statements).
+The next step is [Reading statements](/3-reading-statements).
