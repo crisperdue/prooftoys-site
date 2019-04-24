@@ -1,0 +1,153 @@
+/**
+ * Some styles for the Prooftoys web site.
+ */
+
+sub, sup {
+  /* Prevents these from making the overall line less tall. */
+  line-height: 0px;
+  /* Browsers tend to size these for fractions, which makes */
+  /* them a bit bigger than this. */
+  font-size: 70%;
+}
+
+.hidden {
+  display: none;
+}
+
+.center {
+    text-align: center;
+}
+
+.emphasis {
+    font-family: Georgia;
+    font-style: italic;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* Text wrapping */
+.nowrap {
+  white-space: nowrap;
+}
+
+.wrap {
+  white-space: wrap;
+}
+
+.pre {
+  white-space: pre;
+}
+
+.float {
+    float: right;
+}
+
+/*
+ * For uses of Font-Awesome, do not inherit any text-indent values, working
+ * around a deficiency in its standard styles.  (Class fa displays as
+ * inline-block.)
+ */
+.fa {
+  text-indent: 0;
+}
+
+
+/* Overrides to the Whisper theme */
+
+/* Keep less padding around inline code blocks. */
+.content code {
+    padding: 2px 3px;
+    border-radius: 2px;
+}
+
+/* Make TOC lists be closely packed. */
+#TableOfContents ul {
+    margin: 0;
+}
+
+/* Only display two levels of headings */
+#TableOfContents ul ul ul {
+    display: none;
+}
+
+/* Darken the color of links a bit. */
+a {
+    color: #1dc996;
+}
+
+/* Math-oriented text */
+
+.math, .mathColor, s {
+  font-family: STIXGeneral, Times, serif;
+  /* Variable and constant names should be explicitly italicized
+     within math text. */
+  font-style: normal;
+  white-space: nowrap;
+}
+
+/* You can use <s class=em> to make an em space. */
+/* Character widths may vary by font. */
+s.em {
+    display: inline-block;
+    min-width: 1em;
+    min-height: 1em;
+    vertical-align: text-bottom;
+}
+
+/* You can use <s class=em> to make an en space. */
+/* Character widths may vary by font. */
+s.en {
+    display: inline-block;
+    min-width: .5em;
+    min-height: 1em;
+    vertical-align: text-bottom;
+}
+
+
+/**
+ * Truth tables for binary operators
+ */
+
+table.binaryTruthTable {
+  border-collapse: collapse;
+  margin-bottom: 1.5em;
+  width: auto;
+}
+
+table.binaryTruthTable td.truthy, table.binaryTruthTable td.falsy {
+  padding: 2px 10px;
+  border: 2px solid silver;
+}
+
+/* This needs to be less specific than a rule for class cellHighlight. */
+td.falsy {
+}
+
+table.binaryTruthTable th {
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  padding: 2px 10px;
+  border: none;
+}
+
+/* This needs to take precedency over backgrounds for "falsy" cells. */
+table.binaryTruthTable td.cellHighlight, .cellHighlight {
+  background-color: #fcc;
+}
+
+.thHighlight {
+  background-color: #fcc;
+}
+
+table.binaryTruthTable td.truthy:after {
+  content: "true";
+}
+
+table.binaryTruthTable td.falsy:after {
+  content: "false";
+}
+
+

@@ -24,10 +24,9 @@ of a handful of these.  They are:
 
 - proving a tautology
 - substitution; and
-- rewriting_ (finding a substitution, followed by replacement)_
+- rewriting
 
-When you understand how Mathtoys uses pattern matching to find and
-apply substitutions, and follows them with replacement using equations,
+Once you understand use of these techniques
 you will understand at least 80% of Mathtoys inference steps.
 
 ## Replacement and rewriting
@@ -39,9 +38,9 @@ boolean values.  Logical equivalence ("≡") is equality of truth values.
 
 ### Replacement
 
-In the simplest case, we have an equality that is known to be true that looks like
+In the simplest case, replacement begins with an equality known to be true, of the form:
 
-> A = B   (or A ≡ B is also an equality)
+> A = B   (A ≡ B is also an equality)
 
 An occurrence of A in any proof step can be replaced by B anywhere it occurs.
 
@@ -60,7 +59,10 @@ the use of replacement._)
 
 ### Rewriting
 
-"Rewriting" is just a technical name for the kind of reasoning taught in
+Mathtoys does rewriting by using pattern matching to find and
+apply substitutions, and then uses replacement using equations. 
+
+Rewriting is just a technical name for the kind of reasoning taught in
 every high school algebra textbook.  Writing the commutative law of multiplication
 as an equation `x * y = y * x`, and applying it to the term `x * 3` in
 an equation such as `5 * x = 2 * x + x * 3`, a textbook gets `5 * x = 2 * x + 3 * x`.
@@ -222,3 +224,9 @@ For these and more examples "live", see <http://prooftoys.org/introduction.html>
 
 For a list of additional theorems of pure logic currently available
 in Prooftoys see the [list of logical axioms and theorems](Logical-axioms-and-theorems).
+
+{{< jquery >}}
+{{< resScript "/pt/js/site.js" >}}
+<script>
+  Toy.mathifyAll()l
+</script>
