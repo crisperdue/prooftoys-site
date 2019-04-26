@@ -30,12 +30,6 @@
   {{ partial "header.html" . }}
 
   {{ $displaySidebar := true }}
-  {{ range .Site.Params.mainSections }}
-    {{ if eq $.Section . }}
-      {{ $displaySidebar = true }}
-    {{ end }}
-  {{ end }}
-
   {{ if $displaySidebar }}
   <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
     <div class="row">
