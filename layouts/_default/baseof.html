@@ -17,7 +17,7 @@
   {{ end }}
   <link rel=stylesheet href="/css/custom.css">
   {{ block "header_css" . }}{{ end }}
-  {{ $pt := resources.Get "scss/pt.scss" | toCSS }}
+  {{ $pt := resources.Get "scss/pt.scss" | toCSS (dict "targetPath" "css/pt.css") }}
   <link rel="stylesheet" href="{{ $pt.RelPermalink }}">
 
 
