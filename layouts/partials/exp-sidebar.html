@@ -1,0 +1,42 @@
+{{/* Non-working experiments toward programming the sidebar */}}
+<div class="docs-menu">
+  <h4>{{ .Section | default "Pages" | humanize }}</h4>
+  {{ $s := newScratch }}
+  {{ $s.Set "map" (dict) }}
+  {{ $s.SetInMap "map" "b" "bar" }}
+  {{ $s.SetInMap "map" "a" "zar" }}
+  {{ $m := $s.Get "map" }}
+  {{ $k := sort $m }}
+  {{/* printf "Map values sorted by key: %#v" $k */}}
+  {{/* $list := where .Site.Pages ... */}}
+  
+  <ul class="breadcrumb">
+    {{ template "breadcrumb" dict "page" .Page "id" .File.UniqueID "self" .Page }}
+  </ul>
+  {{ define "breadcrumb" }}
+    {{ if .page.Parent }}
+      {{ template "breadcrumb" dict "page" .page.Parent "self" .self }}
+    {{ end }}
+    {{ if not (or .page.IsHome (eq .page .self)) }}
+    <li>
+	{{ if (eq .id .page.File.UniqueID) }}
+	  {{ .page.Title }}
+	{{ else }}
+	  <a href="{{ .page.RelPermalink }}">{{ .page.Title }}</a>
+	{{ end }}
+      </li>
+    {{ end }}
+  {{ end }}
+UUUULL
+<ul>
+    {{ range sort .Site.Pages ".Weight" }}
+      {{/*printf "path=%#v section=%#v kind=%#v" .File.Path .Section .Kind */}}
+
+      {{ if (and (not .IsHome) (or (eq (path.Base .File.Path) "_index.md") (eq .Section $.Section))) }}
+      <li class="{{ if eq .File.UniqueID $.File.UniqueID }}active {{ end }}">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</div>
