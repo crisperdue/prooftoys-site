@@ -4,7 +4,7 @@ date: 2019-02-11T19:27:37+10:00
 weight: 2.5
 ---
 
-# Logic through Pictures
+# Logic through pictures - introduction
 
 {{< TOC >}}
 
@@ -14,15 +14,7 @@ This page is about fundamental building blocks of
 <a href="http://en.wikipedia.org/wiki/Classical_logic" target=_blank>
 classical logic</a> -- <i>true</i>, <i>false</i>, and functions that
 have these values as inputs and outputs.  We will focus on the
-functions <i>and</i>, <i>or</i>, <i>not</i>, and implication.
-
-Though the system described here is modern in style, it supports the
-kinds of reasoning used in mathematics ever since the ancient Greek
-mathematicians and philosophers.  In the last 100 years or so
-non-classical varieties of logic have been created, but classical
-logic is by far the best known and widely used kind in textbooks and
-by working mathematicians.  This particular logic is also
-<i>functional</i>, having functions as a fundamental concept.
+functions *and*, *or*, *not*, and *implies*.
 
 This page uses pictures of mathematical worlds or universes that have
 things in them.  The things can have properties.  A property is
@@ -31,22 +23,15 @@ Numbers can have properties such as being even, odd, positive, or
 prime.  In classical logic, a thing either has a particular property
 or it does not, and there is no middle ground.
 
-Our logic expresses precisely concepts such as having at least one of
-two properties, having both of two properties, or <i>not</i> having a
-property at all.  It also lets us express statements that are true
-about everything in a mathematical world and to conclude that if one
-statement is true, some different statement must also be true.
-
-The logic concepts described here are enough to make precise virtually
+The logic concepts described here through pictures are enough to make precise virtually
 all of the reasoning needed by students of high school algebra and
-trigonometry (though calculus needs a bit more).  Adding suitable
+trigonometry. (Calculus needs a bit more.)  Adding suitable
 rules of inference and axioms for logic and numbers gives a precise
 system that can be used to solve a great many math problems at this
 level.
 
 This is also the kind of logic used in the Prooftoys automated proof
-assistant, and the use of truth tables here is in the same spirit as
-the reasoning about boolean functions and tautologies in Prooftoys.
+assistant.
 
 ### Summary for the impatient
 
@@ -57,19 +42,13 @@ and truth tables capture their essence as functions.
 
 Implication in particular is more familiar in statements that also
 include predicates, such as "all multiples of 10 are multiples of 5",
-or "if it rains the street will be wet".  Pictures may help
-demonstrate how all of this works.
+or "if it rains the street will be wet".
 
-In classical mathematical logic, a statement is considered true if it
+A mathematical statement is considered true if it
 is true in all possible cases.  Imagine assigning all possible
 combinations of values to the variables in the statement and checking
-the truth of the statement in each of these cases.  The statement is
-considered true if it is true in every case.
-
-Tautologies are true statements involving only boolean values and
-boolean functions.  Substitution is a fundamental idea in math, and
-substitution instances of tautologies are basic building blocks of
-mathematical reasoning.
+the truth of the statement in each of these cases.  We say the statement is
+true if it is true in every case. For example if we take `x` to be an integer, the statement `x is even or x is odd` is true, because it is true for every possible value `x` can have.
 
 If you are satisfied with this summary and don't like looking at
 pictures about abstract mathematics you might prefer to skip reading
@@ -85,12 +64,11 @@ Mathematical writing, instead of saying a point of a picture is blue,
 or has the property of being blue, often says it is a member of the
 set of points that are blue.  In mathematics, properties are also
 often referred to as <i>predicates</i>.  These are all just different
-ways of describing the same situation.  (Note: a predicate can also
+ways of describing the same situation.  (A predicate can also
 express a relationship between two or more things, as in
-`x < y`.  In this case `<`
-is a predicate.)
+`x < y`.  A predicate like `<` is also commonly called a *relation*, because it expresses a *relationship* between `x` and `y`.)
 
-Sets of things with some common property are shown as a circle, part
+Collections of things with some common property are shown as a circle, part
 of a circle, or other region of this world, shaded with a particular
 color or pattern.  Each set is labeled with a name.  Each contains the
 things inside its shaded circle or part circle, but nothing ouside of
@@ -109,6 +87,13 @@ screen will cause the relevant table entries to highlight themselves.
 <canvas id=canvasA width=210 height=210></canvas>
 <canvas id=canvasB width=210 height=210></canvas>
 <canvas id=canvasC width=210 height=210></canvas>
+
+### Logical functions
+
+Our introduction to basic logic emphasizes these mathematical functions that
+have truth values as their inputs and a truth value as their result.
+They can also be referred to as <i>truth functions</i> or <i>logical
+functions</i>.
 
 ## Functions and truth values
 
@@ -148,31 +133,6 @@ example the function defined by `(f x) = 1`.  A function of
 this sort is a <i>constant function</i> because its result does not
 vary with different inputs.  But no function can give different
 results given the same inputs twice.
-
-### True and false as values
-
-In our logic there are values `true` and
-`false`, known as <i>truth values</i>.  These are often
-referred to as boolean values in honor of
-<a href="http://en.wikipedia.org/wiki/George_Boole" target=_blank>
-George Boole</a>,
-a pioneer in the development of these ideas.
-
-When we write something like `(green x)`, 
-`(blue x)`, or `(yellow x)`, the words
-`green`, `blue`, and `yellow`
-represent functions that produce a value of `true`
-or `false`.  The function `blue` for example
-produces a value of `true` or `false` depending
-on whether its input is blue or not.
-
-<i>In other words, predicates are functions that produce values that
-are `true` or `false`.</i>
-
-Our introduction to basic logic focuses on mathematical functions that
-have truth values as their inputs and a truth value as their result.
-These can be referred to as <i>truth functions</i> or <i>logical
-functions</i>.
 
 ## Untrue: "not" (<s>not</s>)
 

@@ -7,6 +7,5 @@ Welcome to Prooftoys, an online tool for learning math
 and and exploring mathematical reasoning.
 Prooftoys is proudly free and open source.
 
-To begin learning, try the
-[Introduction](/1-introduction).
+To begin exploring, try the [Introduction](/1-introduction).
 
