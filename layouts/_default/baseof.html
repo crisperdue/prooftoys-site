@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+{{/* NB. The tail of the link starting with the last "/" not at the end */}}
+{{/* $attrVal := .RelPermalink | replaceRE "^.*([/].+)" "$1" */}}
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -19,12 +21,20 @@
   {{ block "header_css" . }}{{ end }}
   {{ $pt := resources.Get "scss/pt.scss" | toCSS (dict "targetPath" "css/pt.css") }}
   <link rel="stylesheet" href="{{ $pt.RelPermalink }}">
-
+  <style type="text/css">
+  .docs-menu ul {{ printf "a[href=%q]" .RelPermalink | safeCSS }} {
+      color: #1dc996;
+  }
+  </style>
 
 </head>
 
 <body class='page logicZone {{ block "body_classes" . }}{{ end }}'>
-
+<style>
+.docs-menu ul {{ printf "a[href=%q]" .RelPermalink | safeCSS }}] {
+  color: blue;
+}
+</style>
 {{ partial "main-menu-mobile.html" . }}
 <div class="wrapper">
   {{ partial "header.html" . }}
