@@ -12,7 +12,7 @@ weight: 2.5
 
 This page is about fundamental building blocks of
 <a href="http://en.wikipedia.org/wiki/Classical_logic" target=_blank>
-classical logic</a> -- <i>true</i>, <i>false</i>, and functions that
+classical logic</a> -- *true*, *false*, and functions that
 have these values as inputs and outputs.  We will focus on the
 functions *and*, *or*, *not*, and *implies*.
 
@@ -35,8 +35,8 @@ assistant.
 
 ### Summary for the impatient
 
-The basic logical concepts of <em>and</em>, <em>or</em>,
-<em>not</em>, and <em>implies</em> can
+The basic logical concepts of *and*, *or*,
+*not*, and *implies* can
 all be expressed as functions from boolean values to boolean values,
 and truth tables capture their essence as functions.
 
@@ -63,7 +63,7 @@ spot in the picture.
 Mathematical writing, instead of saying a point of a picture is blue,
 or has the property of being blue, often says it is a member of the
 set of points that are blue.  In mathematics, properties are also
-often referred to as <i>predicates</i>.  These are all just different
+often referred to as *predicates*.  These are all just different
 ways of describing the same situation.  (A predicate can also
 express a relationship between two or more things, as in
 `x < y`.  A predicate like `<` is also commonly called a *relation*, because it expresses a *relationship* between `x` and `y`.)
@@ -73,7 +73,7 @@ of a circle, or other region of this world, shaded with a particular
 color or pattern.  Each set is labeled with a name.  Each contains the
 things inside its shaded circle or part circle, but nothing ouside of
 that.  In the diagrams below, areas where some statement is true are
-generally colored.  Areas where a statement is <i>not true</i> are
+generally colored.  Areas where a statement is *not true* are
 usually white or gray.
 
 In our version of mathematical notation we are going to write
@@ -88,53 +88,14 @@ screen will cause the relevant table entries to highlight themselves.
 <canvas id=canvasB width=210 height=210></canvas>
 <canvas id=canvasC width=210 height=210></canvas>
 
-### Logical functions
+## Logical functions
 
 Our introduction to basic logic emphasizes these mathematical functions that
 have truth values as their inputs and a truth value as their result.
-They can also be referred to as <i>truth functions</i> or <i>logical
-functions</i>.
+They can also be referred to as *truth functions* or *logical
+functions*.
 
-## Functions and truth values
-
-### Functions
-
-In mathematics a function named `f` is often defined
-with a statement like this:
-
-> `f(x) = x + 1`
-
-In our notation we write:
-<blockquote>
-`(f x) = x + 1`<br>
-</blockquote>
-or omit the parentheses around the function call, like this:
-<blockquote>
-`f x = x + 1`<br>
-</blockquote>
-
-So:
-<blockquote>
-`f 0 = 1`<br>
-`f 1 = 2`<br>
-`f 2 = 3`
-</blockquote>
-and so on.  A function produces a result value given an input value or
-values.  The addition function (`+`) for example
-takes two numbers as input and gives a number as its result, as in
-`3 + 5 = 8`.  The function `f` above takes a
-number as input and produces a number as its result.  The value of a
-function can depend only on its inputs, nothing else.  And given the
-same inputs on different occasions any mathematical function must have
-the same result each time.
-
-A function can have the same result regardless of the input, for
-example the function defined by `(f x) = 1`.  A function of
-this sort is a <i>constant function</i> because its result does not
-vary with different inputs.  But no function can give different
-results given the same inputs twice.
-
-## Untrue: "not" (<s>not</s>)
+### Untrue: "not" (`not`)
 
 The simplest of these functions is called `not`, also known
 as negation.  Negation provides a way to talk about things that do not
@@ -147,7 +108,7 @@ pictures in the first group that were green, or blue, or yellow are
 white in this group.  The areas that were white in the first group of
 pictures are marked here with stripes, indicating that in the original
 picture they had the property of being
-<i>not</i> green, <i>not</i> blue, or <i>not</i> yellow.
+*not* green, *not* blue, or *not* yellow.
 
 <canvas id=canvasNotA width=210 height=210></canvas>
 <canvas id=canvasNotB width=210 height=210></canvas>
@@ -178,7 +139,7 @@ Moving the mouse over one of these pictures or touching it on a touch
 screen will cause the truth table entries to highlight.
 
 This kind of table that shows the truth value produced by true or
-false inputs to a function is called a <i>truth table</i>.  The
+false inputs to a function is called a *truth table*.  The
 entries where the value is true are shaded with blue lines to
 highlight the difference between true and false.  We will use this
 color scheme in other truth tables as well.
@@ -194,7 +155,7 @@ all the things where theoriginal statement `(A x)` is false.
 
 Another notation sometimes used for negation is "~".
 
-## At least one true: "or" (`|`)
+### At least one true: "or" (`|`)
 
 As an example of our next function, suppose you are thinking what to
 have for lunch, and decide it must either be delicious or easy.  In
@@ -215,7 +176,7 @@ instead of separate shadings for D and E.
 All areas of the first picture that are shaded yellow or green are
 shaded blue in the second picture.  Once again we can use a function
 to model this relationship.  This function has two inputs.  Each input
-value is <i>boolean</i> (true or false) and so is the result.  Again,
+value is *boolean* (true or false) and so is the result.  Again,
 hover the mouse over either of the pictures to highlight the
 appropriate parts of the truth table for the function named
 `or` (`|`).
@@ -244,7 +205,7 @@ the function is in the row for the value of the first input and the
 column for the value of the second input.  So for example
 `(false | true) = true`.
 
-## Both true: "and" (<s>&</s>)
+### Both true: "and" (`&`)
 
 Suppose you are feeling more picky about your lunch, and decide it
 must be both delicious and easy.  Only things in both of the circles
@@ -289,7 +250,7 @@ requirement, in this scenario there is no possible lunch for you!
 A common notation for conjunction is "`&`", for example
 `p & q`.
 
-## Equality: (`=, ==`)
+### Equality: (`=, ==`)
 
 A simple yet important property of truth values is equality.  In this
 case we will give the truth table immediately:
@@ -331,7 +292,7 @@ mathematical reasoning -- in other words theorems.  If a mathematical
 statement has variables in it, the statement is a true one if it is
 true regardless of the values of the variables.  To emphasize that is
 true for all possible values of the variables, these sorts of
-statements are sometimes described as <i>universally</i> true.  We
+statements are sometimes described as *universally* true.  We
 will sometimes refer to them as "true everywhere".
 
 ### Statements with "or"
@@ -388,7 +349,7 @@ the same area) illustrates a true statement of this kind.  But is
 there a system for shading pictures like this so they are completely
 shaded exactly when the statement is true?  It turns out there is.
 
-Let's consider a picture where the statement is <i>not</i> always
+Let's consider a picture where the statement is *not* always
 true, like this:
 
 <canvas id=canvasNotImplies width=210 height=210></canvas>
@@ -403,7 +364,7 @@ whether this statement about birds is true.  If every part of the
 picture is either in the "wings" circle or <b>not</b> in the "birds"
 circle, the statement is true.
 
-## Implication: "implies" (<s>&rArr;</s>)
+### Implication: "implies" (<s>&rArr;</s>)
 
 Returning to functions with truth values as inputs and outputs, we
 can see how to define one more key function.  This function enables us
@@ -452,7 +413,7 @@ no shading.  This is exactly the area where the value of the
 <s>implies</s> function is false.  In this picture not all
 birds have wings, so the function is indeed behaving as intended.
 
-#### About vacuous statements
+#### Vacuous statements
 
 Special situations can lead classical logic to peculiar conclusions.
 Can all birds larger than elephants fly to the moon?  In ordinary life
@@ -461,8 +422,8 @@ no birds larger than elephants.  But nothing in our logic prohibits
 such a statement, and if there are no birds larger than elephants in
 our world, our logic takes this to be a true statement.
 
-How can this be?  Consider that there are <i>no examples that break
-the rule</i>, that is no birds that are larger than elephants and
+How can this be?  Consider that there are *no examples that break
+the rule*, no birds that are larger than elephants but
 cannot fly to the moon!  The truth table entries in the row where the
 first input is <s>false</s> both have the value
 <s>true</s>, so the <s>implies</s> function has the value
@@ -470,23 +431,23 @@ first input is <s>false</s> both have the value
 elephants, all of them can fly to the moon!
 
 Mathematicians recognize that this is a strange situation and refer to
-such as statements as <i>vacuously true</i>, meaning true but useless
+such as statements as *vacuously true*, meaning true but useless
 because their conditions never apply.  In standard logic things that
-do not exist can have <i>any</i> property, even contradictory
+do not exist can have *any* property, even contradictory
 properties.  Taking our example a couple of steps further, all birds
 larger than elephants are blue, and all birds larger than elephants
 are also green.  This is possible only because these statements are
 vacuous.
 
-## Combining logical functions
+### Combining logical functions
 
 The logical functions can be combined into complex expressions.  In
 the lunch example, where D is an abbreviation for "delicious" and E is
 an abbreviation for "easy", the expression
 <s>(not ((D x) & (E x)))</s> refers to things that are
-<i>not</i> easy and delicious.
+*not* easy and delicious.
 
-<canvas id=DnandE width=210 height=210>
+<canvas id=DnandE width=210 height=210></canvas>
 
 The value of this function at each point depends on the values of
 <s>(D x)</s> and <s>(E x)</s> at the same point, and its
@@ -516,7 +477,7 @@ The expression <s>(not (D x) & not (E x))</s> refers to things
 that are neither delicious nor easy; unfortunate for the eater, but
 fortunate for things that do not wish to be eaten.
 
-<canvas id=DnorE width=210 height=210>
+<canvas id=DnorE width=210 height=210></canvas>
 
 Once again we can build each entry in this truth table by looking up
 the values of the subexpressions, first negating each input, then
@@ -555,7 +516,7 @@ blue.  If we make a picture with one area for blue things and the rest
 for things that are not blue, every part of the picture will be in one
 of these two parts, either inside the "blue" area or not inside it.
 
-This is an application of a <i>tautology</i>. Tautologies are true
+This is an application of a *tautology*. Tautologies are true
 regardless of the truth of their parts.  Statements of this sort occur
 constantly in normal mathematical reasoning, sometimes explicitly and
 even more often implicitly behind the scenes.
@@ -586,7 +547,7 @@ expression (such as `(blue x)`) appears more than once in the full expression
 occurrences will have the same value when given the same value for `x`.  It is not possible for one occurrence to
 have the value <s>true</s> and another one the value `false`.  They count as one input. Tautologies properly are expressions with just variables and logical
 functions in them.  This is the simplest way to write down the
-principle of a tautology, and more complex <i>instances</i> of
+principle of a tautology, and more complex *instances* of
 tautologies can be built from them by substitution. Just a few examples of commonly-encountered tautologies are: Assigning all combinations of <s>true</s> and <s>false</s>
 to the variables in these expressions and checking that the value of
 the expression is true will verify that these all really are
@@ -607,12 +568,12 @@ whether the variable is true or false.
 So if a variable appears more than once in a true statement, we know
 the statement will be true as long as each occurrence is assigned the
 same value.  Since an expression with the same inputs always gives the
-same result, substituting an expression for <i>every occurrence</i> of
+same result, substituting an expression for *every occurrence* of
 a variable in a true statement gives another true statement.
 
 In a true statement, if we systematically replace every occurrence of
 a variable with an expression (the same expression everywhere), the
-result of this <i>substitution</i> is another true statement, because
+result of this *substitution* is another true statement, because
 the expression has the same value everywhere it appears.
 
 The simple tautology <s>a &rArr; a</s> is a true statement,
@@ -627,22 +588,12 @@ of <s>x &lt; y</s> is going to be the same in both spots, so the whole statement
 is still true.
 
 The result of substituting an expression for all instances of a
-variable in a statement is called an <i>instance</i> of the original
+variable in a statement is called an *instance* of the original
 statement, so we say that substituting one or more expressions for
-variables in a tautology gives an <i>instance</i> of the tautology.
+variables in a tautology gives an *instance* of the tautology.
 
 <b>Note:</b> If a mathematical statement has parts that use
 "quantifiers" ("for all", "there exists", etc.), substitution has to be
 done a bit more carefully, but the idea remains the same.
 
-{{< jquery >}}
-{{< resScript "/pt/js/canvas.js" >}}
-{{< resScript "/pt/js/logic-pix.js" >}}
-{{< resScript "/pt/js/site.js" >}}
-
-<script>
-  Toy.mathifyAll();
-  drawBooleans();
-  drawStatements();
-  drawCombinations();
-</script>
+{{< include "/pix.md" >}}
