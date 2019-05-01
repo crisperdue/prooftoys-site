@@ -1,3 +1,3 @@
-
-{{ $link := (resources.Get (.Get 0)).RelPermalink }}
+{{ $res := resources.Get (.Get 0) }}
+{{ $link := $res.RelPermalink }}
 <script type="text/javascript" src={{ $link }}></script>
