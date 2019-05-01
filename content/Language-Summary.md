@@ -6,10 +6,15 @@ weight: 5
 
 # The Prooftoys Language
 
-The language is a computer-oriented notation for mathematical formulas. It allows variables for functions and predicates as well as individual values, so it is "higher-order". And it has notation for anonymous functions, see below.
+The language is a computer-oriented notation for mathematical
+formulas. It allows variables for functions and predicates as well as
+individual values, so it is "higher-order". And it has notation for
+anonymous functions, see below.
 
-The language is entirely based on expressions.  The parser and printer both support infix notation and precedence.  Internally though all functions take exactly one argument, so in an expression such as `x = y`, the `x = ` part represents a function that returns T exactly when given an argument that is equal to x.  In other words, functions are
-"[curried](http://en.wikipedia.org/wiki/)".
+The language has only expressions.  The parser and printer both
+support infix notation and precedence of operators, so for example it
+fills in parentheses so `2*x + 3*y` means the same as `(2*x) +
+(3*y)` and not `((2*x) + 3)*y` or even something different.
 
 ## Special characters
 
@@ -60,14 +65,13 @@ Names of the boolean operators favor programming language practice over mathemat
 | `==` | ⇔ | Logical equivalence.  Note: currently same as = but lower precedence
 | `=>` | ⇒ | implication
 | `=, !=` | =, ≠ | equality and its negation
-| `\|` | ∨ | or
+| <code>\|</code> | ∨ | or
 | `&` | ∧ | and
 | `<, <=, >, >=` | <, ≤, >, ≥ | inequality operators
 | `+, -` | +, - | add and subtract
 | `*, /` | ⋅, / | multiply and divide
 
-Negation and reciprocal are represented by `neg` and `recip`, which are unary operators,
-which have higher precedence than binary operators, but lower precedence than named functions.
+## Functions
 
 Functions with names that are identifiers, both constants and variables, have higher
 precedence than any of these, so for example
@@ -92,9 +96,26 @@ Writing `f(x)` means the same as `f x`, but `f (x y)` is a call to a function `f
 argument, the result of applying function `x` to `y`, *not* a call to a function `f`
 of two arguments.
 
-Like most other higher-order logics, our system is built on lambda calculus, in other words anonymous functions with named variables.
-These are enclosed in braces a bit as in code blocks as seen in the
-[Ruby](http://en.wikipedia.org/wiki/Ruby_(programming_language)#Blocks_and_iterators)
-programming language or function blocks in the Smalltalk programming language,
-like this: *`{x. x}`* for an identity function, with a dot (".") following the name of the
-formal parameter.
+#### Special operators/functions
+
+The logical "not" operator is just a function, so `not a | b` is the
+same as `(not a) | b`.
+
+Similarly, negative and reciprocal are represented by "neg" and "recip", which
+are just functions.  So `neg x + y` is the same as `(neg x)  + y`.
+
+#### Function expressions
+
+The language has a form of the traditional "set notation" for
+predicates, as in `{x. x < 10}` ("the set of x such that x is less
+than ten").  In this example the first `x` is known as the bound
+variable, and the `x < 10` is the body of the function.  The Prooftoys
+language extends the notation to functions, for example `{x. x*x}`
+for a function that computes the square of a number.  The key
+difference from set notation is just that the body can have a value
+that is not boolean.
+
+In Prooftoys the value of `{x. x < 10}` for example is a predicate,
+like any other.  So it is not necessary to write something like
+`z in {x. x < 10}`.  You can just write it like a predicate or function
+call: `{x. x < 10} x`.
