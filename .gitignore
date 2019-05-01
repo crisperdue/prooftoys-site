@@ -1,5 +1,14 @@
-/assets/pt/
+# Generated site goes here.
 /public/
+# Internal generated Hugo files go here.
 /resources/
+# Files imported from prooftoys go in the next two.
+/assets/pt/
+/static/pt/
+# External assets go in the next two dirs, e.g. jQuery.
+/assets/lib/
+/static/lib/
+# The themes are downloaded from elsewhere.
 /themes/
+# Miscellaneous stuff just in case.
 /tmp/
