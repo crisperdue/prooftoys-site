@@ -30,11 +30,6 @@
 </head>
 
 <body class='page logicZone {{ block "body_classes" . }}{{ end }}'>
-<style>
-.docs-menu ul {{ printf "a[href=%q]" .RelPermalink | safeCSS }}] {
-  color: blue;
-}
-</style>
 {{ partial "main-menu-mobile.html" . }}
 <div class="wrapper">
   {{ partial "header.html" . }}
@@ -64,27 +59,13 @@
 
   {{ block "footer_js" . }}{{ end }}
 
-  {{ $si := resources.Get "/pt/js/site.js" }}
-  {{ $ut := resources.Get "/pt/js/util.js" }}
-  {{ $pre := resources.Get "/pt/js/prelim.js" }}
-  {{ $ex := resources.Get "/pt/js/expr.js" }}
-  {{ $xu := resources.Get "/pt/js/xutil.js" }}
-  {{ $st := resources.Get "/pt/js/step-editor.js" }}
-  {{ $re := resources.Get "/pt/js/rendering.js" }}
-  {{ $so := resources.Get "/pt/js/solution-status.js" }}
-  {{ $en := resources.Get "/pt/js/engine.js" }}
-  {{ $lo := resources.Get "/pt/js/logic.js" }}
-  {{ $nu := resources.Get "/pt/js/numbers.js" }}
-  {{ range (slice $si $ut $pre $ex $xu $st $re $so $en $lo $nu) }}
-    {{ if $.Site.IsServer }}
-      <script type="text/javascript" src="{{ .RelPermalink }}"></script>
-    {{ else }}
-      <script type="text/javascript"
-       src="{{ ( minify . | fingerprint).RelPermalink }}"></script>
-    {{ end }}
-  {{ end }}
-
+  {{ partial "jquery.html" . }}
+  {{ partial "prooftoys-scripts.html" . }}
   {{ partial "google-analytics.html" . }}
+
+<script>
+Toy.mathifyAll();
+</script>
 
 </body>
 

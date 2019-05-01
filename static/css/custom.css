@@ -8,3 +8,9 @@
 .content blockquote:before {
   content: none;
 }
+
+/* Indent levels of lists in the sidebar. */
+
+.docs-menu ul li {
+    margin-left: 1em;
+}
