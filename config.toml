@@ -14,11 +14,16 @@ pygmentsUseClasses = true
 
 [params]
   mainSections = [ "" ]
-  google_analytics_id=""
+  google_analytics_id = ""
   homepage_button_link = '/docs'
   homepage_button_text = 'Read The Docs'
   homepage_image = '/images/site-image.png'
-  BookMenuBundle = "/menu"
+  BookMenuBundle = "/menu.md"
+
+  # For future use: (separate script files, not minified, etc.)
+  dev_mode = true
+  # For future use: (all resources local)
+  airplane_mode = false
 
   [params.homepage_meta_tags]
 #    meta_description = "Hugo Whisper is a documentation theme built with Hugo."
