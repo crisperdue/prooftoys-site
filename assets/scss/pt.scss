@@ -1,5 +1,5 @@
 /**
- * Some styles for the Prooftoys web site.
+ * Styles for the Prooftoys web site.
  */
 
 sub, sup {
@@ -12,6 +12,11 @@ sub, sup {
 
 .hidden {
   display: none;
+}
+
+/* Invisibly fills space */
+.invisible {
+  visibility: hidden;
 }
 
 .center {
@@ -43,6 +48,45 @@ sub, sup {
 .float {
     float: right;
 }
+
+/* Transitions */
+
+/* This class with "hidden" provides a cheap way to animate appearance */
+/* and disappearance. */
+/* Customize with a specific max-height. */
+.transHeight {
+    max-height: 1000px;
+    transition: max-height 0.25s ease-in;
+    overflow: hidden;
+}
+
+/* Transitioning "height" would only work with explicit height value. */
+.transHeight.hidden {
+    max-height: 0;
+    display: block;
+    transition: max-height 0.25s ease-out;
+}
+
+/* Transition by fading.  The element always occupies space. */
+/* Use jQuery.fadeToggle to get display: none. */
+.transFade {
+    visibility: visible;
+    opacity: 1;
+    /* Think of visibility ranging from 0 to 1, with all */
+    /* nonzero values being visible. */
+    transition: visibility .3s, opacity .3s ease;
+}
+
+.transFade.hidden, .transFade.invisible, .transFade.ultraInvisible {
+    visibility: hidden;
+    transition: visibility 1s, opacity 1s ease;
+    /* This overrides the meaning of hidden = display: none */
+    display: block;
+    opacity: 0;
+}
+
+
+/* Font-Awesome */
 
 /*
  * For uses of Font-Awesome, do not inherit any text-indent values, working
@@ -149,5 +193,3 @@ table.binaryTruthTable td.truthy:after {
 table.binaryTruthTable td.falsy:after {
   content: "false";
 }
-
-
