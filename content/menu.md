@@ -10,5 +10,5 @@ headless: true
   - [True statements](/logic-pix-truth/)
 - [Inference](/4-introduction-to-prooftoys-proofs)
 - [Prooftoys language summary](/language-summary/)
-
-
+- [Logic facts](/logical-axioms-and-theorems/)
+- [Logic facts with proofs](/logic-facts/)

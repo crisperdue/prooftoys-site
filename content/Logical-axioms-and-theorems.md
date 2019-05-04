@@ -1,15 +1,10 @@
 ---
-title: Key logic facts
-draft: true
----
-
----
 title: 'Logic facts'
 date: 2019-02-11T19:27:37+10:00
 weight: 6
 ---
 
-# Lists of axioms and theorems of the logic
+# Axioms and theorems of the logic
 
 Tautologies are not listed here.
 
@@ -57,9 +52,9 @@ All of these definitions have the form `<name> = <expression>` and meet the
 additional requirements for being safe definitions that cannot introduce
 contradictions into the logic.
 
-Definitions of the form `<name> = {x. <etc>}` or `<name> = {x. {y. <etc>}}`
-immediately imply statements of the form `<name> x = <etc>` or 
-`<name> x y = <etc>`.  For example we can immediately deduce from the
+Definitions of the form `"name" = {x. "etc"}` or `"name" = {x. {y. "etc"}}`
+immediately imply statements of the form `"name" x = "etc"` or 
+`"name" x y = "etc"`.  For example we can immediately deduce from the
 definition of `!=` that `x != y == not (x = y)`, as the definition would
 be in first-order logic.
 
