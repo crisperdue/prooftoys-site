@@ -21,12 +21,15 @@
   {{ block "header_css" . }}{{ end }}
   {{ $pt := resources.Get "scss/pt.scss" | toCSS (dict "targetPath" "css/pt.css") }}
   <link rel="stylesheet" href="{{ $pt.RelPermalink }}">
+  {{ $pf := resources.Get "scss/proofs.scss" | toCSS (dict "targetPath" "css/proofs.css") }}
+  <link rel="stylesheet" href="{{ $pf.RelPermalink }}">
   <style type="text/css">
   .docs-menu ul {{ printf "a[href=%q]" .RelPermalink | safeCSS }} {
       color: #1dc996;
   }
   </style>
-
+{{/* Load jQuery early to set up the global jQuery name. */}}
+{{ partial "jquery.html" . }}
 </head>
 
 <body class='page logicZone {{ block "body_classes" . }}{{ end }}'>
@@ -58,7 +61,6 @@
 </div>
 
   {{ block "footer_js" . }}{{ end }}
-  {{ partial "jquery.html" . }}
   {{ partial "prooftoys-scripts.html" . }}
   {{ partial "google-analytics.html" . }}
 
