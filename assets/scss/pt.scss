@@ -104,6 +104,8 @@ sub, sup {
 .content code {
     padding: 2px 3px;
     border-radius: 2px;
+    /* Use Roboto generally even for code (logic) */
+    font-family: Roboto;
 }
 
 /* Make TOC lists be closely packed. */
@@ -193,3 +195,20 @@ table.binaryTruthTable td.truthy:after {
 table.binaryTruthTable td.falsy:after {
   content: "false";
 }
+
+
+/* Blocks of text and logic formulas, used by shortcodes. */
+
+div.textBlock, div.logicBlock {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1em 2em;
+  padding: 0.5em 1em;
+}
+
+div.logicBlock {
+  white-space: pre;
+  line-height: 1.8;
+  font-family: STIXGeneral;
+}
+
