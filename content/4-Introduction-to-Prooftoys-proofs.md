@@ -211,9 +211,8 @@ form to the usual form seen in first-order logics.
 
 ### Proofs of real number facts
 
-You can find a "live" list of basic facts about the real numbers and their proofs,
-with the axioms and definitions that support them, on the Prooftoys website at 
-http://prooftoys.org/real-number-facts.html.
+There is also a "live" list of basic facts about the real numbers and their proofs,
+with the axioms and definitions that support them.
 The page also gives access to the proof of each of the theorems.
 (Just click on the word "fact" or "theorem" in blue to the right of any
 item in the list!)
