@@ -39,23 +39,23 @@ boolean values.  Logical equivalence ("≡") is equality of truth values.
 ### Replacement
 
 In the simplest case, replacement begins with an equality known to be true, of the form:
-{{% inset %}}
+{{% preblock %}}
 A = B   (also A ≡ B)
-{{% /inset %}}
+{{% /preblock %}}
 
 An occurrence of A in any proof step can be replaced by B anywhere it occurs.
 
 Alternatively we may have an equality that applies under assumptions, that
 looks something like:
-{{% inset %}}
+{{% preblock %}}
 You can write A ⇒ (B = C) (also A ⇒ (B ≡ C)) 
-{{% /inset %}}
+{{% /preblock %}}
 
 Using an equation like this on a sentence S results in a sentence of the form:
 
-{{% inset %}}
+{{% preblock %}}
 A ⇒ S'
-{{% /inset %}}
+{{% /preblock %}}
 
 where S' is like S, but with an occurrence of A replaced by B.  (_In more
 advanced cases where S contains "binders", there are some limitations on
@@ -101,22 +101,22 @@ another proved statement, the occurrence can be replaced with T.
 
 So if we have both:
 
-{{% inset %}}
+{{% preblock %}}
 (1) A
 (2) A ⇒ B
-{{% /inset %}}
+{{% /preblock %}}
 
 We can replace the `A` in step 2 with T, giving:
 
-{{% inset %}}
+{{% preblock %}}
 (3) T ⇒ B
-{{% /inset %}}
+{{% /preblock %}}
 
 which is equivalent to just:
 
-{{% inset %}}
+{{% preblock %}}
 (4) B
-{{% /inset %}}
+{{% /preblock %}}
 
 using the tautology (equation!) `(T ⇒ a) ≡ a`.
 
@@ -124,16 +124,16 @@ using the tautology (equation!) `(T ⇒ a) ≡ a`.
 
 Here we are given:
 
-{{% inset %}}
+{{% preblock %}}
 (1) A ⇒ B<br>
 (2) B ⇒ C
-{{% /inset %}}
+{{% /preblock %}}
 
 and will prove that
 
-{{% inset %}}
+{{% preblock %}}
 A ⇒ C
-{{% /inset %}}
+{{% /preblock %}}
 
 We can proceed as follows:
 
@@ -165,25 +165,25 @@ by repeated use of the fundamental rules of inference.
 
 #### Substitution for free variable(s)
 
-{{% inset %}}
+{{% preblock %}}
 _From:_ Proof step with one or more free variables.
 _To:_ Proof step with a term substituted for each variable.
-{{% /inset %}}
+{{% /preblock %}}
 
 #### Universal instantiation
 
-{{% inset %}}
+{{% preblock %}}
 _From:_ `forall {x. A}`.
 _To:_ A with a term of your choice substituted for `x`.
-{{% /inset %}}
+{{% /preblock %}}
 
 
 #### Substitution into a function body (beta reduction)
 
-{{% inset %}}
+{{% preblock %}}
 _From:_ `{x. A} X`.
 _To:_ `A`, with term `X` substituted for `x` throughout
-{{% /inset %}}
+{{% /preblock %}}
 
 This can be done anywhere in any formula.
 
@@ -200,57 +200,57 @@ For details on this see [link TBD](http://prooftoys.org/TBD).
 
 #### Self-equality
 
-{{% inset %}}
+{{% preblock %}}
 `X = X`
-{{% /inset %}}
+{{% /preblock %}}
 
 The value of any expression is equal to itself.
 
 #### Universal quantifier elimination
 
-{{% inset %}}
+{{% preblock %}}
 _From:_ `forall {x. B}`
 _To:_ `B`
-{{% /inset %}}
+{{% /preblock %}}
 
 (Result of instantiating with `x`.)
 
 #### Binding both sides of an equation
 
-{{% inset %}}
+{{% preblock %}}
 _From:_ `X = Y`
 _To:_ `{x. X} = {x. Y}`
-{{% /inset %}}
+{{% /preblock %}}
 
 (Consequence of `{x. X} = {x. X}`, then replacing the second `X` with
 `Y`.)
 
 #### Unbinding an equation
 
-{{% inset %}}
+{{% preblock %}}
 _From:_ `g = {x. G}`
 _To:_ `g x = G`
-{{% /inset %}}
+{{% /preblock %}}
 
 This is useful for converting a definition from the basic
 form to the usual form seen in first-order logics.
 
 #### Rebinding an equation
 
-{{% inset %}}
+{{% preblock %}}
 _From:_ `g x = G`
 _To:_ `g = {x. G}`
-{{% /inset %}}
+{{% /preblock %}}
 
 This is useful for converting a definition from the basic
 form to the usual form seen in first-order logics.
 
 #### Universal quantifier introduction
 
-{{% inset %}}
+{{% preblock %}}
 _From:_ `B`
 _To:_ `forall {x. B}`
-{{% /inset %}}
+{{% /preblock %}}
 
 ## Applying the inference rules
 
@@ -264,10 +264,10 @@ item in the list!)
 
 ### Theorems of logic
 
-For these and more examples "live", see [the logic facts page](/inset-facts).
+For these and more examples "live", see [the logic facts page](/logic-facts).
 
 For a list of additional theorems of pure logic currently available
-in Prooftoys see the [list of logical axioms and theorems](/insetal-axioms-and-theorems).
+in Prooftoys see the [list of logical axioms and theorems](/logical-axioms-and-theorems).
 
 {{< jquery >}}
 {{< resScript "/pt/js/site.js" >}}
