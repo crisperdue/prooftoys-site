@@ -49,8 +49,10 @@
       <div class="col-12 col-md-9">
 	{{ block "main" . }}{{ end }}
       </div>
-      {{ if ne .File.Path "_index.md" }}
-        {{ partial "comments.html" . }}
+      {{ with .File }}
+        {{ if ne .Path "_index.md" }}
+          {{ partial "comments.html" . }}
+        {{ end }}
       {{ end }}
     </div>
   </div>
@@ -65,7 +67,7 @@
   {{ partial "google-analytics.html" . }}
 
 <script>
-Toy.mathifyAll();
+  Toy.mathifyAll();
 </script>
 
 </body>
