@@ -262,19 +262,18 @@ which is either <s>true</s> or <s>false</s>.
   <th x=false>false
   <td x=false class=truthy>
 </table>
+
 The inputs to some of the truth tables are labeled with expressions
-such as `(D x)`, `(E x)`, or `(blue x)`.  It doesn't matter whether an input
-is given by a variable or some expression.  All that matters is that
-different expressions are handled as different inputs.  If an
-expression (such as `(blue x)`) appears more than once in the full expression
-(such as `(blue x) | (not (blue x))`, all of its
-occurrences will have the same value when given the same value for `x`.  It is not possible for one occurrence to
-have the value <s>true</s> and another one the value `false`.  They count as one input. Tautologies properly are expressions with just variables and logical
-functions in them.  This is the simplest way to write down the
-principle of a tautology, and more complex *instances* of
-tautologies can be built from them by substitution. Just a few examples of commonly-encountered tautologies are: Assigning all combinations of <s>true</s> and <s>false</s>
-to the variables in these expressions and checking that the value of
-the expression is true will verify that these all really are
-tautologies.
+such as `(D x)`, `(E x)`, or `(blue x)`.  It doesn't matter whether an
+input is given by a variable or some expression.  All that matters is
+that different expressions are handled as different inputs.  If an
+expression (such as `(blue x)`) appears more than once in the full
+expression (such as `(blue x) | (not (blue x))`, all of its
+occurrences will have the same value when given the same value for
+`x`.
+
+Tautologies properly are expressions with just variables and logical
+functions in them.  More complex *instances* of a tautology can be
+constructed from it by substitution.
 
 {{< include "/pix.md" >}}
