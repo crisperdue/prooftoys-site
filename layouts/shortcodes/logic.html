@@ -1,1 +1,3 @@
-<div class=logicBlock>{{ trim .Inner "\n\r" }}</div>
+<span class=logicBlock>
+{{- trim .Inner "\n\r" -}}{{/* element must be inline */}}
+</span>
