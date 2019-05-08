@@ -202,7 +202,7 @@ table.binaryTruthTable td.falsy:after {
 
 /* If needed add a "zone" shortcode and rely on its class(es). */
 
-.textBlock, .logicBlock {
+.inset, .preBlock {
   display: block;
   background: #f5f5f5;
   border-left: 10px solid #ccc;
@@ -210,7 +210,7 @@ table.binaryTruthTable td.falsy:after {
   padding: 0.5em 1em;
 }
 
-.logicBlock {
+.preBlock {
   white-space: pre;
   line-height: 1.8;
 }
