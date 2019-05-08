@@ -1,10 +1,10 @@
 ---
-title: 'Elements of proofs'
+title: 'Inference'
 date: 2019-02-11T19:27:37+10:00
 weight: 4
 ---
 
-# Prooftoys proofs
+# Inference in Prooftoys
 
 The logic underlying proofs in Prooftoys (and Mathtoys) use a very small number
 of primitive concepts, with one simple rule of inference
@@ -20,7 +20,7 @@ the low-level primitives, so the correctness of proofs in Prooftoys
 only depends on correct implementation of the basic primitives.
 
 Most proof steps are of one of the following kinds, or combinations
-of a handful of these.  They are: 
+of a handful of these.  They are:
 
 - proving a tautology
 - substitution; and
@@ -39,19 +39,23 @@ boolean values.  Logical equivalence ("≡") is equality of truth values.
 ### Replacement
 
 In the simplest case, replacement begins with an equality known to be true, of the form:
-
-> A = B   (A ≡ B is also an equality)
+{{% inset %}}
+A = B   (also A ≡ B)
+{{% /inset %}}
 
 An occurrence of A in any proof step can be replaced by B anywhere it occurs.
 
 Alternatively we may have an equality that applies under assumptions, that
 looks something like:
-
-> You can write A ⇒ (B = C) (or as before, A ⇒ (B ≡ C)) 
+{{% inset %}}
+You can write A ⇒ (B = C) (also A ⇒ (B ≡ C)) 
+{{% /inset %}}
 
 Using an equation like this on a sentence S results in a sentence of the form:
 
-> A ⇒ S'
+{{% inset %}}
+A ⇒ S'
+{{% /inset %}}
 
 where S' is like S, but with an occurrence of A replaced by B.  (_In more
 advanced cases where S contains "binders", there are some limitations on
@@ -97,15 +101,22 @@ another proved statement, the occurrence can be replaced with T.
 
 So if we have both:
 
-> (1) A<br>(2) A ⇒ B
+{{% inset %}}
+(1) A
+(2) A ⇒ B
+{{% /inset %}}
 
 We can replace the `A` in step 2 with T, giving:
 
-> (3) T ⇒ B
+{{% inset %}}
+(3) T ⇒ B
+{{% /inset %}}
 
 which is equivalent to just:
 
-> (4) B
+{{% inset %}}
+(4) B
+{{% /inset %}}
 
 using the tautology (equation!) `(T ⇒ a) ≡ a`.
 
@@ -113,12 +124,16 @@ using the tautology (equation!) `(T ⇒ a) ≡ a`.
 
 Here we are given:
 
-> (1) A ⇒ B<br>
-> (2) B ⇒ C
+{{% inset %}}
+(1) A ⇒ B<br>
+(2) B ⇒ C
+{{% /inset %}}
 
 and will prove that
 
-> A ⇒ C
+{{% inset %}}
+A ⇒ C
+{{% /inset %}}
 
 We can proceed as follows:
 
@@ -150,64 +165,94 @@ by repeated use of the fundamental rules of inference.
 
 #### Substitution for free variable(s)
 
-> _From:_ any proof step with one or more free variables.  
-> _To:_ a similar proof step with arbitrary terms substituted for
-> each variable. 
+{{% inset %}}
+_From:_ Proof step with one or more free variables.
+_To:_ Proof step with a term substituted for each variable.
+{{% /inset %}}
 
 #### Universal instantiation
 
-> _From:_ forall {x. A}.  
-> _To:_ A with a term of your choice substituted for `x`.
+{{% inset %}}
+_From:_ `forall {x. A}`.
+_To:_ A with a term of your choice substituted for `x`.
+{{% /inset %}}
 
-#### Beta reduction (substitution into a function body)
 
-> _From:_ {x. A}  X.  
-> _To:_ `A`, with term `X` substituted for `x` throughout
+#### Substitution into a function body (beta reduction)
+
+{{% inset %}}
+_From:_ `{x. A} X`.
+_To:_ `A`, with term `X` substituted for `x` throughout
+{{% /inset %}}
 
 This can be done anywhere in any formula.
 
 #### Note on substitution
 
-In the simple cases, all forms of substitution above work in the
-way you might expect from examples in any high school math
-textbook.  There is a bit more to be said in cases where the
-term undergoing substitution contains "bound" variables
-of its own.
+In the simple cases, all forms of substitution above work in the way
+you might expect from examples in any high school math textbook.
+There is a restriction in cases where the term undergoing substitution
+contains "bound" variables of its own.
 
 For details on this see [link TBD](http://prooftoys.org/TBD).
 
 ### Other rules
 
 #### Self-equality
-> X = X
+
+{{% inset %}}
+`X = X`
+{{% /inset %}}
 
 The value of any expression is equal to itself.
 
 #### Universal quantifier elimination
-> _From:_ forall {x. B}<br>
-> _To:_ B
+
+{{% inset %}}
+_From:_ `forall {x. B}`
+_To:_ `B`
+{{% /inset %}}
 
 (Result of instantiating with `x`.)
 
-#### Binding an equation
-> _From:_ X = Y<br>
-> _To:_ {x. X} = {x. Y}
+#### Binding both sides of an equation
+
+{{% inset %}}
+_From:_ `X = Y`
+_To:_ `{x. X} = {x. Y}`
+{{% /inset %}}
 
 (Consequence of `{x. X} = {x. X}`, then replacing the second `X` with
 `Y`.)
 
 #### Unbinding an equation
-> _From:_ g = {x. G}<br>
-> _To:_ g x = G
+
+{{% inset %}}
+_From:_ `g = {x. G}`
+_To:_ `g x = G`
+{{% /inset %}}
+
+This is useful for converting a definition from the basic
+form to the usual form seen in first-order logics.
+
+#### Rebinding an equation
+
+{{% inset %}}
+_From:_ `g x = G`
+_To:_ `g = {x. G}`
+{{% /inset %}}
 
 This is useful for converting a definition from the basic
 form to the usual form seen in first-order logics.
 
 #### Universal quantifier introduction
-> _From:_ B  
-> To: forall {x. B}
 
-## Using what you have learned
+{{% inset %}}
+_From:_ `B`
+_To:_ `forall {x. B}`
+{{% /inset %}}
+
+## Applying the inference rules
 
 ### Proofs of real number facts
 
@@ -217,15 +262,12 @@ The page also gives access to the proof of each of the theorems.
 (Just click on the word "fact" or "theorem" in blue to the right of any
 item in the list!)
 
-### Logic examples
+### Theorems of logic
 
-For these and more examples "live", see <http://prooftoys.org/introduction.html>.
+For these and more examples "live", see [the logic facts page](/inset-facts).
 
 For a list of additional theorems of pure logic currently available
-in Prooftoys see the [list of logical axioms and theorems](Logical-axioms-and-theorems).
+in Prooftoys see the [list of logical axioms and theorems](/insetal-axioms-and-theorems).
 
 {{< jquery >}}
 {{< resScript "/pt/js/site.js" >}}
-<script>
-  Toy.mathifyAll()l
-</script>

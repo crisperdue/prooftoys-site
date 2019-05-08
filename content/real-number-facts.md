@@ -44,7 +44,7 @@ equivalent axiomatizations.
 
 In all cases these assume that the variables are real numbers.
 
-{{< logic >}}
+{{% inset %}}
 R (x + y)
 (x + y) + z = x + (y + z)
 x + y = y + x
@@ -57,13 +57,13 @@ x * (y + z) = x * y + x * z
 R x => exists1 (addInverses x)
 R x & x != 0 => exists1 (mulInverses x)
 1 != 0
-{{< /logic >}}
+{{% /inset %}}
 
 ### Ordering axioms for real numbers
 
 In all cases these assume that the variables are real numbers.
 
-{{< logic >}}
+{{% inset %}}
 not (x < x)
 x < y => not (y < x)
 x < y | y < x | x = y
@@ -71,12 +71,12 @@ x < y & y < z => x < z
 x < y => x + z < y + z
 x < y & 0 < z => x * z < y * z
 0 < x & 0 < y => 0 < x * y
-{{< /logic >}}
+{{% /inset %}}
 
 
 ### Definitions
 
-{{< logic >}}
+{{% inset %}}
 isAddIdentity = {x. R x & forall {y. R y => y + x = y}}
 isMulIdentity = {x. R x & forall {y. R y => y * x = y}}
 0 = the1 isAddIdentity
@@ -84,7 +84,7 @@ isMulIdentity = {x. R x & forall {y. R y => y * x = y}}
 addInverses = [x. {y. R x & R y & x + y = 0}]
 mulInverses = [x. {y. R x & R y & x * y = 1}]
 neg = {x. the1 (addInverses x)}
-{{< /logic >}}
+{{% /inset %}}
 
 <script>
 // On DOM ready:
