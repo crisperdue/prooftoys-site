@@ -49,4 +49,5 @@ as inputs and even functions as outputs.
 Collections are functions whose values are boolean, so there
 is no technical difference between a collection and a predicate or relation.
 
-The next step is [Reading statements](/3-reading-statements).
+The next step is learning to [reading statements](/language-intro)
+in the language.

@@ -21,14 +21,8 @@ the fact.  Most of these are just the word "fact".  You can drill
 down to any level of detail in the same way.
 
 For a quick start on reading and understanding proofs like these, you
-may want to take a look at the wiki page on <a target=_blank href=
-"https://github.com/crisperdue/prooftoys/wiki/3-Reading-statements">
-reading statements</a> in the logic and the <a target=_blank href=
-"https://github.com/crisperdue/prooftoys/wiki/4-Introduction-to-Prooftoys-proofs">
-introduction to Prooftoys proofs</a> in the Prooftoys wiki may be
-your best starting point for understanding these proofs.  Other Wiki
-pages may also be useful in understanding the logic and how it is
-used.
+may want to get introduced to [reading the language](/language-intro/)
+and [inference in Prooftoys](/inference/).
 
 <div id=proofDisplay style="margin-bottom: 1em"></div>
 
