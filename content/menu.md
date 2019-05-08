@@ -6,8 +6,8 @@ headless: true
         to the current page to have the intended effect -->
 
 - [Introduction](/1-introduction/)
-- [Logic concepts](/2-prooftoys-logic-concepts/)
-- [The language](/language-intro/)
+- [Concepts](/2-prooftoys-logic-concepts/)
+- [Language basics](/language-intro/)
 - Logic through pictures
   - [Introduction](/logic-pix-intro/)
   - [ "And", "or", "not"](/logic-pix-booleans/)
@@ -17,3 +17,7 @@ headless: true
 - [Logic facts](/logical-axioms-and-theorems/)
 - [Logic facts with proofs](/logic-facts/)
 - [Real number facts](/real-number-facts/)
+
+-------------
+
+- [Proof builder playground](/proofbuilder/)
