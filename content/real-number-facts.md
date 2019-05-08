@@ -20,8 +20,6 @@ detail, click on the text in blue following the statement of
 the fact.  Most of these are just the word "fact".  You can drill
 down to any level of detail in the same way.
 
-## Understanding the proofs
-
 For a quick start on reading and understanding proofs like these, you
 may want to take a look at the wiki page on <a target=_blank href=
 "https://github.com/crisperdue/prooftoys/wiki/3-Reading-statements">
@@ -34,18 +32,32 @@ used.
 
 <div id=proofDisplay style="margin-bottom: 1em"></div>
 
-## Background information
+## Definitions
 
-### Field axioms
-
-These are as stated in the book "Analysis with an Introduction
-to Proof" by Steven R. Lay (third edition).  There are other
-equivalent axiomatizations.
-
-In all cases these assume that the variables are real numbers.
+All of the facts about real numbers rely on these constant
+definitions.
 
 {{% preblock %}}
-R (x + y)
+~~isAddIdentity x == R x & forall {y. R y => y + x = y}
+0 = the1 isAddIdentity
+isMulIdentity x == R x & forall {y. R y => y * x = y}
+1 = the1 isMulIdentity
+addInverses x = {y. R x & R y & x + y = 0}
+neg x = the1 (addInverses x)
+mulInverses x = {y. R x & R y & x * y = 1}
+recip x = the1 (mulInverses x)~~
+{{% /preblock %}}
+
+## Field axioms
+
+The field axioms here are as stated in the book "Analysis with an
+Introduction to Proof" by Steven R. Lay (third edition).  There are
+other equivalent axiomatizations.
+
+Each of these axioms assumes that the variables are real numbers.
+
+{{% preblock %}}
+~~R (x + y)
 (x + y) + z = x + (y + z)
 x + y = y + x
 exists1 isAddIdentity
@@ -56,35 +68,28 @@ exists1 isMulIdentity
 x * (y + z) = x * y + x * z
 R x => exists1 (addInverses x)
 R x & x != 0 => exists1 (mulInverses x)
-1 != 0
+1 != 0~~
 {{% /preblock %}}
 
-### Ordering axioms for real numbers
+## Ordering axioms
 
-In all cases these assume that the variables are real numbers.
+Again, each of these assumes that the variables are real numbers.
 
 {{% preblock %}}
-not (x < x)
+~~not (x < x)
 x < y => not (y < x)
 x < y | y < x | x = y
-x < y & y < z => x < z
-x < y => x + z < y + z
-x < y & 0 < z => x * z < y * z
-0 < x & 0 < y => 0 < x * y
+x < y & y < z => x < z~~
 {{% /preblock %}}
 
-
-### Definitions
+Effects of addition and multiplication on ordering:
 
 {{% preblock %}}
-isAddIdentity = {x. R x & forall {y. R y => y + x = y}}
-isMulIdentity = {x. R x & forall {y. R y => y * x = y}}
-0 = the1 isAddIdentity
-1 = the1 isMulIdentity
-addInverses = [x. {y. R x & R y & x + y = 0}]
-mulInverses = [x. {y. R x & R y & x * y = 1}]
-neg = {x. the1 (addInverses x)}
+~~x < y => x + z < y + z
+x < y & 0 < z => x * z < y * z
+0 < x & 0 < y => 0 < x * y~~
 {{% /preblock %}}
+
 
 <script>
 // On DOM ready:
