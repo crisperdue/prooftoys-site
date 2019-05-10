@@ -32,6 +32,24 @@
   display: none;
 }
 
+.proofEditor {
+  input, button, select {
+      /* font-size: .8rem;  */
+      margin: 0 4px;
+  }
+
+  input[type=button], button {
+      background-color: #ddf;
+      border-radius: 6px;
+      padding: 3px 12px;
+  }
+
+  input.saveAs {
+      padding: 4px;
+      border: 1px solid gray;
+  }
+}
+
 /* Header line and comments for display. */
 .proofHeader {
   margin: 0em 0em .4em .5em;
