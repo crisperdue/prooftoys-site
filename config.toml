@@ -7,17 +7,11 @@ pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsUseClasses = true
 
-[[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
-
 [params]
   mainSections = [ "" ]
   google_analytics_id = ""
   homepage_button_link = '/docs'
   homepage_button_text = 'Read The Docs'
-  homepage_image = '/images/site-image.png'
   BookMenuBundle = "/menu.md"
 
   # For future use: (separate script files, not minified, etc.)
