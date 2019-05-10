@@ -125,7 +125,7 @@ using the tautology (equation!) `(T ⇒ a) ≡ a`.
 Here we are given:
 
 {{% preblock %}}
-(1) A ⇒ B<br>
+(1) A ⇒ B
 (2) B ⇒ C
 {{% /preblock %}}
 

@@ -1,5 +1,5 @@
 ---
-title: "Logical functions"
+title: "Pix - functions"
 ---
 
 ## Logical functions

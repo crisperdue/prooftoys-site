@@ -1,5 +1,5 @@
 ---
-title: 'True statements'
+title: 'Pix - truth'
 ---
 
 ## Statements that are always true

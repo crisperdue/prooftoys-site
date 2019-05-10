@@ -2,7 +2,7 @@
 title: Proof playground
 ---
 
-# Proof playground
+# Proof builder playground
 
 <style type="text/css">
 .proofEditor {
