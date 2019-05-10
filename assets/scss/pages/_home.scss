@@ -1,29 +1,26 @@
 /** Customized version of Whisper theme _home.scss */
 
 .page-home {
-  h1 {
-    text-align: center;
+  .content {
+    @include media-breakpoint-up(md) {
+      width: 80%;
+    }
+    margin: 0 auto;
   }
   .title {
     font-weight: lighter;
     font-family: $font-family-base;
   }
-  p {
+  h1 {
     margin: 0 auto;
-    font-size: 1.2rem;
-    font-weight: lighter;
     margin-bottom: 40px;
     @include media-breakpoint-up(md) {
-      width: 80%;
+      width: 60%;
     }
   }
-  .terminal {
-    border-radius: 3px;
-    margin: 0 auto;
-    margin-top: -200px;
-    img {
-      width: 100%;
-      height: auto;
-    }
+  p {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    margin-bottom: 1em;
   }
 }

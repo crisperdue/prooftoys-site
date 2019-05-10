@@ -11,7 +11,6 @@
   <div class="container pt-2">
     <div class="row">
       <div class="col-12">
-        <h1 class="title">{{ .Title | default .Site.Title }}</h1>
         <div class="content">
           {{ if .Content }}
           {{ .Content }}
@@ -24,17 +23,6 @@
   </div>
 </div>
 
-{{ if .Site.Params.homepage_image }}
-  <div class="strip">
-    <div class="container pt-4 pb-4">
-      <div class="row">
-	<div class="col-12 col-md-10">
-	    <img src="{{ .Site.Params.homepage_image | relURL}}">
-	</div>
-      </div>
-    </div>
-  </div>
-{{ end }}
 {{ end }}
 
 {{ define "footer_js" }}{{ end }}
