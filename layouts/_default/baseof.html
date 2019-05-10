@@ -40,8 +40,7 @@
 {{ partial "main-menu-mobile.html" . }}
 <div class="wrapper">
   {{ partial "header.html" . }}
-
-  {{ $displaySidebar := true }}
+  {{ $displaySidebar := not .Params.noSidebar }}
   {{ if $displaySidebar }}
   <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
     <div class="row">
