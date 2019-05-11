@@ -18,7 +18,8 @@
       width: 60%;
     }
   }
-  p {
+  /* Make text in UL larger like in P. */
+  p, ul {
     font-size: 1.2rem;
     font-weight: lighter;
     margin-bottom: 1em;
