@@ -53,6 +53,11 @@ button {
     background-color: LightSkyBlue;
 }
 
+/* For tables of contents, overriding top and bottom margins. */
+#TOC ul ul {
+    margin: 0;
+}
+
 /* Transitions */
 
 /* This class with "hidden" provides a cheap way to animate appearance */

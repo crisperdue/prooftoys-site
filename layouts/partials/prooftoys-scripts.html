@@ -1,4 +1,5 @@
   {{ $si := resources.Get "/pt/js/site.js" }}
+  {{ $tc := resources.Get "/pt/js/jquery.tableofcontents.js" }}
   {{ $ut := resources.Get "/pt/js/util.js" }}
   {{ $pre := resources.Get "/pt/js/prelim.js" }}
   {{ $ex := resources.Get "/pt/js/expr.js" }}
@@ -9,7 +10,7 @@
   {{ $en := resources.Get "/pt/js/engine.js" }}
   {{ $lo := resources.Get "/pt/js/logic.js" }}
   {{ $nu := resources.Get "/pt/js/numbers.js" }}
-  {{ $all := slice $si $ut $pre $ex $xu $st $re $so $en $lo $nu }}
+  {{ $all := slice $si $tc $ut $pre $ex $xu $st $re $so $en $lo $nu }}
   {{ $allJS := resources.Concat "/js/all.js" $all }}
   <!-- <script src="{{ $allJS.RelPermalink }}"></script> -->
   {{ range $all }}
