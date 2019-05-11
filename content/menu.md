@@ -14,6 +14,7 @@ headless: true
 - [Language basics](/language-intro/)
 - [Inference - rewriting](/inference/)
 - [Inference rules catalog](/inference-rules/) 
+- [Definitions](/definitions/)
 - [Language summary](/language-summary/)
 - [Logic facts](/logical-axioms-and-theorems/)
 - [Logic facts with proofs](/logic-facts/)

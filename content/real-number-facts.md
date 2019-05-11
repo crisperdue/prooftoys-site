@@ -4,6 +4,10 @@ title: Real number facts
 
 # Prooftoys real number facts
 
+##### Table of contents
+
+{{< TOC >}}
+
 Prooftoys / Mathtoys started out with a relatively ad hoc collection
 of facts about the real numbers, but these are being reorganized to
 derive everything from an axiomatization of the real numbers as the
@@ -41,6 +45,11 @@ neg x = the1 (addInverses x)
 mulInverses x = {y. R x & R y & x * y = 1}
 recip x = the1 (mulInverses x)~~
 {{% /preblock %}}
+
+*Except for 0 and 1, the notations for numbers in Prooftoys do not
+have this sort of definition.  Instead, it is accurate to think of
+them as shorthands for expressions that build up the appropriate
+number from 0, 1, addition, and multiplication.*
 
 ## Field axioms
 
@@ -85,7 +94,7 @@ x < y & 0 < z => x * z < y * z
 {{% /preblock %}}
 
 
-<script>
+{{< hereScript >}}
 // On DOM ready:
 jQuery(function() {
   // Proof display
@@ -117,5 +126,4 @@ jQuery(function() {
 
   Toy.mathifyAll();  
 });
-
-</script>
+{{< /hereScript >}}
