@@ -29,7 +29,7 @@ pictures resembling this:
 {{< figure src="/images/logic-circles.png" alt="sample logic graphic"
    width="372" height="122">}}
 
-Prooftoys can even help you *build and remember your own proofs*.
+Prooftoys can also help you *build and remember your own proofs*.
 
 The core system is proudly free and open source software, hosted on <a
 href="http://github.com/crisperdue/prooftoys" target=_blank>
@@ -48,7 +48,7 @@ GitHub</a>.
   ({{< relref "/real-number-facts.md" >}}).
 - Key theorems of [**pure logic**]
   ({{< relref "/logical-axioms-and-theorems.md" >}}).
-- For the very boldest, dive into *building your own proofs* with the
+- For the boldest, dive into *building your own proofs* with the
   [**proof builder**]({{< relref "/proofbuilder.md" >}}).  This tool
   has some rough edges still, though it will only do correct
   inferences.

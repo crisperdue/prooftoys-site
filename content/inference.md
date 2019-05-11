@@ -1,21 +1,24 @@
 ---
-title: 'Inference'
-date: 2019-02-11T19:27:37+10:00
-weight: 4
+title: "Rewriting"
 ---
 
-# Inference in Prooftoys
+# Inference - replacement and rewriting
 
-The logic underlying proofs in Prooftoys (and Mathtoys) use a very small number
-of primitive concepts, with one simple rule of inference
-and a bare handful of
-axioms.  This has the advantage of simplicity, but the deductive steps
-are small, so almost any proof needs many steps.
+##### Table of contents
 
-Proofs that you will actually work with also use a small number
-of different concepts and operations, but they are at a higher level
-so you can reason in bigger but still understandable steps.  The higher-level
-deduction steps you use in a proof do their work using
+{{< TOC >}}
+
+## Introduction
+
+Reasoning in Prooftoys ultimately relies on a very small number of
+"primitive" concepts, with one simple rule of inference and a bare
+handful of axioms.  This has the advantage of simplicity, but the
+deductive steps are small, so almost any proof needs many steps.
+
+Proofs that you will actually work with also use a small number of
+different concepts and operations, but each step accomplishes more so
+you can reason in bigger but still understandable steps.  The
+higher-level deduction steps you use in a proof do their work using
 the low-level primitives, so the correctness of proofs in Prooftoys
 only depends on correct implementation of the basic primitives.
 
@@ -23,8 +26,8 @@ Most proof steps are of one of the following kinds, or combinations
 of a handful of these.  They are:
 
 - proving a tautology
-- substitution; and
-- rewriting
+- rewriting; and
+- substitution
 
 Once you understand use of these techniques
 you will understand at least 80% of Mathtoys inference steps.
@@ -67,10 +70,11 @@ Mathtoys does rewriting by using pattern matching to find and
 apply substitutions, and then uses replacement using equations. 
 
 Rewriting is just a technical name for the kind of reasoning taught in
-every high school algebra textbook.  Writing the commutative law of multiplication
-as an equation `x * y = y * x`, and applying it to the term `x * 3` in
-an equation such as `5 * x = 2 * x + x * 3`, a textbook gets `5 * x = 2 * x + 3 * x`.
-This is exactly what rewriting does in Prooftoys.
+every high school algebra textbook.  Writing the commutative law of
+multiplication as an equation `x * y = y * x`, and applying it to the
+term `x * 3` in an equation such as `5 * x = 2 * x + x * 3`, a
+textbook gets `5 * x = 2 * x + 3 * x`.  This is exactly what rewriting
+does in Prooftoys.
 
 The first part of the rewriting here is to make `x * y` in the statement
 of the commutative law match the term `x * 3` in the example equation.
@@ -93,13 +97,18 @@ Here we use some of the logical notation of Prooftoys.  If the notation
 is unclear, consider reading some of the documentation on the
 logical language.
 
-Proof steps also often use the fact (a tautology) that any statement `A` in the logic
-is equivalent to `A ≡ T`.  So if a proved statement `A` occurs within
-another proved statement, the occurrence can be replaced with T.
+Proof steps also often use the fact (a tautology) that any statement
+`A` in the logic is equivalent to `A ≡ T`.  So if a proved statement
+`A` occurs within another proved statement, the occurrence can be
+replaced with `T`.
 
-### Modus Ponens
+### Forward reasoning
 
-So if we have both:
+Forward reasoning starts with something known and from that infers
+something else.  The most classic form of this is known as
+"modus ponens", and goes back to the ancient Greeks.
+
+If we know that both of these are true:
 
 {{% preblock %}}
 (1) A
@@ -120,22 +129,22 @@ which is equivalent to just:
 
 using the tautology (equation!) `(T ⇒ a) ≡ a`.
 
-### Modus Ponens under assumptions
+### Forward reasoning with assumptions
 
-Here we are given:
+In a similar way, if we know that:
 
 {{% preblock %}}
 (1) A ⇒ B
 (2) B ⇒ C
 {{% /preblock %}}
 
-and will prove that
+we can prove that
 
 {{% preblock %}}
 A ⇒ C
 {{% /preblock %}}
 
-We can proceed as follows:
+The inference goes like this:
 
 | Step | Replace | Using |
 | ---- | ------- | ----- |
@@ -143,131 +152,5 @@ We can proceed as follows:
 | (4) A ⇒ (T ⇒ C) | _B in step 2_ | _step 3_ |
 | (5) A ⇒ C | T ⇒ C in step 4 | (T ⇒ C) ≡ C (_tautology_) |
 
-In step 3, `B` is equivalent to `T` conditionally ("_if A then B ≡ T_"), so step 4 is
-conditional on `A`.
-
-## About the notation
-
-Before learning about more handy rules of inference, let's clarify
-a bit the notation in the next sections.
-
-Capital letters A, B, and C here are not variables in the logic.
-They are pattern variables to be replaced with arbitrary boolean
-terms (with true/false values).  Capital letters X and Y are also
-pattern variables, for arbitrary terms of any type.
-
-## More rules of inference
-
-Here are some useful derived rules of inference.  They are all implemented
-by repeated use of the fundamental rules of inference.
-
-### Substitution
-
-#### Substitution for free variable(s)
-
-{{% preblock %}}
-_From:_ Proof step with one or more free variables.
-_To:_ Proof step with a term substituted for each variable.
-{{% /preblock %}}
-
-#### Universal instantiation
-
-{{% preblock %}}
-_From:_ `forall {x. A}`.
-_To:_ A with a term of your choice substituted for `x`.
-{{% /preblock %}}
-
-
-#### Substitution into a function body (beta reduction)
-
-{{% preblock %}}
-_From:_ `{x. A} X`.
-_To:_ `A`, with term `X` substituted for `x` throughout
-{{% /preblock %}}
-
-This can be done anywhere in any formula.
-
-#### Note on substitution
-
-In the simple cases, all forms of substitution above work in the way
-you might expect from examples in any high school math textbook.
-There is a restriction in cases where the term undergoing substitution
-contains "bound" variables of its own.
-
-For details on this see [link TBD](http://prooftoys.org/TBD).
-
-### Other rules
-
-#### Self-equality
-
-{{% preblock %}}
-`X = X`
-{{% /preblock %}}
-
-The value of any expression is equal to itself.
-
-#### Universal quantifier elimination
-
-{{% preblock %}}
-_From:_ `forall {x. B}`
-_To:_ `B`
-{{% /preblock %}}
-
-(Result of instantiating with `x`.)
-
-#### Binding both sides of an equation
-
-{{% preblock %}}
-_From:_ `X = Y`
-_To:_ `{x. X} = {x. Y}`
-{{% /preblock %}}
-
-(Consequence of `{x. X} = {x. X}`, then replacing the second `X` with
-`Y`.)
-
-#### Unbinding an equation
-
-{{% preblock %}}
-_From:_ `g = {x. G}`
-_To:_ `g x = G`
-{{% /preblock %}}
-
-This is useful for converting a definition from the basic
-form to the usual form seen in first-order logics.
-
-#### Rebinding an equation
-
-{{% preblock %}}
-_From:_ `g x = G`
-_To:_ `g = {x. G}`
-{{% /preblock %}}
-
-This is useful for converting a definition from the basic
-form to the usual form seen in first-order logics.
-
-#### Universal quantifier introduction
-
-{{% preblock %}}
-_From:_ `B`
-_To:_ `forall {x. B}`
-{{% /preblock %}}
-
-## Applying the inference rules
-
-### Proofs of real number facts
-
-There is also a "live" list of basic facts about the real numbers and their proofs,
-with the axioms and definitions that support them.
-The page also gives access to the proof of each of the theorems.
-(Just click on the word "fact" or "theorem" in blue to the right of any
-item in the list!)
-
-### Theorems of logic
-
-For these and more examples "live", see [the logic facts page](/logic-facts).
-
-For a list of additional theorems of pure logic currently available
-in Prooftoys see the [list of logical axioms and theorems](/logical-axioms-and-theorems).
-
-{{< jquery >}}
-{{< resScript "/pt/js/site.js" >}}
+In step 3, `B` is equivalent to `T` conditionally ("_if A then B ≡
+T_"), so step 4 is conditional on `A`.
