@@ -58,6 +58,21 @@ button {
     margin: 0;
 }
 
+/* For the site menu. */
+div.sidebar {
+    position: fixed;
+}
+
+/* Make the utterances Q & A stuff full width and */
+/* make it lie above the sidebar, with a border. */
+p.utterances {
+    background-color: white;
+    max-width: none;
+    z-index: 1;
+    opacity: .9;
+    border-top: 1px solid gray;
+}
+
 /* Transitions */
 
 /* This class with "hidden" provides a cheap way to animate appearance */

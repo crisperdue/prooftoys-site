@@ -5,9 +5,19 @@ title: Proof playground
 # Proof builder playground
 
 <style type="text/css">
+/* Set the proof editor below the sidebar, but moved
+   to the left to give it a wider space to work in. */
 .proofEditor {
-  margin-top: 15em;
+  margin-top: 25em;
   margin-left: -10em;
+  margin-bottom: 5em;
+}
+
+/* This is a hack to make the sidebar scroll with
+   everything else so it doesn't overlap the proof editor. */
+div.sidebar {
+  position: static;
+}
 </style>
 
 The proof builder lets you interactively build proofs using all of the
