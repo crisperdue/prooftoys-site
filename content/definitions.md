@@ -44,3 +44,8 @@ The two forms of definitions can be converted to each other
 by [unbinding]({{< relref "/inference-rules.md#unbinding-an-equation" >}})
 or [rebinding]({{< relref "/inference-rules.md#rebinding-an-equation" >}})
 the equation.
+
+Any definition of this kind can be treated as a true statement
+(like an axiom), and using it in a proof can never result in
+a contradiction -- unless a contradiction was already provable
+without the new definition.

@@ -4,6 +4,10 @@ title: "Pix - functions"
 
 ## Logical functions
 
+##### Table of contents
+
+{{< TOC >}}
+
 Our introduction to basic logic emphasizes these mathematical functions that
 have truth values as their inputs and a truth value as their result.
 They can also be referred to as *truth functions* or *logical
