@@ -18,9 +18,10 @@ headless: true
   - [Rewriting](/inference/)
   - [Rules catalog](/inference-rules/) 
   - [Definitions](/definitions/)
-- [Logic facts](/logical-axioms-and-theorems/)
-- [Logic facts with proofs](/logic-facts/)
-- [Real number facts](/real-number-facts/)
+- Facts
+  - [Logic facts](/logical-axioms-and-theorems/)
+  - [Live logic facts list](/logic-facts/)
+  - [Real number facts](/real-number-facts/)
 
 -------------
 
