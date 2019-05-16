@@ -1,0 +1,6 @@
+#!/bin/bash
+
+docker build -f - --tag=prooftoys-assets . <<EOF
+FROM scratch
+COPY public ./
+EOF
