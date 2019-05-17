@@ -22,22 +22,27 @@ higher-level deduction steps you use in a proof do their work using
 the low-level primitives, so the correctness of proofs in Prooftoys
 only depends on correct implementation of the basic primitives.
 
-Most proof steps are of one of the following kinds, or combinations
-of a handful of these.  They are:
+The concepts in most steps are some combination of:
 
 - proving a tautology
 - rewriting; and
 - substitution
 
-Once you understand use of these techniques
-you will understand at least 80% of Mathtoys inference steps.
+This section covers replacement and rewriting.  See also the
+
+- [**Catalog of additional inference rules**]({{< relref
+  "/inference-rules.md" >}})
+
+Once you understand use of these techniques you will understand at
+least 80% of Mathtoys inference steps.
 
 ## Replacement and rewriting
 
-Inference by replacement allows an arbitrary term appearing anywhere in a proof step to
-be replaced by another term known to be equal to it.  Equality
-applies to individuals, functions, predicates, et cetera, and also to
-boolean values.  Logical equivalence ("≡") is equality of truth values.
+Inference by replacement allows an arbitrary term appearing anywhere
+in a proof step to be replaced by another term known to be equal to
+it.  Equality applies to individuals, functions, predicates, et
+cetera, and also to boolean values.  Logical equivalence ("≡") is
+equality of truth values.
 
 ### Replacement
 

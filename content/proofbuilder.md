@@ -29,7 +29,7 @@ what inference rules do and how they work.
 **Note** that the proof builder tool needs documentation that does not
 yet exist.  Today using it is still an adventure.  You might like to
 start with the version tuned for solving simple math problems
-at [the Mathtoys website](/http://mathtoys.org/equations.html).
+at [the Mathtoys website](http://mathtoys.org/equations.html).
 
 Note: <i>Proof displays and the Proof Builder are supported in recent
 versions of Firefox and Chrome.</i>

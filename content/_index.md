@@ -6,8 +6,9 @@ noSidebar: true
 <h1><b><b style="float:right">(Prove It)</b><b>(Yes You Can)</b></b></h1>
 
 Welcome to **Prooftoys**, an online tool for exploring mathematical
-reasoning and website with resources for learning.  Here for example
-you can:
+reasoning and website with resources for learning.  The overriding
+design objective of Prooftoys is to *drastically reduce the learning
+curve* for working with precise, automated reasoning.  Here you can:
 
 - Introduce yourself to basic
   [**logic concepts**](#logic-through-pictures) through pictures.
@@ -15,24 +16,25 @@ you can:
   used here.
 - [**Dig into proofs**](#digging-into-proofs) created and verified
   by Prooftoys.  Understand in detail or just browse.
-- Eventually you may choose to experiment with
+- Eventually you may experiment with
   [**building your own**](#building-your-own) proofs with the online
   tool.
 
-The core system is proudly free and open source software, hosted on <a
-href="http://github.com/crisperdue/prooftoys" target=_blank>
-GitHub</a>.
+
+
+The core of the system is proudly free and open source software,
+hosted on <a href="http://github.com/crisperdue/prooftoys"
+target=_blank> GitHub</a>.
 
 ## Logic through pictures
 
 This site also aims to help you *understand the concepts* at work in
-mathematical logic and the Prooftoys system, with interactive
-pictures resembling this:
+mathematical logic and the Prooftoys system, with
+[**interactive pictures**]({{< relref "/logic-pix-intro.md" >}})
+resembling these:
 
 [{{< figure src="/images/logic-circles.png" alt="sample logic graphic"
    width="372" height="122">}}]({{< relref "/logic-pix-intro.md" >}})
-
-- Start [**here**]({{< relref "/logic-pix-intro.md" >}}).
 
 
 ## The automated logic
