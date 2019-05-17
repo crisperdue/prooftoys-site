@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Build the static site (for production).
+psite
+
 docker build -f - --tag=prooftoys-assets . <<EOF
 FROM scratch
 COPY public ./

@@ -8,15 +8,16 @@ title: Proof playground
 /* Set the proof editor below the sidebar, but moved
    to the left to give it a wider space to work in. */
 .proofEditor {
-  margin-top: 25em;
+  margin-top: 5em;
   margin-left: -10em;
   margin-bottom: 5em;
+  background: white;
 }
 
-/* This is a hack to make the sidebar scroll with
-   everything else so it doesn't overlap the proof editor. */
+/* This is a hack to prevent the sidebar from overlapping the proof
+   editor. */
 div.sidebar {
-  position: static;
+  visibility:hidden;
 }
 </style>
 
@@ -24,6 +25,11 @@ The proof builder lets you interactively build proofs using all of the
 publicly-available theorems and rules of inference.  It can make
 working with proofs easier, apply rules of inference correctly, show
 what inference rules do and how they work.
+
+**Note** that the proof builder tool needs documentation that does not
+yet exist.  Today using it is still an adventure.  You might like to
+start with the version tuned for solving simple math problems
+at [the Mathtoys website](/http://mathtoys.org/equations.html).
 
 Note: <i>Proof displays and the Proof Builder are supported in recent
 versions of Firefox and Chrome.</i>

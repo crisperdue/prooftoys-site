@@ -5,9 +5,9 @@ noSidebar: true
 
 <h1><b><b style="float:right">(Prove It)</b><b>(Yes You Can)</b></b></h1>
 
-Welcome to **Prooftoys**, an online tool for learning math and
-exploring mathematical reasoning.  The system and this site lets you
-explore these subjects in multiple ways.
+Welcome to **Prooftoys**, an online tool for exploring mathematical
+reasoning and website with resources for learning.  Here for example
+you can:
 
 - Introduce yourself to basic
   [**logic concepts**](#logic-through-pictures) through pictures.
@@ -16,8 +16,8 @@ explore these subjects in multiple ways.
 - [**Dig into proofs**](#digging-into-proofs) created and verified
   by Prooftoys.  Understand in detail or just browse.
 - Eventually you may choose to experiment with
-  [**building your own**](#building-your-own)
-  proofs using the interactive proof builder.
+  [**building your own**](#building-your-own) proofs with the online
+  tool.
 
 The core system is proudly free and open source software, hosted on <a
 href="http://github.com/crisperdue/prooftoys" target=_blank>
@@ -74,11 +74,11 @@ most basic axioms and inferences.
 
 ## Building your own
 
+- The more finished version of the proof builder
+  is targeted for solving simple equations, at the
+  companion [Mathtoys](http://mathtoys.org/equations.html) site.
 - For the boldest, dive into *building your own proofs* with the
   [**proof builder**]({{< relref "/proofbuilder.md" >}}).  This tool
   has some rough edges still, though it will only do correct
   inferences.
-- For a somewhat more finished version of the proof builder, try
-  the version targeted for solving simple equations, at the
-  companion [Mathtoys](http://mathtoys.org/) site.
 
