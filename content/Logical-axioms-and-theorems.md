@@ -19,14 +19,14 @@ Axiom 2 and axiom 3 are also shown in forms typically written when
 their functional parameters (f, g, h) are predicates, in other words
 they have boolean values.
 
-```
-1) p T & p F == forall {a. p a}
+{{% preblock %}}
+~~1) p T & p F == forall {a. p a}
 2) x = y => h x = h y
 2) x = y => (p x == p y)
 3) (f = g) == forall {x. f x = g x}
 3) (p = q) == forall {x. p x == q x}
-5) the1 {x. x = y} = y
-```
+5) the1 {x. x = y} = y~~
+{{% /preblock %}}
 
 Axiom 4 says that if R and S are terms, `{x. R} S` is equal to
 the result of properly substituting `S` for `x` in `R`.  Proper substitution
@@ -58,32 +58,33 @@ immediately imply statements of the form `"name" x = "etc"` or
 definition of `!=` that `x != y == not (x = y)`, as the definition would
 be in first-order logic.
 
-```
-forall = {p. p = {x. T}}
+{{% preblock %}}
+~~forall = {p. p = {x. T}}
 (!=) = {x. {y. not (x = y)}}
 exists = {p. p != {x. F}}
 exists1 = {p. exists {x. p = {y. y = x}}}
-if = {p. {x. {y. the1 {z. p & z = x | not p & z = y}}}}
 empty = {x. F}
 none = the1 empty
 ident = {x. x}
-multi = {p. exists {x. exists {y. p x & p y & x != y}}}
-```
+multi = {p. exists {x. exists {y. p x & p y & x != y}}}~~
+{{% /preblock %}}
 
 ## Theorems of the logic
 
 For a "live" display of all of these theorems, see
 <http://prooftoys.org/logic-facts.html>.  It shows each theorem rendered
-by the system, and gives access to their proofs.
+by the system, and gives access to proofs of them.
 
-### Equality
-```
-(x = y) == (y = x)
+### Without quantifiers
+
+{{% preblock %}}
+Equality:
+~~(x = y) == (y = x)
 x = y & y = z => x = z
-{x. p x} = p
-```
-When the last of this group is used to rewrite a term, it is
-often referred to as "eta conversion".
+{x. p x} = p~~\
+Functions ("eta conversion")
+~~{x. p x} = p~~
+{{% /preblock %}}
 
 ### Quantifier laws
 
@@ -120,37 +121,36 @@ works fine and is slightly simpler.
 This notation with `p x` captures the same idea as informal notations such as
 `∀ x. phi(x)` sometimes found in textbooks.
 
-```
-forall {x. T}
-exists {x. T}
-not (forall {x. F})
-forall p => p x
-p x => exists p
-forall {x. p x => q x} => (forall p => forall q)
-forall {x. p x => q x} => (exists p => exists q)
-forall {x. forall {y. p x y}} == forall {y. forall {x. p x y}}
+{{% preblock %}}
+Relationship between "forall" and "exists"
+~~forall p == not (exists {x. not (p x)})
+exists p == not (forall {x. not (p x)})~~\
+Reversible quantifier rearrangements:
+~~forall {x. forall {y. p x y}} == forall {y. forall {x. p x y}}
 exists {x. exists {y. p x y}} == exists {y. exists {x. p x y}}
-forall {x. a | q x} == (a | forall q)
-exists {x. a & q x} == a & exists q
-forall {x. a => q x} == (a => forall q)
-forall {x. p} == p
-exists {x. p} == p
 forall {x. p x & q x} == forall p & forall q
-exists {x. p x | q x} == exists p | exists q
-forall p | forall q => forall {x. p x | q x}
-exists {x. p x & q x} => exists p & exists q
-forall {x. p x => A} == (exists p => A)
-exists p == not (forall {x. not (p x)})
-not (exists p) == forall {x. not (p x)}
-exists {x. not (p x)} == not (forall p)
-```
-
-### Unique existence
-```
-exists1 p == exists {x. p = {y. y = x}}
+exists {x. p x | q x} == exists p | exists q~~\
+One-way rearrangements:
+~~forall p | forall q => forall {x. p x | q x}
+exists {x. p x & q x} => exists p & exists q~~\
+Unused bound variable:
+~~forall {x. A} == A
+exists {x. A} == A
+forall {x. A | q x} == (A | forall q)
+forall {x. A => q x} == (A => forall q)
+exists {x. A & q x} == A & exists q
+forall {x. p x => A} == (exists p => A)~~\
+Reasoning with instances:
+~~forall p => p x
+p x => exists p~~\
+Forward reasoning:
+~~forall {x. p x => q x} => (forall p => forall q)
+forall {x. p x => q x} => (exists p => exists q)~~\
+Unique existence:
+~~exists1 p == exists {x. p = {y. y = x}}
 exists1 p == exists {x. forall {y. p y == y = x}}
 exists1 p == exists {y. p y & forall {z. p z => z = y}}
 exists1 p => (p x == x = the1 p)
 p x & forall {y. p y => y = x} => exists1 p
-f x = the1 (Q x) & exists1 (Q x) => (Q x y == f x = y)
-```
+(f x = the1(Q x) & exists1 (Q x)) => (Q x y == f x = y)~~
+{{% /preblock %}}
