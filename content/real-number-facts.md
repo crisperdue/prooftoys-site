@@ -47,7 +47,7 @@ recip x = the1 (mulInverses x)~~
 {{% /preblock %}}
 
 *Except for 0 and 1, the notations for numbers in Prooftoys do not
-have this sort of definition.  Instead, it is accurate to think of
+have this sort of definition.  Instead, it is appropriate to think of
 them as shorthands for expressions that build up the appropriate
 number from 0, 1, addition, and multiplication.*
 

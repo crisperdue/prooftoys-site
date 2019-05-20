@@ -29,7 +29,8 @@ boolean value, and is written as "∧". So we express that idea that x
 is greater than zero and less than 10 by writing `x > 0 ∧ x < 10`.
 This whole statement is true if it is true that `x > 0` and it is also
 true that `x < 10`.  If either of them is false, the whole statement
-is false.
+is false.  Discussion with pictures [here]({{< relref
+"/logic-pix-booleans.md" >}}).
 
 ### Functions, predicates, and relations
 
@@ -39,10 +40,9 @@ Functions such as addition and multiplication have inputs that are
 numbers (individuals) and outputs that are also numbers.
 
 A *predicate* tests a value and gives a true/false result. For
-example, to test whether a number is even we can use a predicate,
-*even*.
+example, a test whether a number is even is a predicate.
 
-A *relation* such as *less than* tests whether a number is less than
+A *relation* such as *less than* tests whether a number is less than
 another number, for example `x < y`. It has two inputs and gives a
 true/false result.
 
@@ -54,6 +54,3 @@ outputs.
 
 Collections are functions whose values are boolean, so there is no
 technical difference between a collection and a predicate or relation.
-
-A next step could be learning to [read statements](/language-intro/)
-in the language.

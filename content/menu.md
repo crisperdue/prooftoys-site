@@ -19,9 +19,9 @@ headless: true
   - [Rules catalog](/inference-rules/) 
   - [Definitions](/definitions/)
 - Facts
+  - [Real number facts](/real-number-facts/)
   - [Logic facts](/logical-axioms-and-theorems/)
   - [Live logic facts list](/logic-facts/)
-  - [Real number facts](/real-number-facts/)
 
 -------------
 

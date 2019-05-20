@@ -8,24 +8,19 @@ title: 'About the language'
 
 The language has only expressions, which are often referred to as
 _terms_.  A statement in the language is just an expression whose
-value is boolean, so either true or false.  From an expression and the
-definitions of the names used in it, it is easy to tell if it has a
-boolean value and so can be interpreted as a statement.
-
-It assumes you are familiar with the concepts of boolean values,
-boolean operators, functions, predicates, relations, quantifiers, and
-their meanings, and have at least some acquaintance with typical logic
-notation.
+value is boolean, so either true or false.  Given an expression and
+the definitions of the names used in it, it is easy to tell if the
+expression has a boolean value and so can be interpreted as a
+statement.
 
 ## Expression syntax
 
-The syntax is pretty conventional.  It has infix operators, each
-having a certain precedence, unary operators, and calls to functions
-and predicates.  There are only three kinds of expressions: _atomic_
-expressions, which are either a variable or a constant; function
-calls, which are either in function call form or infix form; and
-functional expressions.
-
+The language syntax is pretty conventional.  It has infix operators,
+each having a certain precedence, and function calls.  Recall that
+predicates and relations are also functions.  There are only three
+kinds of expressions: _atomic_ expressions, which are either a
+variable or a constant; function calls, which are either in function
+call form or infix form; and functional expressions.
 
 ### Constants and variables
 
@@ -33,22 +28,24 @@ The logic has two kinds of names: identifiers and operator names.  An
 identifier is an alphabetic character possibly followed by additional
 letters, digits, and underscores ("_").
 
-A name that is a single letter, optionally followed by an underscore
-and one or more digits, is a variable.  If there are any digits, they
-will display as a subscript on the identifier.  The names "T", "F",
-"R", and "e" are specially reserved for constants.
+All variable names are identifiers.  A name that is a single letter,
+optionally followed by an underscore and one or more digits, is a
+variable name.  If there are any digits, they will display as a
+subscript on the identifier.  The names "T", "F", "R", and "e" are
+specially reserved for constants and cannot be used as variable names.
 
 Every variable has a type, such as boolean or individual.  Prooftoys
-does not currently provide a way to declare the type of a variable,
-but infers it.  Types of some constants such as `T`, `F`, and numeric
-literals, are predefined.
+does not currently provide a way to declare the type of a variable or
+constant, but infers them.  Types of some constants such as `T`, `F`,
+and numeric literals, are predefined.
 
 An operator name is a sequence of printing (currently ASCII)
 characters that are not letters or digits, brackets, braces,
 parentheses, colon (":") or (".").
 
-There are also numeric literals, which are a sequence of digits
-optionally preceded by "-".  The "-" is an operator otherwise.
+Numeric literals are a sequence of digits optionally preceded by "-".
+The "-" is an operator otherwise.  Numeric literals only exist
+for integers.
 
 ### Operators and infix
 

@@ -28,10 +28,9 @@ target=_blank> GitHub</a>.
 
 ## Logic through pictures
 
-This site also aims to help you *understand the concepts* at work in
-mathematical logic and the Prooftoys system, with
-[**interactive pictures**]({{< relref "/logic-pix-intro.md" >}})
-resembling these:
+This site has explanations of concepts at work in mathematical
+logic and the Prooftoys system, with [**interactive pictures**]({{<
+relref "/logic-pix-intro.md" >}}) resembling these:
 
 [{{< figure src="/images/logic-circles.png" alt="sample logic graphic"
    width="372" height="122">}}]({{< relref "/logic-pix-intro.md" >}})
