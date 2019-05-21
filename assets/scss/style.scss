@@ -5,6 +5,9 @@
 @import 'bootstrap/functions';
 @import 'bootstrap-variables';
 @import 'bootstrap/variables';
+
+$hamburger-active-layer-color: $primary;
+
 @import 'bootstrap/mixins';
 // @import 'bootstrap/root';
 @import 'bootstrap/reboot';
@@ -83,6 +86,9 @@ body {
 div.sidebar {
     @include media-breakpoint-up(md) {
 	position: fixed;
+    }
+    @include media-breakpoint-down(md) {
+	display: none;
     }
 }
 
