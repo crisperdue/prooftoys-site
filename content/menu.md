@@ -27,3 +27,4 @@ headless: true
 
 - [*Proof builder playground*](/proofbuilder/)
 - [Language summary](/language-summary/)
+- [Technical notes](/tech-notes/)
