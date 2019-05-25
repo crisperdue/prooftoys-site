@@ -6,10 +6,11 @@ title: 'Concepts'
 
 ## Values and types
 
-The fundamental kinds of things the logic works with are "true",
- "false", and *individuals*.  "True" and "false" are written as `T`
- and `F`. Individuals are anything else that is not a collection or
- function of some sort..  In Prooftoys these are usually numbers.
+The most basic kinds of things the logic works with are "true",
+"false", and *individuals*.  "True" and "false" are written as `T` and
+`F`.  The individuals you will usually see in Prooftoys are numbers.
+All the rest are functions.  Even collections in Prooftoys are
+functions.
 
 ### True and false
 
@@ -32,7 +33,7 @@ true that `x < 10`.  If either of them is false, the whole statement
 is false.  Discussion with pictures [here]({{< relref
 "/logic-pix-booleans.md" >}}).
 
-### Functions, predicates, and relations
+### Functions, collections, and relations
 
 All values in Prooftoys are boolean values, individuals, or functions.
 
@@ -40,14 +41,18 @@ Functions such as addition and multiplication have inputs that are
 numbers (individuals) and outputs that are also numbers.
 
 A *predicate* tests a value and gives a true/false result. For
-example, a test whether a number is even is a predicate.
+example, a test whether a number is even is a predicate.  Every
+predicate can be thought of as a collection.  In Prooftoys there is no
+technical difference between "the set of all positive numbers" and the
+predicate that tests whether something is a positive number.
 
 A *relation* such as *less than* tests whether a number is less than
 another number, for example `x < y`. It has two inputs and gives a
 true/false result.
 
 So predicates and relations are functions that produce values that are
-`true` or `false`.
+`true` or `false`, and a predicate can also be thought of as a
+collection.
 
 A function can also have functions as inputs and even functions as
 outputs.

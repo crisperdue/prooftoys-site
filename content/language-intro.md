@@ -77,6 +77,26 @@ a call to `f` with two argument, `g` and `x`.
 Also be sure to be aware that a call
 to `f` with argument `g x` is written as `f (g x)`.
 
+For example, a statement that might be conventionally
+written as
+
+{{% preblock %}}
+`f(x) = x + 1`
+{{% /preblock %}}
+
+would be written in Prooftys as
+
+{{% preblock %}}
+`(f x) = x + 1`
+{{% /preblock %}}
+
+or omitting the parentheses around the function call, like this:
+
+{{% preblock %}}
+`f x = x + 1`
+{{% /preblock %}}
+
+
 ### Functional expressions
 
 Any expression can be enclosed in parentheses to guarantee its
@@ -84,12 +104,17 @@ grouping, but an expression enclosed in brackets or braces always
 represents a function.  For example a definition of a function that
 squares a number might look like:
 
-    square = [x. x * x]
+{{% preblock %}}
+`square = [x. x * x]`
+{{% /preblock %}}
+
 
 Similarly, a predicate that is true just for positive numbers could be
 defined as:
 
-    positive = {x. 0 < x}
+{{% preblock %}}
+`positive = {x. 0 < x}`
+{{% /preblock %}}
 
 providing a conventional set notation.
 
@@ -126,9 +151,9 @@ and a typical existential statement looks something like:
 {{% /preblock %}}
 
 **Explanation.** Quantifiers are not fundamental concepts in this logic.
-They are defined predicates that take an argument that is a collection.  
-The universal quantifier predicate is named `forall` and displayed as `∀`.
-The existential quantifier is named `exists` and displayed as `∃`.
+They are defined predicates that take an argument that is a collection.
+The universal quantifier predicate is named "forall" and displays as `∀`.
+The existential quantifier is named "exists" and displays as `∃`.
 
 The term `{x. p x}` can be read as set notation, as something like
 "the collection of `x` that have the property `p`". 
