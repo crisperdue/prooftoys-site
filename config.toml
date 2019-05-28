@@ -14,6 +14,9 @@ pygmentsUseClasses = true
   homepage_button_text = 'Read The Docs'
   BookMenuBundle = "/menu.md"
 
+  talkyardServerUrl = "https://comments-for-prooftoys-org.talkyard.net"
+  talkyardScriptUrl = "https://c1.ty-cdn.net/-/talkyard-comments.min.js"
+
   # For future use: (separate script files, not minified, etc.)
   dev_mode = true
   # For future use: (all resources local)
