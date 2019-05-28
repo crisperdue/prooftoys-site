@@ -1,5 +1,5 @@
 ---
-title: "This is T1"
+title: Parser tests
 type: tests
 layout: page
 ---
