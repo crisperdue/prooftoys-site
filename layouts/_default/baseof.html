@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {{/* NB. The tail of the link starting with the last "/" not at the end */}}
 {{/* $attrVal := .RelPermalink | replaceRE "^.*([/].+)" "$1" */}}
+{{ $dot := . }}
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -54,7 +55,7 @@
       </div>
       {{ with .File }}
         {{ if ne .Path "_index.md" }}
-          {{ partial "comments.html" . }}
+          {{ partial "comments.html" $dot }}
         {{ end }}
       {{ end }}
     </div>
