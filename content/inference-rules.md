@@ -116,3 +116,35 @@ This is useful for converting a definition from the basic
 form to the usual form seen in first-order logics.  Like
 unbinding, this rule can be applied multiple times for
 functions of multiple arguments.
+
+### Removing irrelevant assumptions
+
+If a conditional fact has an assumption with a variable
+that only appears (free) in that assumption and nowhere
+else in the statement of the fact, in almost all cases,
+that assumption can safely be removed.  We can suggest
+the working of the inference like this:
+
+{{% preblock %}}
+_From:_ `a_1 and a_2 and ... => C`
+_To:_ `a_2 and ... => C`
+{{% /preblock %}}
+
+The one limitation is that there must be some value for the variable
+that can make the irrelevant assumption true.  So to use this rule in
+a proof, there must be a proof that such a value exists.  Prooftoys
+doesn't yet support this rule in its general form, but it supports a
+couple of common cases.  These are useful cases, and Prooftoys can
+work out the existence fact on its own.  The cases are:
+
+{{% preblock %}}
+<var> = <term>; and
+R <var>
+{{% /preblock %}}
+
+In both cases, the variable ("&lt;var&gt;") does not appear in the
+fact outside this one assumption.
+
+For every assumption of these kinds, the existence of a value
+satisfying it is provable, so we can remove the assumption from the
+proof step.

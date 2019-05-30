@@ -86,7 +86,12 @@ Functions ("eta conversion")
 ~~{x. p x} = p~~
 {{% /preblock %}}
 
-### Quantifier laws
+### Quantifier laws (advanced)
+
+These are mostly needed for more advanced proofs, especially
+proofs of existence, with the existential quantifier.
+A handful of simple number facts have quantifiers, but they
+don't need the quantifier laws to prove them.
 
 These laws all contain quantifiers, `forall`, `exists`, or `exists1`
 for "unique existence".  A few also use `the1`, which gives the unique
