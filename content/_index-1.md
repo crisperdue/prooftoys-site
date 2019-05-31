@@ -2,11 +2,11 @@
 headless: true
 ---
 
-Introduce yourself to basic logic concepts through pictures.
+Introduce yourself to [**basic logic concepts**]({{< relref
+"/logic-pix-intro.md" >}}) through _pictures_.
 
 This site has explanations of concepts at work in mathematical logic
-and the Prooftoys system, with [**interactive pictures**]({{< relref
-"/logic-pix-intro.md" >}}) like these:
+and the Prooftoys system, with interactive pictures like these:
 <br>
 <br>
 [{{< figure src="/images/logic-circles.png" alt="sample logic graphic"
