@@ -4,6 +4,10 @@ title: 'About the language'
 
 # The Prooftoys Language
 
+> _The universe ... cannot be understood unless one first learns to
+> comprehend the language in which it is written.  It is written in
+> the language of mathematics._  -- Galileo Galilei
+
 ## Statements and expressions
 
 The language has only expressions, which are often referred to as

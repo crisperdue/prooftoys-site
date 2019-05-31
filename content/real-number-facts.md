@@ -54,8 +54,8 @@ number from 0, 1, addition, and multiplication.*
 ## Field axioms
 
 The field axioms here are as stated in the book "Analysis with an
-Introduction to Proof" by Steven R. Lay (third edition).  There are
-other equivalent axiomatizations.
+Introduction to Proof" by Steven R. Lay.  There are other equivalent
+axiomatizations.
 
 Each of these axioms assumes that the variables are real numbers.
 
