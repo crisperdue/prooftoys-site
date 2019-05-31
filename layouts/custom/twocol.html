@@ -1,0 +1,45 @@
+{{ define "title" }}{{ end}}
+{{ define "header_css" }}{{ end }}
+{{/* Originally page-home */}}
+{{ define "body_classes" }}{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "meta_tags" }}{{ end }}
+
+{{ define "main" }}
+{{ $c1 := (printf "%s/%s-%s.md" .File.Dir .File.BaseFileName "1") }}
+{{ $c2 := (printf "%s/%s-%s.md" .File.Dir .File.BaseFileName "2") }}
+<div class="strip page-home">
+  <div class="container pt-2">
+    <div class="row">
+      <div class="col-12">
+        <div class="content">
+<h1 style="text-align: center"><b><b>You Can Prove It.</b><br>
+<i>Prooftoys can help.</i></b></h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-6">
+        <div class="content">
+{{ with .Site.GetPage $c1 }}{{ .Content }}{{ end }}
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-6">
+        <div class="content">
+{{ with .Site.GetPage $c2 }}{{ .Content }}{{ end }}
+        </div>
+      </div>
+    </div>
+    <div class="row pt-3 pb-4">
+      <div class="col-12">
+        <div class="content">
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+
+{{ define "footer_js" }}{{ end }}
