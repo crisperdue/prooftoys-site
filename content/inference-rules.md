@@ -142,7 +142,7 @@ work out the existence fact on its own.  The cases are:
 R <var>
 {{% /preblock %}}
 
-In both cases, the variable ("&lt;var&gt;") does not appear in the
+In both cases, the variable `var` does not appear in the
 fact outside this one assumption.
 
 For every assumption of these kinds, the existence of a value
