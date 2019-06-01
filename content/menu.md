@@ -14,10 +14,7 @@ headless: true
   - [True statements](/logic-pix-truth/)
 - [The concepts](/2-prooftoys-logic-concepts/)
 - [Language basics](/language-intro/)
-- Inference
-  - [Rewriting](/inference/)
-  - [Rules catalog](/inference-rules/) 
-  - [Definitions](/definitions/)
+- [Inference](/inference/)
 - Facts
   - [Real number facts](/real-number-facts/)
   - [Logic facts](/logical-axioms-and-theorems/)

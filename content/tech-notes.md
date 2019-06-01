@@ -4,9 +4,13 @@ title: Technical notes
 
 # Prooftoys technical notes
 
+##### Table of contents
+
+{{< TOC >}}
+
 ## More on logic concepts
 
-### Substitution and meaning
+### Substitution
 
 Substitution for variables is one of the fundamental operations in
 virtually all forms of mathematical proofs and mathematical problem
@@ -45,9 +49,20 @@ variable in a statement is called an *instance* of the original
 statement, so we say that substituting one or more expressions for
 variables in a tautology gives an *instance* of the tautology.
 
-<b>Note:</b> If a mathematical statement has parts that use
-"quantifiers" ("for all", "there exists", etc.), substitution has to be
-done a bit more carefully, but the idea remains the same.
+#### Restrictions
+
+If a mathematical statement contains bound variables substitution has
+to be done a bit more carefully, but the idea remains the same.
+
+First, if the a variable `v` in the statement appears as a bound
+variable, in a part that looks like `{v. "body"}`, `v` is left alone
+and not changed in that part of the statement.
+
+Second, if the _replacement_ term being substituted for `v` contains
+any occurrences of `v`, that is not a problem, but any part of the
+statement that binds `v` -- again, `{v. "body"}`, must have the
+variable `v` renamed to a name that does not appear in the replacement
+term.
 
 ## Notes on inference
 

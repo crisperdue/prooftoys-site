@@ -24,7 +24,7 @@ variables, for arbitrary terms of any type.
 Rewriting and replacement are core parts of inference in Prooftoys,
 and have [their own page]({{< relref "/inference.md" >}}).
 
-## Substitution
+## Variations on substitution
 
 ### Substitution for free variable(s)
 
@@ -148,3 +148,16 @@ fact outside this one assumption.
 For every assumption of these kinds, the existence of a value
 satisfying it is provable, so we can remove the assumption from the
 proof step.
+
+### Some fancy forms of rewriting
+
+A couple of often-useful inference rules in Prooftoys combine a couple
+of steps together and rewrite the result.  These may take two steps
+and "conjoin" them using the boolean "and" operation.  Then they
+rewrite a tautology to make it match the conjunction and infer a
+conclusion.
+
+Proof steps that use these rules tend to have the word "consequence"
+in their description.
+
+[[More to be written here.]]

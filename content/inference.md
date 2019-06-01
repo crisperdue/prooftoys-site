@@ -1,12 +1,19 @@
 ---
-title: "Rewriting"
+title: "Basic inference"
 ---
 
-# Inference - replacement and rewriting
+# Inference - the basics
 
 ##### Table of contents
 
 {{< TOC >}}
+
+##### More topics on inference
+
+- [**Definitions**]({{< relref "/definitions.md" >}})
+- [**Catalog of additional inference rules**]({{< relref
+  "/inference-rules.md" >}})
+- [**Simplification**]({{< relref "/simplification.md" >}})
 
 ## Introduction
 
@@ -28,13 +35,45 @@ The concepts in most steps are some combination of:
 - rewriting; and
 - substitution
 
-This section covers replacement and rewriting.  See also the
-
-- [**Catalog of additional inference rules**]({{< relref
-  "/inference-rules.md" >}})
+This page covers replacement, rewriting, and the basics of
+substitution.
 
 Once you understand use of these techniques you will understand at
 least 80% of Mathtoys inference steps.
+
+## Basics of substitution
+
+Substitution starts with a statement that has at least one variable in
+it.  At its simplest, substitution replaces every occurrence of some
+variable with a term.  The variable and the term must be of the same
+type.  For example, if the variable is boolean, the term must be
+boolean.  If the variable is an individual, the value of the term must
+be an individual, and so on.
+
+If a statement has no "bound" variables, as usually found with
+quantifiers (`forall` and `exists`), this is the whole story.
+Any variable can be replaced everywhere by the same term, as long
+as it is of the same type.
+
+If the statement does have bound variables, it is necessary to put a
+couple of restrictions on substitution.  See the [technical notes]
+({{< relref "/tech-notes.md#restrictions" >}}) for details and an
+explanation.
+
+## Tautologies
+
+Tautologies are purely "boolean" statements that are true.  In this
+sense a boolean statement is one where every part of it has a boolean
+value.  In other words every variable and constant in it is boolean
+and every function in it has boolean values.
+
+There is a simple procedure for deciding whether a boolean statement
+is true or not.  Prooftoys implements in a straightforward way, and if
+the statement is true, it also proves it using substitution and
+replacement.  If you inspect a Prooftoys proof of a tautology you will
+see some inference rules not described here, but if you break them
+down further you will see that in the end they only use replacement
+and substitution.
 
 ## Replacement and rewriting
 
