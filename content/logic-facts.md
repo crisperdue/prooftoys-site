@@ -42,11 +42,11 @@ jQuery(function() {
   fact('forall {x. p x => q x} => (exists p => exists q)');
   fact('forall {x. forall {y. p x y}} == forall {y. forall {x. p x y}}');
   fact('exists {x. exists {y. p x y}} == exists {y. exists {x. p x y}}');
-  fact('forall {x. p | q x} == (p | forall q)');
-  fact('exists {x. p & q x} == p & exists q');
-  fact('forall {x. p => q x} == (p => forall q)');
-  fact('forall {x. p} == p');
-  fact('exists {x. p} == p');
+  fact('forall {x. a | q x} == (a | forall q)');
+  fact('exists {x. a & q x} == a & exists q');
+  fact('forall {x. a => q x} == (a => forall q)');
+  fact('forall {x. a} == a');
+  fact('exists {x. a} == a');
   fact('forall {x. p x & q x} == forall p & forall q');
   fact('exists {x. p x | q x} == exists p | exists q');
   fact('forall p | forall q => forall {x. p x | q x}');
