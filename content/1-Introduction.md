@@ -1,7 +1,5 @@
 ---
 title: 'Introduction'
-date: 2019-02-11T19:27:37+10:00
-weight: 1
 ---
 
 ## Introducing Prooftoys
