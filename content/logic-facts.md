@@ -4,15 +4,11 @@ title: Prooftoys logic theorems list
 
 # Prooftoys logic theorem list
 
-This page shows the theorems of the logic as rendered
-by the Prooftoys/Mathtoys system.  A primary value
-of this page is for anyone interested in seeing proofs
-of these theorems.  To view a proof to any desired level
-of detail, click on one of the bits of text displayed
-in blue like hyperlinks.
-
-[[?? For background, discussion, logical axioms, and description of the
-notation used here, please refer to the ??]]
+This page shows a set of basic theorems of the logic as rendered by
+the Prooftoys/Mathtoys system.  A primary value of this page is for
+anyone interested in seeing proofs of these theorems.  To view a proof
+to any desired level of detail, click on one of the bits of text
+displayed in blue like hyperlinks.
 
 Furthermore, all tautologies are also theorems of the logic.
 
