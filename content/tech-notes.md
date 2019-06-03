@@ -8,9 +8,7 @@ title: Technical notes
 
 {{< TOC >}}
 
-## More on logic concepts
-
-### Substitution
+## Substitution
 
 Substitution for variables is one of the fundamental operations in
 virtually all forms of mathematical proofs and mathematical problem
@@ -49,7 +47,7 @@ variable in a statement is called an *instance* of the original
 statement, so we say that substituting one or more expressions for
 variables in a tautology gives an *instance* of the tautology.
 
-#### Restrictions
+### Restrictions
 
 If a mathematical statement contains bound variables substitution has
 to be done a bit more carefully, but the idea remains the same.
@@ -64,7 +62,7 @@ statement that binds `v` -- again, `{v. "body"}`, must have the
 variable `v` renamed to a name that does not appear in the replacement
 term.
 
-## Notes on inference
+## Inference
 
 ### Managing assumptions
 
@@ -96,3 +94,39 @@ arithmetic facts to break it down into assumptions that the values of
 each variable is real.  The example breaks down to `R x & R y`.  It
 also can prove that numeric literals are real numbers, so `R (x + 3)`
 breaks down into just `R x`.
+
+## About the Prooftoys logic
+
+The core of [Mathtoys](http://mathtoys.org) is a Web-based, visual
+proof assistant based on [Alonzo Church's simple type
+theory](http://plato.stanford.edu/entries/type-theory-church/) as
+developed by [Peter Andrews](http://gtps.math.cmu.edu/andrews.html)
+under the name [Q<sub>0</sub>](http://en.wikipedia.org/wiki/Q_zero).
+Simple type theory is suitable for construction of most of
+mathematics, comparable in this respect to first-order logic plus set
+theory.  It uses a minimum of simple, understandable concepts,
+expressing them with a handful of axioms and inference rules.
+
+Prooftoys uses a slightly different axiomatization than Q<sub>0</sub>,
+and will transition to definitions of boolean operators that directly
+expose their truth tables. But the theorems and inference remain the
+same as in Q<sub>0</sub>.
+
+### Logic links
+
+For more information on Church's simple type theory one source is the
+[Type Theory](http://en.wikipedia.org/wiki/Type_theory) article in
+Wikipedia.  [This
+description](http://plato.stanford.edu/entries/type-theory-church/#ForBasEqu)
+of Andrews' formulation of type theory has more technical detail.
+
+The well-established [HOL
+family](http://en.wikipedia.org/wiki/HOL_theorem_prover) of theorem
+provers are also based on simple type theory, though there are
+significant differences as well, including major differences in the
+style of proofs they are designed to support.
+
+Project task tracking is in [Pivotal
+Tracker](https://www.pivotaltracker.com/projects/248279), though
+currently much out of date.
+
