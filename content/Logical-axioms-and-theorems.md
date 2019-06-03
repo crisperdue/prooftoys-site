@@ -25,22 +25,22 @@ they have boolean values.
 2) x = y => (p x == p y)
 3) (f = g) == forall {x. f x = g x}
 3) (p = q) == forall {x. p x == q x}
+4) {x. R} S = R[x := S]
 5) the1 {x. x = y} = y~~
 {{% /preblock %}}
 
-Axiom 4 says that if R and S are terms, `{x. R} S` is equal to
-the result of properly substituting `S` for `x` in `R`.  Proper substitution
-only replaces occurrences of `x` that are free in `R` (though of course
-not free in `{x. R}`).  Furthermore, if R binds `x`, proper substitution
-renames the occurrences of `x` bound in `R` as needed to keep distinct
-variables distinct.
+In the description of Axiom 4, the notation R[x := S] means the result
+of properly substituting `S` for `x` in `R`.  Proper substitution only
+replaces occurrences of `x` that are free in the "body" (`R`).  We say
+that `{x. R}` binds the variable `x`, and that `x` is bound in
+`{x. R}`.  If R contains any bound variables, substitution in
+Prooftoys may also automatically rename them to avoid a phenomenon
+known as "capture".  See the [technical notes]({{< relref
+"/tech-notes.md#substitution" >}}) for more details.
 
 This process of converting `{x. R} S` to an equivalent term via proper
 substitution is known as "beta conversion".
 
-Also expect an axiom of infinity, such as one that states that the collection
-of all individuals can be placed in 1 to 1 correspondence with a subset
-of itself.
 
 ## Definitions
 
@@ -52,21 +52,31 @@ All of these definitions have the form `<name> = <expression>` and meet the
 additional requirements for being safe definitions that cannot introduce
 contradictions into the logic.
 
-Definitions of the form `"name" = {x. "etc"}` or `"name" = {x. {y. "etc"}}`
-immediately imply statements of the form `"name" x = "etc"` or 
-`"name" x y = "etc"`.  For example we can immediately deduce from the
-definition of `!=` that `x != y == not (x = y)`, as the definition would
-be in first-order logic.
+Definitions of functions and predicates in this list are given in
+pairs; first the native form with only the name of the new constant on
+the left, and then in the traditional form.  The two forms are
+equivalent.  See the inference rules for [unbinding]({{< relref
+"/inference-rules.md#unbinding-an-equation" >}}) and [rebinding]({{<
+relref "/inference-rules.md#rebinding-an-equation" >}}) equations.
+
+For more on the use of definitions in Prooftoys see the
+[definitions]({{< relref "/definitions.md" >}}) page.
 
 {{% preblock %}}
 ~~forall = {p. p = {x. T}}
-(!=) = {x. {y. not (x = y)}}
-exists = {p. p != {x. F}}
-exists1 = {p. exists {x. p = {y. y = x}}}
-empty = {x. F}
-none = the1 empty
-ident = {x. x}
-multi = {p. exists {x. exists {y. p x & p y & x != y}}}~~
+forall p == p = {x. T}~~\
+~~(!=) = {x. {y. not (x = y)}}
+x != y == not (x = y)~~\
+~~exists = {p. p != {x. F}}
+exists p == p != {x. F}~~\
+~~exists1 = {p. exists {x. p = {y. y = x}}}
+exists1 p == exists {x. p = {y. y = x}}~~\
+~~ident = {x. x}
+ident x = x~~\
+~~multi = {p. exists {x. exists {y. p x & p y & x != y}}}
+multi p == exists {x. exists {y. p x & p y & x != y}}~~\
+~~empty = {x. F}
+none = the1 empty~~
 {{% /preblock %}}
 
 ## Theorems of the logic
@@ -80,8 +90,7 @@ by the system, and gives access to proofs of them.
 {{% preblock %}}
 Equality:
 ~~(x = y) == (y = x)
-x = y & y = z => x = z
-{x. p x} = p~~\
+x = y & y = z => x = z~~\
 Functions ("eta conversion")
 ~~{x. p x} = p~~
 {{% /preblock %}}
