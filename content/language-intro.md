@@ -57,7 +57,7 @@ Constants named as operators are treated as infix operators, and infix
 expressions are parsed according to their precedence .  The system
 also designates a few other constants such as `div` and `mod` as
 infix.  For more details on the specific predefined names, precedences
-and more, see the [language summary](Language-Summary).
+and more, see the [language summary](prooftoys-language).
 
 To suppress the infix nature of an operator, enclose just its name in
 parentheses, as in `(+)`.

@@ -18,7 +18,7 @@ headless: true
 - Facts
   - [Real number facts](/real-number-facts/)
   - [Logic facts](/logical-axioms-and-theorems/)
-  - [Live logic facts list](/logic-facts/)
+  - [Live logic facts list](/live-logic-facts/)
 
 -------------
 
