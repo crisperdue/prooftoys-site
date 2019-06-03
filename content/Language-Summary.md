@@ -1,7 +1,5 @@
 ---
-title: Language Summary
-draft: false
-weight: 5
+title: Language summary
 ---
 
 # The Prooftoys Language
