@@ -12,12 +12,12 @@ headless: true
   - [Introduction](/logic-pix-intro/)
   - [Boolean functions](/logic-pix-booleans/)
   - [True statements](/logic-pix-truth/)
-- [The concepts](/2-prooftoys-logic-concepts/)
+- [The concepts](/pt-logic-concepts/)
 - [Language basics](/language-intro/)
 - [Inference](/inference/)
 - Facts
   - [Real number facts](/real-number-facts/)
-  - [Logic facts](/logical-axioms-and-theorems/)
+  - [Logic facts](/logic-facts/)
   - [Live logic facts list](/live-logic-facts/)
 
 -------------

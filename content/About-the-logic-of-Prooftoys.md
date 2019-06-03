@@ -32,18 +32,12 @@ at http://prooftoys.org/.
 [Mathtoys](http://mathtoys.org) is an interface to Prooftoys tuned for
 working high school algebra problems.
 
-## Documentation
-
-The Wiki pages are a good starting point for learning more about Prooftoys
-and its logic, such as the page on
-[Prooftoys Logic Concepts](https://github.com/crisperdue/prooftoys/wiki/2-Prooftoys-logic-concepts).
-
 ## Links
 
-For more information on Church's simple type theory one source
-is the [Type Theory](http://en.wikipedia.org/wiki/Type_theory) article
-in Wikipedia.
-[This description](http://plato.stanford.edu/entries/type-theory-church/#ForBasEqu)
+For more information on Church's simple type theory one source is the
+[Type Theory](http://en.wikipedia.org/wiki/Type_theory) article in
+Wikipedia.  [This
+description](http://plato.stanford.edu/entries/type-theory-church/#ForBasEqu)
 of Andrews' formulation of type theory has more technical detail.
 
 The well-established [HOL family](http://en.wikipedia.org/wiki/HOL_theorem_prover)
