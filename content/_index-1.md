@@ -2,8 +2,8 @@
 headless: true
 ---
 
-Introduce yourself to [**basic logic concepts**]({{< relref
-"/logic-pix-intro.md" >}}) through _pictures_.
+* Introduce yourself to logic concepts through
+  [**pictures**]({{< relref "/logic-pix-intro.md" >}}).
 
 This site has explanations of concepts at work in mathematical logic
 and the Prooftoys system, with interactive pictures like these:

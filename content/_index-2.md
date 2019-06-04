@@ -2,16 +2,18 @@
 headless: true
 ---
 
-Introduce yourself to the _language_ of [**the automated logic**]({{<
-relref "/language-intro.md" >}}) of Prooftoys.
+Move on to:
 
-Dig into _proofs_ about [**the real numbers**]({{< relref
-"/real-number-facts.md" >}}).  Understand in detail or just browse.
-Or facts of [**pure logic**]({{< relref "/logic-facts.md" >}}).
+* [**The logic**]({{< relref "/language-intro.md" >}}) of Prooftoys,
+and [**logical inference**]({{< relref "/inference.md" >}}).
 
-Dive into _building your own proofs_ with the online
-[**proof builder**]({{< relref "/proofbuilder.md" >}}).  This tool
-has some rough edges still, though it will only do correct
+* _Proofs_ about [**logic**]({{< relref "/theorems.md" >}}) and [**the
+real numbers**]({{< relref "/real-number-facts.md" >}}).  Understand
+in detail or just browse.
+
+* Even _build your own proofs_ with the online [**proof
+builder**]({{< relref "/proofbuilder.md" >}}).  This tool has some
+rough edges still, but don't worry; it will only do correct
 inferences.
 
 A more finished version of the proof builder
