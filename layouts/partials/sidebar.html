@@ -1,5 +1,5 @@
 <div class=docs-menu>
-{{ with .Site.GetPage .Site.Params.BookMenuBundle }}
+{{ with .Site.GetPage (or .Params.menu .Site.Params.BookMenuBundle) }}
   {{- .Content -}}
 {{ end }}
 </div>

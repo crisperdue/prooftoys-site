@@ -1,5 +1,6 @@
 ---
-title: "Basic inference"
+title: "Inference"
+menu: menu-inference.md
 ---
 
 # Inference - the basics
@@ -7,13 +8,6 @@ title: "Basic inference"
 ##### Table of contents
 
 {{< TOC >}}
-
-##### More topics on inference
-
-- [**Definitions**]({{< relref "/definitions.md" >}})
-- [**Catalog of additional inference rules**]({{< relref
-  "/inference-rules.md" >}})
-- [**Simplification**]({{< relref "/simplification.md" >}})
 
 ## Introduction
 

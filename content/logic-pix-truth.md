@@ -1,5 +1,6 @@
 ---
 title: 'Pix - truth'
+menu: "/menu-logic-pix.md"
 ---
 
 ## Statements that are always true

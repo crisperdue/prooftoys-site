@@ -1,5 +1,6 @@
 ---
 title: "Pix - introduction"
+menu: "/menu-logic-pix.md"
 ---
 
 # Logic through pictures - introduction

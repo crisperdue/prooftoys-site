@@ -8,11 +8,13 @@ headless: true
 ***Contents***
 
 - [Home](/)
-	- [Logic through pictures](/logic-pix-intro/)
+    - [Logic through pictures](/logic-pix-intro/)
+        - [Boolean functions](/logic-pix-booleans/)
+        - [True statements](/logic-pix-truth/)
 	- [The concepts](/pt-logic-concepts/)
 	- [Language basics](/language-intro/)
-	- [Inference](/inference/)
-	- [Theorems](/theorems/)
+    - [Inference](/inference/)
+    - [Theorems](/theorems/)
 
 -------------
 

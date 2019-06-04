@@ -7,8 +7,7 @@ relref "/language-intro.md" >}}) of Prooftoys.
 
 Dig into _proofs_ about [**the real numbers**]({{< relref
 "/real-number-facts.md" >}}).  Understand in detail or just browse.
-Or facts of [**pure logic**]({{< relref
-"/logical-axioms-and-theorems.md" >}}).
+Or facts of [**pure logic**]({{< relref "/logic-facts.md" >}}).
 
 Dive into _building your own proofs_ with the online
 [**proof builder**]({{< relref "/proofbuilder.md" >}}).  This tool

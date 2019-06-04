@@ -8,11 +8,14 @@ headless: true
 ***Contents***
 
 - [Home](/)
-	- [Logic through pictures](/logic-pix-intro/)
+    - [Logic through pictures](/logic-pix-intro/)
 	- [The concepts](/pt-logic-concepts/)
 	- [Language basics](/language-intro/)
-	- [Inference](/inference/)
-	- [Theorems](/theorems/)
+    - [Inference](/inference/)
+    - [Theorems](/theorems/)
+		- [Real number facts](/real-number-facts/)
+		- [Live logic facts list](/live-logic-facts/)
+		- [Advanced quantifier laws](/logic-facts/)
 
 -------------
 

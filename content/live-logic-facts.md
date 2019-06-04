@@ -1,5 +1,6 @@
 ---
 title: Prooftoys logic theorems list
+menu: /menu-theorems.md
 ---
 
 # Prooftoys logic theorem list

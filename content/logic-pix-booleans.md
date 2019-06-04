@@ -1,5 +1,6 @@
 ---
 title: "Pix - functions"
+menu: "/menu-logic-pix.md"
 ---
 
 ## Logical functions
