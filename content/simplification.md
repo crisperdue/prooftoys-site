@@ -1,5 +1,6 @@
 ---
 title: Simplification
+menu: /menu-inference.md
 ---
 
 # Simplification in Prooftoys

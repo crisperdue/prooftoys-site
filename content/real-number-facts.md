@@ -1,6 +1,6 @@
 ---
 title: Real number facts
-menu: /menu-inference.md
+menu: /menu-theorems.md
 ---
 
 # Prooftoys real number facts
