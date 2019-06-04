@@ -84,12 +84,16 @@ body {
 
 /* For the site menu. */
 div.sidebar {
+    display: none;
     @include media-breakpoint-up(md) {
-	position: fixed;
+        position: fixed;
+        display: block;
     }
-    @include media-breakpoint-down(md) {
-	display: none;
-    }
+}
+
+/* This gets manipulated by site.js */
+div.sidebar.displayed {
+    display: block;
 }
 
 // Display breakpoints for DEV
