@@ -56,11 +56,10 @@ First, if the a variable `v` in the statement appears as a bound
 variable, in a part that looks like `{v. "body"}`, `v` is left alone
 and not changed in that part of the statement.
 
-Second, if the _replacement_ term being substituted for `v` contains
-any occurrences of `v`, that is not a problem, but any part of the
-statement that binds `v` -- again, `{v. "body"}`, must have the
-variable `v` renamed to a name that does not appear in the replacement
-term.
+Second, if the _replacement term_ contains any free variables, those
+variables must remain free after the substitution.  This is always
+achievable, and Prooftoys ensures it by automatically renaming
+bound variables in the original statement as needed.
 
 ## Inference
 
