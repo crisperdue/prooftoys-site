@@ -1,0 +1,3 @@
+Sitemap: https://prooftoys.org/sitemap.xml
+Disallow: /tests/main/
+Disallow: /tests/parsing/
