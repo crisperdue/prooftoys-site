@@ -85,19 +85,19 @@ For example, a statement that might be conventionally
 written as
 
 {{% preblock %}}
-`f(x) = x + 1`
+~~f(x) = x + 1~~
 {{% /preblock %}}
 
 would be written in Prooftys as
 
 {{% preblock %}}
-`(f x) = x + 1`
+~~(f x) = x + 1~~
 {{% /preblock %}}
 
 or omitting the parentheses around the function call, like this:
 
 {{% preblock %}}
-`f x = x + 1`
+~~f x = x + 1~~
 {{% /preblock %}}
 
 
@@ -109,7 +109,7 @@ represents a function.  For example a definition of a function that
 squares a number might look like:
 
 {{% preblock %}}
-`square = [x. x * x]`
+~~square = [x. x * x]~~
 {{% /preblock %}}
 
 
@@ -117,7 +117,7 @@ Similarly, a predicate that is true just for positive numbers could be
 defined as:
 
 {{% preblock %}}
-`positive = {x. 0 < x}`
+~~positive = {x. 0 < x}~~
 {{% /preblock %}}
 
 providing a conventional set notation.
