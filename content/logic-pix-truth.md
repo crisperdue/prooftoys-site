@@ -277,4 +277,4 @@ Tautologies properly are expressions with just variables and logical
 functions in them.  More complex *instances* of a tautology can be
 constructed from it by substitution.
 
-{{< include "/pix.md" >}}
+{{< include "pix.md" >}}

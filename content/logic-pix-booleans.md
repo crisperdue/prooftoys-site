@@ -198,4 +198,4 @@ is equal to `false`, and neither one is equal to the other,
 all as you would expect.  For boolean values it is sometimes written
 as `==`.
 
-{{< include "/pix.md" >}}
+{{< include "pix.md" >}}
