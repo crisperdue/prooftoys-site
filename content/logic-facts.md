@@ -5,38 +5,17 @@ menu: menu-theorems.md
 
 # Advanced quantifier laws
 
-These are mostly needed for more advanced proofs, especially
-proofs of existence, with the existential quantifier.
-A handful of simple number facts have quantifiers, but they
-don't need the quantifier laws to prove them.
+These are mostly needed for more advanced proofs, especially proofs of
+existence, with the existential quantifier.  A handful of simple
+number facts have quantifiers, but their proofs don't need these
+quantifier laws.
 
 These laws all contain quantifiers, `forall`, `exists`, or `exists1`
 for "unique existence".  A few also use `the1`, which gives the unique
 value satisfying a condition, if there is indeed exactly one such value.
-These rules need more explaining than the ones shown above, but many simple
-theorems do not need them, so on a first reading it might make sense
-to postpone studying them.  On the other hand, they correspond closely
-to laws that exist in first-order logic, and that may help some readers.
 
-Also, in some of the theorem statements there are occurrences
-of the variable `A` in the scope of a bound variable.
-In a form such as `forall {x. A}`, it is not possible to substitute
-for `A` in a way that has the variable `x` in the result.
-Proper substitution automatically renames the `x` in `forall {x. A}`
-to something else if `x` is free in the term that replaces `A`, so you
-would not get the desired result. 
-
-On the other hand, in a form such as `forall {x. p x}`, `p x` can match any term
-with a true/false value.
-For example it can match `x + 0 = x`, though it does not look like it.
-The trick is that `x + 0 = x` is equivalent to `{z. z + 0 = z} x`.
-So substituting `{z. z + 0 = z}` for `p` and then using beta conversion
-(also a form of substitution, see above) results in `x + 0 = x` as desired.
-In fact there is no need to change `x` to `z`.  Even `{x. x + 0 = x}`
-works fine and is slightly simpler.
-
-This notation with `p x` captures the same idea as informal notations such as
-`∀ x. phi(x)` sometimes found in textbooks.
+Uses here of `p x` capture the same idea as informal notations such as
+`∀ x. phi(x)` found in some textbooks.
 
 {{% preblock %}}
 Rearrangement:
@@ -64,6 +43,37 @@ p x & forall {y. p y => y = x} => exists1 p
 (f x = the1(Q x) & exists1 (Q x)) => (Q x y == f x = y)~~
 {{% /preblock %}}
 
-There are even more theorems like this, many dealing with
-specific issues in reasoning, but this set is implemented
-in Prooftoys today.
+### Using the laws
+
+The proof builder will offer these laws when they apply to a term you
+select.  Still, to understand how to use them takes a bit more
+than other parts of Prooftoys.
+
+In many of these laws there is at least one occurrence of
+a term like `p x`, where `p` is a free variable and `x` is
+bound somewhere in the statement.
+
+Also, in some of the theorem statements there are occurrences of the
+variable `A` in the scope of a bound variable.  In a form such as
+`forall {x. A}`, it is not possible to substitute for `A` in a way
+that puts the bound variable `x` into that part of the result.  Proper
+substitution automatically renames the `x` in `forall {x. A}` to
+something else if `x` is free in the term that replaces `A`, so the
+substitution fails to put an occurrence of the bound variable into the
+result.
+
+On the other hand, in a form such as `forall {x. p x}`, substitution
+can turn the `p x` into _any_ term with a true/false value.
+
+For example `p x` can become `x + 0 = x`, though it does not look like
+it.  The trick is to substitute for `p` and then do a beta conversion
+(axiom 4).  Here `x + 0 = x` is equivalent to `{z. z + 0 = z} x`.  So
+substituting `{z. z + 0 = z}` for `p` and then using beta conversion
+(also a form of substitution, see above) results in `x + 0 = x` as
+desired.  In fact there is no need to change `x + 0 = x` to `z + 0 =
+z`.  Even `{x. x + 0 = x}` works fine and is slightly simpler, though
+it may make the step a bit harder to read.
+
+There are even more theorems like this, many dealing with specific
+issues in reasoning, but these classic laws are implemented in
+Prooftoys today.
