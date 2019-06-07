@@ -1,3 +1,10 @@
 Sitemap: https://prooftoys.org/sitemap.xml
 Disallow: /tests/main/
 Disallow: /tests/parsing/
+Disallow: /_index-1/
+Disallow: /_index-2/
+Disallow: /menu/
+Disallow: /menu-inference/
+Disallow: /menu-logic-pix/
+Disallow: /menu-theorems/
+Disallow: /pix/
