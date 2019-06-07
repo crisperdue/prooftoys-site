@@ -85,4 +85,4 @@ screen will cause the relevant table entries to highlight themselves.
 <canvas id=canvasB width=210 height=210></canvas>
 <canvas id=canvasC width=210 height=210></canvas>
 
-{{< include "/pix.md" >}}
+{{< include2 "pix.md" >}}

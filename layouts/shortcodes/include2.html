@@ -1,0 +1,7 @@
+{{ $bundle := .Site.GetPage "/include/index.md" }}
+{{ $resource := $bundle.Resources.GetMatch (.Get 0) }}
+{{ if $resource  }}
+  {{- $resource.Content -}}
+{{ else }}
+  {{ errorf "No such include file: /include/%s" (.Get 0) }}
+{{ end }}
