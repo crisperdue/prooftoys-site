@@ -1,6 +1,6 @@
 ---
 title: Advanced quantifier laws
-menu: /menu-theorems.md
+menu: menu-theorems.md
 ---
 
 # Advanced quantifier laws

@@ -1,6 +1,6 @@
 ---
 title: "Inference rules"
-menu: /menu-inference.md
+menu: menu-inference.md
 ---
 
 # More common inference rules

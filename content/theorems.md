@@ -1,6 +1,6 @@
 ---
 title: Simple logic
-menu: /menu-theorems.md
+menu: menu-theorems.md
 ---
 
 # Axioms and theorems of the logic

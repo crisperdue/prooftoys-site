@@ -1,6 +1,6 @@
 ---
 title: "Definitions"
-menu: /menu-inference.md
+menu: menu-inference.md
 ---
 
 # Definitions
