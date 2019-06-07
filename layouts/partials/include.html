@@ -1,0 +1,10 @@
+{{/* Call this with just "<name>.md" as the argument,
+     relative to /content/include/ */}}
+{{ $bundle := site.GetPage "/include/index.md" }}
+{{ $path := replaceRE "^/(.*)" "$1" . }}
+{{ $resource := $bundle.Resources.GetMatch $path }}
+{{ if $resource }}
+  {{- $resource.Content -}}
+{{ else }}
+  {{ errorf "No such include file: /include/%s" . }}
+{{ end }}
