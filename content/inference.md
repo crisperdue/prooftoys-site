@@ -56,18 +56,19 @@ explanation.
 
 ## Tautologies
 
-Tautologies are purely "boolean" statements that are true.  In this
-sense a boolean statement is one where every part of it has a boolean
-value.  In other words every variable and constant in it is boolean
-and every function in it has boolean values.
+Tautologies are purely "boolean" statements that are true.
+A tautology is a statement containing only boolean variables,
+boolean constants (`T` and `F`), and functions with boolean
+inputs and a boolean value.
 
 There is a simple procedure for deciding whether a boolean statement
-is true or not.  Prooftoys implements in a straightforward way, and if
-the statement is true, it also proves it using substitution and
-replacement.  If you inspect a Prooftoys proof of a tautology you will
-see some inference rules not described here, but if you break them
-down further you will see that in the end they only use replacement
-and substitution.
+is true or not by checking every combination of values for all
+variables in the statement.  Prooftoys does this in a straightforward
+way, and if the statement is true it produces a proof using
+substitution and replacement.  If you inspect a Prooftoys proof of a
+tautology you will see some inference rules not described here, but if
+you break them down further you will see that in the end they only use
+replacement and substitution.
 
 ## Replacement and rewriting
 

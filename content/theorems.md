@@ -94,9 +94,34 @@ Functions ("eta conversion")
 
 ### Tautologies
 
-All [tautologies]({{< relref "/logic-pix-truth.md#tautologies" >}}) are
-theorems.  A list of frequently-useful ones might be helpful, but we
-do not try to list any at this time.
+All tautologies can be proved, as described on this site from two
+[slightly different]({{< relref "/inference.md#tautologies" >}})
+[points of view]({{< relref "/logic-pix-truth.md#tautologies" >}}).
+
+Here is a list of some tautologies that are used in Prooftoys or may
+be useful in building your own proofs.  Remember that all uses of `==`
+can be reversed because of the symmetry of equality.
+
+The comments suggest places where you may see these tautologies in
+Prooftoys proofs.
+
+{{% preblock %}}
+~~a == a~~ (the "consider" rule)
+~~a => a~~ (the "assume" rule)
+~~(a == b) == (b == a)~~ (symmetry of equality/equivalence)
+~~a == (a == T)~~ (replacing a theorem with ~~T~~ or ~~T~~ with a theorem)
+~~a & T == a~~\
+Relating "and" and "or":
+~~not (a & b) == not a | not b~~
+~~not (a | b) == not a & not b~~\
+Conditionals:
+~~(T => a) == a~~
+~~(a => F) == not a~~ (proofs by contradiction)
+~~(a => b) & (b => c) => (a => c)~~ ("forward" reasoning)
+~~(a => b) & (b => a) == (a == b)~~ (proofs of equivalence)
+~~(a => b) == (not b => not a)~~
+~~(a => (b => c)) == (a & b => c)~~ (managing assumptions)
+{{% /preblock %}}
 
 ### Some basic quantifier laws
 
