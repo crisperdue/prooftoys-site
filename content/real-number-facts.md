@@ -25,6 +25,34 @@ detail, click on the text in blue following the statement of
 the fact.  Most of these are just the word "fact".  You can drill
 down to any level of detail in the same way.
 
+For example let's look at a proof of item 6 in the main list below.
+You can see this same proof by clicking on the word "fact" on line 6
+of the list of proofs.
+
+### Example proof
+
+<div id=demoProof style="margin-bottom: 1em"></div>
+
+Hovering the mouse over a step's step number gives you some
+information about how Prooftoys got to that step.  For example if you
+hover the mouse cursor over the `[2]` in the second step you will see
+the occurrences of `x` highlighted in step 1, and the occurrences of
+`0` highlighted in step 2, to indicate that `0` is being substituted
+for `x` in step 1.  If you hover the mouse cursor over the `[3]` in
+the third step, you will see the term `0 + -(0)` highlighted in
+step 2.  The description of step 3 states that it uses the fact that
+`0 + a = 0`.  Step 3 applies this fact to step 2, using `0` as the
+value for `a` to get `-(0) = 0` as stated.  (Prooftoys does not show
+you that it knows that `R 0`, which simply means that `0` is a real
+number.)
+
+To see a level of details behind the operation of step 2, you can
+click on the words "substitute for x" in the description of step 2.
+To see the details behind the operation of step 3, click on the word
+"use", in blue, in the description of step 3.
+
+## Proof list
+
 For a quick start on reading and understanding proofs like these, you
 may want to get introduced to [reading the language](/language-intro/)
 and [inference in Prooftoys](/inference/).
@@ -98,13 +126,18 @@ x < y & 0 < z => x * z < y * z
 {{< hereScript >}}
 // On DOM ready:
 jQuery(function() {
+
+  Toy.mathifyAll();
+
+  const rules = Toy.rules;
+
   // Proof display
   const display = new Toy.ProofDisplay();
   window.proofDisplay = display;  // debugging
   $('#proofDisplay').append(display.node);
 
   function fact(statement) {
-    display.addStep(Toy.rules.fact(statement));
+    display.addStep(rules.fact(statement));
   }
   fact('@ R x => x * 0 = 0');
   fact('@ R x => (neg 1) * x = neg x');
@@ -125,6 +158,14 @@ jQuery(function() {
   fact('@ R x & R y & x + y = 0 == R x & neg x = y');
   console.log('Completed real facts');
 
-  Toy.mathifyAll();  
+  const demo = new Toy.ProofDisplay();
+  window.demoDisplay = demo;
+  $('#demoProof').append(demo.node);
+  
+  const step1 = rules.fact('x + neg x = 0');
+  const step2 = rules.instVar(step1, '0', 'x');
+  const step3 = rules.rewrite(step2, '/right/left', '0 + a = a');
+  demo.setSteps([step1, step2, step3]);
+
 });
 {{< /hereScript >}}
