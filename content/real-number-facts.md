@@ -36,15 +36,15 @@ of the list of proofs.
 Hovering the mouse over a step's step number gives you some
 information about how Prooftoys got to that step.  For example if you
 hover the mouse cursor over the `[2]` in the second step you will see
-the occurrences of `x` highlighted in step 1, and the occurrences of
-`0` highlighted in step 2, to indicate that `0` is being substituted
-for `x` in step 1.  If you hover the mouse cursor over the `[3]` in
-the third step, you will see the term `0 + -(0)` highlighted in
-step 2.  The description of step 3 states that it uses the fact that
-`0 + a = 0`.  Step 3 applies this fact to step 2, using `0` as the
-value for `a` to get `-(0) = 0` as stated.  (Prooftoys does not show
-you that it knows that `R 0`, which simply means that `0` is a real
-number.)
+`x` highlighted everywhere in step 1, and the occurrences of `0`
+highlighted in step 2 to show that `0` is substituted for `x`.
+
+If you hover the mouse cursor over the `[3]` in the third step, you
+will see the term `0 + -(0)` highlighted in step 2.  Step 3 applies
+the fact that `0 + a = 0` to step 2, using `-(0)` as the value for
+`a`, and replacing `0 + -(0)` with `-(0)` to get step 3.  (Unless you
+look into more levels of detail, Prooftoys does not show you that it
+knows that `R 0`, which simply means that `0` is a real number.)
 
 To see a level of details behind the operation of step 2, you can
 click on the words "substitute for x" in the description of step 2.
