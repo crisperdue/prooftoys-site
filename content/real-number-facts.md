@@ -15,8 +15,8 @@ derive everything from an axiomatization of the real numbers as the
 complete ordered field, the classic characterization of the reals.
 
 Here is a partial list of the number facts that have been proved from
-the axioms for the real numbers.  See below for the specific axioms
-and definitions used.
+the axioms for the real numbers -- most of them from the famous "field
+axioms".  See below for the specific axioms and definitions used.
 
 ## How to view the proofs
 
@@ -30,6 +30,14 @@ You can see this same proof by clicking on the word "fact" on line 6
 of the list of proofs.
 
 ### Example proof
+
+This is a proof that the negative of zero is zero.  It uses the fact
+that a real number plus its negative is zero, but both of these facts
+ultimately rely only on standard axioms for the real numbers (the
+[field axioms]({{< relref "/real-number-facts.md#field-axioms" >}}).
+It may seem obvious, but we don't have to just assume it is true.  And
+because it depends only on a handful of carefully-chosen axioms,
+it can be applied in situations that may be surprising.
 
 <div id=demoProof style="margin-bottom: 1em"></div>
 
@@ -83,10 +91,13 @@ number from 0, 1, addition, and multiplication.*
 ## Field axioms
 
 The field axioms here are as stated in the book "Analysis with an
-Introduction to Proof" by Steven R. Lay.  There are other equivalent
-axiomatizations.
+Introduction to Proof" by Steven R. Lay.  Many important mathematical
+structures obey the field axioms.  In addition to the real numbers,
+the rational numbers, the complex numbers, and even polynomials
+follow these laws.  Each of these axioms assumes that the variables
+are elements of the field, in this case the real numbers.
 
-Each of these axioms assumes that the variables are real numbers.
+There are other possible axiomatizations, all equivalent.
 
 {{% preblock %}}
 ~~R (x + y)
@@ -105,7 +116,10 @@ R x & x != 0 => exists1 (mulInverses x)
 
 ## Ordering axioms
 
-Again, each of these assumes that the variables are real numbers.
+Again, each of these axioms assumes that the variables are members of
+the field, in this case the real numbers.  Adding these axioms to the
+first set makes the domain into an "ordered field".  Not all fields
+are ordered.
 
 {{% preblock %}}
 ~~not (x < x)
