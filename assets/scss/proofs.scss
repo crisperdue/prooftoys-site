@@ -650,7 +650,7 @@ input.varName, input.step, input.equation, input.implication {
     max-height: 20em;
     overflow-y: scroll;
     overflow-x: hidden;
-    z-index: 10;
+    z-index: 2;
 }
 
 .ruleMenu.hidden {
@@ -712,7 +712,7 @@ input.varName, input.step, input.equation, input.implication {
 
 /* Outermost of worksheet containers, without border or padding. */
 .wksControlsOuter {
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     margin-top: 4px;
     left: 1em;
