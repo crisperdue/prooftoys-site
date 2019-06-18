@@ -51,7 +51,6 @@
 <body class='page logicZone {{ block "body_classes" . }}{{ end }}'>
 {{ partial "main-menu-mobile.html" . }}
 <div class="wrapper">
-  {{ partial "header.html" . }}
   {{ $displaySidebar := not .Params.noSidebar }}
   {{ if $displaySidebar }}
   <div class="container pt-2 pt-md-6">
