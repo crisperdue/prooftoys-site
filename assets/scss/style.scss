@@ -1,5 +1,6 @@
 // Font
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Lora:400,700|Roboto+Mono:300,400');
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,900|Lora:400,700|Roboto+Mono:300,400');
 
 // Bootstrap
 @import 'bootstrap/functions';
@@ -65,6 +66,8 @@ $hamburger-active-layer-color: $primary;
 @import 'components/strip';
 @import 'components/whitebox';
 @import 'components/overview';
+
+@import 'banner';
 
 // Pages
 @import 'pages/home';
