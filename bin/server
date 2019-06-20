@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+# First run "generate", also in this directory.
+# Then run this from the top directory of your repo, i.e.
+#
+# $ bin/server
+#
+# This will run a development web server on port 1313.
+
+run() {
+  echo "$@"
+  eval "$@"
+}
+
+run hugo server --bind 0.0.0.0

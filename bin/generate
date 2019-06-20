@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+# Run this from the top directory of your repo, i.e.
+#
+# $ bin/generate
+
+run() {
+  echo "$@"
+  eval "$@"
+}
+
+mkdir -p assets/pt/js
+rm assets/pt/js/*
+run "ln -s ../prooftoys/js/*.js assets/pt/js"
+run "rm -rf public/*"
+run hugo --cleanDestinationDir
