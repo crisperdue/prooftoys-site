@@ -9,8 +9,10 @@ run() {
   eval "$@"
 }
 
+PT=$(dirname $PWD)/prooftoys
+
 mkdir -p assets/pt/js
 rm assets/pt/js/*
-run "ln -s ../prooftoys/js/*.js assets/pt/js"
+run "ln -s $PT/js/*.js assets/pt/js"
 run "rm -rf public/*"
 run hugo --cleanDestinationDir
