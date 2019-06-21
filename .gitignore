@@ -12,3 +12,4 @@
 /themes/
 # Miscellaneous stuff just in case.
 /tmp/
+.DS_Store
