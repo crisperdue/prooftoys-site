@@ -131,3 +131,6 @@ the formulation of the laws of physics is a wonderful gift which we
 neither understand nor deserve. We should be grateful for it and hope
 that it will remain valid in future research and that it will extend
 to ...  wide branches of learning. -- Eugene Wigner
+
+[M]athematics is a kind of game we play with the universe.  -- Martin
+Gardner (in "Wheels, Life and Other Mathematical Amusements", p. vii)
