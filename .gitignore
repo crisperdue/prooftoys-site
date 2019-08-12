@@ -5,6 +5,7 @@
 # Files imported from prooftoys go in the next two.
 /assets/pt/
 /static/pt/
+/static/tests/*.js
 # External assets go in the next two dirs, e.g. jQuery.
 /assets/lib/
 /static/lib/
