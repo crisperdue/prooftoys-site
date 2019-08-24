@@ -11,7 +11,6 @@ title: Proof playground
   margin-top: 5em;
   margin-left: -10em;
   margin-bottom: 5em;
-  background: white;
 }
 
 /* This is a hack to prevent the sidebar from overlapping the proof
