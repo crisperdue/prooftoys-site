@@ -1,12 +1,11 @@
 ---
 title: Home
 type: custom
-# layout: twocol
 noSidebar: true
 ---
 
 <a name=theStory id=theStory></a>
-## The story
+## What Prooftoys is about
 
 Logic and proof are the building materials of
 mathematics.  They make it possible to build sturdy mathematical
@@ -21,6 +20,14 @@ all other fields of knowledge.
 Prooftoys is a unique web-based tool for building and exploring
 computer-verified mathematical proofs, based on simple concepts
 directly out of basic high school math.
+
+The core of the system is proudly free and open source software,
+hosted on **<a href="http://github.com/crisperdue/prooftoys"
+target=_blank>GitHub</a>**.
+
+##### >> **[Learn More](/introduction/)**
+
+##### >> **[Examples](/basic-examples/)**
 
 <!--
 Today there are wonderful tools for practitioners who need answers to
@@ -45,38 +52,16 @@ mathematically proven according to accepted principles, and when it
 has not.
 -->
 
-<a name=example id=example></a>
-## An example
-
-Example stuff here!
-
-Example stuff here!
-
-Example stuff here!
-
-Example stuff here!
-
-Example stuff here!
-
-Example stuff here!
-
-Example stuff here!
-
-Example stuff here!
-
-Example stuff here!
-
-Example stuff here!
-
-Example stuff here!
-
-Example stuff here!
-
-Example stuff here!
-
 ## About Prooftoys
 
-The core of the system is proudly free and open source software,
-hosted on **<a href="http://github.com/crisperdue/prooftoys"
-target=_blank>GitHub</a>**.
+[[This section belongs elsewhere.]]
 
+<script>
+  $('#startButton').on('click', function() {
+       window.location = 'basic-examples/';
+     });
+  $('#tellButton').on('click', function() {
+	  $('#theStory').each(function() {
+		  this.scrollIntoView({behavior: 'smooth', block: 'start'});
+		})});
+</script>
