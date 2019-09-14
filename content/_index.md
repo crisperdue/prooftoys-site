@@ -58,7 +58,7 @@ has not.
 
 <script>
   $('#startButton').on('click', function() {
-       window.location = 'basic-examples/';
+       window.location = 'basic-examples/#repetitious-number';
      });
   $('#tellButton').on('click', function() {
 	  $('#theStory').each(function() {

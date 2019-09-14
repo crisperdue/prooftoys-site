@@ -1,12 +1,12 @@
 ---
-title: "Basic examples"
+title: "Prooftoys in action"
 menu: menu.md
 ---
 
-# Basic examples
+# Prooftoys in action
 
-<a name=example id=example></a>
-## The repetitious number
+<a name=repetitious-number id=example></a>
+## 1. The repetitious number
 
 In this parlor trick you ask spectator A to write down any three-digit
 number, then to copy the number to a new piece of paper, followed by
@@ -46,7 +46,7 @@ So we can ask whether it is true that
 This problem comes from the book "My Best Mathematical and Logic
 Puzzles" (page 10) by the legendary Martin Gardner, author of the
 Mathematical Games column in Scientific American magazine for 25 years
-and author of numerous books of entertaining and puzzling mathematics.
+and numerous books of entertaining and puzzling mathematics.
 
 **The steps.** A proof consists of a sequence of steps connected by
 inference rules, each producing a new step, often with other steps as
