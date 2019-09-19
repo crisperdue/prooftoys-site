@@ -5,14 +5,12 @@ menu: menu-inference.md
 
 # Simplification in Prooftoys
 
-Simplification is not really a new or different form of inference in
-Prooftoys, but it is a very useful convenience.
-
-Simplification is a process that works on some part of a step, making
-it, shall we say, simpler, and this generally means making it smaller.
-When you use the proof builder, it automatically applies certain
-simplifications to the results of most steps for you, since that is
-usually desirable.
+Simplification is a process that works on some part of a step, using
+basic inference rules.  It generally makes the step smaller (shorter),
+and generally makes it look simpler to the human eye.  When you use
+the proof builder, it automatically applies certain simplifications to
+the results of most steps for you, since that is usually helpful in
+solving problems and proving theorems.
 
 Simplification is done by finding opportunities to use some rewrite
 rules, and applying the rules, repeatedly if possible, to simplify
