@@ -78,6 +78,12 @@ it.  Equality applies to individuals, functions, predicates, et
 cetera, and also to boolean values.  Logical equivalence ("≡") is
 equality of truth values.
 
+Rewriting lets you apply a general rule to part of a statement by
+using the "left-hand side" of the rule as a pattern to match to a
+specific part of the statement and then replacing that part of the
+statement using replacement.  The next sections describe replacement
+and then rewriting.
+
 ### Replacement
 
 In the simplest case, replacement begins with an equality known to be true, of the form:
@@ -108,7 +114,7 @@ the use of replacement._)
 Mathtoys does rewriting by using pattern matching to find and
 apply substitutions, and then uses replacement using equations. 
 
-Rewriting is just a technical name for the kind of reasoning taught in
+Rewriting is a technical name for the kind of reasoning taught in
 every high school algebra textbook.  Writing the commutative law of
 multiplication as an equation `x * y = y * x`, and applying it to the
 term `x * 3` in an equation such as `5 * x = 2 * x + x * 3`, a

@@ -5,6 +5,9 @@ menu: menu.md
 
 # Prooftoys in action
 
+We will start with a few little puzzles where the solutions
+demonstrate how Prooftoys operates and how to follow its proofs.
+
 <a name=repetitious-number id=example></a>
 ## 1. The repetitious number
 
@@ -29,3 +32,4 @@ initially-chosen number.
 mathematical statement of it.
 
 **Solution: [Here](/basic-solutions/#repetitious-number)**
+
