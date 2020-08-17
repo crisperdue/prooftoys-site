@@ -15,7 +15,7 @@ headless: true
     - [Theorems](/theorems/)
 		- [Real number facts](/real-number-facts/)
 		- [Live logic facts list](/live-logic-facts/)
-		- [Advanced quantifier laws](/logic-facts/)
+		- [Advanced quantifier laws](/quantifiers/)
 
 -------------
 

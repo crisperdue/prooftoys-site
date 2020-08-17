@@ -148,4 +148,5 @@ Reasoning with instances:
 p x => exists p~~
 {{% /preblock %}}
 
-For more, see also the [advanced quantifier laws]({{< relref "/logic-facts.md" >}}).
+For more, see also the
+[advanced quantifier laws]({{< relref "/quantifiers.md" >}}).
