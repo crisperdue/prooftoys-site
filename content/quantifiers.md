@@ -1,6 +1,8 @@
 ---
 title: Advanced quantifier laws
 menu: menu-theorems.md
+aliases:
+    - /logic-facts/
 ---
 
 # Advanced quantifier laws
@@ -15,7 +17,7 @@ for "unique existence".  A few also use `the1`, which gives the unique
 value satisfying a condition, if there is indeed exactly one such value.
 
 Uses here of `p x` capture the same idea as informal notations such as
-`∀ x. phi(x)` found in some textbooks.
+<code>∀ x. &phi;(x)</code> found in some textbooks.
 
 ## Quantifier laws
 
