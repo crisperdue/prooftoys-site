@@ -13,11 +13,13 @@ number facts have quantifiers, but their proofs don't need these
 quantifier laws.
 
 These laws all contain quantifiers, `forall`, `exists`, or `exists1`
-for "unique existence".  A few also use `the1`, which gives the unique
-value satisfying a condition, if there is indeed exactly one such value.
+for "there exists exactly one" (or "unique existence").  A few also
+use `the1`, which gives the unique value satisfying a condition, if
+there is indeed exactly one such value.
 
-Uses here of `p x` capture the same idea as informal notations such as
-<code>∀ x. &phi;(x)</code> found in some textbooks.
+Uses here of `p x` within `{x. . . . }` capture the same idea as
+informal notations such as <code>∀ x. &phi;(x)</code> found in some
+textbooks.
 
 ## Quantifier laws
 
