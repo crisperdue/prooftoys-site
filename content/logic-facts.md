@@ -17,6 +17,12 @@ value satisfying a condition, if there is indeed exactly one such value.
 Uses here of `p x` capture the same idea as informal notations such as
 `∀ x. phi(x)` found in some textbooks.
 
+## Quantifier laws
+
+<span id=hello>
+Prooftoys form
+<input type=button value="Show &quot;traditional&quot; form"
+ onclick="$('#hello').toggle(); $('#goodbye').toggle()">
 {{% preblock %}}
 Rearrangement:
 ~~forall {x. p x & q x} == forall p & forall q
@@ -42,6 +48,38 @@ exists1 p => (p x == x = the1 p)
 p x & forall {y. p y => y = x} => exists1 p
 (f x = the1(Q x) & exists1 (Q x)) => (Q x y == f x = y)~~
 {{% /preblock %}}
+</span>
+
+<span id=goodbye class=hidden>
+Traditional form
+<input type=button value="Prooftoys &quot;native&quot; form"
+ onclick="$('#hello').toggle(); $('#goodbye').toggle()">
+{{% preblock %}}
+Rearrangement:
+~~forall {x. p x & q x} == forall {x. p x} & forall {x. q x}
+exists {x. p x | q x} == exists {x. p x} | exists {y. q y}~~\
+One-way rearrangements:
+~~forall {x. p x} | forall {x. q x} => forall {x. p x | q x}
+exists {x. p x & q x} => exists {x. p x} & exists {x. q x}~~\
+Unused bound variable:
+~~forall {x. A} == A
+exists {x. A} == A
+forall {x. A | q x} == (A | forall {x. q x})
+forall {x. A => q x} == (A => forall {x. q x})
+exists {x. A & q x} == A & exists {x. q x}
+forall {x. p x => A} == (exists {x. p x} => A)~~\
+Forward reasoning:
+~~forall {x. p x => q x} => (forall {x. p x} => forall {x. q x})
+forall {x. p x => q x} => (exists {x. p x} => exists {x. q x})~~\
+Unique existence:
+~~exists1 {x. p x} == exists {x. p = {y. y = x}}
+exists1 {x. p x} == exists {x. forall {y. p y == y = x}}
+exists1 {x. p x} == exists {y. p y & forall {z. p z => z = y}}
+exists1 {x. p x} => (p x == x = the1 p)
+p x & forall {y. p y => y = x} => exists1 {x. p x}
+(f x = the1(Q x) & exists1 (Q x)) => (Q x y == f x = y)~~
+{{% /preblock %}}
+</span>
 
 ### Using the laws
 

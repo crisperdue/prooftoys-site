@@ -145,19 +145,20 @@ greater = {(x, y) | y < x}
 A typical statement with a universal quantifier has a form like:
 
 {{% preblock %}}
-∀ {x. p x}
+∀ {x. <some-formula> }
 {{% /preblock %}}
 
 and a typical existential statement looks something like:
 
 {{% preblock %}}
-∃ {x. p x}
+∃ {x. <some-formula> }
 {{% /preblock %}}
 
-**Explanation.** Quantifiers are not fundamental concepts in this logic.
-They are defined predicates that take an argument that is a collection.
-The universal quantifier predicate is named "forall" and displays as `∀`.
-The existential quantifier is named "exists" and displays as `∃`.
+How can that be?  In this logic, quantifiers are defined predicates,
+not primitives of the language.  They take an argument that is a
+collection.  The universal quantifier predicate is named "forall" and
+displays as `∀`.  The existential quantifier is named "exists" and
+displays as `∃`.
 
 The term `{x. p x}` can be read as set notation, as something like
 "the collection of `x` that have the property `p`". 
@@ -168,11 +169,19 @@ every possible value of `x` has property `p`.
 ### Quantifiers without braces
 
 An expression of the form `{x. p x}` can be shortened to just `p`,
-and in some situations you will see a statement such as:
+and in some situations you will see a statement such as
 
 {{% preblock %}}
 ∃ p
 {{% /preblock %}}
+
+This is sometimes referred to as Prooftoys "native form" and is often
+used in preference to the more conventional-looking equivalent:
+
+{{% preblock %}}
+∃ {x. p x}
+{{% /preblock %}}
+
 
 ## Next steps
 
