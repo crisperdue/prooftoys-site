@@ -26,7 +26,7 @@ textbooks.
 <span id=hello>
 Prooftoys form
 <input type=button value="Show &quot;traditional&quot; form"
- onclick="$('#hello').toggle(); $('#goodbye').toggle()">
+ onclick="$('#hello, #goodbye').toggleClass('hidden')">
 {{% preblock %}}
 Rearrangement:
 ~~forall {x. p x & q x} == forall p & forall q
@@ -56,8 +56,8 @@ p x & forall {y. p y => y = x} => exists1 p
 
 <span id=goodbye class=hidden>
 Traditional form
-<input type=button value="Prooftoys &quot;native&quot; form"
- onclick="$('#hello').toggle(); $('#goodbye').toggle()">
+<input type=button value="Show Prooftoys &quot;native&quot; form"
+ onclick="Toy.keepScroll(function() {$('#goodbye, #hello').toggleClass('hidden')})">
 {{% preblock %}}
 Rearrangement:
 ~~forall {x. p x & q x} == forall {x. p x} & forall {x. q x}
