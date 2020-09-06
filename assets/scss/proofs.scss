@@ -658,6 +658,11 @@ input.varName, input.step, input.equation, input.implication {
     visibility: hidden;
     /* Same height as when displayed */
     height: 20em;
+    /* An element can have this class yet still be visible as it */
+    /* is fading out.  Generally it should not respond to pointer */
+    /* events, but that has occurred with the rule menu and */
+    /* mouse enter events. */
+    pointer-events: none;
 }
 
 .ruleMenuTitle {

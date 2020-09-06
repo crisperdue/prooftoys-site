@@ -15,7 +15,7 @@ digits has the same effect as multiplying by 1,001.
 So we can ask whether it is true that
 <s>1001 * x / 7 / 11 / 13 = x</s>.
 
-<div class="proof-editor mb-4" data-steps='
+<div class="proof-display mb-4" data-steps='
 (steps
 (1 consider (t ((((1001 * x) / 7) / 11) / 13)))
 (2 simplifyFocalPart (s 1))
@@ -58,6 +58,15 @@ inputs.  In this proof we have:
 Of these, only step 2 does any inference.  You may see it as a
 relatively obvious step, but it has some internal complexity.
 
+**Try the steps yourself.** Can you build the same proof yourself
+from just the given statement?  Here is a workspace you can use
+to do the experiment.
+
+<div class="proof-editor mb-4" data-steps='
+(steps
+(1 given (t ((((1001 * x) / 7) / 11) / 13)))
+)'></div>
+
 **Seeing details.** Prooftoys encourages you to dig down into any step
 to see details for it.  To see the next level of detail, click on the
 blue text in the description of the step, in this case the text
@@ -71,7 +80,3 @@ Most of the steps in the details for step 2 have the word "use" in
 their description.  In descriptions the word "use" indicates that the
 step is an application of a [rewrite
 rule](/inference/#replacement-and-rewriting).
-
-
-
-
