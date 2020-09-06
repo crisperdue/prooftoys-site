@@ -10,6 +10,7 @@ pygmentsUseClasses = true
 [params]
   mainSections = [ "" ]
   google_analytics_id = "UA-28801147-2"
+  google_analytics_config = "'UA-28801147-2', { 'anonymize_ip': true }"
   homepage_button_link = '/docs'
   homepage_button_text = 'Read The Docs'
   BookMenuBundle = "/menu.md"
