@@ -1,7 +1,5 @@
 ---
 title: Home
-type: custom
-noSidebar: true
 ---
 
 <a name=theStory id=theStory></a>

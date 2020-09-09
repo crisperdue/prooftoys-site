@@ -142,12 +142,6 @@ p.utterances {
   margin-left: 1em;
 }
 
-/* Indent levels of lists in the sidebar. */
-/* Does not apply to the top-level UL. */
-.docs-menu ul ul li {
-    margin-left: 1em;
-}
-
 /* Inline code blocks are for logic, so style accordingly. */
 /* This also keeps less padding. */
 .content code {
@@ -156,6 +150,16 @@ p.utterances {
     font-family: STIXGeneral;
     font-size: 1rem;
 }
+
+/* Docs menu */
+
+/* Indent levels of lists in the sidebar. */
+/* Does not apply to the top-level UL. */
+.docs-menu ul ul li {
+    margin-left: 1em;
+}
+
+/* TOC */
 
 /* Make TOC lists be closely packed. */
 #TableOfContents ul {

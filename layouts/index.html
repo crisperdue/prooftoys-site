@@ -7,22 +7,9 @@
 {{ define "banner" }}{{ partial "jumbo.html" }}{{ end }}
 
 {{ define "main" }}
-<div class="strip page-home">
-  <div class="container pt-2">
-    <div class="row">
-      <div class="col-12">
-        <div class="content">
-          {{ if .Content }}
-          {{ .Content }}
-          {{ else }}
-          <p>{{ .Site.Params.homepage_intro }}</p>
-          {{ end }}
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="content">
+  {{ .Content }}
 </div>
-
 {{ end }}
 
 {{ define "footer_js" }}{{ end }}

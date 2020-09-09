@@ -1,5 +1,6 @@
 ---
 title: Proof playground
+menu: menu-docs.md
 ---
 
 # Proof builder playground
@@ -13,10 +14,10 @@ title: Proof playground
   margin-bottom: 5em;
 }
 
-/* This is a hack to prevent the sidebar from overlapping the proof
-   editor. */
+/* Use normal positioning so the proof editor won't
+   overlap the sidebar. */
 div.sidebar {
-  visibility:hidden;
+  position: static;
 }
 </style>
 
