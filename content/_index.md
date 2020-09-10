@@ -2,64 +2,46 @@
 title: Home
 ---
 
-<a name=theStory id=theStory></a>
-## What Prooftoys is about
+## Prooftoys
 
-Logic and proof are the building materials of
-mathematics.  They make it possible to build sturdy mathematical
-structures that reach to the clouds and even far beyond.
+Much as mathematics is an essential building material for science,
+logic and proof are essential building materials of mathematics.  They
+make it possible to build sturdy mathematical structures that reach
+all the way <a target=_blank
+href="https://www.youtube.com/watch?v=2VSYmGSJtCA">to Infinity and
+Beyond</a>!  Math can also be great entertainment, the ultimate puzzle, the
+ultimate game for your mind.
 
-Mathematics has had an extraordinary impact on modern science and
-technology.  Progress in all fields of engineering, physics,
-chemistry, and science generally has been greatly accelerated by use
-of mathematics.  And it is proof that distinguishes mathematics from
-all other fields of knowledge.
+Prooftoys is a computer tool that works with you interactively to
+solve math problems -- or prove mathematical statements.  It has
+correct rules for reasoning built into it, always follows them, and
+never makes a careless mistake or forgets its rules.
 
-Prooftoys is a unique web-based tool for building and exploring
-computer-verified mathematical proofs, based on simple concepts
-directly out of basic high school math.
+Here is a problem from the book "My Best Mathematical and Logic
+Puzzles" (page 10) by the legendary Martin Gardner, author of numerous
+books of entertaining and puzzling mathematics and, for 25 years, the
+Mathematical Games column in Scientific American magazine.
 
-The core of the system is proudly free and open source software,
-hosted on **<a href="http://github.com/crisperdue/prooftoys"
-target=_blank>GitHub</a>**.
+#### The problem of the repetitious number
 
-##### >> **[Learn More](/introduction/)**
+In this parlor trick you ask spectator A to write down any three-digit
+number, then to copy the number to a new piece of paper, followed by
+the same digits again, making a six-digit number.  Without looking,
+Instruct spectator A to pass the paper to spectator B without
+revealing the number to you.
 
-##### >> **[Examples](/basic-examples/)**
+Spectator B is to divide the resulting number by 7, and then pass the
+result to a spectator C, who divides the result by 11. (Tell them not
+to worry, there will be no remainder!)
 
-<!--
-Today there are wonderful tools for practitioners who need answers to
-mathematical questions, ranging from handheld calculators to numerical
-simulators to computer algebra systems.  Generally speaking, these
-tools do not require their users to use proof, though understanding of
-mathematical principles can be most helpful to users of these tools,
-and proof is a part of the essence of all mathematical principles.
+C passes it to yet one final spectator.  This last spectator is to
+divide the result by 13 and then read the resulting quotient.  The
+result will be the original three-digit number.
 
-At the same time, mathematical proof is poorly understood by both
-students and skilled practitioners of fields that use and even rely on
-mathematics.
+**Problem:** Prove that this trick always works regardless of the
+initially-chosen number.
 
-Prooftoys is an effort to bring deeper and stronger understanding of
-mathematical proof to a wider audience, aided by computer
-implementation of principles of mathematical proof.
+**Hint:** The key to solving this problem is finding a simple
+mathematical statement of it.
 
-The experience of two or more thousands of years of
-mathematical practice has shown that diverse minds from different
-backgrounds and different times can agree when a statement has been
-mathematically proven according to accepted principles, and when it
-has not.
--->
-
-## About Prooftoys
-
-[[This section belongs elsewhere.]]
-
-<script>
-  $('#startButton').on('click', function() {
-       window.location = 'basic-examples/#repetitious-number';
-     });
-  $('#tellButton').on('click', function() {
-	  $('#theStory').each(function() {
-		  this.scrollIntoView({behavior: 'smooth', block: 'start'});
-		})});
-</script>
+**Solution: [Here](/basic-solutions/)**

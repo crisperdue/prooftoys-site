@@ -3,17 +3,15 @@ title: "Basic examples - solutions"
 menu: menu.md
 ---
 
-# Prooftoys basic examples -- solutions
-
 <a name=repetitious-number id=example></a>
-## 1. The repetitious number
+# The repetitious number -- solution
 
 The key to this problem is that writing down a three-digit number and
 then making it into a six-digit number by appending the same three
 digits has the same effect as multiplying by 1,001.
 
-So we can ask whether it is true that
-<s>1001 * x / 7 / 11 / 13 = x</s>.
+So we can ask, is it true that
+<s>1001 * x / 7 / 11 / 13 = x</s>?
 
 <div class="proof-display mb-4" data-steps='
 (steps
@@ -22,11 +20,6 @@ So we can ask whether it is true that
 (3 arrangeTerm (s 2) (path "/right/right"))
 (4 display (s 3))
 )'></div>
-
-This problem comes from the book "My Best Mathematical and Logic
-Puzzles" (page 10) by the legendary Martin Gardner, author of numerous
-books of entertaining and puzzling mathematics and, for 25 years, the
-Mathematical Games column in Scientific American magazine.
 
 **The steps.** A proof consists of a sequence of steps connected by
 inference rules, each producing a new step, often with other steps as
@@ -39,25 +32,40 @@ inputs.  In this proof we have:
    numeric as here, or boolean, or any other kind.  The full content
    of the step is a statement that the term is equal to itself.
 
-     If you hover the mouse over the small blank space between the step
-   number and the expression for this step, Prooftoys will display the
-   entire step for you.  In general, if you hover the mouse over this
-   area, or an ellipsis (" &hellip; ") in this part of a step,
-   Prooftoys will show you all of the parts of the step.
+     *Viewing the whole step.* If you hover the mouse over the small
+   blank space between the step number and the expression for this
+   step, Prooftoys will display the entire step for you.  In general,
+   if you hover the mouse over this area, or an ellipsis (" &hellip;
+   ") in this part of a step, Prooftoys will show you all of the parts
+   of the step.
+
+2. "Simplify" -- select the entire step by clicking on the checkbox.
+   Then select "algebra: simplify" from the menu that pops up.
    
-2.  "Standard form &hellip; " -- There are a few different ways to get
-    Prooftoys to look at the expression here and cancel out the
-    multiplication and the divisions.  This one handles all the
-    details in one step.
+3. "Standard form &hellip; " -- select the term <s>1001 * x /
+   1001</s>, then pick the item "algebra: standard form for term in
+   sum" from the menu that pops up.
 	
-3.  "Display fully" -- Prooftoys often just displays an ellipsis ("
-    &hellip; ") if part of a step is the same as in the previous step.
+4.  "Display fully" -- 
     This step does no inference, but causes the system to show all
     parts of its input step.
 
-Of these, only step 2 does any inference.  You may see it as a
-relatively obvious step, but it has some internal complexity.
+**The display.** Prooftoys often just displays an ellipsis (" &hellip;
+") if part of a step is the same as in the previous step.  If you
+hover the mouse cursor over the " &hellip; ", Prooftoys displays the
+entire step without omissions.  Or for step (1), hover over the blank
+space after the step number.
 
+If you hover the mouse cursor over one of the step numbers, Prooftoys
+will highlight the part of the step that it worked on to get this
+one.  If it worked on the whole step, it highlights just the number of
+the step it used as its input.
+
+What about <s>R x => . . . </s>?  This means that if x is a ("real")
+number, then the statement is true.  The <s>R</s> is for "real".
+Since we are working with numbers, you will see this often, and it
+just means you are working with numbers.
+	
 **Try the steps yourself.** Can you build the same proof yourself
 from just the given statement?  Here is a workspace you can use
 to do the experiment.
@@ -76,7 +84,5 @@ the box labeled "hide" to hide the details again.  If there are many
 levels of detail you can repeat this process on steps in the detailed
 display.
 
-Most of the steps in the details for step 2 have the word "use" in
-their description.  In descriptions the word "use" indicates that the
-step is an application of a [rewrite
-rule](/inference/#replacement-and-rewriting).
+If a step has the word "use" in its description, it means the step
+applies a [rewrite rule](/inference/#replacement-and-rewriting).
