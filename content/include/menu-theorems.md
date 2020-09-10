@@ -5,7 +5,7 @@ headless: true
 <!-- Links need trailing "/" to make styling of the link
         to the current page to have the intended effect -->
 
-***Contents***
+***Pages***
 
 - [Home](/)
     - [Logic through pictures](/logic-pix-intro/)
