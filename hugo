@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# This cleans out the psite/public directory and rebuilds it
+# with hugo after reinitializing some content from ~/src/prooftoys.
+
+# TODO: Use content from ~/src/publish/prooftoys instead.
+
+run() {
+  echo '$' "$@"
+  eval "$@"
+}
+
+# cd ~/src/psite
+mkdir -p assets/pt/js
+mkdir -p static/tests
+rm assets/pt/js/*
+run "ln -s ~/src/prooftoys/js/*.js assets/pt/js"
+run "ln -s ~/src/prooftoys/tests/*.js static/tests"
+run "rm -rf public/*"
+run hugo --cleanDestinationDir "$@"

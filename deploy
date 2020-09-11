@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+# Deploy prooftoys-site from the ~/src/publish area.
+
+PUB=~/src/publish
+TREE=~/tmp/prooftoys-site-tree
+
+run() {
+  echo '$' $@
+  "$@"
+}
+
+make_tree() {
+  rm -rf "$2"
+  rsync -rt -l --copy-unsafe-links --delete-after \
+    --exclude=.git --exclude=.DS_Store --exclude=webalizer \
+    "$1/" "$2"
+}
+
+run cd ~/src/publish/prooftoys-site
+run git pull
+run ./hugo
+run make_tree public/ $TREE
+run cd $TREE
+run netlify deploy --site static-prooftoys.netlify.app --dir . -p
