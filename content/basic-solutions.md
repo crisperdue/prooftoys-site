@@ -13,6 +13,8 @@ digits has the same effect as multiplying by 1,001.
 So we can ask, is it true that
 <s>1001 * x / 7 / 11 / 13 = x</s>?
 
+Here is a solution built with Prooftoys.
+
 <div class="proof-display mb-4" data-steps='
 (steps
 (1 consider (t ((((1001 * x) / 7) / 11) / 13)))
@@ -22,15 +24,15 @@ So we can ask, is it true that
 )'></div>
 
 **The steps.** A proof consists of a sequence of steps connected by
-inference rules, each producing a new step, often with other steps as
-inputs.  In this proof we have:
+inference rules, each producing a new step.  In this proof we have:
 
-1. "Consider" -- we start by "considering" the expression that
-   computes the result that hopefully is equal to the input, <s>x</s>.
-   A Prooftoys step is always a true statement.  You can "consider" an
-   arbitrary term, which can have any kind of value, for example
-   numeric as here, or boolean, or any other kind.  The full content
-   of the step is a statement that the term is equal to itself.
+1. "Consider" -- we start by "considering" the expression in the
+   problem statement.  Just under the hood, the full statement here is
+   that <s>1001 * x / 7 / 11 / 13 = 1001 * x / 7 / 11 / 13</s>, and
+   this is true because anything is equal to itself.  The full content
+   of the step is a statement that the term is equal to itself.  This
+   step was created using the menu, selecting "consider", and typing
+   in `1001 * x / 7 / 11 / 13`.
 
      *Viewing the whole step.* If you hover the mouse over the small
    blank space between the step number and the expression for this
