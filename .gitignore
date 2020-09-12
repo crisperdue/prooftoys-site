@@ -7,7 +7,6 @@
 /static/pt/
 /static/tests/*.js
 # External assets go in the next two dirs, e.g. jQuery.
-/assets/lib/
 /static/lib/
 # The themes are downloaded from elsewhere.
 /themes/
