@@ -1,20 +1,55 @@
 #!/bin/bash
 #
 # This cleans out the psite/public directory and rebuilds it
-# with hugo after reinitializing some content from ~/src/prooftoys.
-
-# TODO: Use content from ~/src/publish/prooftoys instead.
+# with hugo after making sure non-repo content is set up.
+#
+# Run this from the top level dir of a prooftoys-site repo.
 
 run() {
   echo '$' "$@"
   eval "$@"
 }
 
-# cd ~/src/psite
+copy() {
+  rsync -ar "$@"
+}
+
+PSITE=~cris/src/prooftoys
+# Unless overridden, Prooftoys files come from ~cris/src.
+PT_REPO="$PSITE"
+
+# Repos to be deployed get copies of everything,
+# but it is more advantageous for psite to use
+# symlinks and thus see updates instantly.
+if [ "$PWD" == "$PT_REPO" ]; then
+  connect="ln -s" 
+else
+  connect=copy
+  if [ -d ../prooftoys ]; then
+    # If there is a sister prooftoys repo, get PT files
+    # from there, but still copy.
+    PT_REPO=$(cd ../prooftoys; echo $PWD)
+  fi
+fi
+
 mkdir -p assets/pt/js
+mkdir -p static/lib
 mkdir -p static/tests
-rm assets/pt/js/*
-run "ln -s ~/src/prooftoys/js/*.js assets/pt/js"
-run "ln -s ~/src/prooftoys/tests/*.js static/tests"
+mkdir -p themes
+
+# These are someone else's released files.
+run copy ~/prj/{jquery-3.4.1.js,qunit-1.11.0/*,font-awesome-4.7.0} static/lib
+run copy ~/prj/hugo-whisper-theme ~/themes
+
+# Clean out Prooftoys js files.
+run rm assets/pt/js/*.js
+run rm static/tests/*.js
+
+# These are checked in, so copy or link to them.
+run $connect $PT_REPO/js/*.js assets/pt/js
+run $connect $PT_REPO/tests/*.js static/tests
+
+# Clean out public/ and rebuild it.
+# TODO: resources/ might be worth cleaning also.
 run "rm -rf public/*"
-run hugo --cleanDestinationDir "$@"
+run hugo --cleanDestinationDir
