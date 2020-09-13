@@ -39,7 +39,7 @@ mkdir -p themes
 
 # These are someone else's released files.
 run copy ~/prj/{jquery-3.4.1.js,qunit-1.11.0/*,font-awesome-4.7.0} static/lib
-run copy ~/prj/hugo-whisper-theme ~/themes
+run copy ~/prj/hugo-themes/hugo-whisper-theme themes
 
 # Clean out Prooftoys js files.
 run rm assets/pt/js/*.js
