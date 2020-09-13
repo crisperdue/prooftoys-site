@@ -10,27 +10,20 @@ run() {
   eval "$@"
 }
 
-make_tree() {
-  rm -rf "$2"
-  rsync -rt -l --copy-unsafe-links --delete-after \
-    --exclude=.git --exclude=.DS_Store --exclude=webalizer \
-    "$1/" "$2"
-}
-
-PROOFTOYS=~/src/publish/prooftoys
-run cd $PROOFTOYS
-echo ==== PROOFTOYS ====
-run git pull
-
 PSITE=~/src/publish/prooftoys-site
-run cd $PSITE
-echo ==== PSITE ====
+PROOFTOYS=~/src/publish/prooftoys
+
+echo ==== USING $PSITE ====
+echo ==== USING $PROOFTOYS ====
+
+run cd $PROOFTOYS
 run git pull
 
+run cd $PSITE
+run git pull
+
+echo ==== BUILD SITE ====
 run ./hugo
-# run git pull
-# run ln -s ~/src/psite/themes .
-# run ./hugo
-# run make_tree public/ $TREE
-# run cd $TREE
+
+echo ==== RELEASE ====
 run netlify deploy --site prooftoys.netlify.app --dir public -p
