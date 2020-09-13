@@ -7,7 +7,7 @@ TREE=~/tmp/prooftoys-site-tree
 
 run() {
   echo '$' $@
-  "$@"
+  eval "$@"
 }
 
 make_tree() {
@@ -17,9 +17,20 @@ make_tree() {
     "$1/" "$2"
 }
 
-run cd ~/src/publish/prooftoys-site
+PROOFTOYS=~/src/publish/prooftoys
+run cd $PROOFTOYS
+echo ==== PROOFTOYS ====
 run git pull
+
+PSITE=~/src/publish/prooftoys-site
+run cd $PSITE
+echo ==== PSITE ====
+run git pull
+
 run ./hugo
-run make_tree public/ $TREE
-run cd $TREE
-run netlify deploy --site static-prooftoys.netlify.app --dir . -p
+# run git pull
+# run ln -s ~/src/psite/themes .
+# run ./hugo
+# run make_tree public/ $TREE
+# run cd $TREE
+run netlify deploy --site prooftoys.netlify.app --dir public -p
