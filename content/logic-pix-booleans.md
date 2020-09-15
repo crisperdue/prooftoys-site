@@ -1,6 +1,7 @@
 ---
 title: "Pix - functions"
 menu: "/menu-logic-pix.md"
+sidebarStyle: floating
 ---
 
 ## Logical functions

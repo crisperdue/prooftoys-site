@@ -1,6 +1,7 @@
 ---
 title: 'Pix - truth'
 menu: "/menu-logic-pix.md"
+sidebarStyle: floating
 ---
 
 ## Statements that are always true
