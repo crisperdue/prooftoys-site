@@ -13,8 +13,9 @@ run() {
 PSITE=~/src/publish/prooftoys-site
 PROOFTOYS=~/src/publish/prooftoys
 
-echo ==== USING $PSITE ====
+echo ==== DEPLOYING FROM $PSITE ====
 echo ==== USING $PROOFTOYS ====
+sleep 1
 
 run cd $PROOFTOYS
 run git pull
