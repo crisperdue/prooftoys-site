@@ -8,14 +8,15 @@ headless: true
 ***Pages***
 
 - [Home](/)
-	- [Logic through pictures](/logic-pix-intro/)
 	- [The concepts](/pt-logic-concepts/)
+	- [Logic through pictures](/logic-pix-intro/)
 	- [Language basics](/language-intro/)
 	- [Inference](/inference/)
 	- [Theorems](/theorems/)
 
 -------------
 
-- [*Proof builder playground*](/proofbuilder/)
+- [About](/about/)
 - [The Language](/language-intro/)
 - [Technical notes](/tech-notes/)
+- [*Proof builder playground*](/proofbuilder/)

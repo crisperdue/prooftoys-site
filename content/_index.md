@@ -20,7 +20,7 @@ orders, and it takes care of the details.
 
 Working problems is a natural way to learn mathematical reasoning, and
 Prooftoys has been designed especially to do precise reasoning, but in
-an especially simple Way.  You can always dig into the solution of any
+an especially simple way.  You can always dig into the solution of any
 problem and any proof to see exactly how it was done.
 
 Here is a problem from the book "My Best Mathematical and Logic

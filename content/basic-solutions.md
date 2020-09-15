@@ -88,3 +88,13 @@ display.
 
 If a step has the word "use" in its description, it means the step
 applies a [rewrite rule](/inference/#replacement-and-rewriting).
+
+The system and this website are both works in progress.  More problems
+like this are on the way, so if you like what you see here, please --
+
+#### Say "Hi"!
+
+If you are interested in using this website to work math problems or
+learn more about mathematical reasoning, the author is delighted to
+hear from you.  Please check out the *[about]({{< relref "/about.md"
+>}})* page for ways to get in touch.
