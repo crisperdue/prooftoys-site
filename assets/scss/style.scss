@@ -87,9 +87,9 @@ body {
 
 /* For the site menu. */
 div.sidebar {
+    /* Manipulated by site.js */
     display: none;
     @include media-breakpoint-up(md) {
-        position: fixed;
         display: block;
     }
 }
@@ -97,6 +97,13 @@ div.sidebar {
 /* This gets manipulated by site.js */
 div.sidebar.displayed {
     display: block;
+}
+
+/* Float it at larger sizes on request. */
+div.sidebar.floating {
+    @include media-breakpoint-up(md) {
+        position: fixed;
+    }
 }
 
 // Display breakpoints for DEV

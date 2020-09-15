@@ -46,7 +46,7 @@
   <div class="container-fluid pt-2 pt-md-3">
     <div class="row">
       <div class="col-12 col-md-4 col-lg-3 mb-3">
-	<div class="sidebar">
+	<div class="sidebar {{ .Params.sidebarStyle }}">
 	  {{ partial "sidebar.html" . }}
 	</div>
       </div>
@@ -63,11 +63,12 @@
   {{ else }}
     {{ block "main" . }}{{ end }}
   {{ end }}
-
 </div>
 
-  {{ block "footer_js" . }}{{ end }}
-  {{ partial "prooftoys-scripts.html" . }}
+{{ partial "page-footer.html" . }}
+
+{{ block "footer_js" . }}{{ end }}
+{{ partial "prooftoys-scripts.html" . }}
 
 <script>
   Toy.mathifyAll();
