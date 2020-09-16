@@ -77,7 +77,9 @@ to do the experiment.
 (1 given (t ((((1001 * x) / 7) / 11) / 13)))
 )'></div>
 
-**Seeing details.** Prooftoys encourages you to dig down into any step
+#### Seeing details
+
+Prooftoys encourages you to dig down into any step
 to see details for it.  To see the next level of detail, click on the
 blue text in the description of the step, in this case the text
 starting with "standard form".  The display then expands vertically to
@@ -92,9 +94,9 @@ applies a [rewrite rule](/inference/#replacement-and-rewriting).
 The system and this website are both works in progress.  More problems
 like this are on the way, so if you like what you see here, please --
 
-#### Say "Hi"!
+#### "Say hello"
 
 If you are interested in using this website to work math problems or
 learn more about mathematical reasoning, the author is delighted to
-hear from you.  Please check out the *[about]({{< relref "/about.md"
->}})* page for ways to get in touch.
+hear from you.  Please check out the [**about**]({{< relref "/about.md"
+>}}) page for ways to get in touch.
