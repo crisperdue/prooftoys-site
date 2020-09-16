@@ -2,15 +2,28 @@
 title: Home
 ---
 
-## Prooftoys
+### Mastering math
+
+*Would you like to master the art of mathematical thinking?*
 
 Much as mathematics is an essential building material for science,
-logic and proof are essential building materials of mathematics.  They
-make it possible to build sturdy mathematical structures that reach
-all the way **<a target=_blank
+mathematical reasoning is the essential building material for
+mathematics, that makes it possible to build sturdy mathematical
+structures that reach all the way **<a target=_blank
 href="https://www.youtube.com/watch?v=2VSYmGSJtCA">to Infinity and
-Beyond</a>**!  Math can also be great entertainment, the ultimate
-puzzle, the ultimate game for your mind.
+Beyond</a>**!
+
+*But math can also be great entertainment, the ultimate puzzle, the
+ultimate game for your mind.*
+
+Mathematical reasoning is at the heart of mathematical thinking.  With
+this website you can see how it is done, building your skills and
+confidence in solving mathematical problems through proof.
+
+*With luck, you might even begin to see how mathematics can be
+something amazing and wonderful, even fun!*
+
+### Prooftoys
 
 Prooftoys is a computer tool that works with you interactively to
 solve math problems -- or prove mathematical statements.  It has
