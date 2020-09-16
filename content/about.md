@@ -19,11 +19,11 @@ mathematics at many levels and universally available.
 One of the goals of this website is to develop a friendly community
 of users around the tools here and using computers for mathematical
 reasoning.  Feel free to say "hello" to the author through
-<a href="mailto:cris@perdues.com">email</a>.
+<a href="mailto:cris@perdues.com"><b>email</b></a>.
 
-Or he is also on Slack.com.  <a target=_blank href=
+Or he is also on Slack.com.  You can use <a target=_blank href=
 "https://join.slack.com/t/mathtoys/shared_invite/zt-hfjkerk4-Am67OX60KEHycW9WEKFbxQ">
-<b>Use this link</b></a> to connect there.
+<b>this link</b></a> to connect there.
 
 <!--
 Today there are wonderful tools for practitioners who need answers to
