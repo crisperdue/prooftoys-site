@@ -55,16 +55,17 @@ body {
       text-decoration: none;
   }
 
-  .hero-image {
+  svg.hero-image {
+    display: block;
     position: absolute;
     top: 0;
     height: 100%;
   }
 
-  .hero-left-image {
+  svg.hero-left-image {
     left: 0px;
   }
-  .hero-right-image {
+  svg.hero-right-image {
     right: 0px;
   }
 
