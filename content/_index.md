@@ -10,11 +10,11 @@ Much as mathematics is an essential building material for science,
 mathematical reasoning is the essential building material for
 mathematics, that makes it possible to build sturdy mathematical
 structures that reach all the way **<a target=_blank
-href="https://www.youtube.com/watch?v=2VSYmGSJtCA">to Infinity and
-Beyond</a>**!
+href="https://www.youtube.com/watch?v=2VSYmGSJtCA">"To Infinity and
+Beyond!"</a>**
 
-*But math can also be great entertainment, the ultimate puzzle, the
-ultimate game for your mind.*
+*But math can also be entertainment, the ultimate puzzle, the
+perfect game for your mind.*
 
 Mathematical reasoning is at the heart of mathematical thinking.  With
 this website you can see how it is done, building your skills and
@@ -37,9 +37,11 @@ an especially simple way.  You can always dig into the solution of any
 problem and any proof to see exactly how it was done.
 
 Here is a problem from the book "My Best Mathematical and Logic
-Puzzles" (page 10) by the legendary Martin Gardner, author of numerous
-books of entertaining and puzzling mathematics and, for 25 years, the
-Mathematical Games column in Scientific American magazine.
+Puzzles" (page 10) by the legendary <a target=_blank
+href="https://en.wikipedia.org/wiki/Martin_Gardner">Martin
+Gardner</a>, author of numerous books of entertaining and puzzling
+mathematics and, for 25 years, the Mathematical Games column in
+Scientific American magazine.
 
 #### Try this: the problem of the repetitious number
 
