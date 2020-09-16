@@ -14,9 +14,8 @@ copy() {
   rsync -ar "$@"
 }
 
-PSITE=~cris/src/prooftoys
-# Unless overridden, Prooftoys files come from ~cris/src.
-PT_REPO="$PSITE"
+# Unless overridden below, Prooftoys files come from ~cris/src/prooftoys.
+PT_REPO=~cris/src/prooftoys
 
 # Repos to be deployed get copies of everything,
 # but it is more advantageous for psite to use
