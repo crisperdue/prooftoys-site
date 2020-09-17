@@ -7,7 +7,7 @@ title: Home
 *Would you like to master the art of mathematical thinking?*
 
 Much as mathematics is an essential building material for science,
-mathematical reasoning is the essential building material for
+mathematical reasoning is an essential building material for
 mathematics, that makes it possible to build sturdy mathematical
 structures that reach all the way **<a target=_blank
 href="https://www.youtube.com/watch?v=2VSYmGSJtCA">"To Infinity and
@@ -43,7 +43,7 @@ Gardner</a>, author of numerous books of entertaining and puzzling
 mathematics and, for 25 years, the Mathematical Games column in
 Scientific American magazine.
 
-#### Try this: the problem of the repetitious number
+#### Math magic -- the problem of the repetitious number
 
 In this parlor trick you ask *spectator A* to write down any three-digit
 number, then to copy the number to a new piece of paper, followed by

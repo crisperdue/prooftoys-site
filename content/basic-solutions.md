@@ -1,5 +1,5 @@
 ---
-title: "Basic examples - solutions"
+title: "Repetitious number"
 menu: menu.md
 ---
 
