@@ -3,8 +3,31 @@ title: "Repetitious number"
 menu: menu.md
 ---
 
-<a name=repetitious-number id=example></a>
-# The repetitious number -- solution
+## The problem of the repetitious number
+
+In this parlor trick you ask *spectator A* to write down any three-digit
+number, then to copy the number to a new piece of paper, followed by
+the same digits again, making a six-digit number.  Without looking,
+instruct *spectator A* to pass the paper to *spectator B* without
+revealing the number to you.
+
+*Spectator B* is to divide the resulting number by 7, and then pass the
+result to a *spectator C*, who divides the result by 11. (Tell them not
+to worry, there will be no remainder!)
+
+*Spectator C* passes it to yet one final spectator.  This last
+spectator is to divide the result by 13 and then read the resulting
+quotient.  The result will be the original three-digit number.
+
+**Problem:** Prove that this trick always works regardless of the
+initially-chosen number.
+
+**Hint:** The key to solving this problem is finding a simple
+mathematical statement of it.
+
+{{% solution name="solution" %}}
+
+### Solution: The repetitious number
 
 The key to this problem is that writing down a three-digit number and
 then making it into a six-digit number by appending the same three
@@ -68,16 +91,17 @@ number, then the statement is true.  The <s>R</s> is for "real".
 Since we are working with numbers, you will see this often, and it
 just means you are working with numbers.
 	
-**Try the steps yourself.** Can you build the same proof yourself
-from just the given statement?  Here is a workspace you can use
-to do the experiment.
+#### Try the steps yourself
+
+Can you build the same proof yourself from just the given statement?
+Here is a workspace you can use to do the experiment.
 
 <div class="proof-editor mb-4" data-steps='
 (steps
 (1 given (t ((((1001 * x) / 7) / 11) / 13)))
 )'></div>
 
-#### Seeing details
+### Seeing details
 
 Prooftoys encourages you to dig down into any step
 to see details for it.  To see the next level of detail, click on the
@@ -91,12 +115,42 @@ display.
 If a step has the word "use" in its description, it means the step
 applies a [rewrite rule](/inference/#replacement-and-rewriting).
 
+### Is there an easier way?
+
+If you are good at math and rarely make mistakes as you work a
+problem, you probably find it easier to solve problems like this in
+your usual way, and then you don't have to learn a new tool.
+
+On the other hand, Prooftoys has a complete set of rules for
+reasoning, and it won't goof if it gets a new kind of problem.
+
+There is a quite different breed of computer tool for solving typical
+textbook math problems, and they are called "computer algebra
+systems".  With one of them you may be able to just enter a statement
+of the problem, and it will crank out the answer.  For many kinds of
+problems they are much more capable than Prooftoys, but you will not
+learn nearly as much about proper mathematical reasoning by using one,
+and they are not built to work collaboratively with the human user
+as Prooftoys is.
+
+{{% /solution %}}
+
+### What's next?
+
 The system and this website are both works in progress.  More problems
 like this are on the way, so if you like what you see here, please --
 
-#### "Say hello"
+> **<i>Say, "Hello!"</i>**
 
 If you are interested in using this website to work math problems or
 learn more about mathematical reasoning, the author is delighted to
 hear from you.  Please check out the [**about**]({{< relref "/about.md"
 >}}) page for ways to get in touch.
+
+### Challenge -- Can you tell how long is a "lunar"?
+
+This problem comes from the same book by Martin Gardner.  He explains
+that in H. G. Wells' novel, "The First Men in the Moon", the moon is
+inhabited by intelligent natives who measure distance in lunars.
+
+##### [How long is a "lunar"?](/lunar/) &#x27aa;

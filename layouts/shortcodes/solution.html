@@ -1,0 +1,35 @@
+{{ $name := (.Get "name") }}
+<div id=no{{$name}}>
+<div class="viewSolution">
+<button class=viewSolution onclick=
+"$('#no{{$name}}').slideToggle(10);$('#{{$name}}')
+  .slideToggle({duration: 1000, easing: 'linear'})">
+<i>Click here</i> to see the solution
+</button>
+</div>
+<p>&nbsp;</p>
+<!-- <p class=mt-2>&nbsp;&nbsp;( . . . )</p> -->
+</div>
+<div id={{$name}} style="display:none">
+<div class=viewSolution>
+<button class=viewSolution onclick=
+"$('#no{{$name}}').slideToggle(100);$('#{{$name}}').slideToggle(100)">
+<i>Click here</i> to hide the solution
+</button>
+<p>&nbsp;</p>
+</div>
+
+{{ .Inner }}
+
+</div>
+<style type="text/css">
+button.viewSolution {
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-family: Georgia;
+}
+div.viewSolution {
+  margin-left: 10em;
+  xmargin-bottom: 30px;
+}
+</style>
