@@ -284,3 +284,33 @@ table.binaryTruthTable td.falsy:after {
   line-height: 1.8;
 }
 
+/* Fade/unfade (for "hiding" problem solutions) */
+
+div.canFade {
+  position: relative;
+}
+
+div.canFade button.unfade {
+  position: absolute;
+  visibility: hidden;
+  margin-top: 2em;
+  margin-left: 5em;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-family: Georgia;
+}
+
+div.canFade.faded button.unfade {
+  visibility: visible;
+}
+
+div.canFade .fadeHere {
+  opacity: 1;
+  transition: opacity .5s ease;
+  pointer-events: auto;
+}
+
+div.canFade.faded .fadeHere {
+  opacity: 0.2;
+  pointer-events: none;
+}
