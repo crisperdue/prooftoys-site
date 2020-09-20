@@ -25,9 +25,9 @@ initially-chosen number.
 **Hint:** The key to solving this problem is finding a simple
 mathematical statement of it.
 
-{{% solution name="solution" %}}
-
 ### Solution: The repetitious number
+
+{{% faded %}}
 
 The key to this problem is that writing down a three-digit number and
 then making it into a six-digit number by appending the same three
@@ -45,6 +45,8 @@ Here is a solution built with Prooftoys.
 (3 arrangeTerm (s 2) (path "/right/right"))
 (4 display (s 3))
 )'></div>
+
+{{% /faded %}}
 
 **The steps.** A proof consists of a sequence of steps connected by
 inference rules, each producing a new step.  In this proof we have:
@@ -132,8 +134,6 @@ problems they are much more capable than Prooftoys, but you will not
 learn nearly as much about proper mathematical reasoning by using one,
 and they are not built to work collaboratively with the human user
 as Prooftoys is.
-
-{{% /solution %}}
 
 ### What's next?
 
