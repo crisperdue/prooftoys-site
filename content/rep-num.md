@@ -25,7 +25,7 @@ initially-chosen number.
 **Hint:** The key to solving this problem is finding a simple
 mathematical statement of it.
 
-### Solution: The repetitious number
+### Solution
 
 {{% faded %}}
 
