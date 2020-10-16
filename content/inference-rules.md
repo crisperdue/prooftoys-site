@@ -127,8 +127,8 @@ that assumption can safely be removed.  We can suggest
 the working of the inference like this:
 
 {{% preblock %}}
-_From:_ `a_1 and a_2 and ... => C`
-_To:_ `a_2 and ... => C`
+_From:_ ~~a_1 and a_2 and ... ⇒ C~~
+_To:_ ~~a_2 and ... ⇒ C~~
 {{% /preblock %}}
 
 The one limitation is that there must be some value for the variable

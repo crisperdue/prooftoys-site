@@ -32,7 +32,7 @@ start with the version tuned for solving simple math problems
 at [the Mathtoys website](http://mathtoys.org/equations.html).
 
 Note: <i>Proof displays and the Proof Builder are supported in recent
-versions of Firefox and Chrome.</i>
+versions of Firefox, Chrome, and Microsoft Edge.</i>
 
 <div id=proofEditor></div>
 
