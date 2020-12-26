@@ -89,9 +89,9 @@ one.  If it worked on the whole step, it highlights just the number of
 the step it used as its input.
 
 What about <s>R x => . . . </s>?  This means that if x is a ("real")
-number, then the statement is true.  The <s>R</s> is for "real".
-Since we are working with numbers, you will see this often, and it
-just means you are working with numbers.
+number, then the statement is true.  The <s>R</s> is for "real".  In
+slightly different words, it expresses the usual assumption that
+<s>x</s> is a real number.
 	
 #### Try the steps yourself
 
@@ -140,10 +140,10 @@ as Prooftoys is.
 The system and this website are both works in progress.  More problems
 like this are on the way, so if you like what you see here, please --
 
-> **<i>Say, "Hello!"</i>**
+> **<i>Say "Hello!"</i>**
 
 If you are interested in using this website to work math problems or
-learn more about mathematical reasoning, the author is delighted to
+learn more about mathematical reasoning, the author would love to
 hear from you.  Please check out the [**about**]({{< relref "/about.md"
 >}}) page for ways to get in touch.
 
