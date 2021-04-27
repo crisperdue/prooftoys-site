@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Deploy prooftoys-site from the ~/src/publish area.
+# Deploy prooftoys.org to Netlify from the ~/src/publish area.  
 
 PUB=~/src/publish
 TREE=~/tmp/prooftoys-site-tree
