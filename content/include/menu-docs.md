@@ -9,8 +9,8 @@ headless: true
 
 - [The concepts](/pt-logic-concepts/)
 - [Language basics](/language-intro/)
-- [The Language](/language-intro/)
+- [The language](/language-intro/)
 - [Inference](/inference/)
-- [Theorems](/theorems/)
+- [Axioms and theorems](/theorems/)
 - [Logic through pictures](/logic-pix-intro/)
 - [Technical notes](/tech-notes/)

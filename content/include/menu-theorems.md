@@ -12,7 +12,7 @@ headless: true
 	- [The concepts](/pt-logic-concepts/)
 	- [Language basics](/language-intro/)
     - [Inference](/inference/)
-    - [Theorems](/theorems/)
+    - [Axioms and theorems](/theorems/)
 		- [Real number facts](/real-number-facts/)
 		- [Live logic facts list](/live-logic-facts/)
 		- [Advanced quantifier laws](/quantifiers/)

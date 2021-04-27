@@ -12,18 +12,20 @@ to represent functions that return values that are not boolean.
 Letters p and q are used for predicates, in other words functions
 with boolean values.
 
-Axiom 2 and axiom 3 are also shown in forms typically written when
-their functional parameters (f, g, h) are predicates (p, q) and have
-boolean values.
+Axiom 2 and axiom 3 are shown in two forms.  The second form shows
+their functional parameters (f, g, h) as predicates (p, q), for
+the case where their values are boolean.
 
 {{% preblock %}}
 ~~1) p T & p F == forall {a. p a}
-2) x = y => h x = h y
-2) x = y => (p x == p y)
-3) (f = g) == forall {x. f x = g x}
-3) (p = q) == forall {x. p x == q x}
+2a) x = y => h x = h y
+2b) x = y => (p x == p y)
+3a) (f = g) == forall {x. f x = g x}
+3b) (p = q) == forall {x. p x == q x}
 4) {x. R} S = R[x := S]
-5) the1 {x. x = y} = y~~
+5) the1 {x. x = y} = y
+6) if T x y = x
+7) if F x y = y~~
 {{% /preblock %}}
 
 In the description of Axiom 4, the notation R[x := S] means the result
@@ -60,6 +62,14 @@ For more on the use of definitions in Prooftoys see the
 [definitions]({{< relref "/definitions.md" >}}) page.
 
 {{% preblock %}}
+~~not = {a. a == F}
+not a == (a == F)~~\
+~~(&) = {a. {b. if a b F}}
+a & b == if a b F~~\
+~~(|) = {a. {b. if a T b}}
+a | b == if a T b~~\
+~~(=>) = {a. {b. if (not a) T b}}
+a => b == if (not a) T b~~\
 ~~forall = {p. p = {x. T}}
 forall p == p = {x. T}~~\
 ~~(!=) = {x. {y. not (x = y)}}
@@ -94,9 +104,9 @@ Functions ("eta conversion")
 
 ### Tautologies
 
-All tautologies can be proved, as described on this site from two
-[slightly different]({{< relref "/inference.md#tautologies" >}})
-[points of view]({{< relref "/logic-pix-truth.md#tautologies" >}}).
+All tautologies can be proved, as described
+[here]({{< relref "/inference.md#tautologies" >}}) and
+[here]({{< relref "/logic-pix-truth.md#tautologies" >}}).
 
 Here is a list of some tautologies that are used in Prooftoys or may
 be useful in building your own proofs.  Remember that all uses of `==`
@@ -148,5 +158,4 @@ Reasoning with instances:
 p x => exists p~~
 {{% /preblock %}}
 
-For more, see also the
-[advanced quantifier laws]({{< relref "/quantifiers.md" >}}).
+For more, see also the "live" list of [logic theorems]({{< relref "/live-logic-facts.md" >}}) and the [advanced quantifier laws]({{< relref "/quantifiers.md" >}}).

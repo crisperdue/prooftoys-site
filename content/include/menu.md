@@ -12,7 +12,7 @@ headless: true
 	- [Logic through pictures](/logic-pix-intro/)
 	- [Language basics](/language-intro/)
 	- [Inference](/inference/)
-	- [Theorems](/theorems/)
+	- [Axioms and theorems](/theorems/)
 
 -------------
 

@@ -14,7 +14,7 @@ headless: true
 	- [The concepts](/pt-logic-concepts/)
 	- [Language basics](/language-intro/)
     - [Inference](/inference/)
-    - [Theorems](/theorems/)
+    - [Axioms and theorems](/theorems/)
 
 -------------
 

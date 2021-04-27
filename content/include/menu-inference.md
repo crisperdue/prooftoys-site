@@ -16,7 +16,7 @@ headless: true
         - [More inference rules]({{< relref
           "/inference-rules.md" >}})
         - [Simplification]({{< relref "/simplification.md" >}})
-    - [Theorems](/theorems/)
+    - [Axioms and theorems](/theorems/)
 
 -------------
 
