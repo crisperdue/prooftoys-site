@@ -1,5 +1,5 @@
 ---
-title: Simple logic
+title: Axioms and theorems
 menu: menu-theorems.md
 ---
 
