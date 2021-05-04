@@ -22,3 +22,9 @@ pygmentsUseClasses = true
   dev_mode = true
   # For future use: (all resources local)
   airplane_mode = false
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
