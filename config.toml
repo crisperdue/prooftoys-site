@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "Prooftoys"
 theme = "hugo-whisper-theme"
 
+enableInlineShortcodes = true
+
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsUseClasses = true
@@ -28,3 +30,18 @@ pygmentsUseClasses = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[module]
+  [[module.imports]]
+    path = "example.com/prooftoys"
+    [[module.imports.mounts]]
+      source = "js"
+      target = "assets/pt/js"
+    [[module.imports.mounts]]
+      source = "tests"
+      target = "static/tests"
+  [[module.imports]]
+    path = "example.com/CDN"
+    [[module.imports.mounts]]
+      source = "static"
+      target = "static/lib"

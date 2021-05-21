@@ -1,3 +1,5 @@
+# Some contents are specific to this copy of repo
+/go.mod
 # Generated site goes here.
 /public/
 # Internal generated Hugo files go here.
