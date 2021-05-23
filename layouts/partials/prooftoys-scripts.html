@@ -9,9 +9,10 @@
   {{ $re := resources.Get "/pt/js/rendering.js" }}
   {{ $so := resources.Get "/pt/js/solution-status.js" }}
   {{ $en := resources.Get "/pt/js/engine.js" }}
+  {{ $un := resources.Get "/pt/js/unify.js" }}
   {{ $lo := resources.Get "/pt/js/logic.js" }}
   {{ $nu := resources.Get "/pt/js/numbers.js" }}
-  {{ $all := slice $si $tc $ut $pre $ex $xu $st $re $so $en $lo $nu }}
+  {{ $all := slice $si $tc $ut $pre $ex $xu $st $re $so $en $un $lo $nu }}
 <!-- This always creates all.js, which is used by test HTML files.
      experiment shows it best to recreate the site in batch
      mode to update it. -->
