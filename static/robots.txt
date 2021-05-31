@@ -1,4 +1,5 @@
 Sitemap: https://prooftoys.org/sitemap.xml
+User-agent: *
 Disallow: /tests/main/
 Disallow: /tests/parsing/
 Disallow: /_index-1/
