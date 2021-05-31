@@ -1,8 +1,11 @@
 {{/* Inserts a table of contents with headings at h2, h3, and h4. */}}
 <script type="text/javascript">
-jQuery(function() {
-  $('#TOC').tableofcontents({exclude: $('h1, h5, h6')});
-});
+
+// Set up a selector for site.js to use to initialize a table of
+// contents.  The DIV below will contain the table of contents.
+window.Toy = window.Toy || {};
+Toy.TOC = '#TOC';
+
 </script>
 
 <div id=TOC></div>

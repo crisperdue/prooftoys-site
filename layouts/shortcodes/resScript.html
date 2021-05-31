@@ -1,3 +1,4 @@
+<!-- This shortcode loads the resource immediately, and blocks. -->
 {{ $res := resources.Get (.Get 0) }}
 {{ $link := $res.RelPermalink }}
 <script type="text/javascript" src={{ $link }}></script>

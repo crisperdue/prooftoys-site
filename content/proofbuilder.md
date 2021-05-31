@@ -36,10 +36,11 @@ versions of Firefox, Chrome, and Microsoft Edge.</i>
 
 <div id=proofEditor></div>
 
-<script>
+<script defer>
 
-// On DOM ready:
-jQuery(function() {
+// On DOM ready.  This initializer runs before jQuery or
+// Prooftoys scripts are loaded.
+document.addEventListener('DOMContentLoaded', event => {
   // The page might have a "fact=" query parameter.
   const fact_arg = Toy.rawQueryParams.fact;
 

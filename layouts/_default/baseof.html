@@ -8,6 +8,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ with .Params.description }}<meta name=description content="{{ trim . "\n"}}">{{ end }}
   {{ block "meta_tags" . }}{{end}}
   <link rel="icon" href="/favicon.ico">
   {{ $style := resources.Get "scss/style.scss" | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" true) }}
@@ -24,7 +25,7 @@
   }
   </style>
 
-{{/* Load jQuery early to set up the global jQuery name. */}}
+{{/* Start jQuery early.  (It is deferred.) */}}
 {{ partial "jquery.html" . }}
 {{ partial "matomo.html" . }}
 </head>
@@ -63,7 +64,11 @@
 {{ partial "prooftoys-scripts.html" . }}
 
 <script>
+// Currently on DOM ready.  We really want mathifyAll to run before
+// all scripts are loaded, but it has some dependencies.
+document.addEventListener('DOMContentLoaded', event => {
   Toy.mathifyAll();
+});
 </script>
 
 </body>

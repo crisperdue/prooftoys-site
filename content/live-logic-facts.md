@@ -16,8 +16,9 @@ Furthermore, all tautologies are also theorems of the logic.
 <div id=proofDisplay style="margin-bottom: 1em"></div>
 
 <script>
-// On DOM ready:
-jQuery(function() {
+// On DOM ready.  This initializer may run before jQuery or
+// Prooftoys scripts are loaded.
+document.addEventListener('DOMContentLoaded', event => {
   // Proof display
   const display = new Toy.ProofDisplay();
   window.proofDisplay = display;  // debugging
