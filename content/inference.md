@@ -1,6 +1,9 @@
 ---
 title: "Inference"
 menu: menu-inference.md
+description: >
+  Reason logically like an expert with Prooftoys.
+  Prooftoys inference techniques are simple and powerful.
 ---
 
 # Inference - the basics

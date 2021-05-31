@@ -1,5 +1,10 @@
 ---
 title: Home
+description: >
+  Reason logically like an expert with Prooftoys,
+  the online reasoning tool.
+  Practice through puzzles and brain teasers, even
+  prove theorems.
 ---
 
 ### Mastering math
@@ -24,7 +29,7 @@ confidence in solving mathematical problems through proof.
 something amazing and wonderful, even fun!*
 
 ### Prooftoys
-
+ 
 Prooftoys is a computer tool that works with you interactively to
 solve math problems -- or prove mathematical statements.  It has
 correct rules for reasoning built into it, always follows them, and
