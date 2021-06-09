@@ -54,13 +54,30 @@ for integers.
 ### Operators and infix
 
 Constants named as operators are treated as infix operators, and infix
-expressions are parsed according to their precedence .  The system
-also designates a few other constants such as `div` and `mod` as
-infix.  For more details on the specific predefined names, precedences
-and more, see the [language summary](prooftoys-language).
+expressions are parsed according to their precedence.
 
 To suppress the infix nature of an operator, enclose just its name in
 parentheses, as in `(+)`.
+
+The precedences of Prooftoys infix operators in order from lowest to
+highest, in the input syntax, are:
+
+```
+  ==
+  =>
+  |
+  &
+  =, !=, <, <=, >, >=
+  +, -
+  *, /
+  **
+```
+
+Items on the same line have equal precedence.  All are
+left-associative, so `a + b - c` is the same as `(a + b) - c` and `a
+=> b => c` is the same as `(a => b) => c`.  The `==`, which displays
+as `≡`, is for boolean equivalence, which is technically just
+equality of true/false values.
 
 ### Function calls
 
@@ -112,6 +129,9 @@ squares a number might look like:
 ~~square = [x. x * x]~~
 {{% /preblock %}}
 
+(Function and predicate definitions are usually written without a
+functional expression, for example `square x = x * x`.  The two
+styles of definitions are fully equivalent.)
 
 Similarly, a predicate that is true just for positive numbers could be
 defined as:
@@ -122,8 +142,9 @@ defined as:
 
 providing a conventional set notation.
 
-**Note:** Brackets and braces are parsed exactly the same, but Prooftoys
-_displays all functions and predicates_  using **braces**, e.g. `{x. x * x}`.
+**Note:** Brackets and braces are parse to exactly the same internal
+structure, but Prooftoys currently displays all functions and
+predicates using **braces**, e.g. `{x. x * x}`.
 
 For a relation (e.g. two argument predicate), the logic uses nested lambdas.
 So we define "greater than" in terms of "less than" like this:
@@ -132,13 +153,8 @@ So we define "greater than" in terms of "less than" like this:
 greater = {x. {y. y < x}}
 {{% /preblock %}}
 
-With this definition it is true that `greater x y == y < x`.
+This is equivalent to the definition `greater x y == y < x`.
 
-This is comparable to notation you might see else where, such as
-
-{{% preblock %}}
-greater = {(x, y) | y < x}
-{{% /preblock %}}
 
 ### Quantifiers
 
