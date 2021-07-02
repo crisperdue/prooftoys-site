@@ -23,13 +23,12 @@
     background-color: honeydew;
 }
 
-/* If the proof editor is not editable, display this. */
-.proofEditor .ifReadOnly {
-  display: block;
-}
-
-.proofEditor.editable .ifReadOnly {
+/* If an error in loading the proof editor, then show. */
+.proofEditor .ifProofLoadError {
   display: none;
+}
+.proofEditor.proofLoadError ifProofLoadError {
+  display: block;
 }
 
 .proofEditor {
