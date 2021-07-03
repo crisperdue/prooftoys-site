@@ -27,7 +27,7 @@
 .proofEditor .ifProofLoadError {
   display: none;
 }
-.proofEditor.proofLoadError ifProofLoadError {
+.proofEditor.proofLoadError .ifProofLoadError {
   display: block;
 }
 
