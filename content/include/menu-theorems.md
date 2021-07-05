@@ -10,7 +10,6 @@ headless: true
 - [Home](/)
     - [Logic through pictures](/logic-pix-intro/)
 	- [The concepts](/pt-logic-concepts/)
-	- [Language basics](/language-intro/)
     - [Inference](/inference/)
     - [Axioms and theorems](/theorems/)
 		- [Real number facts](/real-number-facts/)
@@ -19,6 +18,6 @@ headless: true
 
 -------------
 
-- [*Proof builder playground*](/proofbuilder/)
-- [Language summary](/language-summary/)
+- [The language](/language-intro/)
 - [Technical notes](/tech-notes/)
+- [*Proof builder playground*](/proofbuilder/)

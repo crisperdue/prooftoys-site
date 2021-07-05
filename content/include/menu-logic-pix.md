@@ -12,12 +12,11 @@ headless: true
         - [Boolean functions](/logic-pix-booleans/)
         - [True statements](/logic-pix-truth/)
 	- [The concepts](/pt-logic-concepts/)
-	- [Language basics](/language-intro/)
     - [Inference](/inference/)
     - [Axioms and theorems](/theorems/)
 
 -------------
 
-- [*Proof builder playground*](/proofbuilder/)
-- [Language summary](/language-summary/)
+- [The language](/language-intro/)
 - [Technical notes](/tech-notes/)
+- [*Proof builder playground*](/proofbuilder/)

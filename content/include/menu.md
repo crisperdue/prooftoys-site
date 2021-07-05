@@ -10,7 +10,6 @@ headless: true
 - [Home](/)
 	- [The concepts](/pt-logic-concepts/)
 	- [Logic through pictures](/logic-pix-intro/)
-	- [Language basics](/language-intro/)
 	- [Inference](/inference/)
 	- [Axioms and theorems](/theorems/)
 

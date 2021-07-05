@@ -10,7 +10,7 @@ headless: true
 - [Home](/)
 	- [Logic through pictures](/logic-pix-intro/)
 	- [The concepts](/pt-logic-concepts/)
-	- [Language basics](/language-intro/)
+	- [The language](/language-intro/)
     - [Inference](/inference/)
         - [Definitions]({{< relref "/definitions.md" >}})
         - [More inference rules]({{< relref
