@@ -2,7 +2,7 @@
 {{/* NB. The tail of the link starting with the last "/" not at the end */}}
 {{/* $attrVal := .RelPermalink | replaceRE "^.*([/].+)" "$1" */}}
 {{ $dot := . }}
-<html lang="en">
+<html lang="en" class=logicZone>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -12,7 +12,7 @@
   {{ block "meta_tags" . }}{{end}}
   <link rel="icon" href="/favicon.ico">
   {{ $style := resources.Get "scss/style.scss" | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" true) }}
-    <link rel="stylesheet" href="{{ ($style).RelPermalink }}">
+  <link rel="stylesheet" href="{{ ($style).RelPermalink }}">
 
   {{ block "header_css" . }}{{ end }}
   {{ $pt := resources.Get "scss/pt.scss" | toCSS (dict "targetPath" "css/pt.css") }}
@@ -30,7 +30,7 @@
 {{ partial "matomo.html" . }}
 </head>
 
-<body class='page logicZone {{ block "body_classes" . }}{{ end }}'>
+<body class='page {{ block "body_classes" . }}{{ end }}'>
 {{block "banner" . }}{{partial "banner.html" . }}{{end}}
 {{partial "main-menu-mobile.html" . }}
 <div class="wrapper ml-1 mr-1 ml-md-4 mr-md-6 mr-lg-8">

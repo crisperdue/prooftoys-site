@@ -1,9 +1,25 @@
-/**
- * Styles for the Prooftoys web site.
+////
+//// Styles for the Prooftoys web site, including proofs,
+//// overriding the general site theme.
+////
+
+// Font
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,900|Lora:400,700|Roboto+Mono:300,400');
+
+// Icons
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css";
+
+/* To use Prooftoys styles throughout a document, give the HTML tag
+   the logicZone class.  Proof editors automatically apply it, too.
+   NOTE WELL that from here on, all styles are conditional on a parent
+   element having the "logicZone" class.
+
+   ALSO NOTE that this @import's proofs.css near the bottom, so its
+   styles are implicitly within "logicZone" as well, and can override
+   these.
  */
 
-@import "proofs.css";
-@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css";
+.logicZone {
 
 sub, sup {
   /* Prevents these from making the overall line less tall. */
@@ -317,4 +333,8 @@ div.canFade .fadeHere {
 div.canFade.faded .fadeHere {
   opacity: 0.2;
   pointer-events: none;
+}
+
+@import "proofs.scss";
+
 }
