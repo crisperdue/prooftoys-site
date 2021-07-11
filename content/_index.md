@@ -7,9 +7,9 @@ description: >
   prove theorems.
 ---
 
-### Mastering math
+### Deductive reasoning
 
-*Would you like to master the art of mathematical thinking?*
+*Are you curious about mathematical reasoning?*
 
 Much as mathematics is an essential building material for science,
 mathematical reasoning is an essential building material for
@@ -21,12 +21,12 @@ Beyond!"</a>**
 *But math can also be entertainment, the ultimate puzzle and
 game for your mind.*
 
-Mathematical reasoning is at the heart of mathematical thinking.  With
-this website you can see how it is done, building your skills and
-confidence in solving mathematical problems through proof.
+Proof -- deductive reasoning -- is a cornerstone of mathematical
+thinking.  With this website you can see how it is done, building your
+skills and confidence in solving mathematical problems through proof.
 
 *With luck, you might even begin to see how mathematics can be
-something amazing and wonderful, even fun!*
+amazing, wonderful, and fun!*
 
 ### Prooftoys
  
@@ -41,14 +41,13 @@ Prooftoys has been designed especially to do precise reasoning, but in
 an especially simple way.  You can always dig into the solution of any
 problem and any proof to see exactly how it was done.
 
-Our first problem is from the book "My Best Mathematical and Logic
-Puzzles" by the legendary <a target=_blank
+Here is a sample, a problem is from the book "My Best Mathematical and
+Logic Puzzles" by the legendary <a target=_blank
 href="https://en.wikipedia.org/wiki/Martin_Gardner">Martin
 Gardner</a>, author of numerous books of entertaining and puzzling
 mathematics and, for 25 years, the Mathematical Games column in
 Scientific American magazine.
 
-This is problem 20 in the book, and starts with a little mathematical
-parlor trick.
+This is problem 20 in the book, a little mathematical parlor trick.
 
 ##### [The problem of the repetitious number](/rep-num/) &#x27aa;

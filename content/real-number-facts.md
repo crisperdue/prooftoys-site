@@ -170,6 +170,7 @@ jQuery(function() {
   fact('@ isAddIdentity x == x = 0');
   fact('@ isMulIdentity x == x = 1');
   fact('@ R x & R y & x + y = 0 == R x & neg x = y');
+  fact('divisionIsInverse');
   console.log('Completed real facts');
 
   const demo = new Toy.ProofDisplay();

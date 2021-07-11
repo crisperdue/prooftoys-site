@@ -147,6 +147,8 @@ learn more about mathematical reasoning, the author would love to
 hear from you.  Please check out the [**about**]({{< relref "/about.md"
 >}}) page for ways to get in touch.
 
+<!--
+
 ### Challenge -- Can you tell how long is a "lunar"?
 
 This problem comes from the same book by Martin Gardner.  He explains
@@ -154,3 +156,5 @@ that in H. G. Wells' novel, "The First Men in the Moon", the moon is
 inhabited by intelligent natives who measure distance in lunars.
 
 ##### [How long is a "lunar"?](/lunar/) &#x27aa;
+
+-->
