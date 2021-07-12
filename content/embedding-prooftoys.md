@@ -2,11 +2,6 @@
 title: Embedding Prooftoys in a web page
 menu: menu.md
 ---
-<style type="text/css">
-.logicZone .content .code {
-  font-family: "Roboto Mono", monospace;
-}
-</style>
 
 ### Sample HTML for embedding Prooftoys in a web page
 

@@ -165,11 +165,18 @@ p.utterances {
 /* Inline code blocks are for logic, so style accordingly. */
 /* This also keeps less padding. */
 /* TODO: This is somewhat delicate, find something better. */
-.content p code {
+.content code {
     padding: 1px 3px;
     border-radius: 2px;
     font-family: STIXGeneral;
     font-size: 1rem;
+}
+
+/* From style.scss in the Whisper theme, so it can override
+   the preceding style. */
+.content pre code {
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.9rem;
 }
 
 /* For sidebar, see style.css */
