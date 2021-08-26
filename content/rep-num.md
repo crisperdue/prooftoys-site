@@ -70,8 +70,8 @@ inference rules, each producing a new step.  In this proof we have:
    Then select "algebra: simplify" from the menu that pops up.
    
 3. "Standard form &hellip; " -- select the term <s>1001 * x /
-   1001</s>, then pick the item "algebra: standard form for term in
-   sum" from the menu that pops up.
+   1001</s>, then pick the item "algebra: to form k * x" from the menu
+   that pops up.
 	
 4.  "Display fully" -- 
     This step does no inference, but causes the system to show all
