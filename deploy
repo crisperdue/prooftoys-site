@@ -25,7 +25,7 @@ run git pull
 
 echo
 echo ==== BUILD SITE ====
-run ./hugo
+run hugo
 
 echo
 echo ==== RELEASE ====
