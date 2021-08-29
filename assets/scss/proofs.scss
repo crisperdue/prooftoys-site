@@ -39,8 +39,9 @@
 
   input[type=button], button {
       background-color: #ddf;
+      border-width: 1px;
       border-radius: 6px;
-      padding: 3px 12px;
+      padding: 2px 8px 1px;
   }
 
   input.saveAs {
@@ -137,6 +138,7 @@
      */
     border: 1px solid transparent;
     margin-left: 4em;
+    margin-bottom: .3em;
 }
 
 /* Override the left margin just above to push the first child to the left. */
