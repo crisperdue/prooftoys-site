@@ -141,8 +141,6 @@ x < y & 0 < z => x * z < y * z
 // On DOM ready:
 jQuery(function() {
 
-  Toy.mathifyAll();
-
   const rules = Toy.rules;
 
   // Proof display

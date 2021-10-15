@@ -38,36 +38,37 @@ versions of Firefox, Chrome, and Microsoft Edge.</i>
 
 <script defer>
 
-// On DOM ready.  This initializer runs before jQuery or
-// Prooftoys scripts are loaded.
-document.addEventListener('DOMContentLoaded', event => {
-  // The page might have a "fact=" query parameter.
-  const fact_arg = Toy.rawQueryParams.fact;
+$(() => {
+  // Do all of this "soon" after all ordinary Prooftoys initializations.
+  Promise.resolve().then(() => {
+    // The page might have a "fact=" query parameter.
+    const fact_arg = Toy.rawQueryParams.fact;
 
-  // Proof editor node
-  const options = fact_arg && {docName: 'proofbuilder', loadDoc: false};
-  var editor = new Toy.ProofEditor(options);
-  window.proofEditor = editor;
-  editor.setRulesMode('general');
-  $('#proofEditor').append(editor.containerNode);
+    // Proof editor node
+    const options = fact_arg && {docName: 'proofbuilder', loadDoc: false};
+    var editor = new Toy.ProofEditor(options);
+    window.proofEditor = editor;
+    editor.setRulesMode('general');
+    $('#proofEditor').append(editor.containerNode);
 
-  if (fact_arg) {
-    const rules = Toy.rules;
-    // Convert "^" in the query string to '&' to support
-    // facts with conjunctions in them.
-    const fact = fact_arg.replace(/\^/g, '&');
-    // If there is a "fact" query parameter, force the editor to
-    // load the fact and ignore any existing "proofbuilder" document.
-    // If "details" is also supplied, this forces the editor to
-    // load a proof of the fact.
-    console.log(fact);
-    const result = rules.fact(fact);
-    editor.addStep(result);
-    const details = Toy.queryParams.details;
-    if (details) {
-      rules.inline(editor.steps[0].original);
+    if (fact_arg) {
+      const rules = Toy.rules;
+      // Convert "^" in the query string to '&' to support
+      // facts with conjunctions in them.
+      const fact = fact_arg.replace(/\^/g, '&');
+      // If there is a "fact" query parameter, force the editor to
+      // load the fact and ignore any existing "proofbuilder" document.
+      // If "details" is also supplied, this forces the editor to
+      // load a proof of the fact.
+      console.log(fact);
+      const result = rules.fact(fact);
+      editor.addStep(result);
+      const details = Toy.queryParams.details;
+      if (details) {
+        rules.inline(editor.steps[0].original);
+      }
     }
-  }
+  });
 });
 
 </script>
