@@ -20,70 +20,71 @@ are pattern variables to be replaced with arbitrary boolean terms
 values are functions.  Capital letters X and Y are also pattern
 variables, for arbitrary terms of any type.
 
-## Rewriting and replacement
+## Equality
 
-Rewriting and replacement are core parts of inference in Prooftoys,
-and have [their own page]({{< relref "/inference.md" >}}).
-
-## Variations on substitution
-
-### Substitution for free variable(s)
-
-{{% preblock %}}
-_From:_ Proof step with one or more free variables.
-_To:_ Proof step with a term substituted for each variable.
-{{% /preblock %}}
-
-### Universal instantiation
-
-{{% preblock %}}
-_From:_ `forall {x. A}`.
-_To:_ A with a term of your choice substituted for `x`.
-{{% /preblock %}}
-
-### Substitution into a function body (beta reduction)
-
-{{% preblock %}}
-_From:_ `{x. A} X`.
-_To:_ `A`, with term `X` substituted for `x` throughout
-{{% /preblock %}}
-
-This can be done anywhere in any formula.
-
-#### Note on substitution
-
-In the simple cases, all forms of substitution above work in the way
-you might expect from examples in any high school math textbook.
-There is a restriction in cases where the term undergoing substitution
-contains "bound" variables of its own.
-
-For details on this see [link TBD](http://prooftoys.org/TBD).
-
-## Other rules
+When working with equality in Prooftoys it is important to remember
+that equivalence (<s>==</s>) is the same concept as equality
+applied to true/false values.
 
 ### Self-equality
 
 {{% preblock %}}
-`X = X`
+~~x = x~~
+~~A == A~~
 {{% /preblock %}}
 
 The value of any expression is equal to itself.
 
-### Universal quantifier elimination
+### Symmetry of equality
 
 {{% preblock %}}
-_From:_ `forall {x. B}`
-_To:_ `B`
+~~x = y == y = x~~
 {{% /preblock %}}
 
-(Result of instantiating with `x`.)
-
-### Universal quantifier introduction
+### Transitivity of equality
 
 {{% preblock %}}
-_From:_ `B`
-_To:_ `forall {x. B}`
+~~x = y & y = z => x = z~~
 {{% /preblock %}}
+
+## Using proved statements
+
+### Proved statements are equal to T
+
+This is used constantly with proved statements.
+
+{{% preblock %}}
+~~A == (A == T)~~
+~~A == (T == A)~~
+~~(A == T) == A~~
+~~(T == A) == A~~
+{{% /preblock %}}
+
+In other words, Any proved statement can be converted back and forth
+to a statement that its value is equal to `T`.  If it is conditional,
+it can covert into a statement that its conclusion is equal to `T`.
+
+This lets you build conjunctions using <s>A == A & T</s>.  Or you can
+remove true statements by replacing them with `T`.
+
+## Assumptions
+
+{{% preblock %}}
+~~X => X~~
+{{% /preblock %}}
+
+Conclude anything if you assume it.  This is an often-used tautology.
+
+{{% preblock %}}
+~~C => (A => C)~~
+~~(A => C) => (A & B => C)~~
+{{% /preblock %}}
+
+So you can always add a new assumption.  These are also tautologies.
+
+### Reducing function calls
+
+[[More to come here.]]
 
 ### Binding both sides of an equation
 
@@ -120,10 +121,9 @@ functions of multiple arguments.
 
 ### Removing irrelevant assumptions
 
-If a conditional fact has an assumption with a variable
-that only appears (free) in that assumption and nowhere
-else in the statement of the fact, in almost all cases,
-that assumption can safely be removed.  We can suggest
+If a conditional fact has an assumption with a variable that only
+appears (free) in that assumption and nowhere else in the statement of
+the fact, that assumption can be safely be removed.  We can suggest
 the working of the inference like this:
 
 {{% preblock %}}
@@ -134,9 +134,9 @@ _To:_ ~~a_2 and ... ⇒ C~~
 The one limitation is that there must be some value for the variable
 that can make the irrelevant assumption true.  So to use this rule in
 a proof, there must be a proof that such a value exists.  Prooftoys
-doesn't yet support this rule in its general form, but it supports a
-couple of common cases.  These are useful cases, and Prooftoys can
-work out the existence fact on its own.  The cases are:
+currently supports a couple of common cases.  These are useful cases,
+and Prooftoys can work out the existence fact on its own.  The cases
+are:
 
 {{% preblock %}}
 <var> = <term>; and
@@ -149,6 +149,63 @@ fact outside this one assumption.
 For every assumption of these kinds, the existence of a value
 satisfying it is provable, so we can remove the assumption from the
 proof step.
+
+## Rewriting and replacement
+
+Rewriting and replacement are core parts of inference in Prooftoys,
+and have [their own page]({{< relref "/inference.md" >}}).
+
+## Substitution
+
+{{% preblock %}}
+_From:_ Proof step with one or more free variables.
+_To:_ Proof step with a term substituted for each variable.
+{{% /preblock %}}
+
+## Quantifiers
+
+(new page)
+
+### Universal quantifier elimination
+
+{{% preblock %}}
+_From:_ `forall {x. B}`
+_To:_ `B`
+{{% /preblock %}}
+
+(Result of instantiating with `x`.)
+
+### Universal quantifier introduction
+
+{{% preblock %}}
+_From:_ `B`
+_To:_ `forall {x. B}`
+{{% /preblock %}}
+
+### Universal instantiation
+
+{{% preblock %}}
+_From:_ `forall {x. A}`.
+_To:_ A with a term of your choice substituted for `x`.
+{{% /preblock %}}
+
+### Substitution into a function body (beta reduction)
+
+{{% preblock %}}
+_From:_ `{x. A} X`.
+_To:_ `A`, with term `X` substituted for `x` throughout
+{{% /preblock %}}
+
+This can be done anywhere in any formula.
+
+#### Note on substitution
+
+In the simple cases, all forms of substitution above work in the way
+you might expect from examples in any high school math textbook.
+There is a restriction in cases where the term undergoing substitution
+contains "bound" variables of its own.
+
+For details on this see [link TBD](http://prooftoys.org/TBD).
 
 ### Some fancy forms of rewriting
 
