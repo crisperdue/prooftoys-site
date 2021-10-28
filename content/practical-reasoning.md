@@ -1,9 +1,9 @@
 ---
-title: "Inference rules"
+title: "Practical reasoning"
 menu: menu-inference.md
 ---
 
-# More common inference rules
+# Practical reasoning with Prooftoys
 
 ##### Table of contents
 
