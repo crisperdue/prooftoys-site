@@ -8,18 +8,17 @@ headless: true
 ***Pages***
 
 - [Home](/)
-	- [Logic through pictures](/logic-pix-intro/)
-	- [The concepts](/pt-logic-concepts/)
-	- [The language](/language-intro/)
-    - [Inference](/inference/)
+	- [Logic through pictures]({{< relref "/logic-pix-intro.md" >}})
+	- [The concepts]({{< relref "/pt-logic-concepts.md" >}})
+	- [The language]({{< relref "/language-intro.md" >}})
+    - [Inference]({{< relref "/inference.md" >}})
         - [Definitions]({{< relref "/definitions.md" >}})
-        - [More inference rules]({{< relref
-          "/inference-rules.md" >}})
+        - [Practical reasoning with Prooftoys]({{< relref "/practical-reasoning.md" >}})
         - [Simplification]({{< relref "/simplification.md" >}})
-    - [Axioms and theorems](/theorems/)
+    - [Axioms and theorems]({{< relref "/theorems.md" >}})
 
 -------------
 
-- [*Proof builder playground*](/proofbuilder/)
-- [Language summary](/language-summary/)
-- [Technical notes](/tech-notes/)
+- [*Proof builder playground*]({{< relref "/proofbuilder.md" >}})
+- [Symbols quick reference]({{< relref "/symbols-quickref.md" >}})
+- [Technical notes]({{< relref "/tech-notes.md" >}})

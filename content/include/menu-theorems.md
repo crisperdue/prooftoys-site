@@ -8,16 +8,17 @@ headless: true
 ***Pages***
 
 - [Home](/)
-    - [Logic through pictures](/logic-pix-intro/)
-	- [The concepts](/pt-logic-concepts/)
-    - [Inference](/inference/)
-    - [Axioms and theorems](/theorems/)
-		- [Real number facts](/real-number-facts/)
-		- [Live logic facts list](/live-logic-facts/)
-		- [Advanced quantifier laws](/quantifiers/)
+    - [Logic through pictures]({{< relref "/logic-pix-intro.md" >}})
+	- [The concepts]({{< relref "/pt-logic-concepts.md" >}})
+    - [Inference]({{< relref "/inference.md" >}})
+    - [Axioms and theorems]({{< relref "/theorems.md" >}})
+		- [Real number facts]({{< relref "/real-number-facts.md" >}})
+		- [Live logic facts list]({{< relref "/live-logic-facts.md" >}})
+		- [Advanced quantifier laws]({{< relref "/quantifiers.md" >}})
 
 -------------
 
-- [The language](/language-intro/)
-- [Technical notes](/tech-notes/)
-- [*Proof builder playground*](/proofbuilder/)
+- [The language]({{< relref "/language-intro.md" >}})
+- [*Proof builder playground*]({{< relref "/proofbuilder.md" >}})
+- [Symbols quick reference]({{< relref "/symbols-quickref.md" >}})
+- [Technical notes]({{< relref "/tech-notes.md" >}})

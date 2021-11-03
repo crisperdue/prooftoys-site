@@ -8,14 +8,14 @@ headless: true
 ***Pages***
 
 - [Home](/)
-	- [The concepts](/pt-logic-concepts/)
-	- [Logic through pictures](/logic-pix-intro/)
-	- [Inference](/inference/)
-	- [Axioms and theorems](/theorems/)
+	- [The concepts]({{< relref "/pt-logic-concepts.md" >}})
+	- [Logic through pictures]({{< relref "/logic-pix-intro.md" >}})
+	- [Inference]({{< relref "/inference.md" >}})
+	- [Axioms and theorems]({{< relref "/theorems.md" >}})
 
 -------------
 
-- [About](/about/)
-- [The Language](/language-intro/)
-- [Technical notes](/tech-notes/)
-- [*Proof builder playground*](/proofbuilder/)
+- [About]({{< relref "/about.md" >}})
+- [The Language]({{< relref "/language-intro.md" >}})
+- [Technical notes]({{< relref "/tech-notes.md" >}})
+- [*Proof builder playground*]({{< relref "/proofbuilder.md" >}})

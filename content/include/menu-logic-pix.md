@@ -8,15 +8,16 @@ headless: true
 ***Pages***
 
 - [Home](/)
-    - [Logic through pictures](/logic-pix-intro/)
-        - [Boolean functions](/logic-pix-booleans/)
-        - [True statements](/logic-pix-truth/)
-	- [The concepts](/pt-logic-concepts/)
-    - [Inference](/inference/)
-    - [Axioms and theorems](/theorems/)
+    - [Logic through pictures]({{< relref "/logic-pix-intro.md" >}})
+        - [Boolean functions]({{< relref "/logic-pix-booleans.md" >}})
+        - [True statements]({{< relref "/logic-pix-truth.md" >}})
+	- [The concepts]({{< relref "/pt-logic-concepts.md" >}})
+    - [Inference]({{< relref "/inference.md" >}})
+    - [Axioms and theorems]({{< relref "/theorems.md" >}})
 
 -------------
 
-- [The language](/language-intro/)
-- [Technical notes](/tech-notes/)
-- [*Proof builder playground*](/proofbuilder/)
+- [The language]({{< relref "/language-intro.md" >}})
+- [*Proof builder playground*]({{< relref "/proofbuilder.md" >}})
+- [Symbols quick reference]({{< relref "/symbols-quickref.md" >}})
+- [Technical notes]({{< relref "/tech-notes.md" >}})
