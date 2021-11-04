@@ -23,6 +23,12 @@
   .docs-menu ul {{ printf "a[href=%q]" .RelPermalink | safeCSS }} {
       color: #1dc996;
   }
+  .tippy-box {
+    background-color: darkolivegreen;
+  }
+  .tippy-arrow {
+    color: darkolivegreen;
+  }
   </style>
 
 {{/* Start jQuery early.  (It is deferred.) */}}
@@ -61,14 +67,28 @@
 {{/* partial "page-footer.html" . */}}
 
 {{ block "footer_js" . }}{{ end }}
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js">
+</script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js">
+</script>
 {{ partial "prooftoys-scripts.html" . }}
 
 <script>
 // Currently on DOM ready.  We really want mathifyAll to run before
 // all scripts are loaded, but it has some dependencies.
-document.addEventListener('DOMContentLoaded', event => {
+// document.addEventListener('DOMContentLoaded', event => {
   Toy.mathifyAll();
-});
+  tippy('[data-tippy-content]', {
+    allowHTML: true,
+    delay: [300, 0],
+    content(reference) {
+      const title = reference.getAttribute('title');
+      console.log('title:', title);
+      reference.removeAttribute('title');
+      return title;
+    },
+  });
+// });
 </script>
 
 </body>
