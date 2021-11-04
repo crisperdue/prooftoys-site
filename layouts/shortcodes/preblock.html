@@ -1,3 +1,4 @@
+<!-- Using markdownify here seems to support HTML better -->
 <span class=preBlock>
-{{- trim .Inner "\n\r" -}}{{/* element must be inline */}}
+{{- trim .Inner "\n\r" | markdownify -}}
 </span>
