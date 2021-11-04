@@ -17,9 +17,9 @@ their functional parameters (f, g, h) as predicates (p, q), for
 the case where their values are boolean.
 
 {{% preblock %}}
-~~1) p T & p F == forall {a. p a}
-2a) x = y => h x = h y
-2b) x = y => (p x == p y)
+<s>1) p T & p F == forall {a. p a}</s>
+<s>2a) x = y => h x = h y</s>
+~~2b) x = y => (p x == p y)
 3a) (f = g) == forall {x. f x = g x}
 3b) (p = q) == forall {x. p x == q x}
 4) {x. R} S = R[x := S]
@@ -55,8 +55,8 @@ Definitions of functions and predicates in this list are given in
 pairs; first the native form with only the name of the new constant on
 the left, and then in the traditional form.  The two forms are
 equivalent.  See the inference rules for [unbinding]({{< relref
-"/inference-rules.md#unbinding-an-equation" >}}) and [rebinding]({{<
-relref "/inference-rules.md#rebinding-an-equation" >}}) equations.
+"/practical-reasoning.md#unbinding-an-equation" >}}) and [rebinding]({{<
+relref "/practical-reasoning.md#rebinding-an-equation" >}}) equations.
 
 For more on the use of definitions in Prooftoys see the
 [definitions]({{< relref "/definitions.md" >}}) page.

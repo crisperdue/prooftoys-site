@@ -4,7 +4,11 @@ menu: "/menu-logic-pix.md"
 sidebarStyle: floating
 ---
 
-## Statements that are always true
+## True statements
+
+##### Table of contents
+
+{{< TOC >}}
 
 We will return soon to describe one more function that takes truth
 values as inputs, but it may be easier to understand its importance
@@ -25,7 +29,7 @@ will sometimes refer to them as "true everywhere".
 
 As an example let's consider the statement that every number is either
 less than 100 or greater than 10.  We could state this as
-`x < 100 | x > 10`.  In the picture for this
+<s>x < 100 | x > 10</s>.  In the picture for this
 statement all shaded areas represent cases where the statement is
 true.
 
@@ -39,7 +43,7 @@ line and the values having both of the properties, like this:
 
 <canvas id=canvasArrow width=310 height=100></canvas>
 
-The statement `x < 100 | x > 10` is true regardless
+The statement <s>x < 100 | x > 10</s> is true regardless
 of the value of `x`.  In mathematics, if the truth of a
 statement does not depend on the values of variables in it, it
 is considered simply a true or valid statement.
@@ -49,18 +53,21 @@ is considered simply a true or valid statement.
 For a statement with "and" to be true, both of its parts must be true.
 In the statement's picture, both statements must be true at every spot
 in the picutre.  Here is a picture illustrating a statement
-`A & B` that is true, where A and B are both
+<s>A & B</s> that is true, where A and B are both
 true statements.
 
 <canvas id=canvasAnd width=210 height=210></canvas>
 
-### Statements like "all A are B"
+### Conditional: "implies"
+
+**Symbol: <s>=></s>**<br>
+**Plain text: <tt>=></tt>**
 
 Let's look at another typical kind of statement that has a logical
 meaning, such as "all birds have wings".  We might also express this
 as "if x is a bird then x has wings".  In our notation we can write
-`(bird x) implies (wings x)` or alternatively
-`bird x => wings x`.
+<s>(bird x) implies (wings x)</s> or alternatively
+<s>bird x => wings x</s>.
 
 The picture below illustrates a scenario where the statement is true.
 The area representing all things with wings contains the entire area
@@ -90,7 +97,7 @@ whether this statement about birds is true.  If every part of the
 picture is either in the "wings" circle or <b>not</b> in the "birds"
 circle, the statement is true.
 
-### Implication: "implies" (<s>⇒</s>)
+#### Conditionals that are true
 
 Returning to functions with truth values as inputs and outputs, we
 can see how to define one more key function.  This function enables us
@@ -98,13 +105,11 @@ to express statements like "all birds have wings" mathematically.  It
 takes two truth values as inputs and produces true or false as its
 value.  The previous example and pictures above apply here once again.
 
-We call the function <s>implies</s> (alternatively
-<s>⇒</s>), and it enables us to make statements that say
-one thing implies another.  Here are two picture as before, but with
-shading to show the areas where the expression
-<s>(bird x) ⇒ (wings x)</s> has
-<s>true</s> as its value.  First one where
-it is true everywhere:
+We call the function <s>implies</s> (alternatively <s>⇒</s>), and it
+enables us to make statements that say one thing implies another.
+Here are two picture as before, but with shading to show the areas
+where the expression <s>(bird x) => (wings x)</s> has <s>true</s> as
+its value.  First one where it is true everywhere:
 
 <canvas id=birdWingsTrue width=210 height=210></canvas>
 
@@ -170,7 +175,7 @@ vacuous.
 The logical functions can be combined into complex expressions.  In
 the lunch example, where D is an abbreviation for "delicious" and E is
 an abbreviation for "easy", the expression
-<s>(not ((D x) & (E x)))</s> refers to things that are
+<s>not ((D x) & (E x))</s> refers to things that are
 *not* easy and delicious.
 
 <canvas id=DnandE width=210 height=210></canvas>
@@ -199,7 +204,7 @@ the table for <s>not</s>.
   <td x=false y=false class=truthy>
 </table>
 
-The expression <s>(not (D x) & not (E x))</s> refers to things
+The expression <s>not (D x) & not (E x)</s> refers to things
 that are neither delicious nor easy; unfortunate for the eater, but
 fortunate for things that do not wish to be eaten.
 
@@ -235,12 +240,13 @@ results of each part in a table.
 
 Some statements are not just true everywhere, they are true everywhere
 in every possible picture.  Consider the statement
-`(blue x) | (not (blue x))`, "either x is blue or x
-is not blue".  It does not matter how many things are blue, or which
-things are blue.  It doesn't even matter if any things at all are
-blue.  If we make a picture with one area for blue things and the rest
-for things that are not blue, every part of the picture will be in one
-of these two parts, either inside the "blue" area or not inside it.
+<s>(blue x) | not(blue x)</s>,
+"x is blue or x is not blue".  It does not matter how
+many things are blue, or which things are blue.  It doesn't even
+matter if any things at all are blue.  If we make a picture with one
+area for blue things and the rest for things that are not blue, every
+part of the picture will be in one of these two parts, either inside
+the "blue" area or not inside it.
 
 This is an application of a *tautology*. Tautologies are true
 regardless of the truth of their parts.  Statements of this sort occur
@@ -249,11 +255,13 @@ even more often implicitly behind the scenes.
 
 If a statement is a tautology, this can be verified just by building
 its truth table.  If all of the entries are <s>true</s>, it is a
-tautology.  The statement `(blue x) | (not (blue x))` is
-indeed a tautology, and its truth table has the value
-<s>true</s> everywhere.  Although the expression is complex
-this table has only two entries because it has only one variable,
-which is either <s>true</s> or <s>false</s>.
+tautology.  It turns out that the statement
+<s>(blue x) | (not (blue x))</s>
+is true because the statement <s>A | not A</s> is a tautology.
+In other words the truth table for <s>A | not A</s> has the value
+<s>true</s> everywhere.  Although the expression is complex this table
+has only two entries because it has only one variable, which is either
+<s>true</s> or <s>false</s>.
 
 <table class=binaryTruthTable id=tautology1>
  <tr>
@@ -270,7 +278,7 @@ such as `(D x)`, `(E x)`, or `(blue x)`.  It doesn't matter whether an
 input is given by a variable or some expression.  All that matters is
 that different expressions are handled as different inputs.  If an
 expression (such as `(blue x)`) appears more than once in the full
-expression (such as `(blue x) | (not (blue x))`, all of its
+expression (such as <s>(blue x) | (not (blue x))</s>, all of its
 occurrences will have the same value when given the same value for
 `x`.
 

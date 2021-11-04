@@ -9,16 +9,13 @@ menu: menu-inference.md
 
 {{< TOC >}}
 
-## About the notation
 
-Before learning about more handy rules of inference, let's clarify
-a bit the notation in the next sections.
 
-Capital letters A, B, and C here are not variables in the logic.  They
-are pattern variables to be replaced with arbitrary boolean terms
-(with true/false values).  Letters F and G represent terms whose
-values are functions.  Capital letters X and Y are also pattern
-variables, for arbitrary terms of any type.
+In the descriptions of rules of inference, capital letters A, B, and C
+are variables with boolean (true/false) values.  The letters x and y
+are used for variables of any type.  You can supply any term you
+choose for capital letters X and Y without the need to follow the
+usual rules for substitution.
 
 ## Equality
 
@@ -29,22 +26,18 @@ applied to true/false values.
 ### Self-equality
 
 {{% preblock %}}
-~~x = x~~
-~~A == A~~
+<s>x = x</s>
+<s>A == A</s>
 {{% /preblock %}}
 
-The value of any expression is equal to itself.
+The value of any expression is equal to itself.  This is often a good
+way to start a proof that `A` is equal to something else.  Keep
+replacing one side with something else that is equal to it.
 
 ### Symmetry of equality
 
 {{% preblock %}}
 ~~x = y == y = x~~
-{{% /preblock %}}
-
-### Transitivity of equality
-
-{{% preblock %}}
-~~x = y & y = z => x = z~~
 {{% /preblock %}}
 
 ## Using proved statements
@@ -127,8 +120,8 @@ the fact, that assumption can be safely be removed.  We can suggest
 the working of the inference like this:
 
 {{% preblock %}}
-_From:_ ~~a_1 and a_2 and ... ⇒ C~~
-_To:_ ~~a_2 and ... ⇒ C~~
+_From:_ ~~a_1 and a_2 and ... => C~~
+_To:_ ~~a_2 and ... => C~~
 {{% /preblock %}}
 
 The one limitation is that there must be some value for the variable

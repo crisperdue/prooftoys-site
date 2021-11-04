@@ -15,7 +15,10 @@ have truth values as their inputs and a truth value as their result.
 They can also be referred to as *truth functions* or *logical
 functions*.
 
-### Untrue: "not" (<s>not</s>)
+### Untrue: "not"
+
+**Symbol: <s>not</s>**<br>
+**Plain text: <tt>not</tt>**
 
 The simplest of these functions is called `not`, also known
 as negation.  Negation provides a way to talk about things that do not
@@ -66,24 +69,27 @@ highlight the difference between true and false.  We will use this
 color scheme in other truth tables as well.
 
 In our notation we write the property of not being blue as
-`not(blue x)` or `(not(blue x))`.
-Of course we can also read this as saying that the predicate blue is
+<s>not(blue x)</s> or <s>(not(blue x))</s>.
+We can also read this as saying that the predicate blue is
 not true for x, or that x is not in the set of things that are blue.
-In mathematics a statement like `(not(A x))` is
+In mathematics a statement like <s>not(A x)</s> is
 commonly called the negation of a statement
 `(A x)`.  The negated statement is true of
 all the things where theoriginal statement `(A x)` is false.
 
 Another notation sometimes used for negation is "~".
 
-### At least one true: "or" (`|`)
+### At least one true: "or"
+
+**Symbol: <s>|</s>**<br>
+**Plain text: <tt>or</tt>**
 
 As an example of our next function, suppose you are thinking what to
 have for lunch, and decide it must either be delicious or easy.  In
 the first picture let circle D represent things that are delicious and
 circle E represent things that are easy.  The combined area then
 represents things that are delicious or easy.  We can write that a
-thing x is "delicious or easy" as `(D x) | (E x)`.
+thing x is "delicious or easy" as <s>(D x) | (E x)</s>.
 Everything in the parts of the picture that are shaded have this
 property.
 
@@ -100,7 +106,7 @@ to model this relationship.  This function has two inputs.  Each input
 value is *boolean* (true or false) and so is the result.  Again,
 hover the mouse over either of the pictures to highlight the
 appropriate parts of the truth table for the function named
-`or` (`|`).
+`or` (<s>|</s>).
 
 <table class=binaryTruthTable id=disjunctionTable>
  <tr>
@@ -124,19 +130,22 @@ This truth table is organized with a row for each value of the first
 input and a column for each value of the second input.  The value of
 the function is in the row for the value of the first input and the
 column for the value of the second input.  So for example
-`(false | true) = true`.
+<s>(false | true) == true</s>.
 
-### Both true: "and" (<s>&</s>)
+### Both true: "and"
+
+**Symbol: <s>&</s>**<br>
+**Plain text: <tt>&</tt>**
 
 Suppose you are feeling more picky about your lunch, and decide it
 must be both delicious and easy.  Only things in both of the circles
 fit this description -- the small shaded area in the next picture.  In
-Prooftoys we write `((D x) & (E x))`.
+Prooftoys we write <s>((D x) & (E x))</s>.
 
 <canvas id=canvasAndDE width=210 height=210></canvas>
 
 Once again, at each point "x" in the picture,
-`((D x) & (E x))` is true exactly when `(D x)`
+<s>((D x) & (E x))</s> is true exactly when `(D x)`
 is true and `(E x)` is also true.  We can define a
 function with this truth table:
 
@@ -168,10 +177,10 @@ overlap; there is no part of the picture where <s>(D x)</s> and
 <s>(E x)</s> are both true.  If that really is your
 requirement, in this scenario there is no possible lunch for you!
 
-A common notation for conjunction is "`&`", for example
-`p & q`.
+### Equality: "equivalent"
 
-### Equality: (`=, ==`)
+**Symbol: <s>==</s>**<br>
+**Plain text: <tt>==</tt>**
 
 A simple yet important property of truth values is equality.  In this
 case we will give the truth table immediately:
@@ -196,7 +205,7 @@ case we will give the truth table immediately:
 
 It shows that `true` is equal to `true`, false
 is equal to `false`, and neither one is equal to the other,
-all as you would expect.  For boolean values it is sometimes written
-as `==`.
+all as you would expect.  The notation shown here is specific
+to boolean values, but Prooftoys also permits simply `=`.
 
 {{< include "pix.md" >}}

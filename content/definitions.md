@@ -42,8 +42,8 @@ but both are bound in functional terms like `{x. ... }`
 and `{y. ... }`, so substitutions leave them alone.
 
 The two forms of definitions can be converted to each other
-by [unbinding]({{< relref "/inference-rules.md#unbinding-an-equation" >}})
-or [rebinding]({{< relref "/inference-rules.md#rebinding-an-equation" >}})
+by [unbinding]({{< relref "/practical-reasoning.md#unbinding-an-equation" >}})
+or [rebinding]({{< relref "/practical-reasoning.md#rebinding-an-equation" >}})
 the equation.
 
 Any definition of this kind can be treated as a true statement
