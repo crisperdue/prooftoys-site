@@ -56,17 +56,21 @@ First, if the a variable `v` in the statement appears as a bound
 variable, in a part that looks like `{v. "body"}`, `v` is left alone
 and not changed in that part of the statement.
 
-Second, if the _replacement term_ contains any free variables, those
-variables must remain free after the substitution.  This is always
-achievable, and Prooftoys ensures it by automatically renaming
-bound variables in the original statement as needed.
+Second, any free variables in the _replacement term_ must remain free
+after the substitution.  If we imagine doing substitution with paper
+and scissors, and imagine that all copies of the replacement term have
+their free variables marked with a highlighter before the
+substitution, then the highlighted copies must also be free after
+substitution.  This is always achievable, and Prooftoys ensures it by
+automatically renaming bound variables in the original statement as
+needed.
 
 ## Inference
 
 ### Managing assumptions
 
 Facts about real numbers are conditional.  For example the commutative
-law of addition for real numbers is `R x & R y => x + y = y + x`,
+law of addition for real numbers is <s>R x & R y => x + y = y + x</s>,
 which only asserts the equality for real numbers.  Most steps in
 proofs about the real numbers are also conditional.  So when we apply
 a fact about real numbers to a step in a proof about real numbers by
@@ -74,25 +78,27 @@ replacement or rewriting, often both of the inputs to the rewriting
 are conditional.
 
 After any substitution, the inputs to replacement have the form:
-`a_1 => (t_1 = t_2)` and `a_2 => c`.  After replacing an occurrence
-of `t_1` in `c`, the result looks like `a_1 => (a_2 => c_1)`, where
-`c_1` is the result of the replacement in `c`.
 
-Replacement and rewriting steps in Prooftoys use the tautology `(a ⇒
-(b ⇒ c)) ≡ (a ∧ b ⇒ c)` to collect the assumptions together.
+<s>a_1 => (t_1 = t_2)</s> and <s>a_2 => c</s>.  After replacing an
+occurrence of <s>t_1</s> in <s>c</s>, the result looks like
+<s>a_1 => (a_2 => c_1)</s>, where <s>c_1</s> is the result of the
+replacement in <s>c</s>.
 
-Also, most inference steps check if the result is conditional `(a =>
-b)` and remove duplicated assumptions and any occurrences of `T` to
-simplify the result.
+Replacement and rewriting steps in Prooftoys use the tautology
+<s>(a => (b => c)) == (a & b => c)</s> to collect the assumptions together.
+
+Also, most inference steps check if the result is conditional
+<s>(a => b)</s> and remove duplicated assumptions and any occurrences
+of `T` to simplify the result.
 
 ### Managing type assumptions
 
-When the result of rewriting has assumptions such as `R (x + y)`, that
+When the result of rewriting has assumptions such as <s>R (x + y)</s>, that
 the result of some arithmetic operations is real, it uses known
 arithmetic facts to break it down into assumptions that the values of
-each variable is real.  The example breaks down to `R x & R y`.  It
-also can prove that numeric literals are real numbers, so `R (x + 3)`
-breaks down into just `R x`.
+each variable is real.  The example breaks down to <s>R x & R y</s>.  It
+also can prove that numeric literals are real numbers, so <s>R (x + 3)</s>
+breaks down into just <s>R x</s>.
 
 ## About the Prooftoys logic
 
