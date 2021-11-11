@@ -36,8 +36,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-
 {{ end }}
 
 {{ define "main" }}
-{{ partial "header.html" . }}
-<div class="content mb-md-6">
+<div class="mainContent invisible content mb-md-6">
   {{ .Content }}
 </div>
 {{ end }}

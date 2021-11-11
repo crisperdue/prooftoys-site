@@ -38,13 +38,13 @@
 
 <body class='page {{ block "body_classes" . }}{{ end }}'>
 {{block "banner" . }}{{partial "banner.html" . }}{{end}}
-{{partial "main-menu-mobile.html" . }}
+<div style="text-align: left">{{partial "hamburger.html" . }}</div>
 <div class="wrapper ml-1 mr-1 ml-md-4 mr-md-6 mr-lg-8">
   {{ $displaySidebar := not .Params.noSidebar }}
   {{ if $displaySidebar }}
   <div class="container-fluid pt-2 pt-md-3">
     <div class="row">
-      <div class="col-12 col-md-4 col-lg-3 mb-3">
+      <div class="col-12 col-md-4 col-lg-3">
 	<div class="sidebar {{ .Params.sidebarStyle }}">
 	  {{ partial "sidebar.html" . }}
 	</div>
@@ -89,6 +89,8 @@
     },
   });
 // });
+// The mainContent DIV is created in single.html.
+$('.mainContent').removeClass('invisible');
 </script>
 
 </body>
