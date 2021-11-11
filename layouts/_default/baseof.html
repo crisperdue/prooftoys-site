@@ -74,21 +74,27 @@
 {{ partial "prooftoys-scripts.html" . }}
 
 <script>
-// Currently on DOM ready.  We really want mathifyAll to run before
-// all scripts are loaded, but it has some dependencies.
-// document.addEventListener('DOMContentLoaded', event => {
-  Toy.mathifyAll();
-  tippy('[data-tippy-content]', {
-    allowHTML: true,
-    delay: [300, 0],
-    content(reference) {
-      const title = reference.getAttribute('title');
-      console.log('title:', title);
-      reference.removeAttribute('title');
-      return title;
-    },
-  });
-// });
+// This script runs just before DOMContentReady, which
+// expedites it a little, desirable because it modifies
+// the content and styling of the page.
+if (Toy.TOC) {
+  $(Toy.TOC).tableofcontents({exclude: $('h1, .hero h2, h5, h6')});
+}
+Toy.mathifyAll();
+// Mathification sets up some data-tippy-content attributes.
+tippy('[data-tippy-content]', {
+  allowHTML: true,
+  // This improves tooltip positioning for inline elements.
+  inlinePositioning: true,
+  // This lets the tooltip stay up when the cursor moves over it.
+  interactive: true,
+  // This attaches the tooltip to the document body vs the target
+  // element for more consistent effects on styling of tooltips.
+  appendTo: () => document.body,
+  // 300ms delay for both show and hide.
+  // This is helps to keep the tooltip up so "interactive" can work.
+  delay: [300, 300],
+});
 // The mainContent DIV is created in single.html.
 $('.mainContent').removeClass('invisible');
 </script>
