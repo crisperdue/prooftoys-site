@@ -5,11 +5,9 @@ menu: menu-inference.md
 
 # Practical reasoning with Prooftoys
 
-##### Table of contents
+##### Contents
 
 {{< TOC >}}
-
-
 
 In the descriptions of rules of inference, capital letters A, B, and C
 are variables with boolean (true/false) values.  The letters x and y

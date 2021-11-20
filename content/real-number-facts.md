@@ -5,7 +5,7 @@ menu: menu-theorems.md
 
 # Prooftoys real number facts
 
-##### Table of contents
+##### Contents
 
 {{< TOC >}}
 

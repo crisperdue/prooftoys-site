@@ -6,7 +6,7 @@ sidebarStyle: floating
 
 ## Logical functions
 
-##### Table of contents
+##### Contents
 
 {{< TOC >}}
 

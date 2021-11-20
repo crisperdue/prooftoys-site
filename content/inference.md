@@ -8,7 +8,7 @@ description: >
 
 # Inference - the basics
 
-##### Table of contents
+##### Contents
 
 {{< TOC >}}
 

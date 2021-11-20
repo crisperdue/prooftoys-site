@@ -6,7 +6,7 @@ sidebarStyle: floating
 
 ## True statements
 
-##### Table of contents
+##### Contents
 
 {{< TOC >}}
 
@@ -234,7 +234,6 @@ results of each part in a table.
   <td x=false y=true class=falsy>
   <td x=false y=false class=truthy>
 </table>
-
 
 ## Tautologies
 

@@ -4,7 +4,7 @@ title: Technical notes
 
 # Prooftoys technical notes
 
-##### Table of contents
+##### Contents
 
 {{< TOC >}}
 
