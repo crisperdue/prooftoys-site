@@ -96,44 +96,43 @@ structures obey the field axioms.  In addition to the real numbers,
 the rational numbers, the complex numbers, and even polynomials
 follow these laws.  Each of these axioms assumes that the variables
 are elements of the field, in this case the real numbers.
-
 There are other possible axiomatizations, all equivalent.
 
 {{% preblock %}}
-~~R (x + y)
-(x + y) + z = x + (y + z)
-x + y = y + x
-exists1 isAddIdentity
-R (x * y)
-(x * y) * z = x * (y * z)
-x * y = y * x
-exists1 isMulIdentity
-x * (y + z) = x * y + x * z
-R x => exists1 (addInverses x)
-R x & x != 0 => exists1 (mulInverses x)
-1 != 0~~
+<s>R (x + y)</s>
+<s>(x + y) + z = x + (y + z)</s>
+<s>x + y = y + x</s>
+<s>exists1 isAddIdentity</s>
+<s>R (x * y)</s>
+<s>(x * y) * z = x * (y * z)</s>
+<s>x * y = y * x</s>
+<s>exists1 isMulIdentity</s>
+<s>x * (y + z) = x * y + x * z</s>
+<s>R x => exists1 (addInverses x)</s>
+<s>R x & x != 0 => exists1 (mulInverses x)</s>
+<s>1 != 0</s>
 {{% /preblock %}}
 
 ## Ordering axioms
 
 Again, each of these axioms assumes that the variables are members of
 the field, in this case the real numbers.  Adding these axioms to the
-first set makes the domain into an "ordered field".  Not all fields
+first set makes the domain into an _ordered field_.  Not all fields
 are ordered.
 
 {{% preblock %}}
-~~not (x < x)
-x < y => not (y < x)
-x < y | y < x | x = y
-x < y & y < z => x < z~~
+<s>not (x < x)</s>
+<s>x < y => not (y < x)</s>
+<s>x < y | y < x | x = y</s>
+<s>x < y & y < z => x < z</s>
 {{% /preblock %}}
 
 Effects of addition and multiplication on ordering:
 
 {{% preblock %}}
-~~x < y => x + z < y + z
-x < y & 0 < z => x * z < y * z
-0 < x & 0 < y => 0 < x * y~~
+<s>x < y => x + z < y + z</s>
+<s>x < y & 0 < z => x * z < y * z</s>
+<s>0 < x & 0 < y => 0 < x * y</s>
 {{% /preblock %}}
 
 
