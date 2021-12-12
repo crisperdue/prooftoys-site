@@ -17,7 +17,7 @@ functions*.
 
 ### Untrue: "not"
 
-**Symbol: <s>not</s>**<br>
+**Symbol: `not`**<br>
 **Plain text: <tt>not</tt>**
 
 The simplest of these functions is called `not`, also known
@@ -69,10 +69,10 @@ highlight the difference between true and false.  We will use this
 color scheme in other truth tables as well.
 
 In our notation we write the property of not being blue as
-<s>not(blue x)</s> or <s>(not(blue x))</s>.
+`not(blue x)` or `(not(blue x))`.
 We can also read this as saying that the predicate blue is
 not true for x, or that x is not in the set of things that are blue.
-In mathematics a statement like <s>not(A x)</s> is
+In mathematics a statement like `not(A x)` is
 commonly called the negation of a statement
 `(A x)`.  The negated statement is true of
 all the things where theoriginal statement `(A x)` is false.
@@ -81,7 +81,7 @@ Another notation sometimes used for negation is "~".
 
 ### At least one true: "or"
 
-**Symbol: <s>|</s>**<br>
+**Symbol: `|`**<br>
 **Plain text: <tt>or</tt>**
 
 As an example of our next function, suppose you are thinking what to
@@ -89,7 +89,7 @@ have for lunch, and decide it must either be delicious or easy.  In
 the first picture let circle D represent things that are delicious and
 circle E represent things that are easy.  The combined area then
 represents things that are delicious or easy.  We can write that a
-thing x is "delicious or easy" as <s>(D x) | (E x)</s>.
+thing x is "delicious or easy" as `(D x) | (E x)`.
 Everything in the parts of the picture that are shaded have this
 property.
 
@@ -106,7 +106,7 @@ to model this relationship.  This function has two inputs.  Each input
 value is *boolean* (true or false) and so is the result.  Again,
 hover the mouse over either of the pictures to highlight the
 appropriate parts of the truth table for the function named
-`or` (<s>|</s>).
+`or` (`|`).
 
 <table class=binaryTruthTable id=disjunctionTable>
  <tr>
@@ -130,22 +130,22 @@ This truth table is organized with a row for each value of the first
 input and a column for each value of the second input.  The value of
 the function is in the row for the value of the first input and the
 column for the value of the second input.  So for example
-<s>(false | true) == true</s>.
+`(false | true) == true`.
 
 ### Both true: "and"
 
-**Symbol: <s>&</s>**<br>
+**Symbol: `&`**<br>
 **Plain text: <tt>&</tt>**
 
 Suppose you are feeling more picky about your lunch, and decide it
 must be both delicious and easy.  Only things in both of the circles
 fit this description -- the small shaded area in the next picture.  In
-Prooftoys we write <s>((D x) & (E x))</s>.
+Prooftoys we write `((D x) & (E x))`.
 
 <canvas id=canvasAndDE width=210 height=210></canvas>
 
 Once again, at each point "x" in the picture,
-<s>((D x) & (E x))</s> is true exactly when `(D x)`
+`((D x) & (E x))` is true exactly when `(D x)`
 is true and `(E x)` is also true.  We can define a
 function with this truth table:
 
@@ -173,13 +173,13 @@ for that situation could like this:
 <canvas id=canvasAndDE2 width=210 height=210></canvas>
 
 The picture has no shaded area because region D and region E do not
-overlap; there is no part of the picture where <s>(D x)</s> and
-<s>(E x)</s> are both true.  If that really is your
+overlap; there is no part of the picture where `(D x)` and
+`(E x)` are both true.  If that really is your
 requirement, in this scenario there is no possible lunch for you!
 
 ### Equality: "equivalent"
 
-**Symbol: <s>==</s>**<br>
+**Symbol: `==`**<br>
 **Plain text: <tt>==</tt>**
 
 A simple yet important property of truth values is equality.  In this

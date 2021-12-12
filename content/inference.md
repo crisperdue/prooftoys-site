@@ -12,24 +12,26 @@ description: >
 
 {{< TOC >}}
 
-Prooftoys does _deductive reasoning_.  Deductive reasoning starts with
-true statements.  Based on statements known to be true, precise rules
-let you correctly deduce that other statements are also true.  These
-rules are known as _rules of inference_.  (Deduction and inference are
-synonyms.)
+Prooftoys is a tool that does precise _deductive reasoning_ under your
+guidance.  Deductive reasoning starts with true statements, and
+applies precise rules to them to produce more statements that are also
+true.  These rules are known as _rules of inference_.  (Deduction and
+inference are synonyms.)  The act of applying a rule of inference to a
+true statement is called a _proof step_.
 
-In mathematics, statements that are taken to be true are known as
-_axioms_.  Reasoning in Prooftoys is based on just a handful of axioms
-and a single rule of inference.  This has the advantage of simplicity,
-but the deductive steps are small, so almost any proof needs many
-steps.
+Statements that are taken to be true without being justified by rules
+of inference are known as _axioms_.  Reasoning in Prooftoys is based
+on just a handful of axioms and a single basic rule of inference.
+This has the advantage of simplicity, but the steps are small, so
+almost any proof needs many steps.
 
-Proofs that you will actually work with also use a small number of
-different concepts and inference rules, but each step accomplishes
-more so you can reason in bigger but still understandable steps.  The
-higher-level deduction steps you use in a proof can do their work
-using the low-level primitives, so the correctness of proofs in
-Prooftoys only depends on correctness of the fundamentals.
+Proofs that you will actually work with start with the same axioms and
+use just a modest number of inference rules, but each proof step
+accomplishes more.  This lets you reason in bigger but still
+understandable steps.  The higher-level deduction steps you will
+usually use in proofs are really combinations of basic steps, so the
+correctness of proofs in Prooftoys only depends on correctness of its
+axioms and the one basic inference rule.
 
 The concepts in most steps are some combination of:
 
@@ -101,8 +103,8 @@ and substitution.
 Inference by replacement allows an arbitrary term appearing anywhere
 in a proof step to be replaced by another term known to be equal to
 it.  Equality applies to individuals, functions, predicates, et
-cetera, and also to boolean values.  Logical equivalence (<s>==</s> or
-`==` or even just `=`) is equality of truth values.
+cetera, and also to boolean values.  Logical equivalence (`\==`
+displayed as `==`, or just `=`) is equality of truth values.
 
 Rewriting lets you apply a general rule to part of a statement by
 using the "left-hand side" of the rule as a pattern to match to a
@@ -116,10 +118,10 @@ In the simplest case, replacement begins with an equality known to be
 true, of the form:
 
 {{% preblock %}}
-<s>A = B   (including A == B)</s>
+`A = B   (including A == B)`
 {{% /preblock %}}
 
-This <s>A = B</s> looks like a statement in the language, but it is
+This `A = B` looks like a statement in the language, but it is
 really a pattern that matches any statement that is an equation.  When
 we say an occurrence of A in any proof step can be replaced by B
 anywhere it occurs, we mean that a term exactly matching the left side
@@ -128,14 +130,14 @@ of the equation can be replaced by the right side of the equation.
 Alternatively we may have an equality that applies under assumptions, that
 looks something like:
 {{% preblock %}}
-You can write <s>A => (B = C)</s> (also <s>A => (B == C)</s>)
+You can write `A => (B = C)` (also `A => (B == C)`)
 {{% /preblock %}}
 
 Using an equation like this on a sentence S results in a sentence of
 the form:
 
 {{% preblock %}}
-<s>A => S'</s>
+`A => S'`
 {{% /preblock %}}
 
 where S' is like S, but with an occurrence of A replaced by B.  (In more
@@ -143,8 +145,8 @@ advanced cases where S contains "binders", there are some limitations on
 the use of replacement.)
 
 Here again, `A`, `B`, and `C`, are parts of patterns.  `A` is the
-assumption (or assumptions joined with <s>&</s>) in a proved step, and
-<s>B = C</s> can be any equation.  In this pattern we refer to the
+assumption (or assumptions joined with `&`) in a proved step, and
+`B = C` can be any equation.  In this pattern we refer to the
 left side of the equation as `B` and the right side as `C`.
 
 ### Rewriting
@@ -157,20 +159,20 @@ described above.
 
 When a textbook talks about applying a law such as commutativity,
 associativity, or distributivity, it is talking about rewriting.
-Writing the commutative law of multiplication as an equation <s>x * y
-= y * x</s>, and applying it to the term <s>x * 3</s> in <s>5 * x =
-2 * x + x * 3</s>, a textbook gets <s>5 * x = 2 * x + 3 * x</s>.  This
+Writing the commutative law of multiplication as an equation `x * y
+= y * x`, and applying it to the term `x * 3` in `5 * x =
+2 * x + x * 3`, a textbook gets `5 * x = 2 * x + 3 * x`.  This
 is exactly what rewriting does in Prooftoys.
 
-The first part of the rewriting here is to make <s>x * y</s> in the
-statement of the commutative law match the term <s>x * 3</s> in the
-example equation.  The <s>y</s> can match with <s>3</s>, so we
-_substitute_ <s>3</s> for <s>y</s> in the commutative law, deducing
-that <s>x * 3 = 3 * x</s>.  Then we replace <s>x * 3</s> in the
-example equation with <s>3 * x</s>, giving the textbook result.
+The first part of the rewriting here is to make `x * y` in the
+statement of the commutative law match the term `x * 3` in the
+example equation.  The `y` can match with `3`, so we
+_substitute_ `3` for `y` in the commutative law, deducing
+that `x * 3 = 3 * x`.  Then we replace `x * 3` in the
+example equation with `3 * x`, giving the textbook result.
 
 In the actual Prooftoys system, axioms such as commutativity are
-expressed as conditionals, e.g. <s>R x => x * y = y * x</s>, so the
+expressed as conditionals, e.g. `R x => x * y = y * x`, so the
 rewriting is conditional, but the effect is essentially the same.
 
 ### When there is no equation
@@ -182,10 +184,10 @@ without using equations.
 
 The practical mechanism for this in Prooftoys is replacing a true
 statement by `T`, or replacing `T` by a true statement.  If the true
-statement is conditional, as in <s>A => B</s>, you can also replace
-an occurrence of <s>B</s> anywhere with `T`, but <s>A</s> is added as
+statement is conditional, as in `A => B`, you can also replace
+an occurrence of `B` anywhere with `T`, but `A` is added as
 a condition on the result.  Similarly you can replace `T` anywhere
-with <s>B</s>, adding <s>A</s> as a condition on the result.
+with `B`, adding `A` as a condition on the result.
 All of these transformations are very useful.
 
 Underneath it all, these kinds of replacement are not really new.
@@ -195,8 +197,8 @@ discussed in a [technical note XXX]({{< relref "tech-notes.md#XXX" >}}).
 At the core of it are the tautologies
 
 {{% preblock %}}
-_(a)_<s>A == (A == T)</s>
-_(b)_<s>A == (T == A)</s>
+_(a)_`A == (A == T)`
+_(b)_`A == (T == A)`
 {{% /preblock %}}
 
 and similar ones that permute its occurrences of `A` and `T`.  These
@@ -212,36 +214,36 @@ Let's consider a couple of facts about real numbers -- the
 transitivity of the ordering relation
 
 {{% preblock %}}
-_trans_: <s>x < y & y < z => x < z</s>
+_trans_: `x < y & y < z => x < z`
 {{% /preblock %}}
 
-and the fact that <s>24 < 42</s>.
+and the fact that `24 < 42`.
 
 We will prove that
 
 {{% preblock %}}
-<s>42 < x => 24 < x</s>
+`42 < x => 24 < x`
 {{% /preblock %}}
 
 The proof in full detail goes like this:
 
 | Step                                  | Description                       |
 | ----                                  | -------                           |
-| (1) <s>24 < 42 == (24 < 42 == T)</s>  | substitute for A in tautology (a) |
-| (2) <s>24 < 42 == T</s>               | replace the fact with equivalent  |
-| (3) <s>24 < 42 & 42 < x => 24 < x</s> | substitute for x, y, and z in _trans_|
-| (4) <s>T & 42 < x => 24 < x</s>  | replace <s>24 < 42</s> with `T` using (2) |
-| (5) <s>T & A == A</s>                 | another tautology                 |
-| (6) <s>T & 42 < x == 42 < x</s>       | substitute for A in tautology (5) |
-| (7) <s>42 < x => 24 < x</s>           | replace <s>T & 42 < x</s> in (4)  |
+| (1) `24 < 42 == (24 < 42 == T)`  | substitute for A in tautology (a) |
+| (2) `24 < 42 == T`               | replace the fact with equivalent  |
+| (3) `24 < 42 & 42 < x => 24 < x` | substitute for x, y, and z in _trans_|
+| (4) `T & 42 < x => 24 < x`  | replace `24 < 42` with `T` using (2) |
+| (5) `T & A == A`                 | another tautology                 |
+| (6) `T & 42 < x == 42 < x`       | substitute for A in tautology (5) |
+| (7) `42 < x => 24 < x`           | replace `T & 42 < x` in (4)  |
 
 Written in less detail, just replacing a true statement with `T`:
 
 | Step                                  | Description                       |
 | ----                                  | -------                           |
-| (1) <s>24 < 42 & 42 < x => 24 < x</s> | substitute for x, y, and z in _trans_|
-| (2) <s>T & 42 < x => 24 < x</s>       | replace <s>24 < 42</s> with T     |
-| (3) <s>42 < x => 24 < x</s> | replace <s>T & 42 < x</s> using <s>T & A == A</s> |
+| (1) `24 < 42 & 42 < x => 24 < x` | substitute for x, y, and z in _trans_|
+| (2) `T & 42 < x => 24 < x`       | replace `24 < 42` with T     |
+| (3) `42 < x => 24 < x` | replace `T & 42 < x` using `T & A == A` |
 
 (The actual transitive law for ordering of the real numbers in
 Prooftoys has explicit conditions that `x`, `y`, and `z` must be real
@@ -262,38 +264,38 @@ as _modus ponens_, and goes back to the ancient Greeks.
 Modus ponens says that if both of these are true:
 
 {{% preblock %}}
-<s>(1) A</s>
-<s>(2) A => B</s>
+`(1) A`
+`(2) A => B`
 {{% /preblock %}}
 
 we can replace the `A` in step 2 with T, giving:
 
 {{% preblock %}}
-<s>(3) T => B</s>
+`(3) T => B`
 {{% /preblock %}}
 
 which is equivalent to just:
 
 {{% preblock %}}
-<s>(4) B</s>
+`(4) B`
 {{% /preblock %}}
 
-using the tautology (equation!) <s>(T => a) == a</s>.
+using the tautology (equation!) `(T => a) == a`.
 
 This reasoning applies to any true/false statements `A` and `B` where
-`A` is known to be true and <s>A => B</s> is known to be true.  So for
+`A` is known to be true and `A => B` is known to be true.  So for
 example if we have
 
 {{% preblock %}}
-<s>(1) 17 is an odd number</s>
-<s>(2) i is an odd number => i * i is an odd number</s>
+`(1) 17 is an odd number`
+`(2) i is an odd number => i * i is an odd number`
 {{% /preblock %}}
 
 then after substituting 17 for `i` in step `(2)` the two statements
 match the pattern, and we can conclude that
 
 {{% preblock %}}
-<s>(3) 17 * 17 is an odd number</s>
+`(3) 17 * 17 is an odd number`
 {{% /preblock %}}
 
 without having to multiply and check.
@@ -303,12 +305,12 @@ without having to multiply and check.
 When a proof step is _conditional_ Prooftoys very often treats the
 left side of the conditional as a set of _assumptions_.  A conditional
 step is one where the entire step consists of a left side (the
-assumptions), the conditional operator (<s>=></s>), and a right side
+assumptions), the conditional operator (`=>`), and a right side
 (the conclusion).  If the left side of a conditional contains multiple
-terms connected with <s>&</s>, the _and_ operator, we consider each of
+terms connected with `&`, the _and_ operator, we consider each of
 the terms to be an assumption.
 
-For example, in <s>(A & B) & (C & D)</s>, we say that all of `A`, `B`,
+For example, in `(A & B) & (C & D)`, we say that all of `A`, `B`,
 `C`, and `D` are assumptions.
 
 When Prooftoys applies replacement or rewriting with a conditional

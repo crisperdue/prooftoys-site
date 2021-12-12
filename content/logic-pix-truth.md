@@ -29,7 +29,7 @@ will sometimes refer to them as "true everywhere".
 
 As an example let's consider the statement that every number is either
 less than 100 or greater than 10.  We could state this as
-<s>x < 100 | x > 10</s>.  In the picture for this
+`x < 100 | x > 10`.  In the picture for this
 statement all shaded areas represent cases where the statement is
 true.
 
@@ -43,7 +43,7 @@ line and the values having both of the properties, like this:
 
 <canvas id=canvasArrow width=310 height=100></canvas>
 
-The statement <s>x < 100 | x > 10</s> is true regardless
+The statement `x < 100 | x > 10` is true regardless
 of the value of `x`.  In mathematics, if the truth of a
 statement does not depend on the values of variables in it, it
 is considered simply a true or valid statement.
@@ -53,21 +53,21 @@ is considered simply a true or valid statement.
 For a statement with "and" to be true, both of its parts must be true.
 In the statement's picture, both statements must be true at every spot
 in the picutre.  Here is a picture illustrating a statement
-<s>A & B</s> that is true, where A and B are both
+`A & B` that is true, where A and B are both
 true statements.
 
 <canvas id=canvasAnd width=210 height=210></canvas>
 
 ### Conditional: "implies"
 
-**Symbol: <s>=></s>**<br>
+**Symbol: `=>`**<br>
 **Plain text: <tt>=></tt>**
 
 Let's look at another typical kind of statement that has a logical
 meaning, such as "all birds have wings".  We might also express this
 as "if x is a bird then x has wings".  In our notation we can write
-<s>(bird x) implies (wings x)</s> or alternatively
-<s>bird x => wings x</s>.
+`(bird x) implies (wings x)` or alternatively
+`bird x => wings x`.
 
 The picture below illustrates a scenario where the statement is true.
 The area representing all things with wings contains the entire area
@@ -105,10 +105,10 @@ to express statements like "all birds have wings" mathematically.  It
 takes two truth values as inputs and produces true or false as its
 value.  The previous example and pictures above apply here once again.
 
-We call the function <s>implies</s> (alternatively <s>⇒</s>), and it
+We call the function `implies` (alternatively `⇒`), and it
 enables us to make statements that say one thing implies another.
 Here are two picture as before, but with shading to show the areas
-where the expression <s>(bird x) => (wings x)</s> has <s>true</s> as
+where the expression `(bird x) => (wings x)` has `true` as
 its value.  First one where it is true everywhere:
 
 <canvas id=birdWingsTrue width=210 height=210></canvas>
@@ -141,7 +141,7 @@ true everywhere:
 
 The birds without wings are represented by the small white area with
 no shading.  This is exactly the area where the value of the
-<s>implies</s> function is false.  In this picture not all
+`implies` function is false.  In this picture not all
 birds have wings, so the function is indeed behaving as intended.
 
 #### Vacuous statements
@@ -156,9 +156,9 @@ our world, our logic takes this to be a true statement.
 How can this be?  Consider that there are *no examples that break
 the rule*, no birds that are larger than elephants but
 cannot fly to the moon!  The truth table entries in the row where the
-first input is <s>false</s> both have the value
-<s>true</s>, so the <s>implies</s> function has the value
-<s>true</s> everywhere.  If the there are no birds larger than
+first input is `false` both have the value
+`true`, so the `implies` function has the value
+`true` everywhere.  If the there are no birds larger than
 elephants, all of them can fly to the moon!
 
 Mathematicians recognize that this is a strange situation and refer to
@@ -175,26 +175,26 @@ vacuous.
 The logical functions can be combined into complex expressions.  In
 the lunch example, where D is an abbreviation for "delicious" and E is
 an abbreviation for "easy", the expression
-<s>not ((D x) & (E x))</s> refers to things that are
+`not ((D x) & (E x))` refers to things that are
 *not* easy and delicious.
 
 <canvas id=DnandE width=210 height=210></canvas>
 
 The value of this function at each point depends on the values of
-<s>(D x)</s> and <s>(E x)</s> at the same point, and its
+`(D x)` and `(E x)` at the same point, and its
 truth table can be computed by first looking up the value in the truth
-table for <s>and</s>, then looking up the value of the result in
-the table for <s>not</s>.
+table for `and`, then looking up the value of the result in
+the table for `not`.
 
 <table class=binaryTruthTable id=nandTable>
  <tr>
   <th colspan=2 rowspan=2>
-  <th colspan=2 style="text-align: center"><s>(E x)</s>
+  <th colspan=2 style="text-align: center">`(E x)`
  <tr>
   <th y=true>true
   <th y=false>false
  <tr>
-  <th rowspan=2><s>(D x)</s>
+  <th rowspan=2>`(D x)`
   <th x=true>true
   <td x=true y=true class=falsy>
   <td x=true y=false class=truthy>
@@ -204,7 +204,7 @@ the table for <s>not</s>.
   <td x=false y=false class=truthy>
 </table>
 
-The expression <s>not (D x) & not (E x)</s> refers to things
+The expression `not (D x) & not (E x)` refers to things
 that are neither delicious nor easy; unfortunate for the eater, but
 fortunate for things that do not wish to be eaten.
 
@@ -212,7 +212,7 @@ fortunate for things that do not wish to be eaten.
 
 Once again we can build each entry in this truth table by looking up
 the values of the subexpressions, first negating each input, then
-looking up the results in the table for <s>and</s>.  Logical
+looking up the results in the table for `and`.  Logical
 expressions combine the same way arithmetic expressions do, but the
 calculation is even easier because you only have to look up the
 results of each part in a table.
@@ -220,12 +220,12 @@ results of each part in a table.
 <table class=binaryTruthTable id=norTable>
  <tr>
   <th colspan=2 rowspan=2>
-  <th colspan=2 style="text-align: center"><s>(E x)</s>
+  <th colspan=2 style="text-align: center">`(E x)`
  <tr>
   <th y=true>true
   <th y=false>false
  <tr>
-  <th rowspan=2><s>(D x)</s>
+  <th rowspan=2>`(D x)`
   <th x=true>true
   <td x=true y=true class=falsy>
   <td x=true y=false class=falsy>
@@ -239,7 +239,7 @@ results of each part in a table.
 
 Some statements are not just true everywhere, they are true everywhere
 in every possible picture.  Consider the statement
-<s>(blue x) | not(blue x)</s>,
+`(blue x) | not(blue x)`,
 "x is blue or x is not blue".  It does not matter how
 many things are blue, or which things are blue.  It doesn't even
 matter if any things at all are blue.  If we make a picture with one
@@ -253,18 +253,18 @@ constantly in normal mathematical reasoning, sometimes explicitly and
 even more often implicitly behind the scenes.
 
 If a statement is a tautology, this can be verified just by building
-its truth table.  If all of the entries are <s>true</s>, it is a
+its truth table.  If all of the entries are `true`, it is a
 tautology.  It turns out that the statement
-<s>(blue x) | (not (blue x))</s>
-is true because the statement <s>A | not A</s> is a tautology.
-In other words the truth table for <s>A | not A</s> has the value
-<s>true</s> everywhere.  Although the expression is complex this table
+`(blue x) | (not (blue x))`
+is true because the statement `A | not A` is a tautology.
+In other words the truth table for `A | not A` has the value
+`true` everywhere.  Although the expression is complex this table
 has only two entries because it has only one variable, which is either
-<s>true</s> or <s>false</s>.
+`true` or `false`.
 
 <table class=binaryTruthTable id=tautology1>
  <tr>
-  <th rowspan=2><s>(blue x)</s>
+  <th rowspan=2>`(blue x)`
   <th x=true>true
   <td x=true class=truthy>
  <tr>
@@ -277,7 +277,7 @@ such as `(D x)`, `(E x)`, or `(blue x)`.  It doesn't matter whether an
 input is given by a variable or some expression.  All that matters is
 that different expressions are handled as different inputs.  If an
 expression (such as `(blue x)`) appears more than once in the full
-expression (such as <s>(blue x) | (not (blue x))</s>, all of its
+expression (such as `(blue x) | (not (blue x))`, all of its
 occurrences will have the same value when given the same value for
 `x`.
 

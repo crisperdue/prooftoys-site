@@ -5,28 +5,27 @@ menu: menu-inference.md
 
 # Definitions
 
-Definitions are essential parts of mathematics.
-Definitions you will see here are simple equations
-that have the form:
+Definitions can have the form
 
 {{% preblock %}}
-<name> = <term>
+`<name> = <term>`
 {{% /preblock %}}
 
-The name is the name of a new constant, one that has
+The name must be a new constant name, one that has
 never appeared before in any axioms or definitions,
 and the term is an expression with the one restriction
 that every substitution leaves it unaltered.  Saying
 this another way, the term has no free variables.
 
-For example, let's look at the definitions of [zero]
-({{< relref "/real-number-facts.md#definitions" >}})
-and [additive identity]
-({{< relref "/real-number-facts.md#definitions" >}}).
+
+
+For example, let's look at the definitions of _zero_ and
+_additive identity_ in the fundamental facts about
+[real numbers]({{< relref "/real-number-facts.md#definitions" >}}).
 
 {{% preblock %}}
-~~isAddIdentity x == R x & forall {y. R y => y + x = y}
-0 = the1 isAddIdentity~~
+`isAddIdentity x == R x & forall {y. R y => y + x = y}`
+`0 = the1 isAddIdentity`
 {{% /preblock %}}
 
 Although that is the presentation style on the website, internally,
@@ -34,7 +33,7 @@ additive identity is defined in a different form that is equivalent,
 but less familiar from textbooks:
 
 {{% preblock %}}
-~~isAddIdentity = {x. R x & forall {y. R y => y + x = y}}~~
+`isAddIdentity = {x. R x & forall {y. R y => y + x = y}}`
 {{% /preblock %}}
 
 This "internal" form has the variables `x` and `y` in it,

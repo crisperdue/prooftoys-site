@@ -7,7 +7,7 @@ menu: menu.md
 
 Here is complete HTML for a sample page that embeds a Prooftoys proof editor.
 
-~~~~
+~~~~text
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +23,9 @@ Here is complete HTML for a sample page that embeds a Prooftoys proof editor.
 </html>
 ~~~~
 
-Put the stylesheet link in the `head` section and the scripts at the bottom of the `body`. The `div` can go anywhere within the content of the page, and there can be more than one of them.
+Put the stylesheet link in the `\head` section and the scripts at the
+bottom of the `\body`. The `\div` can go anywhere within the content
+of the page, and there can be more than one of them.
 
 
 #### Preloading steps into a proof editor

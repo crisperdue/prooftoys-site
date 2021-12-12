@@ -1,9 +1,9 @@
 ---
-title: "Practical reasoning"
+title: "More reasoning"
 menu: menu-inference.md
 ---
 
-# Practical reasoning with Prooftoys
+# More reasoning with Prooftoys
 
 ##### Contents
 
@@ -15,100 +15,42 @@ are used for variables of any type.  You can supply any term you
 choose for capital letters X and Y without the need to follow the
 usual rules for substitution.
 
-## Equality
-
-When working with equality in Prooftoys it is important to remember
-that equivalence (<s>==</s>) is the same concept as equality
-applied to true/false values.
-
-### Self-equality
+### Some basic facts
 
 {{% preblock %}}
-<s>x = x</s>
-<s>A == A</s>
+`x = x`
+`A == A`
 {{% /preblock %}}
 
 The value of any expression is equal to itself.  This is often a good
 way to start a proof that `A` is equal to something else.  Keep
-replacing one side with something else that is equal to it.
-
-### Symmetry of equality
-
-{{% preblock %}}
-~~x = y == y = x~~
-{{% /preblock %}}
-
-## Using proved statements
-
-### Proved statements are equal to T
-
-This is used constantly with proved statements.
+replacing one side (usually the right) with something else that is
+equal to it.
 
 {{% preblock %}}
-~~A == (A == T)~~
-~~A == (T == A)~~
-~~(A == T) == A~~
-~~(T == A) == A~~
+`x = y == y = x` (symmetry of equality)
+`x = y & y = z => x = z` (transitivity of equality)
+`f = g == forall {x. f x = g x}` (extensionality)
 {{% /preblock %}}
 
-In other words, Any proved statement can be converted back and forth
-to a statement that its value is equal to `T`.  If it is conditional,
-it can covert into a statement that its conclusion is equal to `T`.
+When working with equality in Prooftoys it is important to remember
+that equivalence (`==`) is the same concept as equality
+applied to true/false values.
 
-This lets you build conjunctions using <s>A == A & T</s>.  Or you can
-remove true statements by replacing them with `T`.
+There are also numerous facts about quantifiers that work as rewrite
+rules using an extended form of matching, described **TBD**.
 
-## Assumptions
+### Tautologies
 
-{{% preblock %}}
-~~X => X~~
-{{% /preblock %}}
+| Tautology                         | Use                           |
+| --------                          | ------                        |
+| `A => A`                          | starting various kinds of proofs  |
+| `(A => B) & (B => A) == (A == B)` | proving an equivalence        |
 
-Conclude anything if you assume it.  This is an often-used tautology.
+### Proving _A and B_
 
-{{% preblock %}}
-~~C => (A => C)~~
-~~(A => C) => (A & B => C)~~
-{{% /preblock %}}
-
-So you can always add a new assumption.  These are also tautologies.
-
-### Reducing function calls
-
-[[More to come here.]]
-
-### Binding both sides of an equation
-
-{{% preblock %}}
-_From:_ `X = Y`
-_To:_ `{x. X} = {x. Y}`
-{{% /preblock %}}
-
-(Consequence of `{x. X} = {x. X}`, then replacing the second `X` with
-`Y`.)
-
-### Unbinding an equation
-
-{{% preblock %}}
-_From:_ `g = {x. X}`
-_To:_ `g x = X`
-{{% /preblock %}}
-
-This is useful for converting a definition from the basic form to the
-usual form seen in first-order logics.  For a function `g` of more
-than one variable, this rule can apply multiple times.
-
-### Rebinding an equation
-
-{{% preblock %}}
-_From:_ `g x = X`
-_To:_ `g = {x. X}`
-{{% /preblock %}}
-
-This is useful for converting a definition from the basic
-form to the usual form seen in first-order logics.  Like
-unbinding, this rule can be applied multiple times for
-functions of multiple arguments.
+If statements A and B are both proved, how can I prove the statement
+`A & B`?
 
 ### Removing irrelevant assumptions
 
@@ -118,8 +60,8 @@ the fact, that assumption can be safely be removed.  We can suggest
 the working of the inference like this:
 
 {{% preblock %}}
-_From:_ ~~a_1 and a_2 and ... => C~~
-_To:_ ~~a_2 and ... => C~~
+_From:_ `a_1 & a_2 & ... => C`
+_To:_ `a_2 & ... => C`
 {{% /preblock %}}
 
 The one limitation is that there must be some value for the variable
@@ -130,8 +72,8 @@ and Prooftoys can work out the existence fact on its own.  The cases
 are:
 
 {{% preblock %}}
-<var> = <term>; and
-R <var>
+`<var> = <term>`; and
+`R <var>`
 {{% /preblock %}}
 
 In both cases, the variable `var` does not appear in the
@@ -141,72 +83,9 @@ For every assumption of these kinds, the existence of a value
 satisfying it is provable, so we can remove the assumption from the
 proof step.
 
-## Rewriting and replacement
+### Definitions
 
-Rewriting and replacement are core parts of inference in Prooftoys,
-and have [their own page]({{< relref "/inference.md" >}}).
+### Adding a new axiom
 
-## Substitution
+[[discuss]]
 
-{{% preblock %}}
-_From:_ Proof step with one or more free variables.
-_To:_ Proof step with a term substituted for each variable.
-{{% /preblock %}}
-
-## Quantifiers
-
-(new page)
-
-### Universal quantifier elimination
-
-{{% preblock %}}
-_From:_ `forall {x. B}`
-_To:_ `B`
-{{% /preblock %}}
-
-(Result of instantiating with `x`.)
-
-### Universal quantifier introduction
-
-{{% preblock %}}
-_From:_ `B`
-_To:_ `forall {x. B}`
-{{% /preblock %}}
-
-### Universal instantiation
-
-{{% preblock %}}
-_From:_ `forall {x. A}`.
-_To:_ A with a term of your choice substituted for `x`.
-{{% /preblock %}}
-
-### Substitution into a function body (beta reduction)
-
-{{% preblock %}}
-_From:_ `{x. A} X`.
-_To:_ `A`, with term `X` substituted for `x` throughout
-{{% /preblock %}}
-
-This can be done anywhere in any formula.
-
-#### Note on substitution
-
-In the simple cases, all forms of substitution above work in the way
-you might expect from examples in any high school math textbook.
-There is a restriction in cases where the term undergoing substitution
-contains "bound" variables of its own.
-
-For details on this see [link TBD](http://prooftoys.org/TBD).
-
-### Some fancy forms of rewriting
-
-A couple of often-useful inference rules in Prooftoys combine a couple
-of steps together and rewrite the result.  These may take two steps
-and "conjoin" them using the boolean "and" operation.  Then they
-rewrite a tautology to make it match the conjunction and infer a
-conclusion.
-
-Proof steps that use these rules tend to have the word "consequence"
-in their description.
-
-[[More to be written here.]]
