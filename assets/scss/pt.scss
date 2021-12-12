@@ -172,7 +172,7 @@ p.utterances {
 /* Inline code blocks are for logic, so style accordingly. */
 /* This also keeps less padding. */
 /* TODO: This is somewhat delicate, find something better. */
-.content code {
+.content code.language-logic {
     padding: 1px 3px;
     border-radius: 2px;
     font-family: STIXGeneral;
