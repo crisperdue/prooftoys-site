@@ -34,7 +34,7 @@ then making it into a six-digit number by appending the same three
 digits has the same effect as multiplying by 1,001.
 
 So we can ask, is it true that
-<s>1001 * x / 7 / 11 / 13 = x</s>?
+`1001 * x / 7 / 11 / 13 = x`?
 
 Here is a solution built with Prooftoys.
 
@@ -53,7 +53,7 @@ inference rules, each producing a new step.  In this proof we have:
 
 1. "Consider" -- we start by "considering" the expression in the
    problem statement.  Just under the hood, the full statement here is
-   that <s>1001 * x / 7 / 11 / 13 = 1001 * x / 7 / 11 / 13</s>, and
+   that `1001 * x / 7 / 11 / 13 = 1001 * x / 7 / 11 / 13`, and
    this is true because anything is equal to itself.  The full content
    of the step is a statement that the term is equal to itself.  This
    step was created using the menu, selecting "consider", and typing
@@ -69,8 +69,8 @@ inference rules, each producing a new step.  In this proof we have:
 2. "Simplify" -- select the entire step by clicking on the checkbox.
    Then select "algebra: simplify" from the menu that pops up.
    
-3. "Standard form &hellip; " -- select the term <s>1001 * x /
-   1001</s>, then pick the item "algebra: to form k * x" from the menu
+3. "Standard form &hellip; " -- select the term `1001 * x /
+   1001`, then pick the item "algebra: to form k * x" from the menu
    that pops up.
 	
 4.  "Display fully" -- 
@@ -88,10 +88,10 @@ will highlight the part of the step that it worked on to get this
 one.  If it worked on the whole step, it highlights just the number of
 the step it used as its input.
 
-What about <s>R x => . . . </s>?  This means that if x is a ("real")
-number, then the statement is true.  The <s>R</s> is for "real".  In
+What about `R x => . . . `?  This means that if x is a ("real")
+number, then the statement is true.  The `R` is for "real".  In
 slightly different words, it expresses the usual assumption that
-<s>x</s> is a real number.
+`x` is a real number.
 	
 #### Try the steps yourself
 

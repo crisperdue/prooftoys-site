@@ -30,28 +30,28 @@ Prooftoys form
 
 {{% preblock %}}
 Rearrangement:
-~~forall {x. p x & q x} == forall p & forall q
-exists {x. p x | q x} == exists p | exists q~~\
+`forall {x. p x & q x} == forall p & forall q`
+`exists {x. p x | q x} == exists p | exists q`\
 One-way rearrangements:
-~~forall p | forall q => forall {x. p x | q x}
-exists {x. p x & q x} => exists p & exists q~~\
+`forall p | forall q => forall {x. p x | q x}`
+`exists {x. p x & q x} => exists p & exists q`\
 Unused bound variable:
-~~forall {x. A} == A
-exists {x. A} == A
-forall {x. A | q x} == (A | forall q)
-forall {x. A => q x} == (A => forall q)
-exists {x. A & q x} == A & exists q
-forall {x. p x => A} == (exists p => A)~~\
+`forall {x. A} == A`
+`exists {x. A} == A`
+`forall {x. A | q x} == (A | forall q)`
+`forall {x. A => q x} == (A => forall q)`
+`exists {x. A & q x} == A & exists q`
+`forall {x. p x => A} == (exists p => A)`\
 Forward reasoning:
-~~forall {x. p x => q x} => (forall p => forall q)
-forall {x. p x => q x} => (exists p => exists q)~~\
+`forall {x. p x => q x} => (forall p => forall q)`
+`forall {x. p x => q x} => (exists p => exists q)`\
 Unique existence:
-~~exists1 p == exists {x. p = {y. y = x}}
-exists1 p == exists {x. forall {y. p y == y = x}}
-exists1 p == exists {y. p y & forall {z. p z => z = y}}
-exists1 p => (p x == x = the1 p)
-p x & forall {y. p y => y = x} => exists1 p
-(f x = the1(Q x) & exists1 (Q x)) => (Q x y == f x = y)~~
+`exists1 p == exists {x. p = {y. y = x}}`
+`exists1 p == exists {x. forall {y. p y == y = x}}`
+`exists1 p == exists {y. p y & forall {z. p z => z = y}}`
+`exists1 p => (p x == x = the1 p)`
+`p x & forall {y. p y => y = x} => exists1 p`
+`(f x = the1(Q x) & exists1 (Q x)) => (Q x y == f x = y)`
 {{% /preblock %}}
 </span>
 
@@ -62,28 +62,28 @@ Traditional form
 
 {{% preblock %}}
 Rearrangement:
-~~forall {x. p x & q x} == forall {x. p x} & forall {x. q x}
-exists {x. p x | q x} == exists {x. p x} | exists {y. q y}~~\
+`forall {x. p x & q x} == forall {x. p x} & forall {x. q x}`
+`exists {x. p x | q x} == exists {x. p x} | exists {y. q y}`\
 One-way rearrangements:
-~~forall {x. p x} | forall {x. q x} => forall {x. p x | q x}
-exists {x. p x & q x} => exists {x. p x} & exists {x. q x}~~\
+`forall {x. p x} | forall {x. q x} => forall {x. p x | q x}`
+`exists {x. p x & q x} => exists {x. p x} & exists {x. q x}`\
 Unused bound variable:
-~~forall {x. A} == A
-exists {x. A} == A
-forall {x. A | q x} == (A | forall {x. q x})
-forall {x. A => q x} == (A => forall {x. q x})
-exists {x. A & q x} == A & exists {x. q x}
-forall {x. p x => A} == (exists {x. p x} => A)~~\
+`forall {x. A} == A`
+`exists {x. A} == A`
+`forall {x. A | q x} == (A | forall {x. q x})`
+`forall {x. A => q x} == (A => forall {x. q x})`
+`exists {x. A & q x} == A & exists {x. q x}`
+`forall {x. p x => A} == (exists {x. p x} => A)`\
 Forward reasoning:
-~~forall {x. p x => q x} => (forall {x. p x} => forall {x. q x})
-forall {x. p x => q x} => (exists {x. p x} => exists {x. q x})~~\
+`forall {x. p x => q x} => (forall {x. p x} => forall {x. q x})`
+`forall {x. p x => q x} => (exists {x. p x} => exists {x. q x})`\
 Unique existence:
-~~exists1 {x. p x} == exists {x. p = {y. y = x}}
-exists1 {x. p x} == exists {x. forall {y. p y == y = x}}
-exists1 {x. p x} == exists {y. p y & forall {z. p z => z = y}}
-exists1 {x. p x} => (p x == x = the1 p)
-p x & forall {y. p y => y = x} => exists1 {x. p x}
-(f x = the1(Q x) & exists1 (Q x)) => (Q x y == f x = y)~~
+`exists1 {x. p x} == exists {x. p = {y. y = x}}`
+`exists1 {x. p x} == exists {x. forall {y. p y == y = x}}`
+`exists1 {x. p x} == exists {y. p y & forall {z. p z => z = y}}`
+`exists1 {x. p x} => (p x == x = the1 p)`
+`p x & forall {y. p y => y = x} => exists1 {x. p x}`
+`(f x = the1(Q x) & exists1 (Q x)) => (Q x y == f x = y)`
 {{% /preblock %}}
 </span>
 

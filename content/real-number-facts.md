@@ -73,14 +73,14 @@ All of the facts about real numbers rely on these constant
 definitions.
 
 {{% preblock %}}
-~~isAddIdentity x == R x & forall {y. R y => y + x = y}
-0 = the1 isAddIdentity
-isMulIdentity x == R x & forall {y. R y => y * x = y}
-1 = the1 isMulIdentity
-addInverses x = {y. R x & R y & x + y = 0}
-neg x = the1 (addInverses x)
-mulInverses x = {y. R x & R y & x * y = 1}
-recip x = the1 (mulInverses x)~~
+`isAddIdentity x == R x & forall {y. R y => y + x = y}`
+`0 = the1 isAddIdentity`
+`isMulIdentity x == R x & forall {y. R y => y * x = y}`
+`1 = the1 isMulIdentity`
+`addInverses x = {y. R x & R y & x + y = 0}`
+`neg x = the1 (addInverses x)`
+`mulInverses x = {y. R x & R y & x * y = 1}`
+`recip x = the1 (mulInverses x)`
 {{% /preblock %}}
 
 *Except for 0 and 1, the notations for numbers in Prooftoys do not
@@ -99,18 +99,18 @@ are elements of the field, in this case the real numbers.
 There are other possible axiomatizations, all equivalent.
 
 {{% preblock %}}
-<s>R (x + y)</s>
-<s>(x + y) + z = x + (y + z)</s>
-<s>x + y = y + x</s>
-<s>exists1 isAddIdentity</s>
-<s>R (x * y)</s>
-<s>(x * y) * z = x * (y * z)</s>
-<s>x * y = y * x</s>
-<s>exists1 isMulIdentity</s>
-<s>x * (y + z) = x * y + x * z</s>
-<s>R x => exists1 (addInverses x)</s>
-<s>R x & x != 0 => exists1 (mulInverses x)</s>
-<s>1 != 0</s>
+`R (x + y)`
+`(x + y) + z = x + (y + z)`
+`x + y = y + x`
+`exists1 isAddIdentity`
+`R (x * y)`
+`(x * y) * z = x * (y * z)`
+`x * y = y * x`
+`exists1 isMulIdentity`
+`x * (y + z) = x * y + x * z`
+`R x => exists1 (addInverses x)`
+`R x & x != 0 => exists1 (mulInverses x)`
+`1 != 0`
 {{% /preblock %}}
 
 ## Ordering axioms
@@ -121,18 +121,18 @@ first set makes the domain into an _ordered field_.  Not all fields
 are ordered.
 
 {{% preblock %}}
-<s>not (x < x)</s>
-<s>x < y => not (y < x)</s>
-<s>x < y | y < x | x = y</s>
-<s>x < y & y < z => x < z</s>
+`not (x < x)`
+`x < y => not (y < x)`
+`x < y | y < x | x = y`
+`x < y & y < z => x < z`
 {{% /preblock %}}
 
 Effects of addition and multiplication on ordering:
 
 {{% preblock %}}
-<s>x < y => x + z < y + z</s>
-<s>x < y & 0 < z => x * z < y * z</s>
-<s>0 < x & 0 < y => 0 < x * y</s>
+`x < y => x + z < y + z`
+`x < y & 0 < z => x * z < y * z`
+`0 < x & 0 < y => 0 < x * y`
 {{% /preblock %}}
 
 
