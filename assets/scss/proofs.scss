@@ -17,8 +17,6 @@
     line-height: 1.3;
     border: 1px solid #ddd;
     padding: 1em;
-    /* This allows extra room for floated ruleStats. */
-    padding-bottom: 1.5em;
     border-radius: 8px;
     background-color: honeydew;
 }
@@ -229,10 +227,7 @@
 /* Statistics displays */
 
 /* Time and step count statistics for proof or step. */
-.ruleStats {
-  float: right;
-  margin-left: 2em;
-  font-size: smaller;
+span.ruleStats {
   font-family: Georgia;
   font-style: italic;
   color: gray;
@@ -325,7 +320,7 @@
 /* The box with info about progress toward solution(s)
  */
 .solutionStatus {
-    margin: .2em 0 1em 2em;
+    margin: .7em 0 .2em 0;
  }
 
 .solutionStatusDisplay {
@@ -630,21 +625,36 @@ input.varName, input.step, input.equation, input.implication {
   width: 4em;
 }
 
+/* Rule display mode controls */
+
+.modeList {
+    display: flex;
+    background-color: hsl(120deg, 73%, 50%);
+    /* The mode list contributes top, left, and right borders. */
+    border: 1px solid #bbf;
+    border-bottom-width: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.modeList > div {
+    text-align: center;
+    padding: .2em 3em 0 3em;
+}
+
+.modeList > div.selected {
+    background-color: #00800080;
+    background-color: hsl(120deg, 73%, 85%);
+}
 
 /* Rules menu */
 
 /* Main node for the rule selector, contains the rulesContainer. */
 .ruleMenu {
     position: absolute;
-    left: .5em;
-    right: .5em;
+    left: 1em;
+    right: 1em;
     background: AliceBlue;
     opacity: .9;
-    border: 1px solid #aaf;
-    border-radius: 5px;
-    max-height: 20em;
-    overflow-y: scroll;
-    overflow-x: hidden;
     z-index: 2;
 }
 
@@ -663,13 +673,21 @@ input.varName, input.step, input.equation, input.implication {
 .ruleMenuTitle {
     font-family: StixGeneral, times, serif;
     font-weight: bold;
-    margin-left: 2px;
+    padding: .2em .7em 0 .7em;
+    /* The rule menu title contributes left and right borders, */
+    border: 1px solid #bbf;
+    border-width: 0 1px;
 }
 
 .ruleMenu .scrollingMenu {
-  overflow-y: auto;
-  border: 1px solid #eee;
-  padding: 2px;
+    max-height: 20em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* The scrolling part contributes bottom, left, and right borders. */
+    border: 1px solid #bbf;
+    border-top-width: 0;
+    border-radius: 0 0 5px 5px;
+    padding: 2px;
 }
 
 .proofPreview {
