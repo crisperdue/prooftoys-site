@@ -811,3 +811,57 @@ input.copyText {
     text-overflow: ellipsis;
 }
 
+/** NEW **/
+
+.proofEditor {
+
+    div.stepEditor {
+        visibility: hidden;
+    }
+
+    .ruleMenu {
+        visibility: hidden;
+    }
+
+    &.proofEditorHovering .ruleMenu {
+        visibility: visible;
+    }
+
+    &.ruleMenuHovering {
+        .solutionStatus {
+            visibility: hidden;
+        }
+        .proofButtons {
+            visibility: hidden;
+        }
+    }
+
+    .ruleForm {
+        display: none;
+    }
+
+    &.ruleFormVisible .ruleForm {
+        display: block;
+    }
+
+    &.ruleFormVisible .stepEditor {
+        visibility: visible;
+    }
+
+    &.ruleFormVisible .ruleMenu {
+        visibility: hidden;
+    }
+
+    &.ruleFormVisible .proofButtons {
+        visibility: hidden;
+    }
+
+    .proofErrors {
+        visibility: hidden;
+    }
+
+    &.proofErrorsVisible .proofErrors {
+        visibility: visible;
+    }
+
+}

@@ -130,8 +130,8 @@ p.utterances {
 
 .transFade.hidden, .transFade.invisible, .transFade.ultraInvisible {
     visibility: hidden;
-    transition: visibility 1s, opacity 1s ease;
-    transition-delay: 1s;
+    transition: visibility 1s, opacity 1s linear;
+    transition-delay: .5s;
     /* This overrides the meaning of hidden = display: none */
     display: block;
     opacity: 0;
