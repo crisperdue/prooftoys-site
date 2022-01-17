@@ -125,16 +125,15 @@ p.utterances {
     opacity: 1;
     /* Think of visibility ranging from 0 to 1, with all */
     /* nonzero values being visible. */
-    transition: visibility .3s, opacity .3s ease;
+    transition: all .3s linear;
 }
 
 .transFade.hidden, .transFade.invisible, .transFade.ultraInvisible {
     visibility: hidden;
-    transition: visibility 1s, opacity 1s linear;
-    transition-delay: .5s;
+    opacity: 0;
+    transition: all .3s linear;
     /* This overrides the meaning of hidden = display: none */
     display: block;
-    opacity: 0;
 }
 
 

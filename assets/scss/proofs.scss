@@ -15,7 +15,7 @@
 .proofEditor {
     position: relative;
     line-height: 1.3;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     padding: 1em;
     border-radius: 8px;
     background-color: honeydew;
@@ -40,6 +40,11 @@
       border-width: 1px;
       border-radius: 6px;
       padding: 2px 8px 1px;
+  }
+
+  button.fa-copy {
+      padding: 4px;
+      margin-left: 0;
   }
 
   input.saveAs {
@@ -555,28 +560,37 @@ span.stepRef {
 
 /* Proof step editor */
 
+// Container for data entry forms for running inference rules
+.ruleForm {
+  left: -1em;
+  top: -.5em;
+  position: absolute;
+  background-color: white;
+  padding: 1em;
+  border: 2px solid DarkSeaGreen;
+  border-radius: 5px;
+  z-index: 5;
+}
+
+// Container for error displays
 .proofErrors {
+    position: absolute;
+    background-color: white;
+    left: 50%;
+    max-width: 80%;
+    z-index: 9;
+    transform: translateX(-50%);
   padding: 4px;
   border: 2px solid DarkSeaGreen;
   border-radius: 5px;
-  margin: 1em 0em;
-}
-
-/* Overrides styles for .proofDisplay. */
-.stepEditor {
-  margin-top: .2em;
-  position: relative;
 }
 
 /* Make inputs a bit smaller than regular text */
-.stepEditor input {
+.ruleForm input {
   font-family: STIXGeneral, times;
   font-size: 90%;
 }
 
-.stepEditor select {
-  font-size: 120%;
-}
 
 /* Other */
 
@@ -636,13 +650,17 @@ input.varName, input.step, input.equation, input.implication {
     border-radius: 5px 5px 0 0;
 }
 
-.modeList > div {
+.modeList .mode {
     text-align: center;
-    padding: .2em 3em 0 3em;
+    padding: .2em 2em 0 2em;
+}
+
+.modeList .mode:hover {
+    background-color: hsl(120deg, 73%, 70%);
+    cursor: default;
 }
 
 .modeList > div.selected {
-    background-color: #00800080;
     background-color: hsl(120deg, 73%, 85%);
 }
 
@@ -815,53 +833,63 @@ input.copyText {
 
 .proofEditor {
 
-    div.stepEditor {
-        visibility: hidden;
-    }
-
+    // The entire rules menu (hidden state)
     .ruleMenu {
         visibility: hidden;
+        opacity: 0;
+        transition: all 1s linear;
+        transition-delay: .5s;
     }
 
-    &.proofEditorHovering .ruleMenu {
+    &:hover .ruleMenu {
         visibility: visible;
+        opacity: 1;
+        transition: all .3s linear;
     }
 
-    &.ruleMenuHovering {
+    .ruleMenu:hover {
+        visibility: visible;
+
         .solutionStatus {
             visibility: hidden;
+            opacity: 0;
+            transition: all .3s linear;
         }
         .proofButtons {
             visibility: hidden;
+            opacity: 0;
+            transition: all .3s linear;
         }
     }
 
-    .ruleForm {
-        display: none;
-    }
-
-    &.ruleFormVisible .ruleForm {
-        display: block;
-    }
-
-    &.ruleFormVisible .stepEditor {
-        visibility: visible;
-    }
-
-    &.ruleFormVisible .ruleMenu {
-        visibility: hidden;
-    }
-
-    &.ruleFormVisible .proofButtons {
-        visibility: hidden;
-    }
-
-    .proofErrors {
-        visibility: hidden;
+    // Waiting for the prover to complete also dims
+    // the rule menu entries, just for consistent appearance.
+    &.ruleFormVisible .ruleMenu, &.waitingForProver {
+        opacity: .5;
+        transition: all .3s linear;
     }
 
     &.proofErrorsVisible .proofErrors {
         visibility: visible;
+        opacity: 1;
+        transition: all .2s linear;
+    }
+
+    // Hide the solution status (progress) display when it
+    // is empty or the mouse pointer is in the ruleMenu area
+    // and may generate step suggestions.
+    .solutionStatus {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .solutionStatus.empty {
+        visibility: hidden;
+    }
+
+    &.ruleMenuHovered .solutionStatus {
+        opacity: 0;
+        visibility: hidden;
     }
 
 }
