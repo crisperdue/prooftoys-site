@@ -38,6 +38,9 @@ pygmentsUseClasses = true
       source = "js"
       target = "assets/pt/js"
     [[module.imports.mounts]]
+      source = "scss"
+      target = "assets/scss"
+    [[module.imports.mounts]]
       source = "content"
       target = "content"
     [[module.imports.mounts]]
