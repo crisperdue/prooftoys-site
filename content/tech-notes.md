@@ -8,7 +8,140 @@ title: Technical notes
 
 {{< TOC >}}
 
-## Substitution
+### Automatic management of assumptions
+
+When a proof step is conditional Prooftoys very often treats the
+left side of the conditional as a set of _assumptions_.  A conditional
+step is one where the entire step consists of a left side (the
+assumptions), the _conditional operator_ (`=>`), and a right side (the
+conclusion).  If the left side of a conditional contains multiple
+terms connected with `&`, the "and" operator, we consider each of the
+terms to be an assumption.
+
+In both of the examples above, there is a step where an assumption has
+been proved, so it is replaced by `T`, and then the assumption `T`
+"disappears" in the next step.  If `T` is the only assumption, there
+are no assumptions at all after it is removed.  This is a standard
+part of managing assumptions.
+
+Beyond this, when Prooftoys applies replacement or rewriting with a
+conditional equation, it treats the left side of the conditional as a
+set of assumptions.  If the target step is also conditional, it
+combines the assumptions in both steps to keep them simple and tidy,
+by:
+
+- Regrouping
+- Reordering
+- Removing duplicates
+
+Prooftoys uses rewriting and some simple tautologies to prove the
+correctness of each transformation it does, and the resulting
+assumptions are fully equivalent to the original ones.
+
+###### Assumptions about numbers
+
+There are a few more transformations of assumptions that are applied
+very frequently, such as assumptions that expressions have numeric
+values.  Prooftoys automatically applies some transformations to
+simplify these assumptions, reducing complex terms, removing
+duplicates, or in some cases removing assumptions entirely.
+
+In all of these cases, if you dig down into the details of these proof
+steps you will see that they use the same kinds of basic operations
+that you see in most other proof steps.
+
+### Variables and substitution
+
+It is customary in mathematics for variables to have names, for
+example `x`, `y`, and `z`.  The statement `x = x` is true because it
+is true for all possible values of `x`.
+
+So for example if we substitute a numeric term such `5` or `144` for
+`x` in `x = x`, we get `5 = 5` or `144 = 144`, which is just what you
+would expect.  In fact, you can substitute any term for x in a
+statement like this and get a correct result.
+
+###### No substituting for bound variables
+
+If a statement has variable binders e.g. "forall" (`forall`) or
+"exists" (`exists`), there are some limitations on substitution.
+Consider a statement like `x >= 0 => exists {y. x = y * y}`.  The
+`exists { ... }` term has a _bound variable_ `y` and a _body_, `x =
+y * y`.  We say an occurrence of a variable is _bound_ if it appears
+within the body of a term where it is the bound variable, otherwise we
+say the occurrence is _free_.  (In fact if a variable has a bound
+occurrence and a free occurrence, the two might as well have different
+names, because having the same name is not significant.)
+
+It is not possible to substitute for a bound variable, so a
+substitution for both `x` and `y` has no effect on bound occurrences
+of `y`.  If `y` occurs elsewhere in the statement, substitutions would
+affect those places.
+
+##### Scopes and substitution
+
+TODO: explain scope.
+
+The same variable name can appear both bound and free, or bound at
+different locations in the same statement.  In any of these cases we
+often refer to them as different variables.  So if we see an `x`, how
+do we determine which `x` is referenced, and what difference does it
+make?
+
+##### Renaming
+
+##### Freedom and the substituted variable
+
+<a id=renaming></a>
+### Renaming of bound variables
+Prooftoys treats terms the same if they differ only by harmless
+renamings of bound variables.  Not all renamings are harmless,
+but for example if a bound variable is given a new name that occurs
+nowhere else in a statement, along with all the references to it,
+that is a harmless renaming, one that does not change the meaning
+of the statement.
+
+### Substitution
+
+Even though substitution only affects occurrences of free variables,
+there is still a potential issue with the variables that are free in
+the substitution's replacement terms: they must remain free after the
+substitution.
+
+Suppose a replacement term contains a variable name that is also
+the name of a bound variable in the statement where the substitution
+is to be applied.  Naive substitution would result in an occurrence of
+the replacement variable becoming bound, though it needs to stay free.
+(This undesirable phenomenon is known in the field as _capturing_.)
+
+A simple solution is to harmlessly rename any bound variables like
+this before doing the substitution.
+
+### Occurrences of a variable
+
+Prooftoys considers statements containing bound variables to be "the
+same" if the only difference is in the names of some bound variables.
+
+Imagine finding all of the variable bindings in the two statements.
+They all have the form `{<boundvar> . <body>}`.  Since the only
+difference is in the names, the bindings occur in exactly the same
+locations in each statement.
+
+Now go through each of those locations, coloring the `<boundvar>` part
+of each one.  Each location gets its own unique color, which is the
+same in both statements when the location is the same.
+
+
+
+the same place in each of
+the terms being compared.  Now imagine giving the `<boundvar>` part at
+each place its own color, with the bindings at the the bound variables
+are different, as long as every occurrence of each one in the `<body>`
+continues to
+
+TBD
+
+### Substitution
 
 Substitution for variables is one of the fundamental operations in
 virtually all forms of mathematical proofs and mathematical problem
@@ -27,10 +160,10 @@ same value.  Since an expression with the same inputs always gives the
 same result, substituting an expression for *every occurrence* of
 a variable in a true statement gives another true statement.
 
-In a true statement, if we systematically replace every occurrence of
-a variable with an expression (the same expression everywhere), the
-result of this *substitution* is another true statement, because
-the expression has the same value everywhere it appears.
+In a true statement, if we systematically replace every free
+occurrence of a variable with copies of a term, the result of this
+substitution is another true statement, because the expression has
+the same value everywhere it appears.
 
 The simple tautology `a ⇒ a` is a true statement,
 since `true ⇒ true` and `false ⇒ false`.  A statement like
@@ -47,7 +180,23 @@ variable in a statement is called an *instance* of the original
 statement, so we say that substituting one or more expressions for
 variables in a tautology gives an *instance* of the tautology.
 
-### Restrictions
+#### Substitution and types
+
+In a substitution the variable and the substitute term must be of the
+same type.  For example, if the variable is boolean, the term must be
+boolean.  If the variable is an individual, for example a number, the
+value of the term must be an individual, and so on.  Any variable can
+be replaced everywhere in a statement by the same term, as long as it
+is of the same type.
+
+
+
+When substituting for the bound variable of a function term, as when
+using the axiom of substitution, the substitution only applies to
+occurrences of the variable that occur within that function term.
+Considering just the body of the function term, but nothing
+surrounding it, the occurrences must be free ones ("relative" to the
+function body).
 
 If a mathematical statement contains bound variables substitution has
 to be done a bit more carefully, but the idea remains the same.
@@ -65,9 +214,9 @@ substitution.  This is always achievable, and Prooftoys ensures it by
 automatically renaming bound variables in the original statement as
 needed.
 
-## Inference
+### Inference
 
-### Managing assumptions
+#### Managing assumptions
 
 Facts about real numbers are conditional.  For example the commutative
 law of addition for real numbers is `R x & R y => x + y = y + x`,
@@ -91,7 +240,7 @@ Also, most inference steps check if the result is conditional
 `(a => b)` and remove duplicated assumptions and any occurrences
 of `T` to simplify the result.
 
-### Managing type assumptions
+#### Managing type assumptions
 
 When the result of rewriting has assumptions such as `R (x + y)`, that
 the result of some arithmetic operations is real, it uses known
@@ -100,7 +249,7 @@ each variable is real.  The example breaks down to `R x & R y`.  It
 also can prove that numeric literals are real numbers, so `R (x + 3)`
 breaks down into just `R x`.
 
-## About the Prooftoys logic
+### About the Prooftoys logic
 
 The core of [Mathtoys](http://mathtoys.org) is a Web-based, visual
 proof assistant based on [Alonzo Church's simple type
@@ -117,7 +266,7 @@ and will transition to definitions of boolean operators that directly
 expose their truth tables. But the theorems and inference remain the
 same as in Q<sub>0</sub>.
 
-### Logic links
+#### Logic links
 
 For more information on Church's simple type theory one source is the
 [Type Theory](http://en.wikipedia.org/wiki/Type_theory) article in

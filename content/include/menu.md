@@ -8,9 +8,9 @@ headless: true
 ***Pages***
 
 - [Home](/)
-	- [The concepts]({{< relref "/pt-logic-concepts.md" >}})
+	- [Terms and concepts]({{< relref "/pt-logic-concepts.md" >}})
 	- [Logic through pictures]({{< relref "/logic-pix-intro.md" >}})
-	- [Inference]({{< relref "/inference.md" >}})
+	- [Prooftoys reasoning]({{< relref "/inference.md" >}})
 	- [Axioms and theorems]({{< relref "/theorems.md" >}})
 
 -------------

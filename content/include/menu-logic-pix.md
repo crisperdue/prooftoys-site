@@ -11,8 +11,8 @@ headless: true
     - [Logic through pictures]({{< relref "/logic-pix-intro.md" >}})
         - [Boolean functions]({{< relref "/logic-pix-booleans.md" >}})
         - [True statements]({{< relref "/logic-pix-truth.md" >}})
-	- [The concepts]({{< relref "/pt-logic-concepts.md" >}})
-    - [Inference]({{< relref "/inference.md" >}})
+	- [Terms and concepts]({{< relref "/pt-logic-concepts.md" >}})
+    - [Prooftoys reasoning]({{< relref "/inference.md" >}})
     - [Axioms and theorems]({{< relref "/theorems.md" >}})
 
 -------------

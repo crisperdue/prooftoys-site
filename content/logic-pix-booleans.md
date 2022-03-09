@@ -39,11 +39,10 @@ picture they had the property of being
 
 So every point that was colored (true) in the first set of pictures is
 white (false) here and each point that was white (false) in the first
-set is shaded (true) here.  we can treat `not` as a
-function that takes `true` or `false` as its
-input and produces a value of `true` or `false`.
-This behavior can be defined with a table.  You can look up the value
-of `not x` by going to the row labeled with the value of
+set is shaded (true) here.  In Prooftoys `not` is a function that
+takes `true` or `false` as its input and produces a value of `true` or
+`false`.  This behavior can be defined with a table.  You can look up
+the value of `not x` by going to the row labeled with the value of
 `x`, either `true` or `false`.
 
 <table class=binaryTruthTable id=negationTable>
