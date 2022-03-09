@@ -9,7 +9,13 @@ description: >
 
 ### Deductive reasoning
 
-*Are you curious about mathematical reasoning?*
+_What is deductive reasoning?_
+
+Deductive reasoning starts with true statements, or at least ones
+taken as hypothetically true, and follows precise rules to reach
+conclusions that we take to be clear consequences of those initial
+statements.  Mathematical reasoning, as in mathematical proof, is the
+quintessence and the epitome of deductive reasoning.
 
 Much as mathematics is an essential building material for science,
 mathematical reasoning is an essential building material for
@@ -18,15 +24,12 @@ structures that reach all the way **<a target=_blank
 href="https://www.youtube.com/watch?v=2VSYmGSJtCA">"To Infinity and
 Beyond!"</a>**
 
-*But math can also be entertainment, the ultimate puzzle and
-game for your mind.*
+*Mathematics can also provide entertainment -- amazing puzzles and
+games for your mind.*
 
 Proof -- deductive reasoning -- is a cornerstone of mathematical
 thinking.  With this website you can see how it is done, building your
 skills and confidence in solving mathematical problems through proof.
-
-*With luck, you might even begin to see how mathematics can be
-amazing, wonderful, and fun!*
 
 ### Prooftoys
  

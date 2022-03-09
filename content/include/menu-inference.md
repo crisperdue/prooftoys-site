@@ -9,11 +9,11 @@ headless: true
 
 - [Home](/)
 	- [Logic through pictures]({{< relref "/logic-pix-intro.md" >}})
-	- [The concepts]({{< relref "/pt-logic-concepts.md" >}})
+	- [Terms and concepts]({{< relref "/pt-logic-concepts.md" >}})
 	- [The language]({{< relref "/language-intro.md" >}})
-    - [Inference]({{< relref "/inference.md" >}})
+    - [Prooftoys reasoning]({{< relref "/inference.md" >}})
         - [Definitions]({{< relref "/definitions.md" >}})
-        - [Practical reasoning with Prooftoys]({{< relref "/practical-reasoning.md" >}})
+        - [More reasoning with Prooftoys]({{< relref "/practical-reasoning.md" >}})
         - [Simplification]({{< relref "/simplification.md" >}})
     - [Axioms and theorems]({{< relref "/theorems.md" >}})
 

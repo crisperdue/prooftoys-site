@@ -9,8 +9,8 @@ headless: true
 
 - [Home](/)
     - [Logic through pictures]({{< relref "/logic-pix-intro.md" >}})
-	- [The concepts]({{< relref "/pt-logic-concepts.md" >}})
-    - [Inference]({{< relref "/inference.md" >}})
+	- [Terms and concepts]({{< relref "/pt-logic-concepts.md" >}})
+    - [Prooftoys reasoning]({{< relref "/inference.md" >}})
     - [Axioms and theorems]({{< relref "/theorems.md" >}})
 		- [Real number facts]({{< relref "/real-number-facts.md" >}})
 		- [Live logic facts list]({{< relref "/live-logic-facts.md" >}})

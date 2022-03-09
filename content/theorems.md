@@ -40,26 +40,20 @@ known as "capture".  See the [technical notes]({{< relref
 This process of converting `{x. R} S` to an equivalent term via proper
 substitution is known as "beta conversion".
 
-
 ## Definitions
 
 Definitions including all of those used in the theorems list below.
 Some additional definitions are used internally or in theorems
 about real numbers.
 
-All of these definitions have the form `<name> = <expression>` and meet the
-additional requirements for being safe definitions that cannot introduce
-contradictions into the logic.
+Definitions have the form `<name> <vars> = <expression>` where
+`<name>` is the newly-defined constant and `<vars>` is an optional
+sequence of variable names.
 
-Definitions of functions and predicates in this list are given in
-pairs; first the native form with only the name of the new constant on
-the left, and then in the traditional form.  The two forms are
-equivalent.  See the inference rules for [unbinding]({{< relref
-"/practical-reasoning.md#unbinding-an-equation" >}}) and [rebinding]({{<
-relref "/practical-reasoning.md#rebinding-an-equation" >}}) equations.
-
-For more on the use of definitions in Prooftoys see the
-[definitions]({{< relref "/definitions.md" >}}) page.
+The expression must not have any free variables other than those in
+the list after the name being defined.  For more on the use of
+definitions in Prooftoys see the [definitions]({{< relref
+"/definitions.md" >}}) page.
 
 {{% preblock %}}
 `not a == (a == F)`

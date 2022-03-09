@@ -7,9 +7,9 @@ headless: true
 
 ***Documentation***
 
-- [The concepts]({{< relref "/pt-logic-concepts.md" >}})
+- [Terms and concepts]({{< relref "/pt-logic-concepts.md" >}})
 - [The language]({{< relref "/language-intro.md" >}})
-- [Inference]({{< relref "/inference.md" >}})
+- [Prooftoys reasoning]({{< relref "/inference.md" >}})
 - [Axioms and theorems]({{< relref "/theorems.md" >}})
 - [Logic through pictures]({{< relref "/logic-pix-intro.md" >}})
 - [Symbols quick reference]({{< relref "/symbols-quickref.md" >}})

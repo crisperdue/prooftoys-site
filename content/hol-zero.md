@@ -60,7 +60,7 @@ sides of the theorem.  The variable must not occur free in the assumptions
 of the supplied theorem.
 
 ~~~
-       `x`   A |- t1 = t2        [ "x" not free in 'A' ]
+       `x`   A |- t1 = t2        [ x cannot occur free within A ]
     ------------------------
     A |- (\x. t1) = (\x. t2)
 ~~~
