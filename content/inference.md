@@ -34,11 +34,10 @@ almost any proof needs many steps.
 
 Most Prooftoys proof steps use some combination of:
 
-- substitution
 - tautologies
-- replacement / rewriting
+- substitution
+- automated matching / rewriting
 - simplification
-- forward chaining
 
 Probably at least 80% of the steps in typical Prooftoys proofs use
 these techniques.  Most other kinds of steps Prooftoys offers are
@@ -56,22 +55,6 @@ the "algebra" mode there.
 If your immediate goal is solving equations, you may want to focus
 right now on replacement and rewriting, as they are the most-used
 for this kind of task.
-
-### Substitution
-
-Substitution replaces every free occurrence of a variable with copies
-of a term.  It is also possible to substitute for multiple variables
-simultaneously, even substituting `x` for `y` and `y` for `x`.
-Rewriting automatically includes substitution as needed.
-
-There are some extra technical details if bound variables are present.
-See the [technical notes]({{< relref "/tech-notes.md#substitution"
->}}) for details and explanation.
-
-Another form of substitution applies a function in the form `{<var>
-. <body>}` to an argument (or arguments) by substituting for `<var>`
-in `<body>`.  It is based on exactly the same underlying principles,
-but is discussed separately in TBD.
 
 ### Tautologies
 
@@ -98,21 +81,26 @@ typical examples are `A | A == A`, `A & B => A`, `A & B == B & A`.
 A more complex but still common tautology is `(A => B) & (B => A) ==
 (A == B)`.
 
-### Replacement and rewriting
+### Substitution
 
-Inference by replacement allows an arbitrary term appearing anywhere
-in a proof step to be replaced by another term known to be equal to
-it.  Equality applies to individuals, functions, predicates, et
-cetera, and also to boolean values.  Logical equivalence (`\==`
-displayed as `==`, or just `=`) is equality of truth values.
+Substitution replaces every free occurrence of a variable with copies
+of a term.  It is also possible to substitute for multiple variables
+simultaneously, even substituting `x` for `y` and `y` for `x`.
+Rewriting automatically includes substitution as needed.
 
-Rewriting lets you apply a general rule to part of a statement by
-using the "left-hand side" of the rule as a pattern to match to a
-specific part of the statement and then replacing that part of the
-statement using replacement.  The next sections describe replacement
-and then rewriting.
+There are some extra technical details if bound variables are present.
+See the [technical notes]({{< relref "/tech-notes.md#substitution"
+>}}) for details and explanation.
 
-**Replacement.**
+Another form of substitution applies a function in the form `{<var>
+. <body>}` to an argument (or arguments) by substituting for `<var>`
+in `<body>`.  It is based on exactly the same underlying principles,
+but is discussed separately in TBD.
+
+
+
+### Replacement
+
 In the simplest case, replacement begins with an equality known to be
 true, of the form:
 
@@ -129,7 +117,7 @@ of the equation can be replaced by the right side of the equation.
 Alternatively we may have an equality that applies under assumptions, that
 looks something like:
 {{% preblock %}}
-You can write `A => (B = C)` (also `A => (B == C)`)
+You can write `A => (B = C)` (or `A => (B == C)`)
 {{% /preblock %}}
 
 Using an equation like this on a sentence S results in a sentence of
@@ -139,21 +127,32 @@ the form:
 `A => S'`
 {{% /preblock %}}
 
-where S' is like S, but with an occurrence of A replaced by B.  (In more
-advanced cases where S contains "binders", there are some limitations on
-the use of replacement.)
+where S' is like S, but with an occurrence of A replaced by B.  (If S
+has bound variables there are some limitations on the use of
+replacement.)
 
 Here again, `A`, `B`, and `C`, are parts of patterns.  `A` is the
-assumption (or assumptions joined with `&`) in a proved step, and
-`B = C` can be any equation.  In this pattern we refer to the
-left side of the equation as `B` and the right side as `C`.
+assumption (or assumptions joined with `&`) in a proved step, and `B =
+C` can be any equation.  So here the left side of the equation is `B`
+and the right side is `C`.
 
-**Rewriting.**
-Mathtoys does rewriting by using pattern matching to find
-substitutions that make the left side of an equation match some term,
-then applies the substitution and replace the term with the equation's
-right side after the substitution.  The equation is often conditional
-as described above.
+### Finding substitutions with matching
+
+Prooftoys can find substitutions that make two terms equivalent by
+matching the terms.  The term where the substitution will occur is
+called the _schema_.  If matching finds no such substitution, the
+matching is considered a failure.
+
+### Rewriting
+
+A rewriting step in a proof combines substitution and replacement.
+Rewriting takes a target step, a target term within the target step,
+and a rewrite rule as inputs.  It matches the left-hand side of the
+rewrite rule as a schema with the target term to find a substitution.
+It applies the substitution to the rewrite rule and replaces the
+target term with the right-hand side of the substituted rewrite rule.
+If the rewrite rule is conditional, rewriting adds its assumptions to
+any existing assumptions of the target step.
 
 When a textbook talks about applying a law such as commutativity,
 associativity, or distributivity, it is talking about rewriting.
@@ -171,7 +170,7 @@ result.
 
 In the actual Prooftoys system, axioms such as commutativity are
 expressed as conditionals, e.g. `R x => x * y = y * x`, so the
-rewriting adds an assumption, but otherwise it is the same.
+rewriting adds an assumption, but other than that it is the same.
 
 ### Simplification
 
@@ -183,23 +182,20 @@ behind the scenes, to save you from some degree of tedious work.
 Prooftoys has a collection of simplification facts, and normally
 tries any of them that match when doing simplification.
 
-### Forward chaining
+### Finding other substitutions (forward reasoning)
 
-Part of rewriting is finding a substitution into the equation
-step. (Or recall that Prooftoys can convert any theorem into an
-equation by adding `== T` in a suitable location.)
+Rewriting only looks for a substitution into its rewrite rule, and
+just in certain places, classically the left side of an equation.
+Sometimes it is useful to prepare for replacement by finding a
+substitution into the target step instead of the rewrite rule step.
+Proofs using so-called forward reasoning often work this way, proving
+first an instance of the left side of a tautology such as `(a => b) &
+(b => a) => (a == b)`, and concluding an instance of `a == b`.
 
-Sometimes though, substitution is needed in some part of a step that
-it cannot use as part of an equation.  Forward chaining can help with
-automatic matching to find the needed substitution.
+Other patterns of reasoning also work this way, including proof by
+contradiction for example using the tautology `(not a => F) => a`.
 
-Forward chaining finds a substitution into the left side of a
-conditional statement `A => C` to make it the same as your
-already-proved proof step.  Being the same, Prooftoys replaces it with
-`T` giving `T => C`, which it replaces with just `C` since
-`T => C == T`.
-
-### True statements and `T`
+### About true statements and T
 
 Replacing an expression with something equal to it is a fundamental
 concept in Prooftoys.  Replacement and rewriting always use an
@@ -213,7 +209,7 @@ replace `T` by a true statement.  If the true statement is conditional
 possible to replace `T` anywhere with `B`, adding `A` as an assumption
 in the result.
 
-###### An example
+#### An example
 
 Let's consider a couple of facts about real numbers -- the
 transitivity of the ordering relation
@@ -229,17 +225,14 @@ We will prove that
 {{% preblock %}}
 `42 < x => 24 < x`
 {{% /preblock %}}
-
-The proof in full detail goes like this:
-
 | Step                             | Description                       |
 | ----                             | -------                           |
-| (3) `24 < 42 & 42 < x => 24 < x` | substitute for x, y, and z in _trans_|
+| (1) `24 < 42 & 42 < x => 24 < x` | substitute for x, y, and z in _trans_|
 | (2) `24 < 42          `          | True by arithmetic                |
-| (4) `T & 42 < x => 24 < x`       | replace `24 < 42` with `T` using (2) |
-| (5) `T & A == A`                 | a tautology                       |
-| (6) `T & 42 < x == 42 < x`       | substitute for A in tautology (5) |
-| (7) `42 < x => 24 < x`           | replace `T & 42 < x` in (4)       |
+| (3) `T & 42 < x => 24 < x`       | replace `24 < 42` with `T` in step (2) |
+| (4) `T & A == A`                 | a tautology                       |
+| (5) `T & 42 < x == 42 < x`       | substitute for A in tautology (4) |
+| (6) `42 < x => 24 < x`           | replace `T & 42 < x` in (5)       |
 
 Written in less detail, just replacing a true statement with `T`:
 
@@ -249,11 +242,11 @@ Written in less detail, just replacing a true statement with `T`:
 | (2) `T & 42 < x => 24 < x`       | replace `24 < 42` with T          |
 | (3) `42 < x => 24 < x`           | replace `T & 42 < x` using `T & A == A` |
 
-(Prooftoys normally states the transitive law with explicit
-conditions that `x`, `y`, and `z` must be real numbers, but the ideas
-in the proof are the same.)
+(Prooftoys states the transitive law with explicit conditions that
+`x`, `y`, and `z` must be real numbers, but the ideas in the proof are
+the same.)
 
-###### Another example
+#### Another example
 
 Defining `odd` as a predicate that is true if its input is an odd
 number, and having already proved that
@@ -276,35 +269,3 @@ of step 4, so we can replace that entire step, giving
 {{% preblock %}}
 `5) odd (17 * 17)`
 {{% /preblock %}}
-
-##### Matching of terms
-
-Matching in Prooftoys means finding a substitution that makes
-two terms the same.  Prooftoys does a lot of matching behind the
-scenes when applying rewrite rules, and even more when working
-with you interactively.
-
-In fact, in many cases two terms just differ in the names of some
-bound variables can still be considered the same.  Prooftoys
-recognizes these situations.  See the [technical notes]({{< relref
-"/tech-notes.md#renaming" >}}) for some further detail.
-
-Rewriting substitutes into the left side of an equation to make it
-match a term to be replaced.
-
-### Advanced techniques
-
-Some proofs require more advanced techniques.  You will need them for
-example if a proof requires use of quantifiers such as "forall"
-(`forall`) and "exists" (`exists`).  And you will probably want to
-learn more about _bound variables_, which naturally accompany use of
-quantifiers.
-
-You might also want to learn how to introduce new constants and how to
-work with definitions.  Some definitions use the _definite description
-operator_, another fundamental concept of the Prooftoys logic.
-
-Mathematical concepts combine in endless amazing and powerful ways, so
-there is always more to learn long after you have seen the fundamental
-principles.
-
