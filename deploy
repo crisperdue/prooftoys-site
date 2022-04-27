@@ -29,4 +29,4 @@ run hugo
 
 echo
 echo ==== RELEASE ====
-run netlify deploy --site prooftoys.netlify.app --dir public -p
+run netlify deploy --site prooftoys.netlify.app --dir public "$@"
