@@ -91,10 +91,11 @@ tippy('[data-tippy-content]', {
   // This attaches the tooltip to the document body vs the target
   // element for more consistent effects on styling of tooltips.
   appendTo: () => document.body,
-  // 300ms delay for both show and hide.
+  // 400ms delay for both show and hide.
   // This helps to keep the tooltip up so "interactive" can work.
   delay: [400, 400],
 });
+// Make the content visible all at once.
 // The mainContent DIV is created in single.html.
 $('.mainContent').removeClass('invisible');
 </script>
