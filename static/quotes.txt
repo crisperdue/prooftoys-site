@@ -51,17 +51,19 @@ who has strayed by mistake into a drawing room full of dukes. -- W H Auden
 No opera plot can be sensible, for people do not sing
 when they are feeling sensible. -- W H Auden
 
-The universe ... cannot be understood unless one first learns
-to comprehend the language in which it is written.
-It is written in the language of mathematics.  -- Galileo Galilei
+Philosophy is written in this grand book — I mean the universe — which
+stands continually open to our gaze, but it cannot be understood
+unless one first learns to comprehend the language in which it is
+written. It is written in the language of mathematics.  -- Galileo
+Galilei
 
 All positive integers are interesting. 
 Proof: 
 Assume the contrary. Then there is a least non-interesting positive integer.
 but, hey, that's pretty interesting! A contradiction. 
 
-Do not worry about your difficulties in Mathematics. I can assure you mine are still
-greater.  -- Albert Einstein
+Do not worry about your difficulties in Mathematics. I can assure you
+mine are still greater.  -- Albert Einstein
 
 You've got to be very careful if you don't know where you are going,
 because you might not get there. -- Yogi Berra
@@ -82,11 +84,12 @@ in accordance with its laws. -- Alfred Tarski
 It is impossible to make anything truly foolproof because
 fools are so ingenious. -- Anonymous
 
-I shall try to correct errors when shown to be errors; and I shall adopt new views
-so fast as they shall appear to be true views. -- Abraham Lincoln
+I shall try to correct errors when shown to be errors; and I shall
+adopt new views so fast as they shall appear to be true views. --
+Abraham Lincoln
 
-The smallest natural number not definable by nine words is definable by nine words.
--- Jules Richard
+The smallest natural number not definable by nine words is definable
+by nine words.  -- Jules Richard
 
 The scientific man does not aim at an immediate result.  . . .
 His work is like that of the planter -- for the future.
