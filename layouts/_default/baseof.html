@@ -11,6 +11,14 @@
   {{ with .Params.description }}<meta name=description content="{{ trim . "\n"}}">{{ end }}
   {{ block "meta_tags" . }}{{end}}
   <link rel="icon" href="/favicon.ico">
+  <!-- One or more occurrences of " fa-" in the class attribute  -->
+  <!-- This puts a "star" (\u2606) as content by default,        -->
+  <!-- in case the FA class is bad or internet not available.    -->
+  <style>
+  [class*=" fa-"]::before {
+    content:"\2606";
+  }
+  </style>
   {{ $style := resources.Get "scss/style.scss" | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" true) }}
   <link rel="stylesheet" href="{{ ($style).RelPermalink }}">
 
@@ -67,9 +75,9 @@
 {{/* partial "page-footer.html" . */}}
 
 {{ block "footer_js" . }}{{ end }}
-<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js">
+<script src="{{ .Site.Params.popper_url }}">
 </script>
-<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js">
+<script src="{{ .Site.Params.tippy_url }}">
 </script>
 {{ partial "prooftoys-scripts.html" . }}
 

@@ -10,20 +10,19 @@ pygmentsCodefencesGuessSyntax = true
 pygmentsUseClasses = true
 
 [params]
+  # To use local copies of popper and tippy, just use /<filename>,
+  # as they are available in static/.
+  popper_url = "https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"
+  tippy_url = "https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"
   mainSections = [ "" ]
-#  google_analytics_id = "UA-28801147-2"
-#  google_analytics_config = "'UA-28801147-2', { 'anonymize_ip': true }"
+  # google_analytics_id = "UA-28801147-2"
+  # google_analytics_config = "'UA-28801147-2', { 'anonymize_ip': true }"
   homepage_button_link = '/docs'
   homepage_button_text = 'Read The Docs'
   BookMenuBundle = "/menu.md"
 
-#  talkyardServerUrl = "https://comments-for-prooftoys-org.talkyard.net"
-#  talkyardScriptUrl = "https://c1.ty-cdn.net/-/talkyard-comments.min.js"
-
-  # For future use: (separate script files, not minified, etc.)
-  dev_mode = true
-  # For future use: (all resources local)
-  airplane_mode = false
+  # talkyardServerUrl = "https://comments-for-prooftoys-org.talkyard.net"
+  # talkyardScriptUrl = "https://c1.ty-cdn.net/-/talkyard-comments.min.js"
 
 [markup]
   defaultMarkdownHandler = "goldmark"
