@@ -12,10 +12,7 @@ title: 'About the language'
 
 The language has only expressions, which are often referred to as
 _terms_.  A statement in the language is just an expression whose
-value is boolean, so either true or false.  Given an expression and
-the definitions of the names used in it, it is easy to tell if the
-expression has a boolean value and so can be interpreted as a
-statement.
+value is boolean, so either true or false.
 
 ## Expression syntax
 
