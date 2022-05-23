@@ -1,5 +1,8 @@
 <!-- Matomo -->
 <script type="text/javascript">
+  // Now gracefully handles all of my websites
+  // and limits tracking to appropriate situations.
+  // Doesn't even load the JS support when not useful.
   var _paq = window._paq = window._paq || [];
   /* tracker methods like "setCustomDimension"
      should be called before "trackPageView" */
@@ -11,16 +14,44 @@
   _paq.push(['enableLinkTracking']);
   // Disable recording with:
   // _paq.push(['HeatmapSessionRecording::disable']);
-  (function() {
-    var u="https://prooftoys.matomo.cloud/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '1']);
-    var d=document, g=d.createElement('script'),
-      s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript';
-    g.async=true;
-    g.src='//cdn.matomo.cloud/prooftoys.matomo.cloud/matomo.js';
-    s.parentNode.insertBefore(g,s);
-  })();
+(function() {
+  // Regexes to control which site ID to use.  If none
+  // found, don't even load matomo.js.
+  var mappings = [
+    [/^prooftoys.org$/, 1],
+    [/^mathtoys.org$/, 3],
+    [/^perdues.com$/, 4],
+    // Don't track localhost with port number.
+    [/^localhost:/, null],
+    // Site 6 exists to test tracking. The pattern matches anything
+    // ending with netlify.app, or with a port number.
+    [/:|netlify.app$/, 6],
+  ];
+  var id = null;
+  for (var i = 0; i < mappings.length; i++) {
+    var entry = mappings[i];
+    if (location.host.match(entry[0])) {
+      id = entry[1];
+      if (id) {
+        // Set up tracking for the ID.
+        var u="https://prooftoys.matomo.cloud/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', id]);
+        var d=document, g=d.createElement('script'),
+            s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript';
+        g.async=true;
+        g.src='//cdn.matomo.cloud/prooftoys.matomo.cloud/matomo.js';
+        s.parentNode.insertBefore(g,s);
+      }
+      // Quit search on first match.
+      break;
+    }
+  }
+  if (!id) {
+    // Indicate we don't want to "push" to anything.
+    _paq = null;
+  }
+})();
 </script>
 <!-- End Matomo Code -->
