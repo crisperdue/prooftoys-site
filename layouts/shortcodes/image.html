@@ -1,0 +1,8 @@
+{{ $src := .Get "src" }}
+{{ $tag := . }}
+{{ $image := resources.Get (printf "images/%s" $src) }}
+
+{{ with $image }}
+  <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{.Height }}"
+   title="{{$tag.Get "title"}}">
+{{ end }}
