@@ -52,6 +52,9 @@ pygmentsUseClasses = true
     [[module.imports.mounts]]
       source = "tests"
       target = "static/tests"
+    [[module.imports.mounts]]
+      source = "static"
+      target = "static/pt"
   [[module.imports]]
     path = "example.com/CDN"
     [[module.imports.mounts]]
