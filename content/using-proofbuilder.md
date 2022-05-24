@@ -14,31 +14,33 @@ description: >
 
 ### The worksheet
 
-The first time you visit a page with a proof builder, the proof
-builder looks a bit like a window onto a blank sheet of paper with a
-few controls.  This window will display proof steps once you have
-some, but it starts out empty and blank.  You will fill it in with
-deduction steps by selecting steps or parts of steps, menus and
-entering terms in the language of the Prooftoys logic.
+**Notes.** Excess parens in if-then-else, now work around with "in".
 
-The worksheet displays the steps of your proof in progress with a
-brief description of each step.  Each time your worksheet changes, it
-is stored persistently in your web browser, so you can navigate to
-other pages and return, or even power off your computer, and still
-keep your work as long as you like.  Just remember that worksheets are
-not shared across different web browsers, even on the same computer.
+The first time you visit a page that contains a proof builder, the
+proof builder looks a bit like a window onto a blank sheet of paper
+with a few controls.  This _proof display_ will show the steps of your
+proof in progress with a brief description of each step, but for now
+it is blank.  You will fill it in with deduction steps by selecting
+steps or parts of steps, choosing items from menus, and entering terms
+(expressions) in the language of the Prooftoys logic.
+
+Each time your worksheet changes, it is stored persistently in your
+web browser, so you can navigate to other pages and return, or even
+power off your computer, and still keep your work as long as you like.
+Just remember that worksheets are not shared across different web
+browsers, even on the same computer.
 
 You can have many worksheets, and switch back and forth between them
-with the proof builder, using the "Worksheets" button.  The name of
-your current worksheet is displayed at the top of the proof builder
-display.  You can also browse a list of all of your worksheets.
-Clicking on the "Worksheets" button shows you additional controls, and
-choose "Open" to see the list.
+with the proof builder, using the "Worksheets" button and its menus.
+The name of the current worksheet is displayed at the top of the proof
+builder display.  You can also browse a list of all of your
+worksheets.  Clicking on the "Worksheets" button shows you additional
+controls.  Then choose "Open" to see the list of worksheets.
 
 ### Starting a proof
 
-You can hover the mouse over the worksheet area, and an additional
-area with menus will appear at the bottom:
+When you hover the mouse over the worksheet an additional area with
+menus will appear at the bottom:
 
 {{< image src="WorksheetMenu.png" title="proof builder image">}}
 
@@ -46,34 +48,34 @@ The "General" menu is initially active with its heading highlighted,
 but you can activate any menu by hovering over its heading.  The menus
 are sensitive to your selection of a step or term (expression) within
 a step, but since there are no steps to select, the menu shows only
-actions that create a new step from just your input.
+actions that create a new step, not depending on any existing proof
+step.
 
 Selecting any one of these prompts you to enter a term in the
-[Prooftoys language]({{< relref "/symbols-quickref.md" >}}).
+[Prooftoys language]({{< relref "/symbols-quickref.md" >}}).  All of
+these prove the step they generate, so do not hesitate to use them
+whenever they may be useful.
 
 **assume** and **assume explicitly**.  These create an "assumption"
-step, which is just an example of that fact that any statement implies
-itself.  The only difference is in the display.  Enter any term with a
-boolean value.
+step, an example of that fact that any statement implies itself.  The
+only difference is in the display.  Enter any term with a boolean
+value to assume it.
 
-**consider a term to transform**.  This creates an example of the true
-statement that any term is equal to itself.  Enter any valid term.
+**consider a term to transform**.  This creates an example of the fact
+that any term is equal / equivalent to itself.  Enter a valid term,
+which the proof builder will prove equal to itself.  The display of
+this step only shows the right-hand side of the equation.
 
-**look up a fact**.  This helps you enter a statement that Prooftoys
-knows to be true.  Prooftoys works hard to help you work without
-having to type in the statement of a fact, but sometimes this is
-useful.
+**look up a fact**.  Prooftoys knows basic logic and facts about real
+numbers.  When you select a term, Prooftoys searches automatically for
+relevant facts to apply based on the currently selected step or term,
+so you can often choose and apply a fact from the menus without having
+to type it in.
 
-Prooftoys has a number of axioms and theorems with names, and you can
-enter the name to add the axiom or theorem as a proof step.  Prooftoys
-also knows numerous other mathematical facts, and you can add one of
-them by entering its statement through the keyboard.  In addition you
-can enter a tautology or a trivial arithmetic fact such as `2 + 2 = 4`
-or `0 < 3`.
-
-Prooftoys tries to help you avoid the need to type in statements of
-facts by finding facts relevant to your current selection and offering
-menu items that use them in standard proof steps.
+You can also enter a fact known to Prooftoys using the keyboard.  If
+the conclusion of a conditional fact uniquely identifies it, you can
+omit the assumptions.  You can also enter an arbitrary tautology this
+way, and Prooftoys will prove it for you.
 
 Prooftoys can also prove an arbitrary tautology or a *substitution
 instance* of a tautology through this menu item.
@@ -87,10 +89,10 @@ precedence), and the conditional ("=>").
 enter is the result of a substitution into a tautology.  If so it
 proves the tautology and does the substitution for you.
 
-***Example.*** Select "consider a term to transform".  Prooftoys will
-prompt you for a "term to consider".  Enter `\x * x = x` and press the
-_<tt>Return</tt>_ key or click on the _<tt>Go</tt>_ button next to the
-input field.
+***Try it.*** Select "consider a term to transform" in the menu.
+Prooftoys will prompt you for a "term to consider".  Enter `\x * x =
+x` and press the _<tt>Return</tt>_ key or click on the _<tt>Go</tt>_
+button next to the input field.
 
 *Start with commutative law for equality.*
 
@@ -175,11 +177,11 @@ Some rules such as "consider" take input from you, as we saw above.
 When you hover the mouse over one of these menu items, the preview
 area shows a message like "needs user input".
 
-Note that the menu items offered are sometimes based on estimates that
-their action makes sense and can be done.  When you hover over the
-item the proof builder tries actually performing the action.  If the
-action cannot actually be done, the preview may be a message like
-"nothing to do", and choosing the item does nothing.
+The menu items offered are sometimes based on estimates that their
+action can be accomplished.  When you hover over the item, the proof
+builder will try to actually perform the action.  If the action cannot
+be done, the preview will be a message such as "nothing to do".  In
+that case, choosing the menu item will do nothing.
 
 ### The menus
 
@@ -225,3 +227,12 @@ often useful or more advanced than ones in the _general_ menu.
 
 [[Talk about it, and the simplification rules]]
 
+<script>
+window.onerror = function(message, source, lineno, colno, error) {
+  console.log('Thus:', message, source, lineno, colno, error);
+  console.log('Args:', arguments);
+  eek = error;
+}
+</script>
+
+<script src="/foo.js" onerror="alert('Yikes')"></script>
