@@ -28,5 +28,9 @@ echo ==== BUILD SITE ====
 run hugo
 
 echo
-echo ==== RELEASE ====
+echo ==== NETLIFY DEPLOY ====
 run netlify deploy --site prooftoys.netlify.app --dir public "$@"
+
+if [ -n "$1" ]; then
+  echo ==== PUBLISHED ====
+fi
