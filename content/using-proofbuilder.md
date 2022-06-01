@@ -100,8 +100,6 @@ the input field.
 
 {{< video src="/images/xxisx.mp4" >}}
 
-**The proof builder always adds a new step at the end of the proof.**
-
 ### Inference steps
 
 Most steps in proofs build from one step to another step.  In the
@@ -163,6 +161,8 @@ a "simplify" step that cancels out the resulting `x - x` term on the
 right hand side.
 
 {{< video src="/images/cancel-x.mp4" >}}
+
+The proof builder always adds new steps at the end of the proof.
 
 #### The menus
 
