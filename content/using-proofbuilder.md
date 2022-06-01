@@ -14,8 +14,6 @@ description: >
 
 ### The worksheet
 
-**Notes.** Excess parens in if-then-else, now work around with "in".
-
 The first time you visit a page that contains a proof builder, the
 proof builder looks a bit like a window onto a blank sheet of paper
 with a few controls.  This _proof display_ will show the steps of your
@@ -42,7 +40,9 @@ controls.  Then choose "Open" to see the list of worksheets.
 When you hover the mouse over the worksheet an additional area with
 menus will appear at the bottom:
 
+{{% divstyle style="margin: 0 10%" %}}
 {{< image src="WorksheetMenu.png" title="proof builder image">}}
+{{% /divstyle %}}
 
 The "General" menu is initially active with its heading highlighted,
 but you can activate any menu by hovering over its heading.  The menus
@@ -51,67 +51,70 @@ a step, but since there are no steps to select, the menu shows only
 actions that create a new step, not depending on any existing proof
 step.
 
-Selecting any one of these prompts you to enter a term in the
-[Prooftoys language]({{< relref "/symbols-quickref.md" >}}).  All of
-these prove the step they generate, so do not hesitate to use them
-whenever they may be useful.
+Selecting any one of these prompts you to enter an expression in the
+language of the logic.  All of these prove the step they generate, so
+do not hesitate to use them whenever they may be useful.
 
-**assume** and **assume explicitly**.  These create an "assumption"
-step, an example of that fact that any statement implies itself.  The
+**assume** and **assume explicitly**
+: These create an "assumption"
+step, an example of the fact that any statement implies itself.  The
 only difference is in the display.  Enter any term with a boolean
 value to assume it.
 
-**consider a term to transform**.  This creates an example of the fact
+**consider a term to transform**
+: This creates an example of the fact
 that any term is equal / equivalent to itself.  Enter a valid term,
 which the proof builder will prove equal to itself.  The display of
 this step only shows the right-hand side of the equation.
 
-**look up a fact**.  Prooftoys knows basic logic and facts about real
+**look up a fact**
+: Prooftoys knows basic logic and facts about real
 numbers.  When you select a term, Prooftoys searches automatically for
 relevant facts to apply based on the currently selected step or term,
 so you can often choose and apply a fact from the menus without having
 to type it in.
 
-You can also enter a fact known to Prooftoys using the keyboard.  If
+: You can also enter a fact known to Prooftoys using the keyboard.  If
 the conclusion of a conditional fact uniquely identifies it, you can
 omit the assumptions.  You can also enter an arbitrary tautology this
 way, and Prooftoys will prove it for you.
 
-Prooftoys can also prove an arbitrary tautology or a *substitution
+: Prooftoys can also prove an arbitrary tautology or a *substitution
 instance* of a tautology through this menu item.
 
-**prove a tautology**.  This attempts to prove the input statement as
-a tautology.  It currently supports boolean functions "and", "or",
-"not", boolean equality (either "=" or "==" each with its own
-precedence), and the conditional ("=>").
+**prove a tautology**
+: This attempts to prove the input statement as a tautology.  It
+currently supports boolean functions "and", "or", "not", boolean
+equality (either "=" or "==" each with its own precedence), and the
+conditional ("=>").
 
-**prove a tautology instance**.  This checks whether the formula you
-enter is the result of a substitution into a tautology.  If so it
-proves the tautology and does the substitution for you.
+**prove a tautology instance**
+: This checks whether the formula you enter is the result of a
+substitution into a tautology.  If so it proves the tautology and does
+the substitution for you.
 
-***Try it.*** Select "consider a term to transform" in the menu.
-Prooftoys will prompt you for a "term to consider".  Enter `\x * x =
-x` and press the _<tt>Return</tt>_ key or click on the _<tt>Go</tt>_
-button next to the input field.
+***Try it.*** Select `assume (A => A)" in the menu.  Prooftoys will
+prompt you for a term to assume.  Enter `\$ == zx * x = x` and press
+the _<tt>Return</tt>_ key or click on the _<tt>Go</tt>_ button next to
+the input field.
 
-*Start with commutative law for equality.*
+{{< video src="/images/xxisx.mp4" >}}
 
-The proof builder always adds a new step at the end of the proof.
+**The proof builder always adds a new step at the end of the proof.**
 
 ### Inference steps
 
 Most steps in proofs build from one step to another step.  In the
-proof builder you generally start by selecting the step or part of a
-step you want to build on.
+proof builder, creation of a new proof step is usually done by first
+selecting a step or part of a step, then selecting an item from one of
+the menus.
 
 #### Selecting a step or term
 
-Most actions in Prooftoys are done by selecting a step or term, then
-selecting a menu item from one of the menus.  To select a _step_,
-click on its step number, or on the checkbox adjacent to the step
-number. You will see the step highlight, and the highlight will remain
-until you click somewhere else, either clearing it or selecting
-something different.
+To select a _step_, click on its step number, or on the checkbox
+adjacent to the step number. You will see the step highlight, and the
+highlight will remain until you click somewhere else, either clearing
+it or selecting something different.
 
 If you hover the mouse over different parts of a step, the different
 terms in the step will highlight as you hover.  If you click while a
@@ -125,10 +128,65 @@ The content of the menus is sensitive to the selection.  When you
 select a step or term you will usually see the visible menu change
 accordingly.
 
-**Example.** Select the last `x` in `x * x = x`, the one on the right
-side of the equation.
+***Try it.*** Select the last `x` in `x * x = x`, the one on the
+right side of the equation.
 
-#### Entering a fact
+### Using the menus
+
+Some rules such as "assume" take input from you, as we saw above.
+When you hover the mouse over one of these menu items, the preview
+area shows a message like "needs user input".  Other rules only need
+the current selection to do their work.
+
+The proof builder also searches through its library of registered
+facts and through the steps in your proof so far for ones it can use
+with its basic types of inferences.  It shows information about the
+action in the menu, and if you hover over the item, it shows exactly
+what the result would be.
+
+Even if a menu item is offered, it is not always guaranteed that the
+action can be accomplished.  When you hover over the item, the proof
+builder will try to actually perform the action.  If the action cannot
+be done, the preview will be a message such as "nothing to do".  In
+that case, choosing the menu item has no effect.
+
+***Try it.*** In our example we will subtract `x` from both sides of
+the equation, which is an _algebra_ step.  This will allow it to be
+removed from the right side of the equation.  Use the "algebra" menu,
+and _hover_ over the menu item labeled _"subtract &star; from both
+sides"_. The proof builder will preview the result of the step at the
+bottom of the worksheet display.  Now **choose the menu item with a
+click**.
+
+Prooftoys will show you the result of this step and automatically add
+a "simplify" step that cancels out the resulting `x - x` term on the
+right hand side.
+
+{{< video src="/images/cancel-x.mp4" >}}
+
+#### The menus
+
+**Algebra.** Many of the items in the algebra menu, like "subtract
+from both sides" in the example, do proof procedures that are useful
+in manipulating equations, as in basic textbook math.  The algebra
+menu also presents a few facts about real numbers that are often
+useful in basic algebra.
+
+**General.** When a step or term in the proof is selected, the
+_general_ menu offers to apply commonly useful facts that can operate
+on that step or term in the ways Prooftoys uses facts in proofs.
+
+**Other.** More matches of the selection with steps in your proof and
+standard inferences that can use them.  These are estimated to be less
+often useful or more advanced than ones in the _general_ menu.
+
+**Edit.** If a step has no other steps that depend on it, you can
+delete it with the red circled "x" next to it.  The "Edit" manu offers
+additional proof editing commands.
+
+### Hints and tips
+
+#### Tips for entering facts
 
 Certain kinds of commonly-occurring assumptions can be omitted when
 you enter a fact using the keyboard.  In particular you can omit
@@ -143,96 +201,58 @@ simply `x + y = y + x`.
 It doesn't matter which names you use when entering a fact.  Entering
 the fact as `w + z = z + w` would have the same effect.
 
-#### Inference through the menus
+#### About matching
 
-The proof builder searches through its library of registered facts and
-through the steps in your proof so far for ones it can use with its
-standard types of inferences.  It shows information about the action
-in the menu, and if you hover over the item, it shows exactly what the
-result would be.
+Practical reasoning in Prooftoys is built primarily on **rewriting**
+and **forward reasoning**.
 
-See XXX for details.
+These both match a selected term in a proof step with part of some
+other registered fact or step in your proof.  This is the same kind of
+matching taught in any basic algebra textbook.  There is more detailed
+information in the section on principles of reasoning in Prooftoys at
+[rewriting]({{< relref "/inference.md#rewriting" >}}) and [forward
+reasoning]({{< relref "/inference.md#forward-reasoning" >}}).
 
-**Example:** For our example we will subtract `x` from both sides of
-the equation, which is a simple _algebra_ step.  This will allow it to
-be removed from the right side of the equation.  Use the "algebra"
-menu, and _hover_ over the menu item labeled "subtract &star; from
-both sides". The proof builder will preview the result of the step
-near the bottom of the worksheet display.  Now _choose the menu item
-with a click_.
+### Reading and understanding proof displays
 
-Prooftoys will show you the result of this step and automatically add
-a "simplify" step that cancels out the resulting `x - x` term on the
-right hand side.
+The main content of a proof editor is a proof display that shows the
+steps of the proof being built.  There are also plain proof displays
+that are not editable, and they provide most of the same information
+as proof displays in a proof editor.
 
-- Specialized proof procedures, such as typical steps in solving
-  equations.
-- Facts that match.
-- Standard inferences where you enter information (such as a suitable
-  fact) instead of asking the proof builder to find it for you.
+Each of the steps in a proof editor has a step number that identifies
+it.  These numbers are sequential, starting at number 1.  The display
+of the step shows its statement, possibly omitting the step's
+assumptions if they are the same as in the preceding step.  If the
+assumptions are omitted you will see an ellipsis (like "&hellip;").
+You can see the entire step with all assumptions by hovering over the
+ellipsis.
 
-### About menu items
+After the display of the step's statement is a brief description of
+the inference that justifies the step.
 
-Some rules such as "consider" take input from you, as we saw above.
-When you hover the mouse over one of these menu items, the preview
-area shows a message like "needs user input".
+If you hover the mouse over different parts of a proof step you will
+see parts of the step lightly outlined.  All of these areas are
+_subexpressions_ of the proof step, also known as its _terms_.  If the
+display is editable you can select any of these by clicking on it.
 
-The menu items offered are sometimes based on estimates that their
-action can be accomplished.  When you hover over the item, the proof
-builder will try to actually perform the action.  If the action cannot
-be done, the preview will be a message such as "nothing to do".  In
-that case, choosing the menu item will do nothing.
+If you hover the mouse over a step's step number, the proof display
+will show information about the steps and/or terms that this step
+depends on.  This information varies, but in general it highlights a
+full step by highlighting its step number, or a term within the step
+by highlighting the term.  If it highlights a term, that is usually
+the term that was selected to do the inference step, such as the term
+modified by a rewrite rule.
 
-### The menus
+Hovering over the step number will also gently highlight references to
+the step from displays of other steps.
 
-**Algebra.** Many of the items in the algebra menu, like "subtract
-from both sides" in the example, do proof procedures that are useful
-in manipulating equations, as in basic textbook math.  The algebra
-menu also presents a few facts about real numbers that are often
-useful in basic algebra.  These are available in the "general" menu as
-well.
-
-**General.** When a step or term in the proof is selected, the
-_general_ menu offers to apply commonly useful facts that can operate
-on that step or term in the ways Prooftoys uses facts in proofs.
-
-**Other.** More matches of the selection with steps in your proof and
-standard inferences that can use them.  These are estimated to be less
-often useful or more advanced than ones in the _general_ menu.
-
-**Edit.** Basic proof editing commands.
-
-### About step displays
-
-- dependencies
-- omitted or elided assumptions
-- full display
-- viewing levels of proof detail
-- deleting
+Part of the description of each step is presented in blue.  Clicking
+on this word or phrase causes the display to show you a level of
+detail in the proof.  You can potentially reach this until reaching
+axioms of the mathematical system and fundamental inference steps of
+the logic.
 
 ### Managing worksheets
 
-### Notes
-
-"pointless" rewrites
-
-### Video
-
-- Resizing the proof display
-- Selection
-- The menu
-- Deleting steps
-- Replacing steps
-- Inlining
-
-[[Talk about it, and the simplification rules]]
-
-<script>
-window.onerror = function(message, source, lineno, colno, error) {
-  console.log('Thus:', message, source, lineno, colno, error);
-  console.log('Args:', arguments);
-  eek = error;
-}
-</script>
-
-<script src="/foo.js" onerror="alert('Yikes')"></script>
+##### `TBD`

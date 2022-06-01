@@ -97,8 +97,6 @@ Another form of substitution applies a function in the form `{<var>
 in `<body>`.  It is based on exactly the same underlying principles,
 but is discussed separately in TBD.
 
-
-
 ### Replacement
 
 In the simplest case, replacement begins with an equality known to be
@@ -182,6 +180,7 @@ behind the scenes, to save you from some degree of tedious work.
 Prooftoys has a collection of simplification facts, and normally
 tries any of them that match when doing simplification.
 
+<a id="forward-reasoning"></a>
 ### Finding other substitutions (forward reasoning)
 
 Rewriting only looks for a substitution into its rewrite rule, and

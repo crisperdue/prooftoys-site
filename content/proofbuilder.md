@@ -1,5 +1,5 @@
 ---
-title: Proof playground
+title: Proof builder
 menu: menu-docs.md
 ---
 
@@ -26,10 +26,8 @@ publicly-available theorems and rules of inference.  It can make
 working with proofs easier, apply rules of inference correctly, show
 what inference rules do and how they work.
 
-**Note** that the proof builder tool needs documentation that does not
-yet exist.  Today using it is still an adventure.  You might like to
-start with the version tuned for solving simple math problems
-at [the Mathtoys website](http://mathtoys.org/equations.html).
+&#x27aa; [**Learn more about the proof builder**]({{< relref
+"/using-proofbuilder.md" >}})
 
 Note: <i>Proof displays and the Proof Builder are supported in recent
 versions of Firefox, Chrome, and Microsoft Edge.</i>

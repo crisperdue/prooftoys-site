@@ -1,0 +1,4 @@
+<!-- Using markdownify here seems to support HTML better -->
+<div style="{{ .Get "style"}}">
+{{- trim .Inner "\n\r" | markdownify -}}
+</div>
