@@ -10,7 +10,7 @@ menu: menu-docs.md
    to the left to give it a wider space to work in. */
 .proofEditor {
   margin-top: 5em;
-  margin-left: -10em;
+  margin-left: -12em;
   margin-bottom: 5em;
 }
 
