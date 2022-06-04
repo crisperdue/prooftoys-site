@@ -3,7 +3,7 @@ title: Proof builder
 menu: menu-docs.md
 ---
 
-# Proof builder playground
+# The proof builder
 
 <style type="text/css">
 /* Set the proof editor below the sidebar, but moved

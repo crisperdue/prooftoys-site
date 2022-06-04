@@ -36,7 +36,8 @@ Most Prooftoys proof steps use some combination of:
 
 - tautologies
 - substitution
-- automated matching / rewriting
+- rewriting
+- "forward" reasoning
 - simplification
 
 Probably at least 80% of the steps in typical Prooftoys proofs use
@@ -181,18 +182,18 @@ Prooftoys has a collection of simplification facts, and normally
 tries any of them that match when doing simplification.
 
 <a id="forward-reasoning"></a>
-### Finding other substitutions (forward reasoning)
+### "Forward" reasoning
 
-Rewriting only looks for a substitution into its rewrite rule, and
-just in certain places, classically the left side of an equation.
-Sometimes it is useful to prepare for replacement by finding a
-substitution into the target step instead of the rewrite rule step.
-Proofs using so-called forward reasoning often work this way, proving
-first an instance of the left side of a tautology such as `(a => b) &
-(b => a) => (a == b)`, and concluding an instance of `a == b`.
+Rewriting always looks for a substitution into its rewrite rule, and
+in specific locations such as the left side of an equation.  Sometimes
+it is useful to prepare for replacement by finding a substitution into
+the target step instead of the rewrite rule step.  Proofs using
+so-called forward reasoning often work this way, proving first an
+instance of the left side of a conditional tautology such as `(a => b)
+& (b => a) => (a == b)`, and concluding an instance of `a == b`.
 
 Other patterns of reasoning also work this way, including proof by
-contradiction for example using the tautology `(not a => F) => a`.
+contradiction, for example using the tautology `(not a => F) => a`.
 
 ### About true statements and T
 

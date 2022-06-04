@@ -1,15 +1,11 @@
 ---
 title: Home
 description: >
-  Reason logically like an expert with Prooftoys,
-  the online reasoning tool.
-  Practice through puzzles and brain teasers, even
-  prove theorems.
+  Reason logically with Prooftoys.  Learn and develop
+  your skills in precise rational thinking.
 ---
 
-### Deductive reasoning
-
-_What is deductive reasoning?_
+## What is deductive reasoning?
 
 Deductive reasoning starts with true statements, or at least ones
 taken as hypothetically true, and follows precise rules to reach
@@ -20,29 +16,91 @@ quintessence and the epitome of deductive reasoning.
 Much as mathematics is an essential building material for science,
 mathematical reasoning is an essential building material for
 mathematics, that makes it possible to build sturdy mathematical
-structures that reach all the way **<a target=_blank
-href="https://www.youtube.com/watch?v=2VSYmGSJtCA">"To Infinity and
-Beyond!"</a>**
+structures that reach all the way "**<a target=_blank
+href="https://www.youtube.com/watch?v=2VSYmGSJtCA">to infinity and
+beyond!</a>**"
 
-*Mathematics can also provide entertainment -- amazing puzzles and
-games for your mind.*
+### Why deductive reasoning?
 
 Proof -- deductive reasoning -- is a cornerstone of mathematical
-thinking.  With this website you can see how it is done, building your
-skills and confidence in solving mathematical problems through proof.
+thinking.  So if mathematics applies to something you are trying
+to do, you probably need skills in deductive reasoning.
 
-### Prooftoys
+Deductive reasoning is also key to solving a tremendous variety
+of problems that can be stated precisely.  The problem could
+be practical, or just exercise for your brain.
+
+### What is Prooftoys?
  
-Prooftoys is a computer tool that works with you interactively to
-solve math problems -- or prove mathematical statements.  It has
-correct rules for reasoning built into it, always follows them, and
-never makes a careless mistake or forgets its rules.  You give the
-orders, and it takes care of the details.
+Prooftoys is an experimental computer tool that works with you
+interactively to solve math problems -- or prove mathematical
+statements.  It has correct rules for reasoning built into it, always
+follows them, and never makes a careless mistake or forgets its rules.
 
-Working problems is a natural way to learn mathematical reasoning, and
-Prooftoys has been designed especially to do precise reasoning, but in
-an especially simple way.  You can always dig into the solution of any
-problem and any proof to see exactly how it was done.
+Prooftoys is built as an _interactive theorem prover_, or as more
+commonly described these days, a _proof assistant_.  Among tools of
+this kind, however, Prooftoys is different in that it is built -- from
+the ground up -- for beginners, people who may be new to using a proof
+assistant, or novices in formal logic, or both.  It uses a simple
+logic (simple type theory) that is capable of developing quite a bit
+of sophisticated mathematics, and knows a bit about the real numbers,
+based on standard axioms.
+
+#### Ready to dive right in?
+
+Head over to the **[proof builder]({{< relref "/proofbuilder.md"
+>}})** page for the quickest start.
+
+#### Need some reasons?
+
+**User interface.** Prooftoys works entirely through a Web-based
+point-and-click graphical user interface.  You select a step or part
+of a step.  Prooftoys offers you suggestions and lets you change your
+mind as often as you like, encouraging you to "play around" with your
+proofs.
+
+**Simplicity.** The logic used by Prooftoys has also been chosen
+specifically for beginners.  For example its rule of inference in
+simple situations is just a modest generalization of what is taught in
+any high school course in basic algebra.
+
+Statements in the logic are simply formulas with constants, variables,
+and functions.  There is no separate concept of hypotheses in the
+language, though some simple automation in the inferences gives
+similar effects.
+
+* [About the language]({{< relref "/language-intro.md" >}})
+* [About the logic]({{< relref "/inference.md" >}})
+
+**Flexibility.** Prooftoys is well-suited to solving problems as well
+as proving theorems.  For example it has no special adaptation to
+working backward from a theorem statement.
+
+**Familiarity.** Prooftoys makes extra effort to present its
+mathematics in familiar, textbook-like style as much as possible.  For
+example type conditions are stated as assumptions rather than type
+annotations, and the result of division by zero is not a number.
+
+**Transparency.** Prooftoys makes the details of every step in every
+proof available in the proof builder and all proof displays.  A click
+lets you drill down into the details of any step, to any depth.
+
+**Website.** With this website you can see how it is done or learn
+about the ideas behind the logic to build your skills and confidence
+in solving mathematical problems through proof.
+
+#### Some things Prooftoys is _not_
+
+- Competitive in functionality to established proof assistants
+- Scalable to large bodies of mathematics
+- Stable platform for developing extensive bodies of mathematics
+
+The specialized procedures ("tactics") for working with real numbers
+are works in progress, not finished products.
+
+{{< comment >}}
+
+The "Mutilated chessboard problem" is a fun one.
 
 Here is a sample, a problem is from the book "My Best Mathematical and
 Logic Puzzles" by the legendary <a target=_blank
@@ -54,3 +112,5 @@ Scientific American magazine.
 This is problem 20 in the book, a little mathematical parlor trick.
 
 ##### [The problem of the repetitious number](/rep-num/) &#x27aa;
+
+{{< /comment >}}
