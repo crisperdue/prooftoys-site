@@ -91,12 +91,15 @@ in solving mathematical problems through proof.
 
 #### Some things Prooftoys is _not_
 
-- Competitive in functionality to established proof assistants
-- Scalable to large bodies of mathematics
-- Stable platform for developing extensive bodies of mathematics
+The Prooftoys implementation is built for ease of use, not for
+power and scale.  It is not:
 
-The specialized procedures ("tactics") for working with real numbers
-are works in progress, not finished products.
+- Built for large collections of theorems
+- Built for editing whole theories
+- Equipped with powerful automation
+
+Even the specialized Prooftoys procedures ("tactics") for working with real
+numbers are works in progress, not finished products.
 
 {{< comment >}}
 

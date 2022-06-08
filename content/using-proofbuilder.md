@@ -93,10 +93,11 @@ conditional ("=>").
 substitution into a tautology.  If so it proves the tautology and does
 the substitution for you.
 
-***Try it.*** Select `assume (A => A)" in the menu.  Prooftoys will
-prompt you for a term to assume.  Enter `\$ == zx * x = x` and press
-the _<tt>Return</tt>_ key or click on the _<tt>Go</tt>_ button next to
-the input field.
+***Try it.*** Select "assume explicitly (A => A)" in the menu.
+Prooftoys will prompt you for a term to assume.  Enter <tt>`\P == x *
+x = x`</tt> and press the _<tt>Return</tt>_ key or click on the
+_<tt>Go</tt>_ button next to the input field.  This invites you to
+find a solution term equivalent to <tt>x * x = x</tt>.
 
 {{< video src="/images/xxisx.mp4" >}}
 

@@ -8,8 +8,8 @@ menu: menu-docs.md
 <style type="text/css">
 /* Set the proof editor below the sidebar, but moved
    to the left to give it a wider space to work in. */
-.proofEditor {
-  margin-top: 5em;
+.outdented {
+  margin-top: 3em;
   margin-left: -12em;
   margin-bottom: 5em;
 }
@@ -21,18 +21,30 @@ div.sidebar {
 }
 </style>
 
+Note: <i>Proof displays and the Proof Builder are supported in recent
+versions of Firefox, Chrome, and Microsoft Edge.</i>
+
 The proof builder lets you interactively build proofs using all of the
 publicly-available theorems and rules of inference.  It can make
 working with proofs easier, apply rules of inference correctly, show
 what inference rules do and how they work.
 
-&#x27aa; [**Learn more about the proof builder**]({{< relref
+{{% divstyle style="border: 1px solid gray" %}}
+{{< youtube id="WYcJBE6ZCgA" title="Proof builder quickstart video" >}}
+{{% /divstyle %}}
+
+{{% divstyle class="outdented" %}}
+
+### Proof builder
+
+##### &#x27aa; [**Read about the proof builder**]({{< relref
 "/using-proofbuilder.md" >}})
 
-Note: <i>Proof displays and the Proof Builder are supported in recent
-versions of Firefox, Chrome, and Microsoft Edge.</i>
-
+{{% divstyle style="margin-top: 1.5em" %}}
 <div id=proofEditor></div>
+{{% /divstyle %}}
+
+{{% /divstyle %}}
 
 <script defer>
 
