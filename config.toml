@@ -5,10 +5,6 @@ theme = "hugo-whisper-theme"
 
 enableInlineShortcodes = true
 
-pygmentsCodeFences = true
-pygmentsCodefencesGuessSyntax = true
-pygmentsUseClasses = true
-
 [params]
   # To use local copies of libs, override with
   # local.toml, which avoids CDNs.
