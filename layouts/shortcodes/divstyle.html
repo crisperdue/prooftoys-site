@@ -1,4 +1,4 @@
-<!-- Using markdownify here seems to support HTML better -->
+<!-- DIVs with style! -->
 <div style="{{ .Get "style"}}" class="{{ .Get "class" }}">
-{{- trim .Inner "\n\r" | markdownify -}}
+{{- trim .Inner "\n\r" | $.Page.RenderString -}}
 </div>

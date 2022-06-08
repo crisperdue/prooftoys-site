@@ -1,4 +1,4 @@
-<!-- Using markdownify here seems to support HTML better -->
+<!-- TODO: replace uses of this with divstyle class="preBlock" -->
 <div class=preBlock>
-{{- trim .Inner "\n\r" | markdownify -}}
+{{- .Inner | $.Page.RenderString -}}
 </div>
