@@ -100,21 +100,29 @@ The comments suggest places where you may see these tautologies in
 Prooftoys proofs.
 
 {{% preblock %}}
-`a == a` (the "consider" rule)
-`a => a` (the "assume" rule)
-`(a == b) == (b == a)` (symmetry of equality/equivalence)
-`a == (a == T)` (replacing a theorem with `T` or `T` with a theorem)
-`a & T == a`\
+Basic:
+`  a == a` (the "consider" rule)
+`  a => a` (the "assume" rule)
+`  (a == b) == (b == a)` (symmetry of equality/equivalence)
+`  a == (a == T)` (replacing a theorem with `T` or `T` with a theorem)
+`  a & T == a`
+&nbsp;
 Relating "and" and "or":
-`not (a & b) == not a | not b`
-`not (a | b) == not a & not b`\
+`  not (a & b) == not a | not b`
+`  not (a | b) == not a & not b`
+&nbsp;
 Conditionals:
-`(T => a) == a`
-`(a => F) == not a` (proofs by contradiction)
-`(a => b) & (b => c) => (a => c)` ("forward" reasoning)
-`(a => b) & (b => a) == (a == b)` (proofs of equivalence)
-`(a => b) == (not b => not a)`
-`(a => (b => c)) == (a & b => c)` (managing assumptions)
+`  (T => a) == a`
+`  (a => F) == not a` (proofs by contradiction)
+`  (a => b) & (b => c) => (a => c)` ("forward" reasoning)
+`  (a => b) & (b => a) == (a == b)` (proofs of equivalence)
+`  (a => b) == (not b => not a)`
+&nbsp;
+Managing assumptions:
+`  (a => (b => c)) == (a & b => c)`
+&nbsp;
+Resolving side conditions, e.g. `a == (x = 0)`
+`  (not a => (p == b)) & (a => p) => (p == a | b)`
 {{% /preblock %}}
 
 ### Some basic quantifier laws
