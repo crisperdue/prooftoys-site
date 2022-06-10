@@ -29,16 +29,18 @@ publicly-available theorems and rules of inference.  It can make
 working with proofs easier, apply rules of inference correctly, show
 what inference rules do and how they work.
 
-{{% divstyle style="border: 1px solid gray" %}}
+#### Quickstart demo
+
+{{% divstyle style="border: 1px solid gray; margin-bottom: 2em" %}}
 {{< youtube id="WYcJBE6ZCgA" title="Proof builder quickstart video" >}}
 {{% /divstyle %}}
+
+##### &#x27aa; [**Read about the proof builder**]({{< relref
+"/using-proofbuilder.md" >}})
 
 {{% divstyle class="outdented" %}}
 
 ### Proof builder
-
-##### &#x27aa; [**Read about the proof builder**]({{< relref
-"/using-proofbuilder.md" >}})
 
 {{% divstyle style="margin-top: 1.5em" %}}
 <div id=proofEditor></div>
