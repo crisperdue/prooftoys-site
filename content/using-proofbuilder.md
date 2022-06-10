@@ -12,6 +12,14 @@ description: >
 
 {{< TOC >}}
 
+**This page and the
+[Youtube video](https://www.youtube.com/watch?v=WYcJBE6ZCgA)
+explain use of the proof builder user interface.  Be sure to
+also look at the
+[principles of reasoning]({{< relref "/inference.md" >}})
+page to learn about the few basic concepts of practical
+reasoning in Prooftoys.**
+
 ### The worksheet
 
 The first time you visit a page that contains a proof builder, the
