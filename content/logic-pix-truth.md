@@ -4,7 +4,7 @@ menu: "/menu-logic-pix.md"
 sidebarStyle: floating
 ---
 
-## True statements
+## True statements through pictures
 
 ##### Contents
 

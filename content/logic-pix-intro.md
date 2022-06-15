@@ -81,6 +81,9 @@ Some of the pictures are near tables that define key functions.
 Moving the mouse over one of these pictures or touching it on a touch
 screen will cause the relevant table entries to highlight themselves.
 
+##### &#x27aa; **Next: [Boolean functions through pictures]({{< relref
+"/logic-pix-booleans.md" >}})**
+
 <canvas id=canvasA width=210 height=210></canvas>
 <canvas id=canvasB width=210 height=210></canvas>
 <canvas id=canvasC width=210 height=210></canvas>

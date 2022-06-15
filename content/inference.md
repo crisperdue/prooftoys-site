@@ -46,7 +46,7 @@ combinations of a small handful of these, applied in a coordinated
 way.
 
 **About solving equations.** Textbook algebra problems are very often
-solved with a combination ofrewrite rules and techniques that are
+solved with a combination of rewrite rules and techniques that are
 somewhat specific to algebra problems.  Some of them move terms,
 either within one side of an equation or from one side of an equation
 to another.  Others work with multiple simultaneous equations.  The

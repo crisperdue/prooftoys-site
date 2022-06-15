@@ -4,7 +4,7 @@ menu: "/menu-logic-pix.md"
 sidebarStyle: floating
 ---
 
-## Logical functions
+## Logical functions through pictures
 
 ##### Contents
 
@@ -206,5 +206,9 @@ It shows that `true` is equal to `true`, false
 is equal to `false`, and neither one is equal to the other,
 all as you would expect.  The notation shown here is specific
 to boolean values, but Prooftoys also permits simply `=`.
+
+##### &#x27aa; **Next: [True statements through pictures]({{< relref
+"/logic-pix-truth.md" >}})**
+
 
 {{< include "pix.md" >}}

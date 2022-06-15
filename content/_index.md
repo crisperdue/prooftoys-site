@@ -28,30 +28,37 @@ to do, you probably need skills in deductive reasoning.
 
 Deductive reasoning is also key to solving a tremendous variety
 of problems that can be stated precisely.  The problem could
-be practical, or just exercise for your brain.
+be practical, or just entertainment for your brain.
 
 ### What is Prooftoys?
  
 Prooftoys is an experimental computer tool that works with you
 interactively to solve math problems -- or prove mathematical
 statements.  It has correct rules for reasoning built into it, always
-follows them, and never makes a careless mistake or forgets its rules.
+follows them, and does not make careless mistakes or forget the rules.
 
 Prooftoys is built as an _interactive theorem prover_, or as more
 commonly described these days, a _proof assistant_.  Among tools of
 this kind, however, Prooftoys is different in that it is built -- from
-the ground up -- for beginners, people who may be new to using a proof
-assistant, or novices in formal logic, or both.  It uses a simple
-logic (simple type theory) that is capable of developing quite a bit
-of sophisticated mathematics, and knows a bit about the real numbers,
-based on standard axioms.
+the ground up -- for beginners, people who may have little background
+in mathematics and no background in formal logic.  It uses a simple
+form of logic (simple type theory) that is capable of developing quite
+a bit of sophisticated mathematics, and it knows a bit about the real
+numbers, based on standard axioms.
 
-#### Ready to dive right in?
+Prooftoys is also an ongoing series of experiments in the design and
+implementation of such a basic proof assistant, seeking to make it
+easier to learn, easier to use, and more effective for its users.  I
+hope you will enjoy playing around with Prooftoys and look forward to
+your feedback.  See the "[About]({{< relref "/about.md" >}})" page for
+more information.
+
+### Want to dive right in?
 
 Head over to the **[proof builder]({{< relref "/proofbuilder.md"
 >}})** page for the quickest start.
 
-#### Need some reasons?
+### Need some reasons?
 
 **User interface.** Prooftoys works entirely through a Web-based
 point-and-click graphical user interface.  You select a step or part
@@ -91,15 +98,17 @@ in solving mathematical problems through proof.
 
 #### Some things Prooftoys is _not_
 
-The Prooftoys implementation is built for ease of use, not for
+The Prooftoys implementation is built for learning and ease of use, not for
 power and scale.  It is not:
 
 - Built for large collections of theorems
-- Built for editing whole theories
-- Equipped with powerful automation
+- Built for editing mathematical theories
+- Equipped with strong automation
+- Meant for professional use
 
-Even the specialized Prooftoys procedures ("tactics") for working with real
-numbers are works in progress, not finished products.
+Even the specialized Prooftoys procedures (a.k.a. "tactics") for
+working with real numbers are works in progress, not finished
+products.
 
 {{< comment >}}
 

@@ -18,6 +18,9 @@ enableInlineShortcodes = true
   homepage_button_text = 'Read The Docs'
   BookMenuBundle = "/menu.md"
 
+  # Key for access to the ipify.org service
+  ipify_key = "at_t2suDoahFs0QQbapi2jqpCkQXCgdU"
+
   # talkyardServerUrl = "https://comments-for-prooftoys-org.talkyard.net"
   # talkyardScriptUrl = "https://c1.ty-cdn.net/-/talkyard-comments.min.js"
 
