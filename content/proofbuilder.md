@@ -60,7 +60,7 @@ $(() => {
     const options = fact_arg && {docName: 'proofbuilder', loadDoc: false};
     var editor = new Toy.ProofEditor(options);
     window.proofEditor = editor;
-    $('#proofEditor').append(editor.containerNode);
+    $('#proofEditor').append(editor.$node);
 
     if (fact_arg) {
       const rules = Toy.rules;
