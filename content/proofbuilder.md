@@ -31,8 +31,10 @@ what inference rules do and how they work.
 
 #### Quickstart demo
 
-{{% divstyle style="border: 1px solid gray; margin-bottom: 2em" %}}
-{{< youtube id="WYcJBE6ZCgA" title="Proof builder quickstart video" >}}
+{{% divstyle style="margin-bottom: 2em" %}}
+<a href="https://youtube.com/watch?v=WYcJBE6ZCgA">
+{{< image src="QuickstartYoutubeImage.jpg" title="Youtube quickstart video" >}}
+</a>
 {{% /divstyle %}}
 
 ##### &#x27aa; [**Read about the proof builder**]({{< relref
@@ -46,7 +48,6 @@ what inference rules do and how they work.
 <div id=proofEditor></div>
 {{% /divstyle %}}
 
-{{% /divstyle %}}
 
 <script defer>
 
