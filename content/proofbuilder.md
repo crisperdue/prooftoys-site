@@ -31,11 +31,11 @@ what inference rules do and how they work.
 
 #### Quickstart demo
 
-{{% divstyle style="margin-bottom: 2em" %}}
+<div style="margin-bottom: 2em; border: 2px solid blue">
 <a href="https://youtube.com/watch?v=WYcJBE6ZCgA">
 {{< image src="QuickstartYoutubeImage.jpg" title="Youtube quickstart video" >}}
 </a>
-{{% /divstyle %}}
+</div>
 
 ##### &#x27aa; [**Read about the proof builder**]({{< relref
 "/using-proofbuilder.md" >}})
@@ -48,21 +48,35 @@ what inference rules do and how they work.
 <div id=proofEditor></div>
 {{% /divstyle %}}
 
+<div class=dialogWrapper>
+<div class="dialog" style="xmax-width: 100%">
+<span style="flex: auto; margin: 0 1em">
+Will you kindly help advance Prooftoys usability
+by enabling detailed tracing of your usage?
+<i>You can opt out at any time.</i>
+For more information, see the
+<a href="/privacy/">privacy information</a> page.
+</span>
+<input type=button class=buttonYes value=Yes
+ onclick="Toy.setSessionRecording(true)">
+<input type=button class=buttonNo value=No
+ onclick="Toy.setSessionRecording(false)">
+</div>
+</div>
+
+{{% /divstyle %}}
 
 <script defer>
-
 $(() => {
   // Do all of this "soon" after all ordinary Prooftoys initializations.
   Promise.resolve().then(() => {
     // The page might have a "fact=" query parameter.
     const fact_arg = Toy.rawQueryParams.fact;
-
     // Proof editor node
     const options = fact_arg && {docName: 'proofbuilder', loadDoc: false};
     var editor = new Toy.ProofEditor(options);
     window.proofEditor = editor;
     $('#proofEditor').append(editor.$node);
-
     if (fact_arg) {
       const rules = Toy.rules;
       // Convert "^" in the query string to '&' to support
@@ -82,5 +96,4 @@ $(() => {
     }
   });
 });
-
 </script>
