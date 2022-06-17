@@ -66,7 +66,7 @@ parentheses, as in `(+)`.
 The precedences of Prooftoys infix operators in order from lowest to
 highest, in the input syntax, are:
 
-```text
+```\
   ==
   =>
   |
@@ -80,8 +80,8 @@ highest, in the input syntax, are:
 Items on the same line have equal precedence.  All are
 left-associative, so `a + b - c` is the same as `(a + b) - c` and `a
 => b => c` is the same as `(a => b) => c`.  The `\==`, which displays
-as `≡`, is for boolean equivalence, which is technically just
-equality of true/false values.
+as `≡`, is for boolean equivalence, which is equality of true/false
+values.
 
 ### Function calls
 
@@ -94,13 +94,12 @@ number".  To call a function with more arguments, just write the
 expressions for all the arguments following the expression for the
 function, e.g.  `log x 10`.
 
-Ordinary function calls have precedence over all infix operators,
-so `sin x/2` means the same as `(sin x) / 2`.
+Function calls have precedence over all infix operators, so `sin x/2`
+means the same as `(sin x) / 2`.
 
-On the other hand, an expression `f g x` represents
-a call to `f` with two argument, `g` and `x`.
-Also be sure to be aware that a call
-to `f` with argument `g x` is written as `f (g x)`.
+On the other hand, an expression `f g x` represents a call to `f` with
+two arguments, `g` and `x`.  A call to `f` with argument `g x` is
+written as `f (g x)`.
 
 For example, a statement that might be conventionally
 written as
@@ -109,7 +108,7 @@ written as
 `f(x) = x + 1`
 {{% /preblock %}}
 
-would be written in Prooftys as
+would be written in Prooftoys as
 
 {{% preblock %}}
 `(f x) = x + 1`
