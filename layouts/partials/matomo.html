@@ -4,16 +4,6 @@
   // and limits tracking to appropriate situations.
   // Doesn't even load the JS support when not useful.
   var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension"
-     should be called before "trackPageView" */
-  // Disable tracking cookies.
-  _paq.push(['disableCookies']);
-  // Or this line is probably sufficient:
-  // _paq.push(['requireCookieConsent']);
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  // Disable recording with:
-  // _paq.push(['HeatmapSessionRecording::disable']);
 (function() {
   // Regexes to control which site ID to use.  If none
   // found, don't even load matomo.js.
@@ -34,9 +24,24 @@
       id = entry[1];
       if (id) {
         // Set up tracking for the ID.
+        //
+        // Disable tracking cookies.
+        _paq.push(['disableCookies']);
+        // Or this line is probably sufficient:
+        // _paq.push(['requireCookieConsent']);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
         var u="https://prooftoys.matomo.cloud/";
         _paq.push(['setTrackerUrl', u+'matomo.php']);
         _paq.push(['setSiteId', id]);
+        // uxOK means "OK to collect detailed UX information"
+        // This code should have no dependencies, e.g. util.js.
+        var uxOK = localStorage.getItem('Toy:uxOK') === 'true';
+        if (!uxOK) {
+          // Disable recording immediately.
+          _paq.push(['HeatmapSessionRecording::disable']);
+          console.log('Session recording OFF')
+        }
         var d=document, g=d.createElement('script'),
             s=d.getElementsByTagName('script')[0];
         g.type='text/javascript';
