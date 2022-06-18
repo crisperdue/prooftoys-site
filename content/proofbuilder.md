@@ -48,22 +48,6 @@ what inference rules do and how they work.
 <div id=proofEditor></div>
 {{% /divstyle %}}
 
-<div class=dialogWrapper>
-<div class="dialog" style="xmax-width: 100%">
-<span style="flex: auto; margin: 0 1em">
-Will you kindly help advance Prooftoys usability
-by enabling detailed tracing of your usage?
-<i>You can opt out at any time.</i>
-For more information, see the
-<a href="/privacy/">privacy information</a> page.
-</span>
-<input type=button class=buttonYes value=Yes
- onclick="Toy.setSessionRecording(true)">
-<input type=button class=buttonNo value=No
- onclick="Toy.setSessionRecording(false)">
-</div>
-</div>
-
 {{% /divstyle %}}
 
 <script defer>
