@@ -34,13 +34,12 @@ proofs and preferences, but does not transmit them to us.
 We process your information for purposes based on improvement of the
 service, compliance with our legal obligations, and/or your consent.
 
-We use the information we collect or receive:
-
-*To evaluate and improve our service, and your user experience.* We
-use and store website session information in aggregated and anonymized
-form so that it is not associated with individual end users and does
-not include personal information. We will not use identifiable
-personal information without your consent.
+We use the information we collect or receive to evaluate and improve
+the service and your user experience. We use and store website session
+information in aggregated and anonymized form so that it is not
+associated with individual end users and does not include personal
+information. We will not use identifiable personal information without
+your consent.
 
 ### Will your information be shared with anyone?
 
