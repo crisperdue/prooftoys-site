@@ -19,3 +19,4 @@ headless: true
 - [The Language]({{< relref "/language-intro.md" >}})
 - [Technical notes]({{< relref "/tech-notes.md" >}})
 - [*Proof builder playground*]({{< relref "/proofbuilder.md" >}})
+- [Privacy information]({{< relref "/privacy.md" >}})

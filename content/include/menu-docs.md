@@ -14,3 +14,4 @@ headless: true
 - [Logic through pictures]({{< relref "/logic-pix-intro.md" >}})
 - [Symbols quick reference]({{< relref "/symbols-quickref.md" >}})
 - [Technical notes]({{< relref "/tech-notes.md" >}})
+- [Privacy information]({{< relref "/privacy.md" >}})

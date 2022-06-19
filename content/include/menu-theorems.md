@@ -22,3 +22,4 @@ headless: true
 - [*Proof builder playground*]({{< relref "/proofbuilder.md" >}})
 - [Symbols quick reference]({{< relref "/symbols-quickref.md" >}})
 - [Technical notes]({{< relref "/tech-notes.md" >}})
+- [Privacy information]({{< relref "/privacy.md" >}})
