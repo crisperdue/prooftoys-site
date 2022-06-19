@@ -48,6 +48,11 @@ We only share information with your consent, to comply with laws, to
 provide you with services, to protect your rights, or to fulfill
 business obligations.
 
+Information is collected on our behalf by the Matomo Cloud service
+under GDPR standards.  You can view
+[their privacy policy](https://matomo.org/matomo-cloud-privacy-policy/)
+in the section "Subprocessors (Matomo Cloud)".
+
 As far as possible, information sharing will only be under the same
 confidentiality conditions that apply to ourselves.
 
