@@ -38,8 +38,7 @@ We use the information we collect or receive to evaluate and improve
 the service and your user experience. We use and store website session
 information in aggregated and anonymized form so that it is not
 associated with individual end users and does not include personal
-information. We will not use identifiable personal information without
-your consent.
+information, except with your consent.
 
 ### Will your information be shared with anyone?
 
