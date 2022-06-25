@@ -8,6 +8,21 @@ title: Technical notes
 
 {{< TOC >}}
 
+### Replacement and types
+
+The fundamental **replacement** inference rule replaces a term by
+another that is equal to it.  Prooftoys is based on **simple type
+theory**, so every term has a type, though we do not present the type
+in Prooftoys.  Replacement (and substitution also) requires that
+replacement is only done with terms of the same type.  Prooftoys
+automatically matches types as needed.  At present manipulation of
+types is treated as a more advanced capability not available to users
+of the proof builder.
+
+Types such as numbers are different concepts in Prooftoys than type
+theory types.  Read on for information about managing types such as
+numbers.
+
 ### Automatic management of assumptions
 
 When a proof step is conditional Prooftoys very often treats the
@@ -188,8 +203,6 @@ boolean.  If the variable is an individual, for example a number, the
 value of the term must be an individual, and so on.  Any variable can
 be replaced everywhere in a statement by the same term, as long as it
 is of the same type.
-
-
 
 When substituting for the bound variable of a function term, as when
 using the axiom of substitution, the substitution only applies to

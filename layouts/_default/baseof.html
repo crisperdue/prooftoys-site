@@ -84,11 +84,12 @@
 // expedites it a little, desirable because it modifies
 // the content and styling of the page.
 if (Toy.TOC) {
-  $(Toy.TOC).tableofcontents({exclude: $('h1, .hero h2, h5, h6')});
+  $(Toy.TOC).tableofcontents({exclude: $('h1, .hero, h5, h6')});
 }
 Toy.mathifyAll();
 // Mathification sets up some data-tippy-content attributes.
 tippy('[data-tippy-content]', {
+  theme: 'light-border',
   allowHTML: true,
   // This improves tooltip positioning for inline elements.
   inlinePositioning: true,

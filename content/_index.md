@@ -3,62 +3,60 @@ title: Home
 description: >
   Reason logically with Prooftoys.  Learn and develop
   your skills in precise rational thinking.
+menu: menu-none.md
+noSideBar: true
 ---
 
-## What is deductive reasoning?
+<style>
+.content p, .content ul {
+  font-size: 1.15rem;
+}
+</style>
 
-Deductive reasoning starts with true statements, or at least ones
-taken as hypothetically true, and follows precise rules to reach
-conclusions that we take to be clear consequences of those initial
-statements.  Mathematical reasoning, as in mathematical proof, is the
-quintessence and the epitome of deductive reasoning.
+<br>
 
-Much as mathematics is an essential building material for science,
-mathematical reasoning is an essential building material for
-mathematics, that makes it possible to build sturdy mathematical
-structures that reach all the way "**<a target=_blank
-href="https://www.youtube.com/watch?v=2VSYmGSJtCA">to infinity and
-beyond!</a>**"
+## What is Prooftoys?
 
-### Why deductive reasoning?
+Prooftoys is a resource for learning about logic and proof, tailored
+specifically for beginners, who may have little background in
+mathematics and no background in formal logic.  Its goal is to be a
+more enjoyable and rewarding road to learning and applying these
+powerful tools.  It includes an embedded **proof builder** tool to
+help you construct real proofs.
 
-Proof -- deductive reasoning -- is a cornerstone of mathematical
-thinking.  So if mathematics applies to something you are trying
-to do, you probably need skills in deductive reasoning.
+## Get introduced
 
-Deductive reasoning is also key to solving a tremendous variety
-of problems that can be stated precisely.  The problem could
-be practical, or just entertainment for your brain.
+{{% divstyle style="float: right; xmargin: 2em 10% 0 10%" %}}
+<a href="{{< relref "/logic-pix-intro.md" >}}">
+{{< figure src="/images/logic-circles.png" alt="sample logic graphic"
+   width="372" height="122">}}
+</a>
+{{% /divstyle %}}
 
-### What is Prooftoys?
- 
-Prooftoys is an experimental computer tool that works with you
-interactively to solve math problems -- or prove mathematical
-statements.  It has correct rules for reasoning built into it, always
-follows them, and does not make careless mistakes or forget the rules.
+* _Read_ about basic "boolean" logic through
+**[pictures]({{< relref "/logic-pix-intro.md" >}})** that introduce
+concepts of basic logic through pictures that are basically Venn
+diagrams with explanation, with truth tables.  This is a point of view
+on the use of propositional logic (e.g. ***and***, ***or***,
+***not***, and ***implies***).
 
-Prooftoys is built as an _interactive theorem prover_, or as more
-commonly described these days, a _proof assistant_.  Among tools of
-this kind, however, Prooftoys is different in that it is built -- from
-the ground up -- for beginners, people who may have little background
-in mathematics and no background in formal logic.  It uses a simple
-form of logic (simple type theory) that is capable of developing quite
-a bit of sophisticated mathematics, and it knows a bit about the real
-numbers, based on standard axioms.
+* _Learn_ [**the language**]({{< relref "/language-intro.md" >}}) of
+Prooftoys, and a simple system of [**practical deduction**]({{< relref
+"/inference.md" >}}).
 
-Prooftoys is also an ongoing series of experiments in the design and
-implementation of such a basic proof assistant, seeking to make it
-easier to learn, easier to use, and more effective for its users.  I
-hope you will enjoy playing around with Prooftoys and look forward to
-your feedback.  See the "[About]({{< relref "/about.md" >}})" page for
-more information.
+## Or dive right in
 
-### Want to dive right in?
-
-Head over to the **[proof builder]({{< relref "/proofbuilder.md"
+* Head over to the **[proof builder]({{< relref "/proofbuilder.md"
 >}})** page for the quickest start.
 
-### Need some reasons?
+* There are plenty of _examples_ of rigorous proofs.  You can view all
+of the theorems in the system -- both theorems of [**logic**]({{<
+relref "/theorems.md" >}}) and [**the real numbers**]({{< relref
+"/real-number-facts.md" >}}).  Understand them in detail or just
+browse.  The same techniques are available for you to use in the
+**[proof builder]({{< relref "/proofbuilder.md" >}})**.
+
+## Need some reasons?
 
 **User interface.** Prooftoys works entirely through a Web-based
 point-and-click graphical user interface.  You select a step or part
@@ -96,21 +94,52 @@ lets you drill down into the details of any step, to any depth.
 about the ideas behind the logic to build your skills and confidence
 in solving mathematical problems through proof.
 
-#### Some things Prooftoys is _not_
+**Prooftoys is for learning.**  If you need to work with some of these
+things you should probably look at some more established proof
+assistant systems:
 
-The Prooftoys implementation is built for learning and ease of use, not for
-power and scale.  It is not:
+- Large collections of theorems
+- Editing entire mathematical theories
+- Strong automation
 
-- Built for large collections of theorems
-- Built for editing mathematical theories
-- Equipped with strong automation
-- Meant for professional use
+<hr>
+
+{{< divstyle class="flexBox"
+ style="justify-content: space-evenly; margin: 2em 0;" >}}
+<a href="{{< relref "/about.md" >}}">About</a>
+<a href="{{< relref "/privacy.md" >}}">Privacy information</a>
+{{< /divstyle >}}
+
+{{< comment >}}
 
 Even the specialized Prooftoys procedures (a.k.a. "tactics") for
 working with real numbers are works in progress, not finished
 products.
 
-{{< comment >}}
+## What is deductive reasoning?
+
+Deductive reasoning starts with true statements, or at least ones
+taken as hypothetically true, and follows precise rules to reach
+conclusions that we take to be clear consequences of those initial
+statements.  Mathematical reasoning, as in mathematical proof, is the
+quintessence and the epitome of deductive reasoning.
+
+Much as mathematics is an essential building material for science,
+mathematical reasoning is an essential building material for
+mathematics, that makes it possible to build sturdy mathematical
+structures that reach all the way "**<a target=_blank
+href="https://www.youtube.com/watch?v=2VSYmGSJtCA">to infinity and
+beyond!</a>**"
+
+### Why deductive reasoning?
+
+Proof -- deductive reasoning -- is a cornerstone of mathematical
+thinking.  So if mathematics applies to something you are trying
+to do, you probably need skills in deductive reasoning.
+
+Deductive reasoning is also key to solving a tremendous variety
+of problems that can be stated precisely.  The problem could
+be practical, or just entertainment for your brain.
 
 The "Mutilated chessboard problem" is a fun one.
 

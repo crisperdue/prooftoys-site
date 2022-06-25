@@ -14,9 +14,8 @@ description: >
 
 **This page and the [Youtube
 video](https://www.youtube.com/watch?v=WYcJBE6ZCgA) explain use of the
-proof builder user interface.  Be sure to also look at the [principles
-of reasoning]({{< relref "/inference.md" >}}) page to learn about
-reasoning in Prooftoys.**
+proof builder user interface.  Go to the [principles of reasoning]({{<
+relref "/inference.md" >}}) page for more understanding.**
 
 ### The worksheet
 
@@ -103,9 +102,9 @@ the substitution for you.
 Prooftoys will prompt you for a term to assume.  Enter <tt>`\P == x *
 x = x`</tt> and press the _<tt>Return</tt>_ key or click on the
 _<tt>Go</tt>_ button next to the input field.  This invites you to
-find a solution term equivalent to <tt>x * x = x</tt>.
-
-{{< video src="/images/xxisx.mp4" >}}
+find a solution term equivalent to <tt>x * x = x</tt>.  (Open the <a
+href= "{{< relref "/proofbuilder.md" >}}" target=proof_builder>
+**proof builder**</a> page.)  {{< video src="/images/xxisx.mp4" >}}
 
 ### Inference steps
 
@@ -134,7 +133,10 @@ select a step or term you will usually see the visible menu change
 accordingly.
 
 ***Try it.*** Select the last `x` in `x * x = x`, the one on the
-right side of the equation.
+right side of the equation.  (Open the <a href=
+"{{< relref "/proofbuilder.md" >}}" target=proof_builder>
+**proof builder**</a> page.)
+
 
 ### Using the menus
 
@@ -161,7 +163,8 @@ removed from the right side of the equation.  Use the "algebra" menu,
 and _hover_ over the menu item labeled _"subtract &star; from both
 sides"_. The proof builder will preview the result of the step at the
 bottom of the worksheet display.  Now **choose the menu item with a
-click**.
+click**.  (Open the <a href= "{{< relref "/proofbuilder.md" >}}"
+target=proof_builder> **proof builder**</a> page.)
 
 Prooftoys will show you the result of this step and automatically add
 a "simplify" step that cancels out the resulting `x - x` term on the
