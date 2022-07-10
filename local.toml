@@ -1,3 +1,5 @@
+# Run hugo as "hugo --config config.toml,local.toml" to
+# use local copies of JS libraries.
 [params]
   # Parameters for serving from local files,
   # overriding CDNs listed in config.toml
