@@ -31,7 +31,7 @@ what inference rules do and how they work.
 
 #### Quickstart demo
 
-<div style="margin-bottom: 2em; border: 2px solid blue">
+<div style="margin-bottom: 2em">
 <a href="https://youtube.com/watch?v=WYcJBE6ZCgA">
 {{< image src="QuickstartYoutubeImage.jpg" title="Youtube quickstart video" >}}
 </a>

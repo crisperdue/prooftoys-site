@@ -8,23 +8,27 @@ noSideBar: true
 ---
 
 <style>
+/* Use bigger text and extra whitespace on this page. */
 .content p, .content ul {
   font-size: 1.15rem;
+}
+.content h3 {
+  margin-top: 1em;
 }
 </style>
 
 <br>
 
-## What is Prooftoys?
+## **What is Prooftoys?**
 
-Prooftoys is a resource for learning about logic and proof, tailored
-specifically for beginners, who may have little background in
-mathematics and no background in formal logic.  Its goal is to be a
-more enjoyable and rewarding road to learning and applying these
-powerful tools.  It includes an embedded **proof builder** tool to
-help you construct real proofs.
+Prooftoys is a resource for learning the principles of **logic** and
+**proof**, tailored specifically for beginners, who may have little
+background in mathematics and no background in formal logic.  Its goal
+is to be a more enjoyable and rewarding road to learning and applying
+these powerful tools.  It includes an embedded **proof builder** tool
+to help you construct real proofs.
 
-## Get introduced
+### **Get introduced**
 
 {{% divstyle style="float: right; xmargin: 2em 10% 0 10%" %}}
 <a href="{{< relref "/logic-pix-intro.md" >}}">
@@ -33,30 +37,30 @@ help you construct real proofs.
 </a>
 {{% /divstyle %}}
 
-* _Read_ about basic "boolean" logic through
-**[pictures]({{< relref "/logic-pix-intro.md" >}})** that introduce
-concepts of basic logic through pictures that are basically Venn
-diagrams with explanation, with truth tables.  This is a point of view
-on the use of propositional logic (e.g. ***and***, ***or***,
-***not***, and ***implies***).
+* ***[Study the pictures]({{< relref "/logic-pix-intro.md" >}})***
+that introduce basic "boolean" logic.  These are basically Venn
+diagrams with explanation, and truth tables.  This is a point of view
+on the use of "propositional" logic (e.g. *and*, *or*, *not*, and
+*implies*).
 
-* _Learn_ [**the language**]({{< relref "/language-intro.md" >}}) of
-Prooftoys, and a simple system of [**practical deduction**]({{< relref
-"/inference.md" >}}).
+* [***Learn the language***]({{< relref "/language-intro.md" >}}) of
+Prooftoys, and a simple system of:
 
-## Or dive right in
+* [***Practical deduction***]({{< relref "/inference.md" >}}).
 
-* Head over to the **[proof builder]({{< relref "/proofbuilder.md"
->}})** page for the quickest start.
+### **Dive straight in**
 
-* There are plenty of _examples_ of rigorous proofs.  You can view all
+* ***Quick start*** is on the **[proof builder]({{< relref
+"/proofbuilder.md" >}})** page.
+
+* ***Check out examples*** of ***rigorous proofs***.  You can view all
 of the theorems in the system -- both theorems of [**logic**]({{<
 relref "/theorems.md" >}}) and [**the real numbers**]({{< relref
 "/real-number-facts.md" >}}).  Understand them in detail or just
 browse.  The same techniques are available for you to use in the
 **[proof builder]({{< relref "/proofbuilder.md" >}})**.
 
-## Need some reasons?
+### **Need some reasons?**
 
 **User interface.** Prooftoys works entirely through a Web-based
 point-and-click graphical user interface.  You select a step or part
@@ -94,9 +98,9 @@ lets you drill down into the details of any step, to any depth.
 about the ideas behind the logic to build your skills and confidence
 in solving mathematical problems through proof.
 
-**Prooftoys is for learning.**  If you need to work with some of these
-things you should probably look at some more established proof
-assistant systems:
+**Prooftoys is for learning.** If you need more power or larger scale,
+you should probably look at some more established proof assistant
+systems, which support:
 
 - Large collections of theorems
 - Editing entire mathematical theories
