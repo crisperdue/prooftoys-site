@@ -44,9 +44,10 @@ on the use of "propositional" logic (e.g. *and*, *or*, *not*, and
 *implies*).
 
 * [***Learn the language***]({{< relref "/language-intro.md" >}}) of
-Prooftoys, and a simple system of:
+Prooftoys, and:
 
-* [***Practical deduction***]({{< relref "/inference.md" >}}).
+* a simple system of [***practical deduction***]({{< relref
+  "/inference.md" >}}).
 
 ### **Dive straight in**
 
