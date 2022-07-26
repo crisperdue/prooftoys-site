@@ -47,12 +47,12 @@ on the use of "propositional" logic (e.g. *and*, *or*, *not*, and
 * ***Learn [the language]({{< relref "/language-intro.md" >}})*** of
 Prooftoys.
 
-* ***Grasp*** its simple, practical [***system of deduction***]({{<
-relref "/inference.md" >}}).
+* ***Understand*** its simple, practical system of
+[***deduction***]({{< relref "/inference.md" >}}).
 
 ### **Dive straight in**
 
-* ***Quick start*** is on the **[proof builder]({{< relref
+* ***Quick start*** on the **[proof builder]({{< relref
 "/proofbuilder.md" >}})** page.
 
 * ***Check out examples*** of *rigorous proofs*.  You can view all
