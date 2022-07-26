@@ -21,12 +21,13 @@ noSideBar: true
 
 ## **What is Prooftoys?**
 
-Prooftoys is a resource for learning the principles of **logic** and
-**proof**, tailored specifically for beginners, who may have little
-background in mathematics and no background in formal logic.  Its goal
-is to be a more enjoyable and rewarding road to learning and applying
-these powerful tools.  It includes an embedded **proof builder** tool
-to help you construct real proofs.
+Prooftoys is a resource for learning the principles of precise
+reasoning -- in other words **logic** and **proof**, tailored
+specifically for beginners, who may have little background in
+mathematics and no background in formal logic.  Its goal is to be a
+more enjoyable and rewarding road to learning and applying these
+powerful tools.  It includes an embedded **proof builder** tool to
+help you construct real proofs.
 
 ### **Get introduced**
 
@@ -44,9 +45,9 @@ on the use of "propositional" logic (e.g. *and*, *or*, *not*, and
 *implies*).
 
 * [***Learn the language***]({{< relref "/language-intro.md" >}}) of
-Prooftoys, and:
+Prooftoys,
 
-* a simple system of [***practical deduction***]({{< relref
+* and a simple system of [***practical deduction***]({{< relref
   "/inference.md" >}}).
 
 ### **Dive straight in**
