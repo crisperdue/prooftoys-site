@@ -26,8 +26,8 @@ reasoning -- in other words **logic** and **proof**, tailored
 specifically for beginners, who may have little background in
 mathematics and no background in formal logic.  Its goal is to be a
 more enjoyable and rewarding road to learning and applying these
-powerful tools.  It includes an embedded **proof builder** tool to
-help you construct real proofs.
+powerful tools.  It includes an embedded graphical tool to help you
+construct real proofs.
 
 ### **Get introduced**
 
@@ -38,24 +38,24 @@ help you construct real proofs.
 </a>
 {{% /divstyle %}}
 
-* ***[Study the pictures]({{< relref "/logic-pix-intro.md" >}})***
+* ***Study [the pictures]({{< relref "/logic-pix-intro.md" >}})***
 that introduce basic "boolean" logic.  These are basically Venn
 diagrams with explanation, and truth tables.  This is a point of view
 on the use of "propositional" logic (e.g. *and*, *or*, *not*, and
 *implies*).
 
-* [***Learn the language***]({{< relref "/language-intro.md" >}}) of
-Prooftoys,
+* ***Learn [the language]({{< relref "/language-intro.md" >}})*** of
+Prooftoys.
 
-* and a simple system of [***practical deduction***]({{< relref
-  "/inference.md" >}}).
+* ***Grasp*** its simple, practical [***system of deduction***]({{<
+relref "/inference.md" >}}).
 
 ### **Dive straight in**
 
 * ***Quick start*** is on the **[proof builder]({{< relref
 "/proofbuilder.md" >}})** page.
 
-* ***Check out examples*** of ***rigorous proofs***.  You can view all
+* ***Check out examples*** of *rigorous proofs*.  You can view all
 of the theorems in the system -- both theorems of [**logic**]({{<
 relref "/theorems.md" >}}) and [**the real numbers**]({{< relref
 "/real-number-facts.md" >}}).  Understand them in detail or just
@@ -76,21 +76,20 @@ simple situations is just a modest generalization of what is taught in
 any high school course in basic algebra.
 
 Statements in the logic are simply formulas with constants, variables,
-and functions.  There is no separate concept of hypotheses in the
-language, though some simple automation in the inferences gives
-similar effects.
+and functions.  Prooftoys reduces the number of concepts to a minimum,
+with just a little automation for convenience.  There is no need to
+learn a separate proof language with its own syntax and vocabulary.
 
-* [About the language]({{< relref "/language-intro.md" >}})
-* [About the logic]({{< relref "/inference.md" >}})
+**Flexibility.** Prooftoys is as well-suited to solving problems as to
+proving theorems.  For example it easily works backward from the
+statement of a theorem or forward from the givens of a problem.
 
-**Flexibility.** Prooftoys is well-suited to solving problems as well
-as proving theorems.  For example it has no special adaptation to
-working backward from a theorem statement.
-
-**Familiarity.** Prooftoys makes extra effort to present its
-mathematics in familiar, textbook-like style as much as possible.  For
-example type conditions are stated as assumptions rather than type
-annotations, and the result of division by zero is not a number.
+**Familiarity.** Prooftoys works to present its mathematics in
+familiar, textbook-like style.  For example type conditions are stated
+as assumptions rather than type annotations, and the result of
+division by zero is not a number.  Proofs show up in a familiar
+textbook style as a list of proved statements, each derived from the
+ones before it.
 
 **Transparency.** Prooftoys makes the details of every step in every
 proof available in the proof builder and all proof displays.  A click
