@@ -21,13 +21,13 @@ noSideBar: true
 
 ## **What is Prooftoys?**
 
-Prooftoys is a resource for learning the principles of precise
-reasoning -- in other words **logic** and **proof**, tailored
-specifically for beginners, who may have little background in
-mathematics and no background in formal logic.  Its goal is to be a
-more enjoyable and rewarding road to learning and applying these
-powerful tools.  It includes an embedded graphical tool to help you
-construct real proofs.
+Prooftoys is a set of resource for learning the principles of _precise
+reasoning_ -- **logic** and **mathematical proof**, tailored
+specifically for beginners with little background in mathematics and
+no background in formal logic.  It exists to be an enjoyable and
+rewarding road to learning and applying these powerful tools, and
+includes an embedded graphical tool that helps you construct correct
+proofs with no holes and no handwaves.
 
 ### **Get introduced**
 
@@ -38,16 +38,16 @@ construct real proofs.
 </a>
 {{% /divstyle %}}
 
-* ***Study [the pictures]({{< relref "/logic-pix-intro.md" >}})***
-that introduce basic "boolean" logic.  These are basically Venn
-diagrams with explanation, and truth tables.  This is a point of view
-on the use of "propositional" logic (e.g. *and*, *or*, *not*, and
+* ***Tour [the picture gallery]({{< relref "/logic-pix-intro.md"
+>}})*** that introduce basic "boolean" logic.  These are interactive
+Venn diagrams with explanation, and truth tables.  This is a point of
+view on the use of "propositional" logic (e.g. *and*, *or*, *not*, and
 *implies*).
 
 * ***Learn [the language]({{< relref "/language-intro.md" >}})*** of
 Prooftoys.
 
-* ***Understand*** its simple, practical system of
+* ***Understand*** its simple, practical, efficient system of
 [***deduction***]({{< relref "/inference.md" >}}).
 
 ### **Dive straight in**
@@ -71,9 +71,9 @@ mind as often as you like, encouraging you to "play around" with your
 proofs.
 
 **Simplicity.** The logic used by Prooftoys has also been chosen
-specifically for beginners.  For example its rule of inference in
-simple situations is just a modest generalization of what is taught in
-any high school course in basic algebra.
+specifically for beginners.  For example its single rule of inference
+is just a modest generalization of what is taught in any high school
+course in basic algebra.
 
 Statements in the logic are simply formulas with constants, variables,
 and functions.  Prooftoys reduces the number of concepts to a minimum,
@@ -106,6 +106,11 @@ systems, which support:
 - Large collections of theorems
 - Editing entire mathematical theories
 - Strong automation
+
+The [Prooftoys](http://prooftoys.org) website and its software are
+ongoing experiments in creating computer aids to help human beings do
+mathematics.  Its knowledge of mathematics is limited, but we aim to
+grow it as users become more advanced and ask for more.
 
 <hr>
 
