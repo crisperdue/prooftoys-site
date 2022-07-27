@@ -39,7 +39,7 @@ proofs with no holes and no handwaves.
 {{% /divstyle %}}
 
 * ***Tour [the picture gallery]({{< relref "/logic-pix-intro.md"
->}})*** that introduce basic "boolean" logic.  These are interactive
+>}})*** that introduces basic "boolean" logic.  These are interactive
 Venn diagrams with explanation, and truth tables.  This is a point of
 view on the use of "propositional" logic (e.g. *and*, *or*, *not*, and
 *implies*).
