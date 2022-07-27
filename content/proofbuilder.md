@@ -29,7 +29,7 @@ publicly-available theorems and rules of inference.  It can make
 working with proofs easier, apply rules of inference correctly, show
 what inference rules do and how they work.
 
-#### Quickstart demo
+#### Quickstart video
 
 <div style="margin-bottom: 2em">
 <a href="https://youtube.com/watch?v=WYcJBE6ZCgA">
@@ -37,7 +37,7 @@ what inference rules do and how they work.
 </a>
 </div>
 
-##### &#x27aa; [**Read about the proof builder**]({{< relref
+#### &#x27aa; [***Or read about it***]({{< relref
 "/using-proofbuilder.md" >}})
 
 {{% divstyle class="outdented" %}}

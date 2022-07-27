@@ -14,6 +14,14 @@ repository.  Our goal is to create computer math tools that are
 useful, attractive, and valuable to people learning (or doing)
 mathematics at many levels and universally available.
 
+### About the logic
+
+The logic of Prooftoys is a form of <a target=_blank href=
+"http://www.cas.mcmaster.ca/sqrl/papers/SQRLreport18_rev2.pdf"> simple
+type theory</a>, based rather directly on the theory **Q<sub>0</sub>**
+of Carnegie Mellon Professor Peter B. Andrews.  See the [tech
+notes]({{< relref "/tech-notes.md" >}}) for more details.
+
 ### Getting in touch
 
 One of the goals of this website is to develop a friendly community

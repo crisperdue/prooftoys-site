@@ -26,8 +26,8 @@ reasoning_ -- **logic** and **mathematical proof**, tailored
 specifically for beginners with little background in mathematics and
 no background in formal logic.  It exists to be an enjoyable and
 rewarding road to learning and applying these powerful tools, and
-includes an embedded graphical tool that helps you construct correct
-proofs with no holes and no handwaves.
+includes an embedded graphical tool that helps you construct
+understandable and correct proofs with no holes and no handwaves.
 
 ### **Get introduced**
 
@@ -40,9 +40,8 @@ proofs with no holes and no handwaves.
 
 * ***Tour [the picture gallery]({{< relref "/logic-pix-intro.md"
 >}})*** that introduces basic "boolean" logic.  These are interactive
-Venn diagrams with explanation, and truth tables.  This is a point of
-view on the use of "propositional" logic (e.g. *and*, *or*, *not*, and
-*implies*).
+Venn diagrams with explanation, and truth tables -- a point of view on
+"propositional" logic (e.g. *and*, *or*, *not*, and *implies*).
 
 * ***Learn [the language]({{< relref "/language-intro.md" >}})*** of
 Prooftoys.
@@ -100,8 +99,8 @@ about the ideas behind the logic to build your skills and confidence
 in solving mathematical problems through proof.
 
 **Prooftoys is for learning.** If you need more power or larger scale,
-you should probably look at some more established proof assistant
-systems, which support:
+you should look at more established proof assistant systems, which
+support:
 
 - Large collections of theorems
 - Editing entire mathematical theories
@@ -109,8 +108,8 @@ systems, which support:
 
 The [Prooftoys](http://prooftoys.org) website and its software are
 ongoing experiments in creating computer aids to help human beings do
-mathematics.  Its knowledge of mathematics is limited, but we aim to
-grow it as users become more advanced and ask for more.
+mathematics.  Its knowledge of mathematics is quite limited, but we
+aim to grow it as users become more advanced and ask for more.
 
 <hr>
 

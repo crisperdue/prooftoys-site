@@ -10,12 +10,13 @@ sidebarStyle: floating
 
 {{< TOC >}}
 
-We will return soon to describe one more function that takes truth
-values as inputs, but it may be easier to understand its importance
-after some introduction to the idea of mathematical functions that
-have the value `true` for all possible inputs, in other
-words for all things in the universe.  These sorts of functions
-are mathematically true statements.
+A mathematical statement is considered true if it is true in all
+possible cases.  Imagine assigning all possible combinations of values
+to the variables in the statement and checking the truth of the
+statement in each of these cases.  We say the statement is true if it
+is true in every case. For example if we take `x` to be an integer,
+the statement `x is even or x is odd` is true, because it is true for
+every possible value `x` can have.
 
 Mathematics is especially interested in statements that are true by
 mathematical reasoning -- in other words theorems.  If a mathematical
@@ -24,6 +25,10 @@ true regardless of the values of the variables.  To emphasize that is
 true for all possible values of the variables, these sorts of
 statements are sometimes described as *universally* true.  We
 will sometimes refer to them as "true everywhere".
+
+If you are satisfied with this summary and don't like looking at
+pictures about abstract mathematics you could skip the rest of the
+page.  After all, you can always come back later.
 
 ### Statements with "or"
 

@@ -13,45 +13,27 @@ classical logic</a> -- *true*, *false*, and functions that
 have these values as inputs and outputs.  We will focus on the
 functions *and*, *or*, *not*, and *implies*.
 
-This page uses pictures of mathematical worlds or universes that have
+These pages use pictures of mathematical worlds or universes that have
 things in them.  The things can have properties.  A property is
 something like being red, being new, or being a member of some group.
 Numbers can have properties such as being even, odd, positive, or
 prime.  In classical logic, a thing either has a particular property
 or it does not, and there is no middle ground.
 
-The logic concepts described here through pictures are enough to make precise virtually
-all of the reasoning needed by students of high school algebra and
-trigonometry. (Calculus needs a bit more.)  Adding suitable
-rules of inference and axioms for logic and numbers gives a precise
-system that can be used to solve a great many math problems at this
-level.
+The logic concepts described here through pictures are enough to make
+precise virtually all of the reasoning needed by students of high
+school algebra and trigonometry. (Calculus needs a bit more.)  Adding
+suitable rules of inference and axioms for logic and numbers gives a
+precise system that can be used to solve a great many math problems at
+this level.
 
-This is also the kind of logic used in the Prooftoys automated proof
-assistant.
-
-### Summary for the impatient
-
-The basic logical concepts of *and*, *or*,
-*not*, and *implies* can
-all be expressed as functions from boolean values to boolean values,
-and truth tables capture their essence as functions.
-
-Implication in particular is more familiar in statements that also
-include predicates, such as "all multiples of 10 are multiples of 5",
-or "if it rains the street will be wet".
-
-A mathematical statement is considered true if it
-is true in all possible cases.  Imagine assigning all possible
-combinations of values to the variables in the statement and checking
-the truth of the statement in each of these cases.  We say the statement is
-true if it is true in every case. For example if we take `x` to be an integer, the statement `x is even or x is odd` is true, because it is true for every possible value `x` can have.
-
-If you are satisfied with this summary and don't like looking at
-pictures about abstract mathematics you might prefer to skip reading
-the rest of the page.
+This is also the kind of logic used in the Prooftoys proof builder.
 
 ### About the pictures
+
+<canvas id=canvasA width=210 height=210></canvas>
+<canvas id=canvasB width=210 height=210></canvas>
+<canvas id=canvasC width=210 height=210></canvas>
 
 In the pictures a mathematical world is shown as a circle.  The world
 has various things in it, each of those things having a particular
@@ -83,9 +65,5 @@ screen will cause the relevant table entries to highlight themselves.
 
 ##### &#x27aa; **Next: [Boolean functions through pictures]({{< relref
 "/logic-pix-booleans.md" >}})**
-
-<canvas id=canvasA width=210 height=210></canvas>
-<canvas id=canvasB width=210 height=210></canvas>
-<canvas id=canvasC width=210 height=210></canvas>
 
 {{< include "pix.md" >}}
