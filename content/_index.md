@@ -21,8 +21,8 @@ noSideBar: true
 
 ## **What is Prooftoys?**
 
-Prooftoys is a set of resource for learning the principles of _precise
-reasoning_ -- **logic** and **mathematical proof**, tailored
+Prooftoys is a set of resources for learning the principles of
+_precise reasoning_ -- **logic** and **mathematical proof**, tailored
 specifically for beginners with little background in mathematics and
 no background in formal logic.  It exists to be an enjoyable and
 rewarding road to learning and applying these powerful tools, and
