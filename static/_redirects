@@ -1,0 +1,3 @@
+# Netlify redirections and xparent proxying.
+
+/fubar	/inference/	200
