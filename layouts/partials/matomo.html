@@ -32,7 +32,8 @@
         _paq.push(['trackPageView']);
         _paq.push(['enableLinkTracking']);
         var u="https://prooftoys.matomo.cloud/";
-        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        // Transparent proxy to: 'https://prooftoys.org/m.php'
+        _paq.push(['setTrackerUrl', 'https://prooftoys.org/m.php']);
         _paq.push(['setSiteId', id]);
         // uxOK means "OK to collect detailed UX information"
         // This code should have no dependencies, e.g. util.js.
@@ -46,7 +47,8 @@
             s=d.getElementsByTagName('script')[0];
         g.type='text/javascript';
         g.async=true;
-        g.src='//cdn.matomo.cloud/prooftoys.matomo.cloud/matomo.js';
+        // Proxies to: '//cdn.matomo.cloud/prooftoys.matomo.cloud/matomo.js'
+        g.src='//prooftoys.org/m.js';
         s.parentNode.insertBefore(g,s);
       }
       // Quit search on first match.
