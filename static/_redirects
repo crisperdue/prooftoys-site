@@ -1,4 +1,4 @@
-# Netlify redirections and xparent proxying.
+# Netlify redirections and reverse proxying.
 
 /m.php	https://prooftoys.matomo.cloud/matomo.php			200
 /m.js	https://cdn.matomo.cloud/prooftoys.matomo.cloud/matomo.js	200
