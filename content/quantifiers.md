@@ -3,6 +3,9 @@ title: Advanced quantifier laws
 menu: menu-theorems.md
 aliases:
     - /logic-facts/
+description: >
+  Quick reference for working with quantifiers
+  in Prooftoys.
 ---
 
 # Advanced quantifier laws

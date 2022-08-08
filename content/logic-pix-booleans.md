@@ -2,6 +2,10 @@
 title: "Pix - functions"
 menu: "/menu-logic-pix.md"
 sidebarStyle: floating
+description: >
+  Pictorial introduction to functions with
+  true and false values as inputs and outputs.
+  Boolean functions.
 ---
 
 ## Logical functions through pictures

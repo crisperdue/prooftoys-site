@@ -1,8 +1,9 @@
 ---
 title: Home
 description: >
-  Reason logically with Prooftoys.  Learn and develop
-  your skills in precise rational thinking.
+  The Prooftoys proof assistant is for beginners.
+  An easy, practical system of deductive reasoning
+  with open source implementation
 menu: menu-none.md
 noSideBar: true
 ---

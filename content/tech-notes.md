@@ -1,5 +1,8 @@
 ---
 title: Technical notes
+description: >
+  More in-depth technical information about the operation
+  of the Prooftoys web app and its logic.
 ---
 
 # Prooftoys technical notes

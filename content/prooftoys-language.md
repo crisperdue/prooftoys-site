@@ -1,5 +1,7 @@
 ---
 title: Language summary
+description: >
+  Details of the Prooftoys language.
 ---
 
 # The Prooftoys Language

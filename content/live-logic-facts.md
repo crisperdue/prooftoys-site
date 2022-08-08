@@ -1,6 +1,11 @@
 ---
 title: Prooftoys logic theorems list
 menu: menu-theorems.md
+description: >
+  The main theorems of pure logic in Prooftoys
+  with convenient access to all of their proofs.
+  Theorems of pure logic apply to all branches
+  of mathematics.
 ---
 
 # Prooftoys logic theorem list

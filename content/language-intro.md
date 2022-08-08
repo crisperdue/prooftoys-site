@@ -1,5 +1,7 @@
 ---
-title: 'About the language'
+title: 'The language'
+description: >
+  The language of Prooftoys.
 ---
 
 # The Prooftoys Language

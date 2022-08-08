@@ -1,6 +1,10 @@
 ---
 title: Axioms and theorems
 menu: menu-theorems.md
+description: >
+  Summary of the axioms and theorems of pure logic
+  available in Prooftoys.  Theorems that apply across
+  all branches of mathematics.
 ---
 
 # Axioms and theorems of the logic

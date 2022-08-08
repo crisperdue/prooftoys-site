@@ -1,5 +1,8 @@
 ---
 title: 'Concepts'
+description: >
+  Concepts and terms used on the Prooftoys website
+  to describe logic, the system, and its user interface.
 ---
 
 # Prooftoys logic concepts

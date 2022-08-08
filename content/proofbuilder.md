@@ -1,6 +1,9 @@
 ---
 title: Proof builder
 menu: menu-docs.md
+description: >
+  The Prooftoys proof builder helps you interactively
+  build proofs with its graphical user interface.
 ---
 
 # The proof builder
@@ -24,7 +27,7 @@ div.sidebar {
 Note: <i>Proof displays and the Proof Builder are supported in recent
 versions of Firefox, Chrome, and Microsoft Edge.</i>
 
-The proof builder lets you interactively build proofs using all of the
+The proof builder helps you interactively build proofs using all of the
 publicly-available theorems and rules of inference.  It can make
 working with proofs easier, apply rules of inference correctly, show
 what inference rules do and how they work.

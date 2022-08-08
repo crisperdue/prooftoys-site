@@ -1,6 +1,9 @@
 ---
 title: "More reasoning"
 menu: menu-inference.md
+description: >
+  Digging a little deeper into practical deductive
+  reasoning with Prooftoys.
 ---
 
 # More reasoning with Prooftoys

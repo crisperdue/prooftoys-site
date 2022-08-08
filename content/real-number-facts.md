@@ -1,6 +1,9 @@
 ---
 title: Real number facts
 menu: menu-theorems.md
+description: >
+  Summary of theorems about real numbers available
+  in Prooftoys.
 ---
 
 # Prooftoys real number facts

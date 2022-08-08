@@ -1,6 +1,9 @@
 ---
 title: "Definitions"
 menu: menu-inference.md
+description: >
+  Prooftoys definitions introduce new constants while maintaining
+  logical consistency.
 ---
 
 # Definitions
@@ -16,8 +19,6 @@ never appeared before in any axioms or definitions,
 and the term is an expression with the one restriction
 that every substitution leaves it unaltered.  Saying
 this another way, the term has no free variables.
-
-
 
 For example, let's look at the definitions of _zero_ and
 _additive identity_ in the fundamental facts about

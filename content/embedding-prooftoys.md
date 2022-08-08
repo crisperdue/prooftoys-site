@@ -1,6 +1,8 @@
 ---
 title: Embedding Prooftoys in a web page
 menu: menu.md
+description: >
+  The Prooftoys web component is easily embedded in web pages.
 ---
 
 ### Sample HTML for embedding Prooftoys in a web page

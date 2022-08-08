@@ -1,6 +1,9 @@
 ---
 title: Privacy policy
 type: custom
+description: >
+  Prooftoys takes care to protect your privacy
+  with transparent policies.
 ---
 
 # Prooftoys Privacy Information
@@ -51,7 +54,7 @@ under GDPR standards.  You can view
 [their privacy policy](https://matomo.org/matomo-cloud-privacy-policy/)
 in the section "Subprocessors (Matomo Cloud)".
 
-As far as possible, information sharing will only be under the same
+As far as is feasible, information sharing will only be under the same
 confidentiality conditions that apply to ourselves.
 
 ### Do we use cookies and other tracking technologies?

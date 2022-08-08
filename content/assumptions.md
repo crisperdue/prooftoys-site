@@ -2,8 +2,7 @@
 title: "Assumptions"
 menu: menu-inference.md
 description: >
-  Reason logically like an expert with Prooftoys.
-  Prooftoys inference techniques are simple and powerful.
+  Prooftoys keeps assumptions organized and deduplicated.
 ---
 
 # Managing assumptions

@@ -2,8 +2,8 @@
 title: "Reasoning"
 menu: menu-inference.md
 description: >
-  Reason logically like an expert with Prooftoys
-  simple and powerful techniques.
+  The nuts and bolts of the exceptionally simple
+  and easy Prooftoys system for deductive reasoning.
 ---
 
 # Principles of reasoning in Prooftoys

@@ -2,8 +2,8 @@
 title: "Using the Proof Builder"
 menu: menu-inference.md
 description: >
-  Reason logically like an expert with Prooftoys
-  simple and powerful techniques.
+  A gentle introduction to the Prooftoys user interface
+  that helps you build proofs and solve math problems.
 ---
 
 # Using the Proof Builder

@@ -2,6 +2,9 @@
 title: 'Pix - truth'
 menu: "/menu-logic-pix.md"
 sidebarStyle: floating
+description: >
+  Meanings of true statements of basic logic with
+  Venn diagram pictures.
 ---
 
 ## True statements through pictures
