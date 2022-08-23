@@ -31,10 +31,11 @@
         // _paq.push(['requireCookieConsent']);
         _paq.push(['trackPageView']);
         _paq.push(['enableLinkTracking']);
-        var url = 'https://prooftoys.matomo.cloud/matomo.php'
-        _paq.push(['setTrackerUrl', url]);
+        // This is the standard tracker URL.
+        // var url = 'https://prooftoys.matomo.cloud/matomo.php'
+        // _paq.push(['setTrackerUrl', url]);
         // Alternate first-party tracker URL:
-        // _paq.push(['setTrackerUrl', 'https://prooftoys.org/m.php']);
+        _paq.push(['setTrackerUrl', 'https://prooftoys.org/m.php']);
         _paq.push(['setSiteId', id]);
         // uxOK means "OK to collect detailed UX information"
         // This code should have no dependencies, e.g. util.js.
@@ -48,9 +49,10 @@
             s=d.getElementsByTagName('script')[0];
         g.type='text/javascript';
         g.async=true;
+        // Standard URL for matomo.js.
         g.src = '//cdn.matomo.cloud/prooftoys.matomo.cloud/matomo.js'
         // Alternate first-party script URL.
-        // g.src = '//prooftoys.org/m.js';
+        g.src = '//prooftoys.org/m.js';
         s.parentNode.insertBefore(g,s);
       }
       // Quit search on first match.
