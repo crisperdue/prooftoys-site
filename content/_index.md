@@ -95,7 +95,7 @@ ones before it.
 proof available in the proof builder and all proof displays.  A click
 lets you drill down into the details of any step, to any depth.
 
-**Website.** With this website you can see how it is done or learn
+**Resources.** With this website you can see how it is done or learn
 about the ideas behind the logic to build your skills and confidence
 in solving mathematical problems through proof.
 
