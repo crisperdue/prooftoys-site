@@ -2,3 +2,4 @@
 
 /m.php	https://prooftoys.matomo.cloud/matomo.php			200
 /m.js	https://cdn.matomo.cloud/prooftoys.matomo.cloud/matomo.js	200
+/plugins/HeatmapSessionRecording/configs.php  https://prooftoys.matomo.cloud/plugins/HeatmapSessionRecording/configs.php  200
