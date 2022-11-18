@@ -8,22 +8,6 @@ description: >
 
 # The proof builder
 
-<style type="text/css">
-/* Set the proof editor below the sidebar, but moved
-   to the left to give it a wider space to work in. */
-.outdented {
-  margin-top: 3em;
-  margin-left: -12em;
-  margin-bottom: 5em;
-}
-
-/* Use normal positioning so the proof editor won't
-   overlap the sidebar. */
-div.sidebar {
-  position: static;
-}
-</style>
-
 Note: <i>Proof displays and the Proof Builder are supported in recent
 versions of Firefox, Chrome, and Microsoft Edge.</i>
 
