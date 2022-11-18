@@ -68,7 +68,8 @@ browse.  The same techniques are available for you to use in the
 point-and-click graphical user interface.  You select a step or part
 of a step.  Prooftoys offers you suggestions and lets you change your
 mind as often as you like, encouraging you to "play around" with your
-proofs.
+proofs.  If used well, suggestions benefit from recognition being
+easier than recall.
 
 **Simplicity.** The logic used by Prooftoys has also been chosen
 specifically for beginners.  For example its single rule of inference
