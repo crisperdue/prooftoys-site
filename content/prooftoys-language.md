@@ -16,11 +16,14 @@ support infix notation and precedence of operators, so for example it
 fills in parentheses so `2*x + 3*y` means the same as `(2*x) +
 (3*y)` and not `((2*x) + 3)*y` or even something different.
 
-## Special characters
+## Special characters and tokens
 
 The characters `"`, `'`, `(`, `)`, `[`, `]`, `{`, `}`,
 `\`, `#`, `` ` ``, `:`, and `.` are special 
 and never part of any variable, constant, or operator name.
+
+The token `->` is reserved for representation of lambdas (function
+literals).
 
 ## Variables and constants
 
@@ -110,10 +113,11 @@ The language has a form of the traditional "set notation" for
 predicates, as in `{x. x < 10}` ("the set of x such that x is less
 than ten").  In this example the first `x` is known as the bound
 variable, and the `x < 10` is the body of the function.  The Prooftoys
-language extends the notation to functions, for example `{x. x*x}`
+language extends the notation to functions, for example `{x. x * x}`
 for a function that computes the square of a number.  The key
 difference from set notation is just that the body can have a value
-that is not boolean.
+that is not boolean.  Prooftoys may display a function of this kind
+as `(x -> x * x)` if the type of its value is not boolean.
 
 In Prooftoys the value of `{x. x < 10}` for example is a predicate,
 like any other.  So it is not necessary to write something like

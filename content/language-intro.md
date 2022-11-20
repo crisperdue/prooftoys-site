@@ -126,12 +126,12 @@ or omitting the parentheses around the function call, like this:
 ### Functional expressions
 
 Any expression can be enclosed in parentheses to guarantee its
-grouping, but an expression enclosed in brackets or braces always
-represents a function.  For example a definition of a function that
-squares a number might look like:
+grouping, but an expression enclosed in braces always represents a
+function.  For example a definition of a function that squares a
+number might look like:
 
 {{% preblock %}}
-`square = [x. x * x]`
+`square = {x. x * x}`
 {{% /preblock %}}
 
 (Function and predicate definitions are usually written without a
@@ -147,9 +147,6 @@ defined as:
 
 providing a conventional set notation.
 
-**Note:** Brackets and braces are parse to exactly the same internal
-structure, but Prooftoys currently displays all functions and
-predicates using **braces**, e.g. `{x. x * x}`.
 
 For a relation (e.g. two argument predicate), the logic uses nested lambdas.
 So we define "greater than" in terms of "less than" like this:
@@ -160,6 +157,15 @@ greater = {x. {y. y < x}}
 
 This is equivalent to the definition `greater x y == y < x`.
 
+#### Displaying functional expressions
+
+If a function does not return a boolean value, Prooftoys may also
+display it surrounded with parentheses, with an arrow rather than a
+".".
+
+{{% preblock %}}
+`square = (x → x * x)`
+{{% /preblock %}}
 
 ### Quantifiers
 
