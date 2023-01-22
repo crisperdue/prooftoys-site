@@ -33,9 +33,9 @@ binding variable replaced with the application's argument, under no
 assumptions.
 
 ~~~
-         `(\x. t) s`
+         `(λx. t) s`
     ---------------------
-    |- (\x. t) s = t[s/x]
+    |- (λx. t) s = t[s/x]
 ~~~
 
 ###### 3. prim_mk_comb_rule : thm -> thm -> thm
@@ -62,7 +62,7 @@ of the supplied theorem.
 ~~~
        `x`   A |- t1 = t2        [ x cannot occur free within A ]
     ------------------------
-    A |- (\x. t1) = (\x. t2)
+    A |- (λx. t1) = (λx. t2)
 ~~~
 
 ###### 5. prim_assume_rule : term -> thm
@@ -150,11 +150,10 @@ conclusion, according to the instantiation list.  All occurrences of
 instantiation list domain elements in the theorem get replaced.  Each
 instantiation list domain element must be a type variable.
 
-Binding variables in the resulting theorem are renamed as necessary to
-avoid variable capture.  Note that instantiation list entries that do not
-apply are simply ignored, as are repeated entries for a given type
-variable (beyond its first entry).  If no instantiation list entries
-apply, then the returned theorem is the same as the input.
+Note that instantiation list entries that do not apply are simply
+ignored, as are repeated entries for a given type variable (beyond its
+first entry).  If no instantiation list entries apply, then the
+returned theorem is the same as the input.
 
 ~~~
          [(tv1,ty1);(tv2,ty2);..]    A |- p
@@ -184,7 +183,7 @@ formed by applying the function to the binding variable is equal to
 the function.
 
 ~~~
-∀ f. (\x. f x) = f
+∀ f. (λx. f x) = f
 ~~~
 
 ###### 2. Implicational antisymmetry axiom
@@ -212,7 +211,7 @@ The axioms refer to the universal quantifier, <tt>∀</tt>, which is
 defined as
 
 ~~~
-∀ = \P. P = (\x. true)
+∀ = λP. P = (λx. true)
 ~~~
 
 meaning that the given predicate is true for all possible values of
@@ -221,7 +220,7 @@ its argument.
 and <tt>true</tt> is defined as
 
 ~~~
-true = ((\p. p) = (\p. p))
+true = ((λp. p) = (λp. p))
 ~~~
 
 (where <tt>p</tt> is a boolean value), meaning that the identity
