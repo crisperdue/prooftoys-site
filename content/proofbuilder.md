@@ -44,7 +44,9 @@ $(() => {
     // The page might have a "fact=" query parameter.
     const fact_arg = Toy.rawQueryParams.fact;
     // Proof editor node
-    const options = fact_arg && {docName: 'proofbuilder', loadDoc: false};
+    const options = (fact_arg ? 
+                     {docName: 'proofbuilder', loadDoc: false}
+                     : {});
     var editor = new Toy.ProofEditor(options);
     window.proofEditor = editor;
     $('#proofEditor').append(editor.$node);
