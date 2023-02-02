@@ -144,6 +144,8 @@ Effects of addition and multiplication on ordering:
 jQuery(function() {
 
   const rules = Toy.rules;
+  
+  Toy.requireRealNumbers();
 
   // Proof display
   const display = new Toy.ProofDisplay();
