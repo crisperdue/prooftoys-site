@@ -26,6 +26,14 @@ Types such as numbers are different concepts in Prooftoys than type
 theory types.  Read on for information about managing types such as
 numbers.
 
+### Replacement and free variables
+
+There is one somewhat technical limitation on the use of replacement.
+When using a conditional equation of the form `A => (B = C)` to
+replace some occurrence of `B` with `C` in a step `S`, every variable
+that occurs free in `A` and free in `B = C` must also be free at the
+spot in `S` where `B` is to be replaced by `C`.
+
 ### Automatic management of assumptions
 
 When a proof step is conditional Prooftoys very often treats the
@@ -135,7 +143,7 @@ the replacement variable becoming bound, though it needs to stay free.
 A simple solution is to harmlessly rename any bound variables like
 this before doing the substitution.
 
-### Occurrences of a variable
+### Equality of formulas
 
 Prooftoys considers statements containing bound variables to be "the
 same" if the only difference is in the names of some bound variables.
@@ -146,18 +154,16 @@ difference is in the names, the bindings occur in exactly the same
 locations in each statement.
 
 Now go through each of those locations, coloring the `<boundvar>` part
-of each one.  Each location gets its own unique color, which is the
-same in both statements when the location is the same.
+of each one.  Each location gets its own unique color, the same color
+in both statements when the location is the same.  Within a binding
+body, every place the name of the bound variable refers to the same
+(bound) variable, unless it is within some inner binding of the same
+name.
 
-
-
-the same place in each of
-the terms being compared.  Now imagine giving the `<boundvar>` part at
-each place its own color, with the bindings at the the bound variables
-are different, as long as every occurrence of each one in the `<body>`
-continues to
-
-TBD
+Imagine coloring all of these references to each bound variable with
+the same color as the `<boundvar>` it refers to.  The two formulas are
+equal exactly if everything not colored has the same text in the same
+places, and the same colors appear in the places in each formula.
 
 ### Substitution
 

@@ -29,10 +29,11 @@ both, is in the section [Logic through pictures]({{< relref
 
 #### Terminology
 
-<span id=boolean>**Boolean value.**</span> Simply either `T` or `F`, named in honor of <a
+<span id=boolean>**Boolean value.**</span> Simply either `T` (_true_)
+or `F` (_false_), named in honor of <a
 href="http://en.wikipedia.org/wiki/George_Boole" target=_blank> George
-Boole</a>, a pioneer in the development of these ideas.  These are also
-known as the _truth values_.
+Boole</a>, a pioneer in the development of these ideas.  These are
+also known as the _truth values_.
 
 **Predicate.** A *predicate* tests a value and gives a true/false
 result. For example, a test whether a number is even is a predicate.
