@@ -87,20 +87,23 @@ if (Toy.TOC) {
   $(Toy.TOC).tableofcontents({exclude: $('h1, .hero, h5, h6')});
 }
 Toy.mathifyAll();
-// Mathification sets up some data-tippy-content attributes.
-tippy('[data-tippy-content]', {
-  theme: 'light-border',
-  allowHTML: true,
-  // This improves tooltip positioning for inline elements.
-  inlinePositioning: true,
-  // This lets the tooltip stay up when the cursor moves over it.
-  interactive: true,
-  // This attaches the tooltip to the document body vs the target
-  // element for more consistent effects on styling of tooltips.
-  appendTo: () => document.body,
-  // 400ms delay for both show and hide.
-  // This helps to keep the tooltip up so "interactive" can work.
-  delay: [400, 400],
+$(function() {
+  // Mathification sets up some data-tippy-content attributes.
+  // Turn them into tooltips.
+  tippy('[data-tippy-content]', {
+    theme: 'light-border',
+    allowHTML: true,
+    // This improves tooltip positioning for inline elements.
+    inlinePositioning: true,
+    // This lets the tooltip stay up when the cursor moves over it.
+    interactive: true,
+    // This attaches the tooltip to the document body vs the target
+    // element for more consistent effects on styling of tooltips.
+    appendTo: () => document.body,
+    // 400ms delay for both show and hide.
+    // This helps to keep the tooltip up so "interactive" can work.
+    delay: [400, 400],
+  });
 });
 // Make the content visible all at once.
 // The mainContent DIV is created in single.html.
