@@ -5,8 +5,10 @@ description: >
   Introducing the natural numbers
 ---
 
-# Hello
+## Hello
 
-## World
+### World
 
 <div class=proof-editor data-exercise="nat/add1"></div>
+
+
