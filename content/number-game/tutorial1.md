@@ -92,4 +92,6 @@ just the goal, which was exactly what you wanted to prove.
 
 {{< figure src="/images/proof-complete.png" alt="The completed proof" >}}
 
+<!--
 #### ➪ [***Next***]({{< relref "/number-game/tutorial2.md" >}})
+ -->
