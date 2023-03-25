@@ -1,0 +1,48 @@
+---
+title: 3 - Associativity
+menu: menu-docs.md
+description: >
+  Addition is associative.
+---
+
+### Associativity of addition
+
+Associativity is a key property of addition.  Associativity of an
+operation such as `+` is the property that `(x + y) + z = x + (y +
+z)`.  In other words, the same result comes from adding `z` to the sum
+of `x` and `y`, or adding the sum of `y` and `z` to `x`.  You will
+want to remember that Prooftoys always reads `x + y + z` as `(x + y) +
+z`, and similarly for other binary operators as well.
+
+Many mathematical operations are associative, but many other
+operations are not.  Subtraction for example is *not* associative.
+For example `(3 - 2) - 1` is not the same as `3 - (2 - 1)`.
+
+*Hint:* since addition was defined by recursion on the rightmost
+variable, you will want to use induction on that variable to prove the
+property.
+
+*Further hint:* to use the fact that `(a = b => f a = f b) == T`, you
+will want `f` to be `succ`, and `a = b` will presumably be `x + y + z
+= x + (y + z)`, so you wil want to try moving the occurrences of
+`succ` outside the sum to make the key assumption fit our usual
+pattern of reasoning for induction.
+
+<div class=proof-editor data-exercise="nat/add2"></div>
+
+*Tip:* The proofs are getting a bit longer, and you might like to be
+able to see more at one time.  If your screen is large enough you
+might wish to expand your view of the proof in progress, and you can
+easily do this.  In the corner of the viewer, at the bottom of the
+scrollbar is a little widget you can drag down to expand the view.
+
+*Side trip (optional):* If you checked carefully, you might have
+noticed that this proof uses the fact `NN a & NN b => NN (a + b)`,
+which you have not proved to be true.  You can take this [***Side
+Trip***]({{< relref "/number-game/tutorial5.5.md" >}}) to prove it for
+yourself.
+
+#### ➭ [***Next***]({{< relref "/number-game/tutorial7.md" >}})
+
+<!-- How to approach the idea that there are more advanced topics and
+some extensions of the key ideas, yet the core is still the same?  -->

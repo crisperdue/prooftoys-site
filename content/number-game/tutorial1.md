@@ -1,5 +1,5 @@
 ---
-title: Natural numbers - tutorial
+title: Natural numbers game
 menu: menu-docs.md
 description: >
   Introducing the natural numbers game
@@ -9,14 +9,15 @@ description: >
 
 Welcome to the Prooftoys edition of the ***Natural Numbers Game***, a
 series of puzzles in which you build up mathematical knowledge about
-numbers step by step with computer guidance.
+numbers step by step with computer guidance.  As you play the game
+you develop skills in creating precise mathematical proofs.
 
 ### What is this about?
 
-In this game you will start with just the bare essentials of knowledge
-about the natural numbers (the "counting numbers", 0, 1, 2, 3, and so
-on up from there) and work your way up to more powerful knowledge
-through mathematical proofs.
+You will start with just the bare essentials of knowledge about the
+natural numbers (the "counting numbers", 0, 1, 2, 3, and so on up from
+there) and work your way up to more powerful knowledge through
+mathematical proofs.
 
 The structure of this game is largely a clone of the admirable
 original [Natural Number
@@ -24,74 +25,139 @@ Game](https://www.ma.imperial.ac.uk/~buzzard/xena/natural_number_game/)
 tutorial developed in England at Cambridge University using the [Lean
 Theorem Prover](https://leanprover.github.io/).  This edition uses the
 Prooftoys proof assistant, with its focus on graphical user
-interaction, simplicity, and ease of use for beginners.
+interaction, simplicity, and ease of use for beginners.  While it
+knows far less mathematics than research-grade proof assistants such
+as Lean, the logic of Prooftoys is capable of supporting advanced
+university-level math.
 
 ### Will it be hard?
 
-***If you have studied basic high school algebra, you have used the
-concepts you will need to play this game!*** We will review the
-principles with you, and Prooftoys will provide you with the guidance
-and suggestions to help you succeed.
+***If you have studied basic high school algebra, you have the
+concepts you will need!*** In fact it turns out that there are
+fundamentally only *two ways* in Prooftoys to go from one true
+statement to another, and these are both part of ordinary high school
+algebra.  We will review the principles with you in the next few
+sections, and Prooftoys will provide you with the guidance and
+suggestions to help you succeed.
 
 *Your first mission, should you decide to accept it, is to prove that*
-`x + y = x + y`.
+`0 = 0` &mdash; about as simple as it gets.
 
-The proof will use the principle that anything is equal to itself, a
-basic principle of mathematical reasoning.
+The tiny one-step proof of this will use the principle that anything
+is equal to itself.  As trivial as it is, it shows a great deal about
+using Prooftoys.
 
-<div class=proof-editor data-exercise="nat/nat1"></div>
+### What is this?
 
-### What do I do now?
+<div class=proof-editor data-exercise="nat/nat0"></div>
 
 In front of you is a Prooftoys proof editor.  It displays a proof in
 progress, and lets you interactively add to or modify the proof,
-experimenting with different proof steps and approaches however you
-wish.
+experimenting with different proof steps and approaches.
 
-You should see the beginning of a proof, with just one line, a
-statement of the goal.  If not, try clicking on "Clear work", then
-confirming that you do want to clear your work.  The goal statement in
-this case is `(x + y = x + y) => x + y = x + y`.
+You should see the beginning of a proof, with just one line.  If not,
+click on "Clear work", then confirm that you want to clear your work.
+The initial statement in this case is `0 = 0 => 0 = 0`, which
+Prooftoys proves internally.
 
-This is a conditional statement, which you can read as "`x + y = x +
-y` **implies** `x + y = x + y`", or "**if** `x + y = x + y` **then**
-`x + y = x + y`".  The arrow (`=>`) in the middle is known as the
-**conditional operator**.  This statement is mathematically true
-because any statement imples itself.  "If it is true, then it is
-true!"  We say that this statement has the form `A => A` because it
-has the same statement on the left and on the right, with `=>` in the
-middle.
+##### The pieces
 
-Items on the left side of a conditional are considered _assumptions_.
-This statement has only one.  The statement on the right side is the
-**conclusion** (also known technically as the *consequent*).  When an
-assumption is proved to be true (`T`), it can be removed, and when all
-of the assumptions have been removed, only the conclusion remains, and
-the proof is complete.
+This is a *conditional statement* because of the double arrow (`=>`)
+in the middle, which is the **conditional operator**.  You can read a
+conditional statement `A => B` as `A` **implies** `B`, or **if** `A`
+**then** `B`.  Items on the left side of a conditional are considered
+**assumptions**.  This statement has only one assumption: `0 = 0`.
+The part of the statement after the conditional operator we will call
+the **conclusion**.  All of these, and any meaningful part of a a
+statement such as the assumptions and the conclusion we will call a
+**term**.
 
-This proof has just one step, and the step has just one assumption.
-Start by selecting the assumption, `x + y = x + y`.  As you hover the
-mouse cursor over different parts of the statement they will highlight
-to show that they can be selected.  Click to confirm the offered
-selection <b videotip="/images/select-x-y.mp4">like this</b> (Hover
-the mouse cursor to see a demonstration.)
+We say that this statement *has the form* `A => A` because it has the
+same statement on the left and on the right of the `=>` operator.  Put
+another way, if you replace both of the `A`'s with `0 = 0` you get `0
+= 0 => 0 = 0`.  Replacement of *all* occurrences of a variable with
+the same term is **substitution** -- one of the two fundamental ways
+of getting from one true statement to another in the logic of
+Prooftoys.
+
+### Taking your first step
+
+First steps are big milestones!  This proof will have just one step.
+Start by selecting the assumption, the first `0 = 0`.  As you hover
+the mouse cursor over different parts of the statement they will
+highlight to show that they can be selected.  Click to confirm the
+offered selection <b videotip="/images/select-x-y.mp4">like this</b>
+(Hover the mouse cursor to see a demonstration.)
 
 Next look at the menu down at the bottom of the proof editor.  If the
-"Popular" section of the menu is not already displayed, show it by
-pausing the mouse cursor over the word "Popular".
+"Basic" section of the menu is not already displayed, show it by
+pausing the mouse cursor over the word "Basic".
 
-The menu offers you choices for the next proof step.  You will want the menu item
-that starts with ➭ <b>`T`</b>, meaning that the selected term will be
-replaced with `T` (true).  When an assumption is proved to be true,
-Prooftoys automatically drops it from the set of assumptions.
+The menu offers you choices for the next proof step.  You will want
+the menu item that starts with ➭ <b>`T`</b>.  This arrow at the
+beginning of a menu item means that the selected term will be
+transformed into `T`, for *true*.  Many typical proof steps are like
+this, transforming an assumption into some other form.
 
-Go ahead and select that menu item. You should see a second step now
+Go ahead and select that menu item. Now you should see a second step
 in the proof editor display, and the words "Proof complete" at the top
-of the proof editor area.  The one assumption has been dropped leaving
-just the goal, which was exactly what you wanted to prove.
+of the proof editor area.  When Prooftoys proves that an assumption is
+true, it normally drops it from the assumptions.  In this case there
+are no more assumptions, so we are left with just the desired result
+-- the goal statement.
+
+The words "Proof complete" appear at the top of the proof editor
+display, confirming that your mission is accomplished.
 
 {{< figure src="/images/proof-complete.png" alt="The completed proof" >}}
 
-<!--
+This one proof step illustrates both of the basic operations Prooftoys
+uses to get from one true statement to another true statement:
+**substitution** as already described, and **replacement** of a term
+with some equal term.  In this step, Prooftoys uses the fact that `(x
+= x) == T` to replace `0 = 0` with T.  It then drops the true
+assumption `T` from the assumptions, leaving just the conclusion.
+
+This combination of substitution together with replacement is known as
+**rewriting**, our most widely used type of proof step.  You will also
+use some other kinds of combination steps in playing
+the Natural Numbers Game, but don't worry --- they are all just
+conveniences to help make your journey easier.
+
+So it is fair to say that this simple one step proof sets the stage
+for all reasoning in Prooftoys!
+
 #### ➪ [***Next***]({{< relref "/number-game/tutorial2.md" >}})
- -->
+
+&nbsp;
+
+<hr>
+
+&nbsp;
+
+### About the Proof Editor
+
+Here is a quick visual reference to the parts of a proof editor.  The
+labeled parts are:
+
+1. **Proof display.** This shows the steps of your proof so far.  It
+   lets you select steps or parts of steps, or delete steps easily.
+2. **Action menu.** This menu is dynamic based on the current
+   selection in the proof display.  Selecting items here is the way
+   you develop and edit proofs.
+3. **Goal statement.** This shows what you are trying to prove.  If it
+   has the form `A => B`, `A` has the expected assumptions for proving
+   the conclusion `B`.
+4. **Copy text.** This lets you copy the most recently-selected term
+   as text.
+5. **Clear work.** Use this button to restart the proof from the
+   beginning.
+6. Checking this box gives the developer permission to generate
+   detailed traces of your activity for research purposes, to improve
+   the website and the proof editor.  See the [privacy
+   information]({{< relref src="/privacy.md" >}}) page for details.
+
+{{< figure src="/images/proof-editor-legend.png" 
+  alt="proof editor components" >}}
+
+#### ➪ [***Next***]({{< relref "/number-game/tutorial2.md" >}})
