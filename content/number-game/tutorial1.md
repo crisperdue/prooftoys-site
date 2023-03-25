@@ -9,8 +9,9 @@ description: >
 
 Welcome to the Prooftoys edition of the ***Natural Numbers Game***, a
 series of puzzles in which you build up mathematical knowledge about
-numbers step by step with computer guidance.  As you play the game
-you develop skills in creating precise mathematical proofs.
+numbers step by step with computer guidance.  As you take on the
+challenges of the game you build skills in creating 100% correct
+mathematical proofs.
 
 ### What is this about?
 
