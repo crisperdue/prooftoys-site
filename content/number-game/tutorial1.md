@@ -5,6 +5,8 @@ description: >
   Introducing the natural numbers game
 ---
 
+> A journey of a thousand miles begins with a single step. -- Lao Tsu
+
 ## Welcome!
 
 Welcome to the Prooftoys edition of the ***Natural Numbers Game***, a
@@ -42,7 +44,7 @@ sections, and Prooftoys will provide you with the guidance and
 suggestions to help you succeed.
 
 *Your first mission, should you decide to accept it, is to prove that*
-`0 = 0` &mdash; about as simple as it gets.
+`0 = 0` --- about as simple as it gets.
 
 The tiny one-step proof of this will use the principle that anything
 is equal to itself.  As trivial as it is, it shows a great deal about
@@ -58,8 +60,42 @@ experimenting with different proof steps and approaches.
 
 You should see the beginning of a proof, with just one line.  If not,
 click on "Clear work", then confirm that you want to clear your work.
-The initial statement in this case is `0 = 0 => 0 = 0`, which
-Prooftoys proves internally.
+The initial statement in this case is `0 = 0 => 0 = 0`.
+
+### Taking your first step
+
+First steps are big milestones!  This proof will have just one step.
+Start by selecting the assumption, the first `0 = 0` --- for an
+ultra-quick demo <b videotip="/images/select-x-y.mp4">click
+here</b>.  As you hover the mouse over different parts of the step,
+they highlight, and when you click there is a stronger highlight that
+stays until you click again.
+
+After selecting the first `0 = 0`, move the mouse down into the
+"Basic" section of the menu, and select the menu item that says `➭
+T using x = x == T` by clicking on it.  <b
+videotip="/images/select-x-y.mp4">ultra-quick demo</b>
+
+If the "Basic" section of the menu is not already displayed, show it
+by pausing the mouse cursor over the word "Basic".
+
+The arrow at the beginning of the menu item means that the term you
+have selected will be replaced with `T`, for *true*.  Many typical
+proof steps are like this, replacing an assumption.
+
+Now that you have selected that menu item, you should see a second
+step in the proof editor display, and the words "Proof complete" at
+the top of the proof editor area, like in this picture.
+*Congratulations, you did it!*
+
+{{< figure src="/images/proof-complete.png" alt="The completed proof" >}}
+
+This one proof step illustrates both of the basic operations Prooftoys
+uses to get from one true statement to another true statement:
+**substitution** as already described, and **replacement** of a term
+with some equal term.  In this step, Prooftoys uses the fact that `(x
+= x) == T` to replace `0 = 0` with `T`, and when an assumption becomes
+`T`, it drops it from the assumptions.
 
 ##### The pieces
 
@@ -81,60 +117,16 @@ the same term is **substitution** -- one of the two fundamental ways
 of getting from one true statement to another in the logic of
 Prooftoys.
 
-### Taking your first step
-
-First steps are big milestones!  This proof will have just one step.
-Start by selecting the assumption, the first `0 = 0`.  As you hover
-the mouse cursor over different parts of the statement they will
-highlight to show that they can be selected.  Click to confirm the
-offered selection <b videotip="/images/select-x-y.mp4">like this</b>
-(Hover the mouse cursor to see a demonstration.)
-
-Next look at the menu down at the bottom of the proof editor.  If the
-"Basic" section of the menu is not already displayed, show it by
-pausing the mouse cursor over the word "Basic".
-
-The menu offers you choices for the next proof step.  You will want
-the menu item that starts with ➭ <b>`T`</b>.  This arrow at the
-beginning of a menu item means that the selected term will be
-transformed into `T`, for *true*.  Many typical proof steps are like
-this, transforming an assumption into some other form.
-
-Go ahead and select that menu item. Now you should see a second step
-in the proof editor display, and the words "Proof complete" at the top
-of the proof editor area.  When Prooftoys proves that an assumption is
-true, it normally drops it from the assumptions.  In this case there
-are no more assumptions, so we are left with just the desired result
--- the goal statement.
-
-The words "Proof complete" appear at the top of the proof editor
-display, confirming that your mission is accomplished.
-
-{{< figure src="/images/proof-complete.png" alt="The completed proof" >}}
-
-This one proof step illustrates both of the basic operations Prooftoys
-uses to get from one true statement to another true statement:
-**substitution** as already described, and **replacement** of a term
-with some equal term.  In this step, Prooftoys uses the fact that `(x
-= x) == T` to replace `0 = 0` with T.  It then drops the true
-assumption `T` from the assumptions, leaving just the conclusion.
-
-This combination of substitution together with replacement is known as
-**rewriting**, our most widely used type of proof step.  You will also
-use some other kinds of combination steps in playing
-the Natural Numbers Game, but don't worry --- they are all just
-conveniences to help make your journey easier.
-
-So it is fair to say that this simple one step proof sets the stage
-for all reasoning in Prooftoys!
+The combination of substitution together with replacement is known as
+**rewriting**, our most widely used type of proof step.  So it is fair
+to say that *this simple one step proof sets the stage for all
+reasoning in Prooftoys!*
 
 #### ➪ [***Next***]({{< relref "/number-game/tutorial2.md" >}})
 
 &nbsp;
 
 <hr>
-
-&nbsp;
 
 ### About the Proof Editor
 

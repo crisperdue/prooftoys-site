@@ -7,14 +7,17 @@ description: >
 
 ### A first induction proof: adding to zero
 
-Your next challenge is to prove that `NN n => 0 + n = n`.
+> Why is a ham sandwich is better than paradise?  (answer at the
+> bottom of the page)
 
-*But wait a minute -- didn't we already know that `n + 0 = n`?* Yes,
+The math challenge here is to prove that `NN n => 0 + n = n`.
+
+*But hold on: didn't we already know that `n + 0 = n`?* Yes,
 we did, but the question now is adding n to zero.  Remember that a
 proof of `x + y = y + x` is still in the future, so we can't just swap
 the `n` and the 0.
 
-This is the first challenge that needs the principle of induction.  We
+This is the first time you will need the principle of induction.  We
 will go through this one with pretty explicit instructions, and take
 the training wheels off for the next mission.
 
@@ -25,7 +28,7 @@ that `0 + n = n`, and in the Basic menu choose "induction on n".  This
 creates a second step which comes from the axiom of induction for the
 natural numbers.
 
-`[2] ((0 + n = n) ⇒ (0 + succ n = succ n)) ∧ NN n ∧ 0 + 0 = 0 ⇒ 0 + n = n`
+`[2] ((0 + n = n) => (0 + succ n = succ n)) & NN n & 0 + 0 = 0 => 0 + n = n`
 
 This step has three assumptions.  One is that `NN n`.  One is the
 "base case", that the desired property is true for zero.  And the last
@@ -41,7 +44,7 @@ If you have two variables with equal values and apply the same
 function to both of them, the results are equal.
 
 So if you have an assumption of the form `x = y => succ x = succ y`,
-you can replace it with T.  Remember that any terms can take the
+you can replace it with `T`.  Remember that any terms can take the
 places of `x` and `y` here, not just other variables.
 
 #### Turning the key
@@ -66,3 +69,8 @@ prove it using the Basic menu, and you should see confirmation that
 the proof is now complete!
 
 #### ➭ [***Next***]({{< relref "/number-game/tutorial5.md" >}})
+
+> Why is a ham sandwich better than paradise?
+> Well, nothing is better than paradise, right?
+> But a ham sandwich is better than nothing.
+> Therefore . . .

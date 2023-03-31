@@ -5,7 +5,10 @@ description: >
   Introducing the natural numbers
 ---
 
-### The natural numbers
+### About the natural numbers
+
+> God created the integers; all else is the work of man. -- Leopold
+> Kronecker
 
 The natural numbers have just two building blocks: the initial number
 0, and a successor function that gives the next natural number.
@@ -14,9 +17,10 @@ number one was treated as the first natural number.  Now zero is more
 often used.  You may say that it's a modern success story --- we start
 with nothing and work our way up to everything!)*
 
-We call the natural numbers `NN`, except sometimes in plain text where
-they appear as `\NN`.  `NN x` means that x is a natural number.  The
-natural numbers are characterized by five properties:
+We call the natural numbers `NN`, except sometimes in plain text we
+write `\NN`.  `NN x` means that x is a natural number.  For proving
+things about the natural numbers you have five fundamental facts in
+your toolbox to use at any time:
 
 1. `NN 0`
 1. `NN x => NN (succ x)`
@@ -24,7 +28,10 @@ natural numbers are characterized by five properties:
 1. `NN (succ x) & NN (succ y) => x = y`
 1. `P 0 & (P n => P (succ n)) => (NN x => P x)`
 
-In other words:
+These are the axioms for the natural numbers, known as
+the **Peano axioms** in honor of their discoverer.
+
+Stated in English they are that:
 
 1. Zero is a natural number.
 1. The successor of a natural number is also a natural number.
@@ -37,23 +44,28 @@ In other words:
 
 ### Introducing addition
 
-Addition of natural numbers is defined by three basic facts in
-addition to the ones listed above:
+It may seem odd to talk about numbers without the concept of addition.
+Addition of natural numbers is defined by two basic facts about
+addition:
 
-3. `NN x & NN y => NN (x + y)` --- the sum will be another natural number
-1. `NN x => x + 0 = x` --- adding zero has no effect
-2. `NN x => x + succ y = succ (x + y)` --- adding the next number
+- `NN x => x + 0 = x` --- adding zero has no effect
+- `NN x => x + succ y = succ (x + y)` --- adding the next number
 
-Proving the other properties of addition from these fundamental
+Proving some well-known properties of addition from these fundamental
 properties will be your challenges, starting with this one, that `NN n
 => n + succ 0 = succ n`.
 
+### First addition challenge
+
+Can you figure this one out on your own?
+
+*Hint:* start by selecting `n + succ 0` in the left (assumption) side
+of the first step.  After that, selecting assumptions (in red) or
+parts of assumptions that don't belong in the result should help you
+get good suggestions from the proof builder Basic menu.
+
 <div class=proof-editor data-exercise="nat/nat4"></div>
 
-Can you figure this one out on your own?  Hint: start by selecting
-`n + succ 0` in the left (assumption) side of the first step.
-After that, selecting assumptions (in red) that you don't want
-should help you get good suggestions from the proof builder
-Basic menu.
+My proof of this has five steps: four plus the initial setup.
 
 #### ➭ [***Next***]({{< relref "/number-game/tutorial4.md" >}})

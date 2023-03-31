@@ -7,6 +7,11 @@ description: >
 
 ### Associativity of addition
 
+> I refuse to join any club that would have me as a member.
+> -- Groucho Marx
+
+#### What it's all about
+
 Associativity is a key property of addition.  Associativity of an
 operation such as `+` is the property that `(x + y) + z = x + (y +
 z)`.  In other words, the same result comes from adding `z` to the sum
@@ -14,19 +19,23 @@ of `x` and `y`, or adding the sum of `y` and `z` to `x`.  You will
 want to remember that Prooftoys always reads `x + y + z` as `(x + y) +
 z`, and similarly for other binary operators as well.
 
-Many mathematical operations are associative, but many other
-operations are not.  Subtraction for example is *not* associative.
-For example `(3 - 2) - 1` is not the same as `3 - (2 - 1)`.
+This fact is especially important and useful when combined with the
+next one you will prove, `x + y = y + x` (commutativity).
 
-*Hint:* since addition was defined by recursion on the rightmost
+#### The proof
+
+*Proof hint:* since addition was defined by recursion on the rightmost
 variable, you will want to use induction on that variable to prove the
 property.
 
 *Further hint:* to use the fact that `(a = b => f a = f b) == T`, you
-will want `f` to be `succ`, and `a = b` will presumably be `x + y + z
-= x + (y + z)`, so you wil want to try moving the occurrences of
-`succ` outside the sum to make the key assumption fit our usual
-pattern of reasoning for induction.
+will want `f` to be `succ`.  The conclusion (right side) of the big
+conditional that comes out of the induction setup:
+
+`x + y + n = x + (y + n) => x + y + succ n = x + (y + succ n)`
+
+will need to become `succ (x + y + n) = succ (x + y + n)`, so you would
+like to move the occurrences of `succ` outside the `+`'s.
 
 <div class=proof-editor data-exercise="nat/add2"></div>
 
