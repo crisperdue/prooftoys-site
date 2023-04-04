@@ -5,11 +5,11 @@ description: >
   Proving equality with conditionals
 ---
 
-### Successors same --- numbers same
+### Successors same ⇒ numbers same
 
-> The more things change, the more they stay the same.  In the
-> original French: "plus ça change, plus c'est la même chose" --
-> Alphonse Karr
+> The more things change, the more they stay the same.  -- Alphonse
+> Karr.  In the original French: "plus ça change, plus c'est la même
+> chose".
 
 You have proved conditionals in both directions, so you can solve this
 one by breaking it down into the two conditionals.  You have almost

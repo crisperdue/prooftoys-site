@@ -68,9 +68,9 @@ If this leaves one more undesired assumption, that `NN 0` is true,
 prove it using the Basic menu, and you should see confirmation that
 the proof is now complete!
 
-#### ➭ [***Next***]({{< relref "/number-game/tutorial5.md" >}})
-
-> Why is a ham sandwich better than paradise?
+> Why is a ham sandwich better than paradise?<br>
 > Well, nothing is better than paradise, right?
 > But a ham sandwich is better than nothing.
 > Therefore . . .
+
+#### ➭ [***Next***]({{< relref "/number-game/tutorial5.md" >}})

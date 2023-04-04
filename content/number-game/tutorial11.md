@@ -1,16 +1,27 @@
 ---
-title: bonus -- summing to zero
+title: wrapping up
 menu: menu-docs.md
 description: >
   proving a number must be zero
 ---
 
-### Summing to zero: the final cut
+### The wrap-up
 
-You have done the heavy lifting in proving that
-`x + y = 0 => y = 0`.  This is a chance to top it off
-by taking this to its logical conclusion.
+You have already done the heavy lifting in proving that `x + y = 0 =>
+y = 0`.  If you would like to take this result to its logical
+conclusion, you could try this *optional* bonus problem.
 
 <div class=proof-editor data-exercise="nat/addxbonus"></div>
 
-#### Congratulations!
+*Hints:* Remember that you can turn the `==` into two conditionals.
+Also it turns out that `(A => B) & (A => C) => (A => B & C)`.
+
+#### Where to go from here?
+
+Some ideas:
+
+- <button class=btn>Looking under the hood</button>
+- <button class=btn>Core concepts</button>
+- <button class=btn>Advanced topics</button>
+- <button class=btn>Theory</button>
+
