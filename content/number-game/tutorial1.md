@@ -66,7 +66,7 @@ The initial statement in this case is `0 = 0 => 0 = 0`.
 
 First steps are big milestones!  This proof will have just one step.
 Start by selecting the assumption, the first `0 = 0` --- for an
-ultra-quick demo <b videotip="/images/select-x-y.mp4">click
+ultra-quick demo <b videotip="/images/select-0-0.mp4">click
 here</b>.  As you hover the mouse over different parts of the step,
 they highlight, and when you click there is a stronger highlight that
 stays until you click again.
@@ -74,7 +74,7 @@ stays until you click again.
 After selecting the first `0 = 0`, move the mouse down into the
 "Basic" section of the menu, and select the menu item that says `➭
 T using x = x == T` by clicking on it.  <b
-videotip="/images/select-x-y.mp4">ultra-quick demo</b>
+videotip="/images/select-x-x.mp4">another tiny demo</b>
 
 If the "Basic" section of the menu is not already displayed, show it
 by pausing the mouse cursor over the word "Basic".
