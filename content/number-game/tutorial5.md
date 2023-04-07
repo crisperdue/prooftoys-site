@@ -45,6 +45,18 @@ might wish to expand your view of the proof in progress, and you can
 easily do this.  In the corner of the viewer, at the bottom of the
 scrollbar is a little widget you can drag down to expand the view.
 
+#### A golden key to induction proofs
+
+Most of the induction proofs we will encounter have one key step that
+is basically the same for all of them.  That step uses the fact that
+`(x = y => f x = f y) == T` --- a fundamental fact about functions.
+If you have two variables with equal values and apply the same
+function to both of them, the results are equal.
+
+So if you have an assumption of the form `x = y => succ x = succ y`,
+you can replace it with `T`.  Remember that any terms can take the
+places of `x` and `y` here, not just other variables.
+
 *Side trip (optional):* If you checked carefully, you might have
 noticed that this proof uses the fact `NN a & NN b => NN (a + b)`,
 which you have not proved to be true.  You can take this [***Side

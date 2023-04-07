@@ -23,31 +23,32 @@ the training wheels off for the next mission.
 
 <div class=proof-editor data-exercise="nat/add1"></div>
 
-To prove this by induction, select the assumption in the first step,
+#### Setting up the induction proof
+
+To start this proof by induction, select the assumption in the first step,
 that `0 + n = n`, and in the Basic menu choose "induction on n".  This
 creates a second step which comes from the axiom of induction for the
 natural numbers.
 
 `[2] ((0 + n = n) => (0 + succ n = succ n)) & NN n & 0 + 0 = 0 => 0 + n = n`
 
-This step has three assumptions.  One is that `NN n`.  One is the
-"base case", that the desired property is true for zero.  And the last
-is the "inductive case", `0 + n = n => 0 + succ n = succ n` --- that
-whenever the property is true for `n`, it is true for `succ n`.
+This step has three assumptions.  One is that `NN n`.
 
-#### A golden key to induction proofs
+Another is the **base case**, the assumption that `0 + 0 = 0`.  It
+states that the desired property is true when `n = 0`.
 
-Most of the induction proofs we will encounter have one key step that
-is basically the same for all of them.  That step uses the fact that
-`(x = y => f x = f y) == T` --- a fundamental fact about functions.
-If you have two variables with equal values and apply the same
-function to both of them, the results are equal.
+And the last is the **inductive case**, `0 + n = n => 0 + succ n =
+succ n` --- that whenever the property is true for `n`, it is true for
+`succ n`.
 
-So if you have an assumption of the form `x = y => succ x = succ y`,
-you can replace it with `T`.  Remember that any terms can take the
-places of `x` and `y` here, not just other variables.
+Many basic properties of the natural numbers are proved by induction,
+and this will be our standard way to start induction proofs.
 
-#### Turning the key
+#### Proving it
+
+I suggest proving the *base case* (`0 + 0 = 0`) first, to get it out
+of the way.  Select `0 + 0` and replace it with `0`; then select `0 =
+0` and replace it with `T`.
 
 In the inductive case of this proof, if you change the part `0 + succ
 n = succ n` to `succ (0 + n) = succ n`, you will have a statement of
@@ -58,15 +59,34 @@ You need to transform `0 + succ n` into `succ (0 + n)`, so try
 selecting the `0 + succ n`.  The Basic menu should offer you the
 transformation you need.  With that done, in the next step select the
 whole conditional assumption, and using the Basic menu you should be
-able to immediately show that the whole conditional is true.
-
-Just to eliminate some assumptions right away, I suggest proving the
-base case first.  (Select `0 + 0` and reduce it to just `0`, then
-select `0 = 0` and reduce it to `T`.)
+able to immediately show that it is true.
 
 If this leaves one more undesired assumption, that `NN 0` is true,
 prove it using the Basic menu, and you should see confirmation that
 the proof is now complete!
+
+#### A bit of theory (optional)
+
+**How does Prooftoys come up with the steps labeled as "set up
+induction"?**  Look at that step in this proof.  It should have
+two assumptions like this:
+
+`x + 0 = 0 + x`, and `((x + n = n + x) ⇒ (x + succ n = succ n + x))`
+
+The axiom of induction is:
+
+`P 0 & (P n => P (succ n)) => (NN x => P x)`
+
+Defining the function `P` as:
+
+`P n == x + n = n + x`
+
+`P 0` is `x + 0 = 0 + x`.
+
+Also `P n` is `x + n = n + x`, and `P (succ n)` is `x + succ n = succ
+n + x`.
+
+This is the idea behind the setup of an induction proof.
 
 > Why is a ham sandwich better than paradise?<br>
 > Well, nothing is better than paradise, right?

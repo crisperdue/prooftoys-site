@@ -64,9 +64,10 @@ Here `x = y == y = x` is an equation with `x = y` as its left side and
 `y = x` as its right side.  `x = y` and `y = x` are terms with values
 that are true or false depending on the values of `x` and `y`.  We use
 the symbol `==` to represent equality of boolean (true/false) terms.
-When you use this fact here, Prooftoys substitutes `f y` for `x` and
-`z` for `y` giving `z = f y == f y = z`, and replaces the selected
-term with the equation's right side: `f y = z`, as you see in step 3.
+When you use this fact here, Prooftoys substitutes: `f y` for `x`; and
+`z` for `y` giving `z = f y == f y = z`.  It then replaces the
+selected term with the equation's right side: `f y = z`, as you see in
+step 3.
 
 #### Reading and writing function calls in Prooftoys
 
@@ -91,7 +92,7 @@ highlighted together.
 
 #### ➭ [***Next***]({{< relref "/number-game/tutorial3.md" >}})
 
-#### Optional bonus challenge: [<i><b>working forward</b></i>]({{< relref "/number-game/tutorial2.5.md" >}}).
+##### Or optional bonus challenge: ➭ [<i><b>Working forward</b></i>]({{< relref "/number-game/tutorial2.5.md" >}})
 
 <!--
 

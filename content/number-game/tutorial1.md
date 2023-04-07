@@ -72,9 +72,11 @@ they highlight, and when you click there is a stronger highlight that
 stays until you click again.
 
 After selecting the first `0 = 0`, move the mouse down into the
-"Basic" section of the menu, and select the menu item that says `➭
-T using x = x == T` by clicking on it.  <b
-videotip="/images/select-x-x.mp4">another tiny demo</b>
+"Basic" section of the menu, and select the menu item that says `➭ T
+using x = x == T` by clicking on it.  <b
+videotip="/images/select-x-x.mp4">another tiny demo</b> The `➭ T` in
+the menu item means that it will replace the selected term with `T`.
+
 
 If the "Basic" section of the menu is not already displayed, show it
 by pausing the mouse cursor over the word "Basic".
@@ -99,15 +101,19 @@ with some equal term.  In this step, Prooftoys uses the fact that `(x
 
 ##### The pieces
 
-This is a *conditional statement* because of the double arrow (`=>`)
-in the middle, which is the **conditional operator**.  You can read a
-conditional statement `A => B` as `A` **implies** `B`, or **if** `A`
-**then** `B`.  Items on the left side of a conditional are considered
-**assumptions**.  This statement has only one assumption: `0 = 0`.
-The part of the statement after the conditional operator we will call
-the **conclusion**.  All of these, and any meaningful part of a a
-statement such as the assumptions and the conclusion we will call a
-**term**.
+The statement `(0 = 0) => (0 = 0)` is a *conditional statement*
+because of the double arrow (`=>`) in the middle, which is the
+**conditional operator**.  You can read a conditional statement `A =>
+B` as `A` **implies** `B`, or **if** `A` **then** `B`.  Items on the
+left side of a conditional are considered **assumptions**.  The
+meaning of a conditional statement is, "if all of the *assumptions*
+are true, then the *conclusion* is true."  This statement has only one
+assumption: `0 = 0`.
+
+The part of the statement after the conditional operator is the
+**conclusion**; in this case the `0 = 0` on the right.  All of these
+parts, and any meaningful part of a a mathematical statement, such as
+the assumptions and the conclusion we call a **term**.
 
 We say that this statement *has the form* `A => A` because it has the
 same statement on the left and on the right of the `=>` operator.  Put
@@ -117,7 +123,7 @@ the same term is **substitution** -- one of the two fundamental ways
 of getting from one true statement to another in the logic of
 Prooftoys.
 
-The combination of substitution together with replacement is known as
+This combination of substitution followed by replacement is known as
 **rewriting**, our most widely used type of proof step.  So it is fair
 to say that *this simple one step proof sets the stage for all
 reasoning in Prooftoys!*

@@ -57,8 +57,6 @@ properties will be your challenges, starting with this one, that `NN n
 
 ### First addition challenge
 
-Can you figure this one out on your own?
-
 *Hint:* start by selecting `n + succ 0` in the left (assumption) side
 of the first step.  After that, selecting assumptions (in red) or
 parts of assumptions that don't belong in the result should help you
