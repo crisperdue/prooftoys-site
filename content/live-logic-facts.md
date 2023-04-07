@@ -42,7 +42,9 @@ document.addEventListener('DOMContentLoaded', event => {
   fact('forall p => p x');
   fact('p x => exists p');
   fact('forall {x. p x => q x} => (forall p => forall q)');
+  fact('forall {x. p x => q x} & forall p => forall q');
   fact('forall {x. p x => q x} => (exists p => exists q)');
+  fact('forall {x. p x => q x} & exists p => exists q');
   fact('forall {x. forall {y. p x y}} == forall {y. forall {x. p x y}}');
   fact('exists {x. exists {y. p x y}} == exists {y. exists {x. p x y}}');
   fact('forall {x. a | q x} == (a | forall q)');
