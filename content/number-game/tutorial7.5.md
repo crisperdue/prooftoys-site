@@ -1,6 +1,7 @@
 ---
 title: Closure property of addition
-menu: menu-docs.md
+menus:
+  - menu-tut.md
 description: >
   Closure property of adddition.
 ---
@@ -16,4 +17,4 @@ Prove this by induction.
 
 Click the link to get back on the main track:
 
-#### ➭ [***Next***]({{< relref "/number-game/tutorial6.md" >}})
+#### ➭ [***Next***]({{< relref "/number-game/tutorial8.md" >}})

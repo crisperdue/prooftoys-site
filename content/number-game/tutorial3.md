@@ -1,11 +1,12 @@
 ---
 title: 1 - The natural numbers
-menu: menu-docs.md
+menus:
+  - menu-tut.md
 description: >
   Introducing the natural numbers
 ---
 
-### About the natural numbers
+### Axiomatics
 
 > God created the integers; all else is the work of man. -- Leopold
 > Kronecker

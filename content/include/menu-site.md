@@ -2,14 +2,14 @@
 headless: true
 ---
 
-<!-- Links need trailing "/" to make styling of the link
-        to the current page to have the intended effect -->
+<p>
 
 ### *Site*
 
 - [***Home***]({{< relref "/_index.md" >}})
+- [**Hands-on**]({{< relref "/hands-on.md" >}})
+- [**Documentation**]({{< relref "/documentation.md" >}})
 - [About Prooftoys]({{< relref "/about.md" >}})
-- [FAQ]({{< relref "/faq.md" >}})
-- [*Proof builder*]({{< relref "/proofbuilder.md" >}})
 - [Privacy information]({{< relref "/privacy.md" >}})
+- [FAQ]({{< relref "/faq.md" >}})
 - [**News**]({{< relref "/news.md" >}})

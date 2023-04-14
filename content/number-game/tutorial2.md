@@ -1,6 +1,7 @@
 ---
 title: Goals - tutorial
-menu: menu-docs.md
+menus:
+  - menu-tut.md
 description: >
   Working with goals and assumptions
 ---

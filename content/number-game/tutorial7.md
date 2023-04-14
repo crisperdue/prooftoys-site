@@ -1,6 +1,7 @@
 ---
 title: 4 - Commutativity
-menu: menu-docs.md
+menus:
+  - menu-tut.md
 description: >
   Commutativity of addition
 ---
@@ -51,5 +52,8 @@ n + x`.
 This is the idea behind the setup of an induction proof.
 
 #### ➭ [***Next***]({{< relref "/number-game/tutorial8.md" >}})
+
+##### ➭ [***Side trip: closure property and adding one***]({{< relref
+ "/number-game/tutorial7.5.md" >}})
 
 <!-- Use simplification. -->

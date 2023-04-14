@@ -1,11 +1,12 @@
 ---
 title: 7 - summing to zero
-menu: menu-docs.md
+menus:
+  - menu-tut.md
 description: >
   proving a number must be zero
 ---
 
-### Summing to zero
+### Zero sums
 
 > "Take some more tea," the March Hare said to Alice, very earnestly.
 > "I've had nothing yet," Alice replied in an offended tone, "so I

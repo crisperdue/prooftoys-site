@@ -1,6 +1,7 @@
 ---
 title: 6 - same successors
-menu: menu-docs.md
+menus:
+  - menu-tut.md
 description: >
   Proving equality with conditionals
 ---
@@ -8,8 +9,8 @@ description: >
 ### Successors same ⇒ numbers same
 
 > The more things change, the more they stay the same.  -- Alphonse
-> Karr.  In the original French: "plus ça change, plus c'est la même
-> chose".
+> Karr.<br>
+> "Plus ça change, plus c'est la même chose." (original French)
 
 You have proved conditionals in both directions, so you can solve this
 one by breaking it down into the two conditionals.  You have almost

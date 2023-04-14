@@ -1,6 +1,7 @@
 ---
 title: 3 - Associativity
-menu: menu-docs.md
+menus:
+  - menu-tut.md
 description: >
   Addition is associative.
 ---
@@ -60,7 +61,7 @@ places of `x` and `y` here, not just other variables.
 *Side trip (optional):* If you checked carefully, you might have
 noticed that this proof uses the fact `NN a & NN b => NN (a + b)`,
 which you have not proved to be true.  You can take this [***Side
-Trip***]({{< relref "/number-game/tutorial5.5.md" >}}) to prove it for
+Trip***]({{< relref "/number-game/tutorial7.5.md" >}}) to prove it for
 yourself.
 
 #### ➭ [***Next***]({{< relref "/number-game/tutorial7.md" >}})

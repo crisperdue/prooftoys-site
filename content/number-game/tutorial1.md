@@ -1,19 +1,26 @@
 ---
 title: Natural numbers game
-menu: menu-docs.md
+menus: 
+  - menu-tut.md
 description: >
   Introducing the natural numbers game
 ---
 
+## *The Natural Numbers Game*
+
 > A journey of a thousand miles begins with a single step. -- Lao Tsu
 
-## Welcome!
-
 Welcome to the Prooftoys edition of the ***Natural Numbers Game***, a
-series of puzzles in which you build up mathematical knowledge about
-numbers step by step with computer guidance.  As you take on the
-challenges of the game you build skills in creating 100% correct
-mathematical proofs.
+series of problem-solving challenges in which you build mathematical
+knowledge about numbers step by step with computer guidance.  As you
+take on the challenges of the game you build skills in creating 100%
+correct mathematical proofs.
+
+This sequence of pages is designed to be self-contained with enough
+information to give you a practical introduction to proving and
+problem-solving with Prooftoys.  The Prooftoys [**documentation**]({{<
+relref "/documentation.md" >}}) has more systematic and in-depth
+explanations.
 
 ### What is this about?
 

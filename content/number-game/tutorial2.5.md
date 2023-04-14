@@ -1,6 +1,7 @@
 ---
 title: Forward proof
-menu: menu-docs.md
+menus:
+  - menu-tut.md
 description: >
   Working forward
 ---

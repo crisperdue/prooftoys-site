@@ -1,11 +1,12 @@
 ---
-title: wrapping up
-menu: menu-docs.md
+title: wrapping upa
+menus:
+  - menu-tut.md
 description: >
   proving a number must be zero
 ---
 
-### The wrap-up
+### Zero sums: the final cut
 
 You have already done the heavy lifting in proving that `x + y = 0 =>
 y = 0`.  If you would like to take this result to its logical

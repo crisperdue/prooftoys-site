@@ -1,6 +1,7 @@
 ---
 title: Adding to the successor
-menu: menu-docs.md
+menus:
+  - menu-tut.md
 description: >
   Adding to the successor
 ---

@@ -1,6 +1,7 @@
 ---
 title: 5 - Adding 1
-menu: menu-docs.md
+menus:
+  - menu-tut.md
 description: >
   Adding to the successor
 ---
@@ -17,5 +18,3 @@ the fact that `1 = succ 0`, which is our definition of 1.
 <div class=proof-editor data-exercise="nat/add5"></div>
 
 #### ➭ [***Next***]({{< relref "/number-game/tutorial9.md" >}})
-
-
