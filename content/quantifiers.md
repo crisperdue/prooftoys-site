@@ -1,6 +1,6 @@
 ---
 title: Advanced quantifier laws
-menu: menu-theorems.md
+menu: menu-docs.md
 aliases:
     - /logic-facts/
 description: >

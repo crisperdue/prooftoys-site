@@ -1,6 +1,6 @@
 ---
 title: "Using the Proof Builder"
-menu: menu-inference.md
+menu: menu-docs.md
 description: >
   A gentle introduction to the Prooftoys user interface
   that helps you build proofs and solve math problems.

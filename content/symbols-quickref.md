@@ -1,6 +1,6 @@
 ---
 title: Quickref
-menu: menu-inference.md
+menu: menu-docs.md
 ---
 
 # Prooftoys syntax quick reference

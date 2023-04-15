@@ -1,5 +1,6 @@
 ---
 title: 'Concepts'
+menu: menu-docs.md
 description: >
   Concepts and terms used on the Prooftoys website
   to describe logic, the system, and its user interface.
@@ -11,8 +12,7 @@ description: >
 
 The most basic kinds of things the logic works with are "true",
 "false", and *individuals*.  In Prooftoys "true" and "false" are
-written as `T` and `F`.  They are the _truth values_, also known as
-_boolean values_.
+written as `T` and `F`.
 
 Numbers are the sorts of _individuals_ you will usually encounter in
 Prooftoys.  Everything in the logic that is not a truth value or an

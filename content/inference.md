@@ -1,6 +1,6 @@
 ---
 title: "Reasoning"
-menu: menu-inference.md
+menu: menu-docs.md
 description: >
   The nuts and bolts of the exceptionally simple
   and easy Prooftoys system for deductive reasoning.

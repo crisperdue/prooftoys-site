@@ -1,6 +1,6 @@
 ---
 title: Prooftoys logic theorems list
-menu: menu-theorems.md
+menu: menu-docs.md
 description: >
   The main theorems of pure logic in Prooftoys
   with convenient access to all of their proofs.
