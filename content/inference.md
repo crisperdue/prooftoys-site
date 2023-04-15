@@ -173,13 +173,20 @@ rewriting adds an assumption, but other than that it is the same.
 
 ### Simplification
 
-Simplification in Prooftoys is a mechanism that finds and applies
-_rewriting_ rules, often repeatedly, to do inferences that are often
-helpful in proofs, usually ones that look obvious to the human user.
-Prooftoys often applies simplifications automatically, sometimes
-behind the scenes, to save you from some degree of tedious work.
-Prooftoys has a collection of simplification facts, and normally
-tries any of them that match when doing simplification.
+Simplification works on a term.  It generally makes the term smaller
+(shorter), and generally makes it look simpler to the human eye.  The
+proof builder applies certain simplifications to the results of many
+steps for you.
+
+Simplification is done by finding opportunities to use some rewrite
+rules, and applying the rules, repeatedly if possible, to simplify
+those parts.  For example it can simplify a term `2 * x + 0` to just
+`2 * x` by applying the rewrite rule `x + 0 = x`, which is a fact
+about the real numbers.
+
+Usually simplification looks for opportunities to apply any rule in a
+whole set of rewrite rules.  The rewrites that are useful can vary
+from one situation to another, but the process is still the same.
 
 <a id="forward-reasoning"></a>
 ### "Forward" reasoning

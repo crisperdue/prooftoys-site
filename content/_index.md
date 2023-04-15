@@ -22,47 +22,44 @@ noSideBar: true
 
 ## **What is Prooftoys?**
 
-Prooftoys is a set of resources for learning the principles of
-_precise reasoning_ -- **logic** and **mathematical proof**, tailored
-specifically for beginners with little background in mathematics and
-no background in formal logic.  It exists to be an enjoyable and
-rewarding road to learning and applying these powerful tools, and
-includes an embedded graphical tool that helps you construct
-understandable and correct proofs with no holes and no handwaves.
+Prooftoys is a set of resources for learning principles of _precise
+reasoning_, tailored specifically for beginners with little background
+in mathematics and no background in formal logic.  It exists to be an
+understandable and enjoyable road to learning and applying these
+super-powerful tools, and includes an embedded graphical user
+interface that helps you construct understandable and correct proofs
+with no holes and no handwaves.
 
-### **Get introduced**
+### **Ways to start**
 
-{{% divstyle style="float: right; xmargin: 2em 10% 0 10%" %}}
+{{% divstyle style="float: right; margin: 0 1em 0 1em" %}}
 <a href="{{< relref "/logic-pix-intro.md" >}}">
 {{< figure src="/images/logic-circles.png" alt="sample logic graphic"
    width="372" height="122">}}
 </a>
 {{% /divstyle %}}
 
-* ***Tour [the picture gallery]({{< relref "/logic-pix-intro.md"
->}})*** that introduces basic "boolean" logic.  These are interactive
-Venn diagrams with explanation, and truth tables -- a point of view on
-"propositional" logic (e.g. *and*, *or*, *not*, and *implies*).
+* ***Visually:*** with [***logic through pictures***]({{< relref
+"/logic-pix-intro.md" >}}), an introduction to some universal basics
+of logic.  These are interactive diagrams with explanation, and truth
+tables, to support your intuitive sense of concepts such as *and*,
+*or*, *not*, and *implies*).
 
-* ***Learn [the language]({{< relref "/language-intro.md" >}})*** of
-Prooftoys.
+* ***Hands-on:*** learn by doing through logical [***math
+puzzles***]({{< relref "/hands-on.md" >}}), including an extensive and
+self-contained [***Natural Numbers Game***]({{< relref
+"/number-game/tutorial1" >}}) tutorial that takes you step-by-step
+through proofs of fundamental properties of numbers, with background,
+hints, and tips for taking on its challenges.
 
-* ***Understand*** its simple, practical, efficient system of
-[***deduction***]({{< relref "/inference.md" >}}).
-
-### **Dive straight in**
-
-* ***Quick start*** on the **[proof builder]({{< relref
-"/proofbuilder.md" >}})** page.
-
-* ***Check out examples*** of *rigorous proofs*.  You can view all
-of the theorems in the system -- both theorems of [**logic**]({{<
-relref "/theorems.md" >}}) and [**the real numbers**]({{< relref
-"/real-number-facts.md" >}}).  Understand them in detail or just
-browse.  The same techniques are available for you to use in the
-**[proof builder]({{< relref "/proofbuilder.md" >}})**.
+* ***In depth:*** through the [***documentation***]({{< relref
+"/documentation.md" >}}) of the logic and the system, including a
+quickstart demonstration of the Prooftoys [**proof builder**]({{<
+relref "/proofbuilder.md" >}}).
 
 ### **Need some reasons?**
+
+> Simplicity is the ultimate sophistication.  -- Leonardo da Vinci
 
 **User interface.** Prooftoys works entirely through a Web-based
 point-and-click graphical user interface.  You select a step or part

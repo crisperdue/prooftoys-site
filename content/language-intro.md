@@ -1,5 +1,6 @@
 ---
 title: 'The language'
+menu: menu-docs.md
 description: >
   The language of Prooftoys.
 ---

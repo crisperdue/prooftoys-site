@@ -1,6 +1,6 @@
 ---
 title: About
-menu: menu.md
+menu: menu-site.md
 description: >
   Prooftoys is a simple, easy to learn and use use proof
   assistant for beginners.
