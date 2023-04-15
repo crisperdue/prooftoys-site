@@ -1,5 +1,9 @@
 <div class="docs-menu mt-md-4 mb-3">
-{{ with (or .Params.menu .Site.Params.BookMenuBundle) }}
+{{ range .Params.menus }}
   {{ partial "include" . }}
+{{ else }}
+  {{ with (or .Params.menu .Site.Params.BookMenuBundle) }}
+    {{ partial "include" . }}
+  {{ end }}
 {{ end }}
 </div>
