@@ -55,9 +55,7 @@ Definitions have the form `<name> <vars> = <expression>` where
 sequence of variable names.
 
 The expression must not have any free variables other than those in
-the list after the name being defined.  For more on the use of
-definitions in Prooftoys see the [definitions]({{< relref
-"/definitions.md" >}}) page.
+the list after the name being defined.
 
 {{% preblock %}}
 `not a == (a == F)`
