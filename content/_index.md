@@ -22,13 +22,19 @@ noSideBar: true
 
 ## **What is Prooftoys?**
 
-Prooftoys is a set of resources for learning principles of _precise
-reasoning_, tailored specifically for beginners with little background
-in mathematics and no background in formal logic.  It exists to be an
+Prooftoys is a set of resources for learning and using principles of
+_precise reasoning_.  This is the reasoning of mathematics, but today
+it applies to many fields --- very broadly to much of computing, but
+also to many other fields, often through mathematical modeling and
+other forms of mathematical analysis.
+
+The Prooftoys system has been designed specifically to be approachable
+for beginners who may have little background in mathematics and
+perhaps no background at all in formal logic.  It exists to be an
 understandable and enjoyable road to learning and applying these
-super-powerful tools, and includes an embedded graphical user
-interface that helps you construct understandable and correct proofs
-with no holes and no handwaves.
+super-powerful tools through an embedded graphical user interface that
+helps you construct understandable and correct proofs with no holes
+and no handwaving.
 
 ### **Ways to start**
 
@@ -39,20 +45,20 @@ with no holes and no handwaves.
 </a>
 {{% /divstyle %}}
 
-* ***Visually:*** with [***logic through pictures***]({{< relref
+- ***Visually:*** with [***logic through pictures***]({{< relref
 "/logic-pix-intro.md" >}}), an introduction to some universal basics
 of logic.  These are interactive diagrams with explanation, and truth
 tables, to support your intuitive sense of concepts such as *and*,
 *or*, *not*, and *implies*).
 
-* ***Hands-on:*** learn by doing through logical [***math
-puzzles***]({{< relref "/hands-on.md" >}}), including an extensive and
-self-contained [***Natural Numbers Game***]({{< relref
-"/number-game/tutorial1" >}}) tutorial that takes you step-by-step
-through proofs of fundamental properties of numbers, with background,
-hints, and tips for taking on its challenges.
+- ***Hands on:*** with an extensive and self-contained [***Natural
+Numbers Game tutorial***]({{< relref "/number-game/tutorial1" >}})
+that takes you step-by-step through proofs of fundamental properties
+of numbers, with background, hints, and tips for taking on its
+challenges; and an assortment of [***logical puzzles***]({{< relref
+"/hands-on.md" >}}).
 
-* ***In depth:*** through the [***documentation***]({{< relref
+- ***In depth:*** through the [***documentation***]({{< relref
 "/documentation.md" >}}) of the logic and the system, including a
 quickstart demonstration of the Prooftoys [**proof builder**]({{<
 relref "/proofbuilder.md" >}}).
