@@ -21,8 +21,8 @@ Also it turns out that `(A => B) & (A => C) => (A => B & C)`.
 
 Some ideas:
 
-- <button class=btn>Looking under the hood</button>
-- <button class=btn>Core concepts</button>
-- <button class=btn>Advanced topics</button>
-- <button class=btn>Theory</button>
+- <button class="btn btn-primary">Looking under the hood</button>
+- <button class="btn btn-primary">Core concepts</button>
+- <button class="btn btn-primary">Advanced topics</button>
+- <button class="btn btn-primary">Theory</button>
 
