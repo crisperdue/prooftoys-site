@@ -17,6 +17,9 @@ headless: true
   - [Adding one]({{< relref "/number-game/tutorial8.md" >}})
 - [Same successors]({{< relref "/number-game/tutorial9.md" >}})
 - [Zero sums]({{< relref "/number-game/tutorial10.md" >}})
+
+<!--
 - [Zero sums: the final cut]({{< relref "/number-game/tutorial11.md" >}})
+-->
 
 {{< include "menu-site.md" >}}

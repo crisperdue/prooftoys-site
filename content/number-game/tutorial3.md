@@ -29,8 +29,9 @@ your toolbox to use at any time:
 1. `NN (succ x) & NN (succ y) => x = y`
 1. `P 0 & (P n => P (succ n)) => (NN x => P x)`
 
-These are the axioms for the natural numbers, known as
-the **Peano axioms** in honor of their discoverer.
+These are the standard axioms for the natural numbers, known as the
+**Peano axioms** in honor of their discoverer, [Giuseppe
+Peano](https://en.wikipedia.org/wiki/Giuseppe_Peano).
 
 Stated in English they are that:
 
@@ -46,7 +47,7 @@ Stated in English they are that:
 ### Introducing addition
 
 It may seem odd to talk about numbers without the concept of addition.
-Addition of natural numbers is defined by two basic facts about
+We define addition of natural numbers with two basic facts about
 addition:
 
 - `NN x => x + 0 = x` --- adding zero has no effect
@@ -66,5 +67,24 @@ get good suggestions from the proof builder Basic menu.
 <div class=proof-editor data-exercise="nat/nat4"></div>
 
 My proof of this has five steps: four plus the initial setup.
+
+### Why do some proof steps use `(x = x) == T`?
+
+You may already be noticing proof steps with descriptions such as "use
+`(x = x) == T`", or that otherwise contain `== T`.  What are these
+about? And why doesn't Prooftoys just use `x = x` instead?  For
+example the fact `NN 0` is used in this proof to replace `NN 0` with
+T.
+
+The difference is in the policies Prooftoys uses in applying facts for
+rewriting.  These policies ensure that a request to rewrite a specific
+term with a specific fact is never ambiguous.  If the fact is either
+an equation such as `x = x` or a conditional equation such as `NN
+(succ x) & NN (succ y) => x = y`, rewriting matches the left side of
+that equation to do the rewriting.
+
+If the step is neither of these, Prooftoys internally converts it to
+an equation.  For example it converts `NN x => NN (succ x)` to `NN x
+=> NN (succ x) == T`, and `NN 0` becomes `NN 0 == T`.
 
 #### ➭ [***Next***]({{< relref "/number-game/tutorial4.md" >}})

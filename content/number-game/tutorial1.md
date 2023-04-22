@@ -106,6 +106,11 @@ with some equal term.  In this step, Prooftoys uses the fact that `(x
 = x) == T` to replace `0 = 0` with `T`, and when an assumption becomes
 `T`, it drops it from the assumptions.
 
+(It might seem as if "dropping" assumptions is based on some
+additional, special principle; but really behind the scenes it uses
+the same principles as all other reasoning, and Prooftoys can show you
+those details on request.)
+
 ##### The pieces
 
 The statement `(0 = 0) => (0 = 0)` is a *conditional statement*

@@ -20,7 +20,8 @@ tried-and-true approach to proof, but it is not the only way.
 Textbook proofs tend to work forward toward the goal, and solutions to
 algebra problems also tend to work forward from the givens.
 
-As you work this way toward a goal, the proof editor highlights in red
+As you work this way toward a goal, the proof editor
+**<span style="color:red">highlights in red</span>**
 the assumptions that do not match any listed in the goal, to help you
 focus on transforming or eliminating them.
 

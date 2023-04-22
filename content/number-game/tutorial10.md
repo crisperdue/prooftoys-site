@@ -27,10 +27,12 @@ about irrelevant assumptions in an earlier page.]]
 
 #### *Congratulations, You Did It!!*
 
+<!--
 This is officially the end.  There is always a next challenge though,
 in life and in mathematics.  In fact one is already prepared here.  Be
 warned though, that it needs some proof techniques we have not
 explored or explained as yet.
 
 ##### ➭ [***Next?***]({{< relref "/number-game/tutorial11.md" >}})
+-->
 
