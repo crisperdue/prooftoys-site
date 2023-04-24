@@ -5,9 +5,16 @@ menu: menu-site.md
 
 ### Hands-on with Prooftoys
 
+#### Tool
+
+- [**Proof builder**]({{< relref "/proofbuilder.md" >}})
+
+#### Tutorial
+
 - [**Natural Numbers Game**]({{< relref
   "/number-game/tutorial1.md" >}})
-- [**Proof builder**]({{< relref "/proofbuilder.md" >}})
+
+#### Puzzles and examples
 
 - [**The repetitious number**]({{< relref "/rep-num.md" >}})
 - Country music theorem

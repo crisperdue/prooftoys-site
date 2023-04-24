@@ -31,9 +31,10 @@ This proof uses variables `x`, `y`, and `z`, with a function `f`.
 Your mission this time is to combine the two function calls into
 a single expression.
 
-The fact to be proved has two assumptions: `f x = y` and `f y = z`.
-Between the two assumptions is the operator `&`, mathematical notation
-for *"and"*.  This can be done in two steps plus the initial setup.
+**Operator `&`:** The fact to be proved has two assumptions: `f x = y`
+and `f y = z`.  Between the two assumptions is the operator `&`,
+mathematical notation for *"and"*.  This can be done in two steps plus
+the initial setup.
 
 <div class=proof-editor data-exercise="nat/nat0.2"></div>
 

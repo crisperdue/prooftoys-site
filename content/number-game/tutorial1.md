@@ -84,7 +84,6 @@ using x = x == T` by clicking on it.  <b
 videotip="/images/select-x-x.mp4">another tiny demo</b> The `➭ T` in
 the menu item means that it will replace the selected term with `T`.
 
-
 If the "Basic" section of the menu is not already displayed, show it
 by pausing the mouse cursor over the word "Basic".
 
@@ -106,6 +105,10 @@ with some equal term.  In this step, Prooftoys uses the fact that `(x
 = x) == T` to replace `0 = 0` with `T`, and when an assumption becomes
 `T`, it drops it from the assumptions.
 
+**Operator `==`:** The `==` operator tests for equality just like the
+usual `=`, but is specifically for true/false values unlike `=`, which
+is generic.
+
 (It might seem as if "dropping" assumptions is based on some
 additional, special principle; but really behind the scenes it uses
 the same principles as all other reasoning, and Prooftoys can show you
@@ -113,14 +116,14 @@ those details on request.)
 
 ##### The pieces
 
-The statement `(0 = 0) => (0 = 0)` is a *conditional statement*
-because of the double arrow (`=>`) in the middle, which is the
-**conditional operator**.  You can read a conditional statement `A =>
-B` as `A` **implies** `B`, or **if** `A` **then** `B`.  Items on the
-left side of a conditional are considered **assumptions**.  The
-meaning of a conditional statement is, "if all of the *assumptions*
-are true, then the *conclusion* is true."  This statement has only one
-assumption: `0 = 0`.
+**Operator `=>`:** The statement `(0 = 0) => (0 = 0)` is a
+*conditional statement* because of the double arrow (`=>`) in the
+middle, which is the **conditional operator**.  You can read a
+conditional statement `A => B` as `A` **implies** `B`, or **if** `A`
+**then** `B`.  Items on the left side of a conditional are considered
+**assumptions**.  The meaning of a conditional statement is, "if all
+of the *assumptions* are true, then the *conclusion* is true."  This
+statement has only one assumption: `0 = 0`.
 
 The part of the statement after the conditional operator is the
 **conclusion**; in this case the `0 = 0` on the right.  All of these
@@ -128,17 +131,16 @@ parts, and any meaningful part of a a mathematical statement, such as
 the assumptions and the conclusion we call a **term**.
 
 We say that this statement *has the form* `A => A` because it has the
-same statement on the left and on the right of the `=>` operator.  Put
-another way, if you replace both of the `A`'s with `0 = 0` you get `0
-= 0 => 0 = 0`.  Replacement of *all* occurrences of a variable with
-the same term is **substitution** -- one of the two fundamental ways
-of getting from one true statement to another in the logic of
-Prooftoys.
+same statement on the left and on the right of the `=>` operator.  If
+you replace both of the `A`'s with `0 = 0` you get `0 = 0 => 0 = 0`.
+Replacement of *all* occurrences of a variable with the same term is
+**substitution** -- one of the two fundamental ways of getting from
+one true statement to another in the logic of Prooftoys.
 
 This combination of substitution followed by replacement is known as
 **rewriting**, our most widely used type of proof step.  So it is fair
 to say that *this simple one step proof sets the stage for all
-reasoning in Prooftoys!*
+reasoning in Prooftoys.*
 
 #### ➪ [***Next***]({{< relref "/number-game/tutorial2.md" >}})
 

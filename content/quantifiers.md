@@ -47,7 +47,9 @@ Unused bound variable:
 `forall {x. p x => A} == (exists p => A)`\
 Forward reasoning:
 `forall {x. p x => q x} => (forall p => forall q)`
-`forall {x. p x => q x} => (exists p => exists q)`\
+`forall {x. p x => q x} & forall p => forall q`
+`forall {x. p x => q x} => (exists p => exists q)`
+`forall {x. p x => q x} & exists p => exists q`\
 Unique existence:
 `exists1 p == exists {x. p = {y. y = x}}`
 `exists1 p == exists {x. forall {y. p y == y = x}}`
