@@ -38,8 +38,9 @@ conditions, based on two facts about our mathematical world.
    "/inference.md#tautologies" >}}) and [through pictures]({{< relref
    "/logic-pix-truth.md#tautologies" >}}).
 1. Add "forall" quantifier.
-1. This is a _consequence_ of step 4, where step 4 matches the
-   pattern `forall {x. p x => q x}`.
+1. This is a _consequence_ of step 4, where step 4 matches the pattern
+   `forall {x. p x => q x}`.  This is justified by the fact that
+   `
 1. This uses step 2 to conclude that the assumption 
    `exists {x. not (Rock x)}` is true.  It internally simplifies,
    removing the `T =>`.  The statement `exists Country` means that
