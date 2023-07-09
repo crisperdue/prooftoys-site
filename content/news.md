@@ -7,16 +7,20 @@ description: >
 
 ### News
 
+##### 07/2023
+
+- Focus on stable and predictable operations so proofs remain
+  completely valid as the implementation changes.
+- Extensive work on indenting proof steps for clarity and
+  easy reading.
+
 ##### 04/2023
 
 - [***Natural Numbers Game***]({{< relref "/number-game/tutorial1.md"
  >}}) extensive hands-on tutorial!
 
-### In progress
+### Upcoming
 
-- More details on advanced features of Prooftoys and its logic,
-  especially based on site usage and requests.
 - Initial versions of other tasty example proofs, in the
   [hands-on]({{< relref "/hands-on.md" >}}) section of the site.
 - Tidy up solutions for linear equations of 1 and 2 variables
-- Tidy up demonstration of division by zero
