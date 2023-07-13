@@ -22,19 +22,27 @@ noSideBar: true
 
 ## **What is Prooftoys?**
 
-Prooftoys is a set of resources for learning and using principles of
-_precise reasoning_.  This is the reasoning of mathematics, but today
-it applies to many fields --- very broadly to much of computing, but
-also to many other fields, often through mathematical modeling and
-other forms of mathematical analysis.
+Prooftoys is software and a set of resources for learning and using
+the principles of ***logic***.
 
 The Prooftoys system has been designed specifically to be approachable
-for beginners who may have little background in mathematics and
-perhaps no background at all in formal logic.  It exists to be an
+for beginners with little background in mathematics and even no
+background at all in formal logic.  Its goal is to provide an
 understandable and enjoyable road to learning and applying these
-super-powerful tools through an embedded graphical user interface that
-helps you construct understandable and correct proofs with no holes
-and no handwaving.
+super-powerful tools through a graphical user interface that helps you
+construct understandable and correct proofs with no holes and no
+handwaving.
+
+### **What can it do for me?**
+
+- Build your skills at effectively using rock-solid reasoning.
+
+- Grow your appreciation of the power of reasoning from fundamental
+  principles.
+
+- Develop your understanding of sound and practical proof techniques.
+
+- Even assist you in solving algebra problems.
 
 ### **Ways to start**
 
@@ -52,27 +60,32 @@ tables, to support your intuitive sense of concepts such as *and*,
 *or*, *not*, and *implies*).
 
 - ***Hands on:*** with an extensive and self-contained [***Natural
-Numbers Game tutorial***]({{< relref "/number-game/tutorial1" >}})
-that takes you step-by-step through proofs of fundamental properties
-of numbers, with background, hints, and tips for taking on its
-challenges; and an assortment of [***logical puzzles***]({{< relref
-"/hands-on.md" >}}).
+  Numbers Game tutorial***]({{< relref "/number-game/tutorial1" >}})
+  that takes you step-by-step through proofs of important properties of
+  numbers starting from a small handful of fundamental principles.  This
+  includes background, hints, and tips for taking on its challenges
+
+  Try some curious [***logical puzzles***]({{< relref
+  "/hands-on.md" >}}).
+
+  Or start by solving basic algebra problems with the help of the
+  computer.  Prooftoys handles algebra problems in a natural way as
+  proofs, so your steps are guaranteed to be mathematically correct.
 
 - ***In depth:*** through the [***documentation***]({{< relref
 "/documentation.md" >}}) of the logic and the system, including a
 quickstart demonstration of the Prooftoys [**proof builder**]({{<
 relref "/proofbuilder.md" >}}).
 
-### **Need some reasons?**
+### **Why try Prooftoys?**
 
 > Simplicity is the ultimate sophistication.  -- Leonardo da Vinci
 
 **User interface.** Prooftoys works entirely through a Web-based
-point-and-click graphical user interface.  You select a step or part
-of a step.  Prooftoys offers you suggestions and lets you change your
-mind as often as you like, encouraging you to "play around" with your
-proofs.  If used well, suggestions benefit from recognition being
-easier than recall.
+point-and-click graphical user interface.  Most things you do are
+based on suggestions based on your selection of a step or expression.
+It lets you change your mind as much as you like, encouraging you to
+"play around" with your proofs.
 
 **Simplicity.** The logic used by Prooftoys has also been chosen
 specifically for beginners.  For example its single rule of inference
@@ -89,11 +102,9 @@ proving theorems.  For example it easily works backward from the
 statement of a theorem or forward from the givens of a problem.
 
 **Familiarity.** Prooftoys works to present its mathematics in
-familiar, textbook-like style.  For example type conditions are stated
-as assumptions rather than type annotations, and the result of
-division by zero is not a number.  Proofs show up in a familiar
-textbook style as a list of proved statements, each derived from the
-ones before it.
+familiar, textbook-like style.  Proofs show up in a familiar textbook
+style as a list of proved statements, each derived from the ones
+before it.
 
 **Transparency.** Prooftoys makes the details of every step in every
 proof available in the proof builder and all proof displays.  A click

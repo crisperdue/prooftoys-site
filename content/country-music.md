@@ -82,5 +82,4 @@ conditions, based on two facts about our mathematical world.
 You can use this space to practice building your own proof.  You might
 like to start by recreating the proof shown above.
 
-<div class="xproof-editor mb-4"></div>
-
+<div class=proof-editor data-noload></div>

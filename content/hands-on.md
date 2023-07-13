@@ -17,8 +17,11 @@ menu: menu-site.md
 #### Puzzles and examples
 
 - [**The repetitious number**]({{< relref "/rep-num.md" >}})
-- Country music theorem
+- [**Country Music Theorem**]({{< relref "/country-music.md" >}})
 - How long is a lunar?
+
+#### Algebra
+
 - Solving linear equation with 1 variable
 - Solving linear equations with 2 variables
 - Division by zero
