@@ -22,15 +22,14 @@ primarily in the <a
 href="http://github.com/crisperdue/prooftoys">crisperdue/prooftoys</a>
 repository.
 
-The immediate goal is to create a computer math tool or tools that are
-easy, highly available, useful, attractive, and valuable to people
-learning (or doing) mathematics, especially newcomers, for both
-reading and writing proofs.
+The key goal is to create a computer math tool or tools that are easy,
+highly available, useful, attractive, and valuable to people learning
+(or doing) mathematics, especially newcomers, for reading and writing
+proofs, and for solving problems deductively.
 
-Down the road, the vision is to provide a compelling model of
-computer-aided mathematics that can bridge the cultural chasm between
-computer proof technology and and real-world learning and doing of
-mathematics.
+The larger vision is to create a compelling model of bridging the
+divide between computer proof technology and ordinary people learning
+to understand and do mathematics.
 
 ### About the logic
 
@@ -42,19 +41,19 @@ of Carnegie Mellon University Professor Peter B. Andrews.  See the
 
 ### Getting in touch
 
-One goal of this website is to develop a friendly community of users
-around the tools here and their goals of using computers for
-mathematical reasoning.  Feel free to say "hello" to the author
-through <a href="mailto:cris@perdues.com"><b>email</b></a>.
-
-Or he is also on Slack.com.  You can use <a target=_blank href=
-"https://join.slack.com/t/mathtoys/shared_invite/zt-hfjkerk4-Am67OX60KEHycW9WEKFbxQ">
-<b>this link</b></a> to connect there.
+One goal is to develop a friendly community of users around the tools
+here and their goals of using computers for mathematical reasoning.
+Feel free to say "hello" to the author through <a
+href="mailto:cris@perdues.com"><b>email</b></a>.
 
 Sincerely,<br>
 Cris Perdue
 
 <!--
+Or you can reach him on Slack.com with <a target=_blank href=
+"https://join.slack.com/t/mathtoys/shared_invite/zt-hfjkerk4-Am67OX60KEHycW9WEKFbxQ">
+<b>this link</b></a>.
+
 Today there are wonderful tools for practitioners who need answers to
 mathematical questions, ranging from handheld calculators to numerical
 simulators to computer algebra systems.  Generally speaking, these
