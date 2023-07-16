@@ -6,35 +6,53 @@ description: >
   assistant for beginners.
 ---
 
+> The scientific man does not aim at an immediate result.  He does not
+expect that his advanced ideas will be readily taken up.  His work is
+like that of the planter -- for the future.  His duty is to lay the
+foundation for those who are to come, and point the way. --- Nikola
+Tesla
+
 ### About Prooftoys.org
 
-The [Prooftoys](http://prooftoys.org) website and its software are
-ongoing experiments in creating computer aids to help human beings do
-mathematics.  The application software is proudly open source, hosted
-at <a href="http://github.com">Github</a>, primarily in the <a
+**Welcome!** The [Prooftoys](http://prooftoys.org) website and its
+software are ongoing experiments in creating computer aids to help
+human beings learn and do mathematics.  The application software is
+proudly open source, hosted at <a href="http://github.com">Github</a>,
+primarily in the <a
 href="http://github.com/crisperdue/prooftoys">crisperdue/prooftoys</a>
-repository.  Our goal is to create computer math tools that are
-useful, attractive, and valuable to people learning (or doing)
-mathematics at many levels and universally available.
+repository.
+
+The immediate goal is to create a computer math tool or tools that are
+easy, highly available, useful, attractive, and valuable to people
+learning (or doing) mathematics, especially newcomers, for both
+reading and writing proofs.
+
+Down the road, the vision is to provide a compelling model of
+computer-aided mathematics that can bridge the cultural chasm between
+computer proof technology and and real-world learning and doing of
+mathematics.
 
 ### About the logic
 
 The logic of Prooftoys is a form of <a target=_blank href=
 "http://www.cas.mcmaster.ca/sqrl/papers/SQRLreport18_rev2.pdf"> simple
 type theory</a>, based rather directly on the theory **Q<sub>0</sub>**
-of Carnegie Mellon Professor Peter B. Andrews.  See the [tech
-notes]({{< relref "/tech-notes.md" >}}) for more details.
+of Carnegie Mellon University Professor Peter B. Andrews.  See the
+[tech notes]({{< relref "/tech-notes.md" >}}) for more details.
 
 ### Getting in touch
 
-One of the goals of this website is to develop a friendly community
-of users around the tools here and using computers for mathematical
-reasoning.  Feel free to say "hello" to the author through
-<a href="mailto:cris@perdues.com"><b>email</b></a>.
+One goal of this website is to develop a friendly community of users
+around the tools here and their goals of using computers for
+mathematical reasoning.  Feel free to say "hello" to the author
+through <a href="mailto:cris@perdues.com"><b>email</b></a>.
 
 Or he is also on Slack.com.  You can use <a target=_blank href=
 "https://join.slack.com/t/mathtoys/shared_invite/zt-hfjkerk4-Am67OX60KEHycW9WEKFbxQ">
 <b>this link</b></a> to connect there.
+
+Sincerely,<br>
+Cris Perdue
 
 <!--
 Today there are wonderful tools for practitioners who need answers to
