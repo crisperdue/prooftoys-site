@@ -27,9 +27,9 @@ highly available, useful, attractive, and valuable to people learning
 (or doing) mathematics, especially newcomers, for reading and writing
 proofs, and for solving problems deductively.
 
-The larger vision is to create a compelling model of bridging the
-divide between computer proof technology and ordinary people learning
-to understand and do mathematics.
+The larger vision is to develop the kind of user experience that can
+bridge the gap between computer proof technology and ordinary people
+learning to understand and use mathematics.
 
 ### About the logic
 
