@@ -39,12 +39,11 @@ So we can ask, is it true that
 Here is a solution built with Prooftoys.
 
 <div class="proof-display mb-4" data-steps='
-(steps
 (1 consider (t ((((1001 * x) / 7) / 11) / 13)))
 (2 simplifyFocalPart (s 1))
 (3 arrangeTerm (s 2) (path "/right/right"))
 (4 display (s 3))
-)'></div>
+'></div>
 
 {{% /faded %}}
 
@@ -99,9 +98,8 @@ Can you build the same proof yourself from just the given statement?
 Here is a workspace you can use to do the experiment.
 
 <div class="proof-editor mb-4" data-steps='
-(steps
 (1 given (t ((((1001 * x) / 7) / 11) / 13)))
-)'></div>
+'></div>
 
 ### Seeing details
 
