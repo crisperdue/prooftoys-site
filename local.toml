@@ -4,5 +4,6 @@
   # Parameters for serving from local files,
   # overriding CDNs listed in config.toml
   jquery_url = "/lib/jquery-3.6.0.js"
+  dexie_url = "/lib/dexie-3.2.4.mjs"
   popper_url = "/popper.min.js"
   tippy_url = "/tippy-bundle.umd.js"
