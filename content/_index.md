@@ -23,7 +23,7 @@ noSideBar: true
 ## **What is Prooftoys?**
 
 Prooftoys is software and a set of resources for learning and using
-the principles of ***logic***.
+the principles of **precise reasoning**.
 
 The Prooftoys system has been designed specifically to be approachable
 for beginners with little background in mathematics and even no
@@ -33,16 +33,38 @@ super-powerful tools through a graphical user interface that helps you
 construct understandable and correct proofs with no holes and no
 handwaving.
 
+### **What is it for?**
+
+On the one hand, Prooftoys is for learning **core ideas** of
+mathematical proof, not cookbook procedures, but general **concepts of
+reasoning**, in a way that is approachable to ordinary people.
+
+In a larger sense though, Prooftoys is a set of experiments with ways
+to learn these great ideas in our modern era.  Far too much of
+education is still about people doing procedures that may have been
+useful three hundred years ago, but are thoroughly irrelevant now.
+
+Computers can do the procedures for us, but without the concepts
+we are still lost.  Luckily, there are now powerful systems of
+mathematical reasoning that are based on simple principles used
+throughout ordinary high school mathematics, and Prooftoys uses
+one of these for all of its reasoning.
+
+Prooftoys is here to be an example of a new way of introducing
+mathematics where the computer does things it is very good at, and
+human beings learn concepts and key ideas.  It also aims to do this in
+a way that is stimulating and interesting, not boring and a waste of
+time.
+
 ### **What can it do for me?**
 
-- Build your skills at effectively using rock-solid reasoning.
+- Build your skills and develop your understanding of rock-solid
+  reasoning.
 
 - Grow your appreciation of the power of reasoning from fundamental
   principles.
 
-- Develop your understanding of sound and practical proof techniques.
-
-- Demonstrate solutions of algebra problems as proofs.
+- Demonstrate solutions of traditional school math problems as proofs.
 
 ### **Ways to start**
 
@@ -59,15 +81,16 @@ of logic.  These are interactive diagrams with explanation, and truth
 tables, to support your intuitive sense of concepts such as *and*,
 *or*, *not*, and *implies*).
 
-- ***Hands on:*** with an extensive and self-contained [***Natural
-  Numbers Game tutorial***]({{< relref "/number-game/tutorial1" >}})
-  that takes you step-by-step through proofs of important properties of
-  numbers starting from a small handful of fundamental principles.  This
-  includes background, hints, and tips for taking on its challenges
+- [***Hands on:***]({{< relref "/hands-on.md" >}}) with an extensive
+  and self-contained [***Natural Numbers Game tutorial***]({{< relref
+  "/number-game/tutorial1.md" >}}) that takes you step-by-step through
+  proofs of important properties of numbers starting from a small
+  handful of fundamental principles.  This includes background, hints,
+  and tips for taking on its challenges
 
   [***Logical puzzles***]({{< relref "/hands-on.md" >}}) are also
-  here, illustrating some principles of proof, with a potential
-  surprise or two.
+  here, illustrating principles of proof, with a potential surprise or
+  two.
 
   There are also demonstrations of solving basic algebra problems with
   the help of the computer.  Prooftoys handles algebra problems as
