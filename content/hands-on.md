@@ -19,7 +19,8 @@ menu: menu-site.md
 - [**The repetitious number**]({{< relref "/rep-num.md" >}})
 - [**Country Music Theorem**]({{< relref "/country-music.md" >}})
 - [**The Drinking Theorem**]({{< relref "/drinking.md" >}})
-- How long is a lunar?
+- [**A Fake Proof**]({{< relref "/fake-proof.md" >}}) that `1 = 2`
+- **How long is a lunar?** (upcoming)
 
 #### Algebra (preview!)
 
@@ -32,5 +33,5 @@ the "Solve" button.
 - [**Simultaneous linear equations**]({{< relref "/equations2.md" >}})
 - [**Simultaneous with no solution**]({{< relref "/equations3.md" >}})
 - [**Finding a common denominator**]({{< relref "/equations4.md" >}})
-- [**Rational functions**]({{< relref "/equations5.md" >}})
-- Division by zero
+- [**Rational functions**]({{< relref "/equations5.md" >}}) including
+  demo of division by zero
