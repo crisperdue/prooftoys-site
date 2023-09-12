@@ -65,8 +65,9 @@ tables, to support your intuitive sense of concepts such as *and*,
   numbers starting from a small handful of fundamental principles.  This
   includes background, hints, and tips for taking on its challenges
 
-  Try some curious [***logical puzzles***]({{< relref
-  "/hands-on.md" >}}).
+  [***Logical puzzles***]({{< relref "/hands-on.md" >}}) are also
+  here, illustrating some principles of proof, with a potential
+  surprise or two.
 
   Or start by solving basic algebra problems with the help of the
   computer.  Prooftoys handles algebra problems in a natural way as
