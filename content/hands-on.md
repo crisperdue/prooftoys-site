@@ -24,6 +24,14 @@ menu: menu-site.md
 
 #### Algebra (preview!)
 
+Solutions to typical algebra problems --- or solutions to sets of
+equations --- are typically mathematical statements equivalent to the
+problem statement, but in a simpler or more useful form such as `x =
+. . .`.  When solving for multiple variables, the prototypical result is
+an "and" that mentions each of those variables, like `x = . . . & y =
+. . .`.  If there are multiple solutions, the result is an "or" like `x
+= . . . | x = . . .`.
+
 Everything here, from the tactics to the presentation, is not nearly
 as polished as the rest of the site, but feel free to take a look.
 If you would like to see a worked solution to a problem, press
