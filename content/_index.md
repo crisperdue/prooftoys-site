@@ -42,7 +42,7 @@ handwaving.
 
 - Develop your understanding of sound and practical proof techniques.
 
-- Even assist you in solving algebra problems.
+- Demonstrate solutions of algebra problems as proofs.
 
 ### **Ways to start**
 
