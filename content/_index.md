@@ -69,9 +69,9 @@ tables, to support your intuitive sense of concepts such as *and*,
   here, illustrating some principles of proof, with a potential
   surprise or two.
 
-  Or start by solving basic algebra problems with the help of the
-  computer.  Prooftoys handles algebra problems in a natural way as
-  proofs, so your steps are guaranteed to be mathematically correct.
+  There are also demonstrations of solving basic algebra problems with
+  the help of the computer.  Prooftoys handles algebra problems as
+  proofs, so the steps are guaranteed to be mathematically correct.
 
 - ***In depth:*** through the [***documentation***]({{< relref
 "/documentation.md" >}}) of the logic and the system, including a
