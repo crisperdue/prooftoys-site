@@ -40,7 +40,7 @@ mathematical proof, general **concepts of reasoning** rather than
 cookbook procedures, in a way that is approachable to ordinary people.
 
 In a larger sense though, Prooftoys is a set of experiments with ways
-to learn these great ideas in our modern era.  Far too much of
+to learn these great ideas in our modern era.  Far too much of math
 education is still about people doing procedures that may have been
 useful three hundred years ago, but are thoroughly irrelevant now.
 
