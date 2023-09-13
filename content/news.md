@@ -7,6 +7,13 @@ description: >
 
 ### News
 
+##### 09/2023
+
+- New "[**Fake Proof**]({{< relref "/fake-proof.md" >}})" of `1 = 2`
+- New "[**Drinking Theorem**]({{< relref "/drinking.md" >}})"
+- New demonstrations of equation-solving with Prooftoys,
+  links in the "[**Hands-on**]({{< relref "/hands-on.md" >}})" page.
+
 ##### 07/2023
 
 - Focus on stable and predictable operations so proofs remain
@@ -17,7 +24,7 @@ description: >
 ##### 04/2023
 
 - [***Natural Numbers Game***]({{< relref "/number-game/tutorial1.md"
- >}}) extensive hands-on tutorial!
+ >}}) extensive hands-on tutorial
 
 ### Upcoming
 

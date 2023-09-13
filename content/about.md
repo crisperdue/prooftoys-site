@@ -34,7 +34,7 @@ learning to understand and use mathematics.
 ### About the logic
 
 The logic of Prooftoys is a form of <a target=_blank href=
-"http://www.cas.mcmaster.ca/sqrl/papers/SQRLreport18_rev2.pdf"> simple
+"https://imps.mcmaster.ca/doc/seven-virtues.pdf"> simple
 type theory</a>, based rather directly on the theory **Q<sub>0</sub>**
 of Carnegie Mellon University Professor Peter B. Andrews.  See the
 [tech notes]({{< relref "/tech-notes.md" >}}) for more details.
@@ -43,7 +43,7 @@ of Carnegie Mellon University Professor Peter B. Andrews.  See the
 
 One goal is to develop a friendly community of users around the tools
 here and their goals of using computers for mathematical reasoning.
-Feel free to say "hello" to the author through <a
+Don't hesitate to say "hello" to the author through <a
 href="mailto:cris@perdues.com"><b>email</b></a>.
 
 Sincerely,<br>

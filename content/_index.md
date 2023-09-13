@@ -33,13 +33,13 @@ super-powerful tools through a graphical user interface that helps you
 construct understandable and correct proofs with no holes and no
 handwaving.
 
-### **What is it for?**
+### **The Vision**
 
 On the one hand, Prooftoys is for learning **core ideas** of
 mathematical proof, general **concepts of reasoning** rather than
 cookbook procedures, in a way that is approachable to ordinary people.
 
-In a larger sense though, Prooftoys is a set of experiments with ways
+In a larger sense though, Prooftoys is an effort to find better ways
 to learn these great ideas in our modern era.  Far too much of math
 education is still about people doing procedures that may have been
 useful three hundred years ago, but are thoroughly irrelevant now.
@@ -50,11 +50,12 @@ mathematical reasoning that are based on simple principles used
 throughout ordinary high school mathematics, and Prooftoys uses
 one of these for all of its reasoning.
 
-Prooftoys is here to be an example of a new way of introducing
+Prooftoys is here as an example of a new way of introducing
 mathematics where the computer does things it is very good at, and
 human beings learn concepts and key ideas.  It also aims to do this in
 a way that is stimulating and interesting, not boring and a waste of
-time.
+time.  It is the result of ongoing experimentation, and will evolve
+based on the experience and input of people like you.
 
 ### **What can it do for me?**
 
@@ -64,7 +65,7 @@ time.
 - Grow your appreciation of the power of reasoning from fundamental
   principles.
 
-- Demonstrate solutions of traditional school math problems as proofs.
+- Demonstrate solving traditional school math problems through proof.
 
 ### **Ways to start**
 
@@ -154,7 +155,7 @@ aim to grow it as users become more advanced and ask for more.
 <hr>
 
 {{< divstyle class="flexBox"
- style="justify-content: space-evenly; margin: 2em 0;" >}}
+ style="justify-content: space-evenly; margin: 2em 0; font-weight: bold; font-size: larger;" >}}
 <a href="{{< relref "/about.md" >}}">About</a>
 <a href="{{< relref "/privacy.md" >}}">Privacy information</a>
 {{< /divstyle >}}
