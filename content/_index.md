@@ -23,7 +23,7 @@ noSideBar: true
 ## **What is Prooftoys?**
 
 Prooftoys is software and a set of resources for learning and using
-the principles of **precise reasoning**.
+the principles of **logical reasoning**.
 
 The Prooftoys system has been designed specifically to be approachable
 for beginners with little background in mathematics and even no
@@ -36,8 +36,8 @@ handwaving.
 ### **What is it for?**
 
 On the one hand, Prooftoys is for learning **core ideas** of
-mathematical proof, not cookbook procedures, but general **concepts of
-reasoning**, in a way that is approachable to ordinary people.
+mathematical proof, general **concepts of reasoning** rather than
+cookbook procedures, in a way that is approachable to ordinary people.
 
 In a larger sense though, Prooftoys is a set of experiments with ways
 to learn these great ideas in our modern era.  Far too much of
