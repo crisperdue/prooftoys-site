@@ -131,19 +131,16 @@ of the problem, and it will crank out the answer.  For many kinds of
 problems they are much more capable than Prooftoys, but you will not
 learn nearly as much about proper mathematical reasoning by using one,
 and they are not built to work collaboratively with the human user
-as Prooftoys is.
+as interactive proof assistants such as Prooftoys are.
 
 ### What's next?
 
-The system and this website are both works in progress.  More problems
-like this are on the way, so if you like what you see here, please --
+There are more logical puzzles and examples in the
+"[**hands-on**]({{< relref "/hands-on.md" >}})" section.
 
-> **<i>Say "Hello!"</i>**
-
-If you are interested in using this website to work math problems or
-learn more about mathematical reasoning, the author would love to
-hear from you.  Please check out the [**about**]({{< relref "/about.md"
->}}) page for ways to get in touch.
+And if some things here interest you, please check out the
+"[**about**]({{< relref "/about.md" >}})" page for ways to get in
+touch.
 
 <!--
 
