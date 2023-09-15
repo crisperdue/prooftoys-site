@@ -9,7 +9,7 @@ enableInlineShortcodes = true
   # To use local copies of libs, override with
   # local.toml, which avoids CDNs.
   jquery_url = "https://code.jquery.com/jquery-3.6.0.js"
-  dexie_url = "https://unpkg.com/dexie/dist/dexie.mjs"
+  dexie_url = "/lib/dexie-3.2.4.mjs"
   popper_url = "/popper.min.js"
   tippy_url = "/tippy-bundle.umd.js"
   mainSections = [ "" ]
