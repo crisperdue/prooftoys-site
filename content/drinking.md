@@ -36,7 +36,9 @@ either there exists a person who does not drink, or everyone drinks.
 
 Our computer-based proof works backward from the goal, transforming
 the assumptions until they are known to be true.  It uses some of the
-fancier quantifier laws known to Prooftoys.
+fancier quantifier laws known to Prooftoys --- so you will probably
+find it a harder proof than the 
+[Country Music Theorem]({{< relref "/country-music.md" >}}).
 
 Hover over step numbers to see highlighted the steps and parts of
 steps that are affected by each inference.
@@ -82,4 +84,6 @@ can see that it rewrites using `A | not A = T`.
 Here is a worksheet you can use to try building this proof yourself,
 or an alternate version.
 
-<div class="proof-editor mb-4"></div>
+<div class="proof-editor mb-4" data-steps='(steps
+(1 assumeExplicitly (t (exists {x. ((drinker x) => (forall {y. (drinker y)}))})))
+)'></div>
