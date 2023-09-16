@@ -13,26 +13,21 @@ as the ["drinker paradox"](https://wikipedia.org/wiki/Drinker_paradox).
 It can be stated, "There is someone in the pub such that, if they are
 drinking, then everyone in the pub is drinking."
 
-The statement here is slightly simplified, with the universe taking
-the place of the pub.  Mathematically we state:
+The statement here is slightly simplified, not mentioning the pub
+explicitly, just drinkers and non-drinkers:
 
-```
-exists {x. drinker x => forall {y. drinker y}}
-```
+`exists {x. drinker x => forall {y. drinker y}}`
 
 Wikipedia points out that the mathematical statement does not mean
 that there is a person who causes everyone else to drink when they
-drink, nor does it mean that _whenever_ they drink everyone else
-also drinks.
+drink, and it also does not mean that _whenever_ that person drinks
+everyone else also drinks.
 
 I think of this theorem as a variant of the statement that there is
 someone who drinks as little as anyone else.  We can then consider
 whether it is true when everyone drinks and whether it is true when at
-least one person does not drink at all.  It turns out that every
-non-drinker has the extraordinary property in the theorem's statement.
-
-The proof converts the theorem as stated to a statement that
-either there exists a person who does not drink, or everyone drinks.
+least one person does not drink at all.  In fact, every non-drinker
+has the extraordinary-sounding property in the theorem's statement.
 
 Our computer-based proof works backward from the goal, transforming
 the assumptions until they are known to be true.  It uses some of the
@@ -61,28 +56,26 @@ modifying the assumptions part until it is just `T`.
 [2] Rewrite the conditional into an "or".
 
 [3] Convert the "forall" into "not exists".  This rewrites with the
-rule `forall p == not (exists {x. not (p x)})`.  This successfully
-uses higher-order matching of `p` with `{y. drinker y}`.  In the
-result, `exists {x. not (p x)}` becomes `exists {y. not (drinker y)}`
-because Prooftoys uses the variable name `y` from the target
-step rather than `x`.  Click on the word "use" in line 3 to see
-details.
+rule `forall p == not (exists {x. not (p x)})`, matching `p` with
+`{y. drinker y}`.  Click on the word "use" in line 3 to see details.
 
 [4] Distribute the "or" over the two existentially quantified terms.
-This step also uses higher-order matching.
+This step uses a fancier kind of matching, known as "higher-order"
+matching.  To see it in action, click on the word "use" in line 4
+to see it in action.
 
 [5] Variable `x` does not occur inside the quantifier, so we can
 remove the quantifier.  (The quantified term has the same value
-regardless of the value of `x`.)  This also uses higher-order
-matching.
+regardless of the value of `x`.)
 
 [6] Simplify.  If you click on the word "simplify" on this line, you
-can see that it rewrites using `A | not A = T`.
+can see that it rewrites using `A | not A == T`, leaving just `T`
+as the only assumption, which it removes with another rewrite.
 
 #### Try it yourself
 
 Here is a worksheet you can use to try building this proof yourself,
-or an alternate version.
+or your own alternative proof.
 
 <div class="proof-editor mb-4" data-steps='(steps
 (1 assumeExplicitly (t (exists {x. ((drinker x) => (forall {y. (drinker y)}))})))
