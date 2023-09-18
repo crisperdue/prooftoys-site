@@ -61,8 +61,7 @@ rule `forall p == not (exists {x. not (p x)})`, matching `p` with
 
 [4] Distribute the "or" over the two existentially quantified terms.
 This step uses a fancier kind of matching, known as "higher-order"
-matching.  To see it in action, click on the word "use" in line 4
-to see it in action.
+matching.  To see it in action, click on the word "use" in line 4.
 
 [5] Variable `x` does not occur inside the quantifier, so we can
 remove the quantifier.  (The quantified term has the same value
@@ -71,6 +70,22 @@ regardless of the value of `x`.)
 [6] Simplify.  If you click on the word "simplify" on this line, you
 can see that it rewrites using `A | not A == T`, leaving just `T`
 as the only assumption, which it removes with another rewrite.
+
+**Technical notes on steps 4 and 5:** Step 5 uses the fact that
+`exists {x. a} == a`.  This fact looks as if it can remove any
+existential quantifier anywhere, but it can't.  It does let you remove
+the quantifier --- if the bound variable (e.g. `x`) does not appear in
+the term that substitutes for `a`!  This is one of the fine points of
+[substitution]({{< relref "/tech-notes.md#substitution" >}}) for bound
+variables such as `x` in step 4.
+
+Then if you look carefully at the inference in step 4, you may notice
+that step 4 substitutes for `p` and `q`.  The result looks as if it
+substitutes for `p x` and `q x`.  In fact it does a maneuver in the
+substitution that gives this effect, and also makes it possible to
+bring in terms with the variable `x` even though `x` is bound at the
+target site.  If you use the Proof Builder to dig down into the
+details of these steps, you can see this maneuver at work.
 
 #### Try it yourself
 

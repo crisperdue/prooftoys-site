@@ -64,7 +64,7 @@ Prooftoys uses rewriting and some simple tautologies to prove the
 correctness of each transformation it does, and the resulting
 assumptions are fully equivalent to the original ones.
 
-###### Assumptions about numbers
+##### Assumptions about numbers
 
 There are a few more transformations of assumptions that are applied
 very frequently, such as assumptions that expressions have numeric
@@ -75,95 +75,6 @@ duplicates, or in some cases removing assumptions entirely.
 In all of these cases, if you dig down into the details of these proof
 steps you will see that they use the same kinds of basic operations
 that you see in most other proof steps.
-
-### Variables and substitution
-
-It is customary in mathematics for variables to have names, for
-example `x`, `y`, and `z`.  The statement `x = x` is true because it
-is true for all possible values of `x`.
-
-So for example if we substitute a numeric term such `5` or `144` for
-`x` in `x = x`, we get `5 = 5` or `144 = 144`, which is just what you
-would expect.  In fact, you can substitute any term for x in a
-statement like this and get a correct result.
-
-###### No substituting for bound variables
-
-If a statement has variable binders e.g. "forall" (`forall`) or
-"exists" (`exists`), there are some limitations on substitution.
-Consider a statement like `x >= 0 => exists {y. x = y * y}`.  The
-`exists { ... }` term has a _bound variable_ `y` and a _body_, `x =
-y * y`.  We say an occurrence of a variable is _bound_ if it appears
-within the body of a term where it is the bound variable, otherwise we
-say the occurrence is _free_.  (In fact if a variable has a bound
-occurrence and a free occurrence, the two might as well have different
-names, because having the same name is not significant.)
-
-It is not possible to substitute for a bound variable, so a
-substitution for both `x` and `y` has no effect on bound occurrences
-of `y`.  If `y` occurs elsewhere in the statement, substitutions would
-affect those places.
-
-##### Scopes and substitution
-
-TODO: explain scope.
-
-The same variable name can appear both bound and free, or bound at
-different locations in the same statement.  In any of these cases we
-often refer to them as different variables.  So if we see an `x`, how
-do we determine which `x` is referenced, and what difference does it
-make?
-
-##### Renaming
-
-##### Freedom and the substituted variable
-
-<a id=renaming></a>
-### Renaming of bound variables
-Prooftoys treats terms the same if they differ only by harmless
-renamings of bound variables.  Not all renamings are harmless,
-but for example if a bound variable is given a new name that occurs
-nowhere else in a statement, along with all the references to it,
-that is a harmless renaming, one that does not change the meaning
-of the statement.
-
-### Substitution
-
-Even though substitution only affects occurrences of free variables,
-there is still a potential issue with the variables that are free in
-the substitution's replacement terms: they must remain free after the
-substitution.
-
-Suppose a replacement term contains a variable name that is also
-the name of a bound variable in the statement where the substitution
-is to be applied.  Naive substitution would result in an occurrence of
-the replacement variable becoming bound, though it needs to stay free.
-(This undesirable phenomenon is known in the field as _capturing_.)
-
-A simple solution is to harmlessly rename any bound variables like
-this before doing the substitution.
-
-### Equality of formulas
-
-Prooftoys considers statements containing bound variables to be "the
-same" if the only difference is in the names of some bound variables.
-
-Imagine finding all of the variable bindings in the two statements.
-They all have the form `{<boundvar> . <body>}`.  Since the only
-difference is in the names, the bindings occur in exactly the same
-locations in each statement.
-
-Now go through each of those locations, coloring the `<boundvar>` part
-of each one.  Each location gets its own unique color, the same color
-in both statements when the location is the same.  Within a binding
-body, every place the name of the bound variable refers to the same
-(bound) variable, unless it is within some inner binding of the same
-name.
-
-Imagine coloring all of these references to each bound variable with
-the same color as the `<boundvar>` it refers to.  The two formulas are
-equal exactly if everything not colored has the same text in the same
-places, and the same colors appear in the places in each formula.
 
 ### Substitution
 
@@ -204,7 +115,57 @@ variable in a statement is called an *instance* of the original
 statement, so we say that substituting one or more expressions for
 variables in a tautology gives an *instance* of the tautology.
 
-#### Substitution and types
+#### Substituting for bound variables
+
+Math textbooks commonly use "set builder" notations such as `{x. x <
+10}`, meaning the set of all `x` such that `x` is less than 10.  A
+variable like the `x` in this notation are known as a **bound
+variable**.  It turns out that notations like this lead to another
+form of substitution, very common in mathematics, but not really
+defined in most math texts.
+
+Type theory extends the concept to functions with values of all types,
+not just boolean values, so Prooftoys uses the notation to describe
+functions generally, for example using `{x. x * x}` for a function
+that yields the square of its input numbers.  In both of these two
+examples, `x` is the bound variable of the set or function.
+
+In Prooftoys you can write that 5 is between 0 and 10 with `{x. 0 < x
+& x < 10} 5 == T`, or just `{x. 0 < x & x < 10} 5`.  In other words,
+"5 is in the set of things that are between 0 and 10."  The statement
+`{x. 0 < x & x < 10} 5` is fully equivalent to `0 < 5 & 5 < 10` by
+substitution.  Prooftoys also caters to the traditional set notation
+by defining `in` so that `5 in {x. 0 < x & x < 10}` is also
+equivalent.
+
+#### More technical details
+
+<a id=renaming></a>
+##### Renaming of bound variables
+Prooftoys treats terms the same if they differ only by harmless
+renamings of bound variables.  Not all renamings are harmless,
+but for example if a bound variable is given a new name that occurs
+nowhere else in a statement, along with all the references to it,
+that is a harmless renaming, one that does not change the meaning
+of the statement.
+
+##### Substitution and "capture"
+
+Even though substitution only affects occurrences of free variables,
+there is still a potential issue with the variables that are free in
+the substitution's replacement terms: they must remain free after the
+substitution.
+
+Suppose a replacement term contains a variable name that is also
+the name of a bound variable in the statement where the substitution
+is to be applied.  Naive substitution would result in an occurrence of
+the replacement variable becoming bound, though it needs to stay free.
+(This undesirable phenomenon is known as _capturing_.)
+
+A simple solution is to harmlessly rename any bound variables like
+this before doing the substitution.
+
+##### Substitution and types
 
 In a substitution the variable and the substitute term must be of the
 same type.  For example, if the variable is boolean, the term must be
@@ -235,6 +196,28 @@ substitution, then the highlighted copies must also be free after
 substitution.  This is always achievable, and Prooftoys ensures it by
 automatically renaming bound variables in the original statement as
 needed.
+
+### Equality of formulas
+
+Prooftoys considers statements containing bound variables to be "the
+same" if the only difference is in the names of some bound variables.
+
+Imagine finding all of the variable bindings in the two statements.
+They all have the form `{<boundvar> . <body>}`.  Since the only
+difference is in the names, the bindings occur in exactly the same
+locations in each statement.
+
+Now go through each of those locations, coloring the `<boundvar>` part
+of each one.  Each location gets its own unique color, the same color
+in both statements when the location is the same.  Within a binding
+body, every place the name of the bound variable refers to the same
+(bound) variable, unless it is within some inner binding of the same
+name.
+
+Imagine coloring all of these references to each bound variable with
+the same color as the `<boundvar>` it refers to.  The two formulas are
+equal exactly if everything not colored has the same text in the same
+places, and the same colors appear in the places in each formula.
 
 ### Inference
 
