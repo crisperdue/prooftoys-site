@@ -84,7 +84,7 @@
 // expedites it a little, desirable because it modifies
 // the content and styling of the page.
 if (Toy.TOC) {
-  $(Toy.TOC).tableofcontents({exclude: $('h1, .hero, h5, h6')});
+  $(Toy.TOC).tableofcontents({exclude: $('h1, .hero *, .sidebar *, h5, h6')});
 }
 Toy.mathifyAll();
 $(function() {
