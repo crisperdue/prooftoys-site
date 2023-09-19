@@ -71,26 +71,52 @@ regardless of the value of `x`.)
 can see that it rewrites using `A | not A == T`, leaving just `T`
 as the only assumption, which it removes with another rewrite.
 
+***Tip:*** *Matching in Prooftoys has some extra cleverness that is
+used in steps 4 and 5 here.  The Proof Builder is smart about using
+this in making suggestions, so you may not need to know all about it.
+But if you would like to know more, read on.*
+
+*Steps 4 and 5 use facts with free variables `p`, `q`, and `a`
+matching terms in locations within a binding of the variable `x`
+(within the `{ ... }`), and that is where this more sophisticated
+matching applies.  In step 4 `p x` can match `not (drinker x)` where
+`x` is bound in `exists {x. ... }`.  Similarly, a term `q x` can match
+`not (exists {y. not (drinker y)}` in an area where `x` is bound.
+Both of these work because `p x` and `q x` in the fact have the bound
+variable `x` as arguments.  In step 5, the term `a` can match `not
+(exists {y. not (drinker y)})` because the bound `x` does not occur in
+it.  See the [technical notes]({{< relref
+"/tech-notes.md#substitution" >}}) for more information.*
+
+<!--
+matching facts like these with parts of a step, the match can
+succeed if the part of the step has no occurrence of any variable that
+is bound at that spot.  If a free variable such as `p` or `q`  is
+in a term such as `p x`, `q y`, `p x y` with arguments that are just
+a bound variable, it can successfully match against 
+possible to match terms of this kind with parts of a 
+
 **Technical notes on steps 4 and 5:** Step 5 uses the fact that
 `exists {x. a} == a`.  This fact looks as if it can remove any
 existential quantifier anywhere, but it can't.  It does let you remove
 the quantifier --- if the bound variable (e.g. `x`) does not appear in
 the term that substitutes for `a`!  This is one of the fine points of
 [substitution]({{< relref "/tech-notes.md#substitution" >}}) for bound
-variables such as `x` in step 4.
+variables such as the `x` in step 4.
 
 Then if you look carefully at the inference in step 4, you may notice
 that step 4 substitutes for `p` and `q`.  The result looks as if it
-substitutes for `p x` and `q x`.  In fact it does a maneuver in the
+substitutes for `p x` and `q x`.  It does a maneuver along with the
 substitution that gives this effect, and also makes it possible to
 bring in terms with the variable `x` even though `x` is bound at the
 target site.  If you use the Proof Builder to dig down into the
 details of these steps, you can see this maneuver at work.
+-->
 
 #### Try it yourself
 
 Here is a worksheet you can use to try building this proof yourself,
-or your own alternative proof.
+or your own alternative version.
 
 <div class="proof-editor mb-4" data-steps='(steps
 (1 assumeExplicitly (t (exists {x. ((drinker x) => (forall {y. (drinker y)}))})))
