@@ -5,6 +5,14 @@ menu: menu.md
 
 ## The problem of the repetitious number
 
+This puzzle comes from the book "My Best Mathematical and Logic
+Puzzles" by the legendary <a target=_blank
+href="https://en.wikipedia.org/wiki/Martin_Gardner">Martin
+Gardner</a>, author of numerous books of entertaining and puzzling
+mathematics and, for 25 years, the Mathematical Games column in
+Scientific American magazine.
+
+It is problem 20 in the book, a little mathematical parlor trick.
 In this parlor trick you ask *spectator A* to write down any three-digit
 number, then to copy the number to a new piece of paper, followed by
 the same digits again, making a six-digit number.  Without looking,

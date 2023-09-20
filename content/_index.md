@@ -42,7 +42,7 @@ cookbook procedures, in a way that is approachable to ordinary people.
 In a larger sense though, Prooftoys is an effort to find better ways
 to learn these great ideas in our modern era.  Far too much of math
 education is still about people doing procedures that may have been
-useful three hundred years ago, but are thoroughly irrelevant now.
+useful three hundred years ago, but pointless to do by hand now.
 
 Computers can do the procedures for us, but without the concepts
 we are still lost.  Luckily, there are now powerful systems of
@@ -50,12 +50,12 @@ mathematical reasoning that are based on simple principles used
 throughout ordinary high school mathematics, and Prooftoys uses
 one of these for all of its reasoning.
 
-Prooftoys is here as an example of a new way of introducing
-mathematics where the computer does things it is very good at, and
-human beings learn concepts and key ideas.  It also aims to do this in
-a way that is stimulating and interesting, not boring and a waste of
-time.  It is the result of ongoing experimentation, and will evolve
-based on the experience and input of people like you.
+Prooftoys is an example of a new way of introducing mathematics where
+the computer does things it is very good at, and human beings learn
+concepts and key ideas.  It also aims to do this in a way that is
+stimulating and interesting, not boring and a waste of time.  It is
+the result of ongoing experimentation, and will evolve based on the
+experience and input of people like you.
 
 ### **What can it do for me?**
 
@@ -83,11 +83,11 @@ tables, to support your intuitive sense of concepts such as *and*,
 *or*, *not*, and *implies*).
 
 - [***Hands on:***]({{< relref "/hands-on.md" >}}) with an extensive
-  and self-contained [***Natural Numbers Game tutorial***]({{< relref
-  "/number-game/tutorial1.md" >}}) that takes you step-by-step through
-  proofs of important properties of numbers starting from a small
-  handful of fundamental principles.  This includes background, hints,
-  and tips for taking on its challenges
+  and self-contained [***Natural Numbers Game***]({{< relref
+  "/number-game/tutorial1.md" >}}) tutorial that takes you
+  step-by-step through proofs of important properties of numbers
+  starting from a small handful of fundamental principles.  This
+  includes background, hints, and tips for taking on its challenges
 
   [***Logical puzzles***]({{< relref "/hands-on.md" >}}) are also
   here, illustrating principles of proof, with a potential surprise or
@@ -113,9 +113,9 @@ It lets you change your mind as much as you like, encouraging you to
 "play around" with your proofs.
 
 **Simplicity.** The logic used by Prooftoys has also been chosen
-specifically for beginners.  For example its single rule of inference
-is just a modest generalization of what is taught in any high school
-course in basic algebra.
+specifically to be useful to beginners.  For example its single rule
+of inference is just a modest generalization of what is taught in any
+high school course in basic algebra.
 
 Statements in the logic are simply formulas with constants, variables,
 and functions.  Prooftoys reduces the number of concepts to a minimum,
@@ -135,9 +135,9 @@ before it.
 proof available in the proof builder and all proof displays.  A click
 lets you drill down into the details of any step, to any depth.
 
-**Resources.** With this website you can see how it is done or learn
-about the ideas behind the logic to build your skills and confidence
-in solving mathematical problems through proof.
+**Resources.** With this website you can see how proofs are done or
+learn about the ideas behind the logic to build your skills and
+confidence in solving mathematical problems through proof.
 
 **Prooftoys is for learning.** If you need more power or larger scale,
 you should look at more established proof assistant systems, which
@@ -150,7 +150,7 @@ support:
 The [Prooftoys](http://prooftoys.org) website and its software are
 ongoing experiments in creating computer aids to help human beings do
 mathematics.  Its knowledge of mathematics is quite limited, but we
-aim to grow it as users become more advanced and ask for more.
+aim to grow it as users advance.
 
 <hr>
 

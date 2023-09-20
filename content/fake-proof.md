@@ -38,7 +38,7 @@ because *false* implies anything.  The final step is an instance of
 the tautology `F => a` --- one typical result of trying fallacious
 reasoning in Prooftoys.
 
-Remember, in a simplification step, if you click on the word
+Remember, when viewing a simplification step, if you click on the word
 "simplify", the display will show step by step how the simplification
 is done.
 

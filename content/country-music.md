@@ -67,6 +67,6 @@ removing ones that are not desired.  It is also possible to work
 `((exists {x. (not (Rock x))}) & (forall {x. ((Rock x) | (Country x))}))
     => ((exists {x. (not (Rock x))}) & (forall {x. ((Rock x) | (Country x))}))`
 
-and transforming the *conclusion* into the desired one.
-Can you do a version of this proof by working forward?
+and transforming the *conclusion* into the desired one.  Would
+you be able to create a version of this proof that works forward?
 
