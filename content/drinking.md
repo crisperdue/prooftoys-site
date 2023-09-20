@@ -72,21 +72,22 @@ can see that it rewrites using `A | not A == T`, leaving just `T`
 as the only assumption, which it removes with another rewrite.
 
 ***Tip:*** *Matching in Prooftoys has some extra cleverness that is
-used in steps 4 and 5 here.  The Proof Builder is smart about using
-this in making suggestions, so you may not need to know all about it.
-But if you would like to know more, read on.*
+used in steps 4 and 5 here.  The Proof Builder uses it when making
+suggestions, so you may be happy just looking at the suggestions.  But
+if you would like to know more, read on.*
 
-*Steps 4 and 5 use facts with free variables `p`, `q`, and `a`
-matching terms in locations within a binding of the variable `x`
-(within the `{ ... }`), and that is where this more sophisticated
-matching applies.  In step 4 `p x` can match `not (drinker x)` where
-`x` is bound in `exists {x. ... }`.  Similarly, a term `q x` can match
-`not (exists {y. not (drinker y)}` in an area where `x` is bound.
-Both of these work because `p x` and `q x` in the fact have the bound
-variable `x` as arguments.  In step 5, the term `a` can match `not
-(exists {y. not (drinker y)})` because the bound `x` does not occur in
-it.  See the [technical notes]({{< relref
-"/tech-notes.md#substitution" >}}) for more information.*
+*Step 4 uses a fact with free variables `p` and `q`, and step 5 uses a
+fact with free variable `a`.  They match parts of the steps that are
+within a binding of the variable `x` (inside the braces `{x. ... }`),
+and that is where this more sophisticated matching can be helpful.  In
+step 4, `p x` is matched with `not (drinker x)` in an area of step 3
+where `x` is bound.  Similarly, `q` is matched with `not (exists
+{y. not (drinker y)}` in the same area.  Both of these succeed because
+`p` and `q` are both applied to the bound variable `x` in the fact.
+In step 5, `a` matches the term `not (exists {y. not (drinker y)})`,
+which is OK because that term does not contain the bound variable `x`.
+See the [technical notes]({{< relref "/tech-notes.md#substitution"
+>}}) for more information.*
 
 <!--
 matching facts like these with parts of a step, the match can
