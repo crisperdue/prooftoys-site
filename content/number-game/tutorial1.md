@@ -32,9 +32,9 @@ mathematical proofs.
 The structure of this game is largely a clone of the admirable
 original [Natural Number
 Game](https://www.ma.imperial.ac.uk/~buzzard/xena/natural_number_game/)
-tutorial developed in England at Cambridge University using the [Lean
-Theorem Prover](https://leanprover.github.io/).  This edition uses the
-Prooftoys proof assistant, with its focus on graphical user
+tutorial developed in England at Imperial College London using the
+[Lean Theorem Prover](https://leanprover.github.io/).  This edition
+uses the Prooftoys proof assistant, with its focus on graphical user
 interaction, simplicity, and ease of use for beginners.  While it
 knows far less mathematics than research-grade proof assistants such
 as Lean, the logic of Prooftoys is capable of supporting advanced
