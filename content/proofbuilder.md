@@ -6,7 +6,7 @@ description: >
   build proofs with its graphical user interface.
 ---
 
-# The proof builder
+# Proof Builder
 
 Note: <i>Proof displays and the Proof Builder are supported in recent
 versions of Firefox, Chrome, and Microsoft Edge.</i>
@@ -29,7 +29,7 @@ what inference rules do and how they work.
 
 {{% divstyle class="outdented" %}}
 
-### Proof builder
+## The Proof Builder
 
 {{% divstyle style="margin-top: 1.5em" %}}
 <div id=proofEditor></div>
