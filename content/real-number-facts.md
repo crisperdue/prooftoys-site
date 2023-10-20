@@ -116,7 +116,7 @@ There are other possible axiomatizations, all equivalent.
 `1 != 0`
 {{% /preblock %}}
 
-## Ordering axioms
+## Ordering
 
 Again, each of these axioms assumes that the variables are members of
 the field, in this case the real numbers.  Adding these axioms to the
@@ -138,12 +138,12 @@ Effects of addition and multiplication on ordering:
 `0 < x & 0 < y => 0 < x * y`
 {{% /preblock %}}
 
-### Ordering: definitions
+Ordering: more definitions
 
 {{% preblock %}}
-x > y == y < x
-x <= y == x < y | x = y
-x >= y == x > y | x = y
+`x > y == y < x`
+`x <= y == x < y | x = y`
+`x >= y == x > y | x = y`
 {{% /preblock %}}
 
 ## Dedekind completeness
@@ -151,14 +151,14 @@ x >= y == x > y | x = y
 Upper bounds
 
 {{% preblock %}}
-isUB x S == R x & subset S R & not (empty S) & forall {y. S y => y <= x}
+`isUB x S == R x & S subset R & not (empty S) & forall {y. S y => y <= x}`
 {{% /preblock %}}
 
 
 Least upper bounds
 
 {{% preblock %}}
-isLUB x S == isUB x S & forall {y. isUB y S => x <= y}
+`isLUB x S == isUB x S & forall {y. isUB y S => x <= y}`
 {{% /preblock %}}
 
 {{< hereScript >}}
