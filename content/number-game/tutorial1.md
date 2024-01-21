@@ -29,9 +29,8 @@ natural numbers (the "counting numbers", 0, 1, 2, 3, and so on up from
 there) and work your way up to more powerful knowledge through
 mathematical proofs.
 
-The structure of this game is largely a clone of the admirable
-original [Natural Number
-Game](https://www.ma.imperial.ac.uk/~buzzard/xena/natural_number_game/)
+The structure of this game is largely a clone of the
+[Natural Number Game](https://adam.math.hhu.de/#/g/leanprover-community/nng4)
 tutorial developed in England at Imperial College London using the
 [Lean Theorem Prover](https://leanprover.github.io/).  This edition
 uses the Prooftoys proof assistant, with its focus on graphical user
