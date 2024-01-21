@@ -16,11 +16,11 @@ publicly-available theorems and rules of inference.  It can make
 working with proofs easier, apply rules of inference correctly, show
 what inference rules do and how they work.
 
-#### Quickstart video
+## Quickstart video
 
 <div style="margin-bottom: 2em">
-<a href="https://youtube.com/watch?v=WYcJBE6ZCgA">
-{{< image src="QuickstartYoutubeImage.jpg" title="Youtube quickstart video" >}}
+<a href="https://youtube.com/watch?v=WLvGFIHqL88">
+{{< image src="PBPreview.jpg" title="Youtube quickstart video" >}}
 </a>
 </div>
 
