@@ -26,7 +26,7 @@ your toolbox to use at any time:
 1. `NN 0`
 1. `NN x => NN (succ x)`
 1. `NN x => 0 != succ x`
-1. `NN (succ x) & NN (succ y) => x = y`
+1. `NN n & NN m & succ m = succ n => m = n`
 1. `P 0 & (P n => P (succ n)) => (NN x => P x)`
 
 These are the standard axioms for the natural numbers, known as the
