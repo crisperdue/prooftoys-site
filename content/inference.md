@@ -90,8 +90,7 @@ simultaneously, even substituting `x` for `y` and `y` for `x`.
 Rewriting automatically includes substitution as needed.
 
 There are some extra technical details if bound variables are present.
-See the [technical notes]({{< relref "/tech-notes.md#substitution"
->}}) for details and explanation.
+See the [technical notes]({{< relref "/tech-notes.md#substitution">}}) for details and explanation.
 
 Another form of substitution applies a function in the form `{<var>
 . <body>}` to an argument (or arguments) by substituting for `<var>`
@@ -170,6 +169,17 @@ result.
 In the actual Prooftoys system, axioms such as commutativity are
 expressed as conditionals, e.g. `R x => x * y = y * x`, so the
 rewriting adds an assumption, but other than that it is the same.
+
+#### Conveniences for rewriting
+
+In a strict sense, it is only possible to rewrite with equational facts --- ones of the form
+
+{{% preblock %}}
+`A = B                (including A == B)` or
+`A => (B = C)     (including A => (B == C))`
+{{% /preblock %}}
+
+It turns out that in the logic of Prooftoys, any fact can be converted into an equivalent equation using the fact `A == (A == T)`, and the rewriting rules take advantage of this . If given a fact that is not in an equational form, they convert it to an equation. Prooftoys rewriting can use a conditional fact `A => B` as `A => (B == T)`; and an unconditional fact as just `A == T`. If the fact is already equational, rewriting only uses it as stated.
 
 ### Simplification
 
