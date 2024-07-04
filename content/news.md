@@ -7,6 +7,19 @@ description: >
 
 ### News
 
+##### 07/2024
+
+- Fix the induction axioms to properly require an internal quantifier.
+- To this end, support subgoals in the rules and displays so proofs
+  remain very similar to what they were before.  Update existing
+  proofs accordingly.
+
+##### 05/2024
+
+- New "detach" inference rule.  Selecting the conclusion of a step
+  searches for facts with assumptions it matches.  The rule
+  substitutes into the fact, then removes it as true.
+
 ##### 09/2023
 
 - New "[**Fake Proof**]({{< relref "/fake-proof.md" >}})" of `1 = 2`

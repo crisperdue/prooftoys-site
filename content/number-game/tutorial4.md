@@ -9,7 +9,7 @@ description: >
 
 ### A first induction proof: adding to zero
 
-> Why is a ham sandwich is better than paradise?  (answer at the
+> Why is a ham sandwich better than paradise?  (answer at the
 > bottom of the page)
 
 The math challenge here is to prove that `NN n => 0 + n = n`.
