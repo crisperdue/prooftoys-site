@@ -5,6 +5,11 @@ theme = "hugo-whisper-theme"
 
 enableInlineShortcodes = true
 
+[sitemap]
+  # Give a reasonable default priority to all pages.
+  # Normal range is 0.0 - 1.0.
+  priority = 0.5
+
 [params]
   # To use local copies of libs, override with
   # local.toml, which avoids CDNs.
