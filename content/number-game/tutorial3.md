@@ -51,7 +51,7 @@ We define addition of natural numbers with two basic facts about
 addition:
 
 - `NN x => x + 0 = x` --- adding zero has no effect
-- `NN x => x + succ y = succ (x + y)` --- adding the next number
+- `NN x & NN y => x + succ y = succ (x + y)` --- adding the next number
 
 Proving some well-known properties of addition from these fundamental
 properties will be your challenges, starting with this one, that `NN n
