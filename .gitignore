@@ -12,6 +12,8 @@ go.mod
 /static/lib/
 # The themes are downloaded from elsewhere.
 /themes/
+# Items not yet ready for version control, mainly .md files.
+/content/drafts/
 # Miscellaneous stuff just in case.
 /tmp/
 .DS_Store
