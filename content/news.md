@@ -9,10 +9,12 @@ description: >
 
 ##### 07/2024
 
-- Fix the induction axioms to properly require an internal quantifier.
-- To this end, support subgoals in the rules and displays so proofs
-  remain very similar to what they were before.  Update existing
-  proofs accordingly.
+- The axiom of induction now properly contains an internal quantifier.
+- The inference rule / command that sets up an induction proof now imports relevant assumptions into the scope of the quantifier.
+- In proofs that have a goal, steps with the goal's conclusion highlight undesired assumptions in red to indicate that they need to be proved true.
+- There is now a formal "subgoal" rule. This allows induction proofs to stay the same as before except for use of an official subgoal in proving the inductive case.
+- Improvements to manual and automatic simplification.
+- Numerous improvements to presentation of rules in menus and proof displays.
 
 ##### 05/2024
 
