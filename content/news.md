@@ -9,7 +9,7 @@ description: >
 
 ##### 07/2024
 
-- The entire proof builder system is now converted from JavaScript to Typescript, and now compiles with minimal errors.
+- The entire proof builder system is now converted from JavaScript to Typescript and compiles with minimal errors.
 - The axiom of induction now properly contains an internal quantifier.
 - The inference rule / command that sets up an induction proof now imports relevant assumptions into the scope of the quantifier.
 - In proofs that have a goal, steps with the goal's conclusion highlight undesired assumptions in red to indicate that they need to be proved true.
