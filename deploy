@@ -20,6 +20,16 @@ sleep 1
 run cd $PROOFTOYS
 run git pull
 
+echo
+errcount=$(tsc | grep -w error | wc -l)
+if [[ $? = 0 || $? = 2 ]]; then
+  echo "TSC: $errcount warnings"
+ else
+  echo "TSC FAILED" >&2
+  exit 1
+fi
+echo
+
 run cd $PSITE
 run git pull
 
