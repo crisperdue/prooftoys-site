@@ -37,11 +37,25 @@ enableInlineShortcodes = true
       unsafe = true
 
 [module]
+  # To interpret all of these, look at go.mod
+  # in this folder, which maps alleged mount URLs
+  # to locations in the local filesystem.
   [[module.imports]]
+    # Alleged URL to mount:
+    # Remapped to local file path in go.mod such as
+    # ~/src/prooftoys.
     path = "example.com/prooftoys"
     [[module.imports.mounts]]
+      # Path to mount:
       source = "js"
+      # Where to mount it within this workspace:
+      # TODO: Remove this when superseded by assets/js.
       target = "assets/pt/js"
+    [[module.imports.mounts]]
+      # Path to mount:
+      source = "js"
+      # Also make js/* "resources" available as /js/* here.
+      target = "assets/js"
     [[module.imports.mounts]]
       source = "scss"
       target = "assets/scss"
