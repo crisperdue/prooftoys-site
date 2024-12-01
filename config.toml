@@ -13,6 +13,8 @@ enableInlineShortcodes = true
 [params]
   # To use local copies of libs, override with
   # local.toml, which avoids CDNs.
+  # SO -- At runtime, jQuery comes from here:
+  # Type info for it comes from node_modules/...
   jquery_url = "https://code.jquery.com/jquery-3.6.0.js"
   dexie_url = "/lib/dexie-3.2.4.mjs"
   popper_url = "/popper.min.js"
@@ -56,6 +58,10 @@ enableInlineShortcodes = true
       source = "js"
       # Also make js/* "resources" available as /js/* here.
       target = "assets/js"
+    [[module.imports.mounts]]
+      source = "node_modules"
+      # This path is convenient.  Could it cause confusion?
+      target = "assets"
     [[module.imports.mounts]]
       source = "scss"
       target = "assets/scss"
