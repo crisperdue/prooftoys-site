@@ -17,15 +17,14 @@ description: >
 This is the trickiest challenge of our own adventures in reasoning
 about addition, and a proper capstone for this adventure.
 
-[[Notes: this proof needs simplifications with T and F (or
-tautologies).  Probably some earlier problem should introduce
-simplification.  Also it uses some of the less intuitive properties
-of the conditional.  And there should probably be a little discussion
-about irrelevant assumptions in an earlier page.]]
-
 <div class=proof-editor data-exercise="nat/addx8"></div>
 
 #### *Congratulations, You Did It!!*
+
+*Notes: this proof needs simplifications with T and F (or
+tautologies).  Also it uses some of the less intuitive properties of
+the conditional.  And there should probably be a little discussion
+about irrelevant assumptions in an earlier page.*
 
 <!--
 This is officially the end.  There is always a next challenge though,

@@ -28,29 +28,6 @@ with this [**Side Trip**]({{< relref "/number-game/tutorial6.md" >}}).
 
 <div class=proof-editor data-exercise="nat/add4"></div>
 
-#### A bit of theory
-
-**How does Prooftoys come up with the steps labeled as "set up
-induction"?**  Look at that step in this proof.  It should have
-two assumptions like this:
-
-`x + 0 = 0 + x`, and `((x + n = n + x) ⇒ (x + succ n = succ n + x))`
-
-The axiom of induction is:
-
-`P 0 & (P n => P (succ n)) => (NN x => P x)`
-
-So suppose a function `P` is defined as:
-
-`P n == x + n = n + x`
-
-Then `P 0` is `x + 0 = 0 + x`.
-
-Also `P n` is `x + n = n + x`, and `P (succ n)` is `x + succ n = succ
-n + x`.
-
-This is the idea behind the setup of an induction proof.
-
 #### ➭ [***Next***]({{< relref "/number-game/tutorial8.md" >}})
 
 ##### ➭ [***Side trip: closure property and adding one***]({{< relref

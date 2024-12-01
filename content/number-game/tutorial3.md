@@ -6,10 +6,12 @@ description: >
   Introducing the natural numbers
 ---
 
-### Axiomatics
+## Properties of the natural numbers
 
 > God created the integers; all else is the work of man. -- Leopold
 > Kronecker
+
+### Axioms
 
 The natural numbers have just two building blocks: the initial number
 0, and a successor function that gives the next natural number.
@@ -50,23 +52,24 @@ It may seem odd to talk about numbers without the concept of addition.
 We define addition of natural numbers with two basic facts about
 addition:
 
-- `NN x => x + 0 = x` --- adding zero has no effect
+- `NN x => x + 0 = x` --- adding zero to a number gives the same number back
 - `NN x & NN y => x + succ y = succ (x + y)` --- adding the next number
 
 Proving some well-known properties of addition from these fundamental
-properties will be your challenges, starting with this one, that `NN n
-=> n + succ 0 = succ n`.
+properties will be your challenges.
 
-### First addition challenge
+### A property of addition
 
-*Hint:* start by selecting `n + succ 0` in the left (assumption) side
-of the first step.  After that, selecting assumptions (in red) or
-parts of assumptions that don't belong in the result should help you
-get good suggestions from the proof builder Basic menu.
+The first property we will prove about addition is that `NN n => n +
+succ 0 = succ n`.
+
+*How to:* start by selecting `n + succ 0` in the left (assumption)
+side of the first step, and convert it to `succ (n + 0)`.  After that,
+simplifying the assumptions will get the needed result.
 
 <div class=proof-editor data-exercise="nat/nat4"></div>
 
-My proof of this has five steps: four plus the initial setup.
+If you wish, all of the simplification can be done with a single step.
 
 ### Why do some proof steps use `(x = x) == T`?
 
