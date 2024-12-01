@@ -20,6 +20,9 @@ sleep 1
 run cd $PROOFTOYS
 run git pull
 
+# Update node_modules to match config files.
+npm install
+
 echo
 errcount=$(tsc | grep -w error | wc -l)
 if [[ $? = 0 || $? = 2 ]]; then
