@@ -167,8 +167,6 @@ jQuery(function() {
 
   const rules = Toy.rules;
   
-  Toy.requireRealNumbers();
-
   // Proof display
   const display = new Toy.ProofDisplay();
   window.proofDisplay = display;  // debugging
@@ -177,6 +175,7 @@ jQuery(function() {
   function fact(statement) {
     display.addStep(rules.fact(statement));
   }
+  Toy.requireScript(Toy.realNumbersScript).then(() => {
   fact('@ R x => x * 0 = 0');
   fact('@ R x => (neg 1) * x = neg x');
   fact('@ R x => -1 * x = neg x');
@@ -205,6 +204,6 @@ jQuery(function() {
   const step2 = rules.instVar(step1, '0', 'x');
   const step3 = rules.rewrite(step2, '/right/left', '0 + a = a');
   demo.setSteps([step1, step2, step3]);
-
+  });
 });
 {{< /hereScript >}}
