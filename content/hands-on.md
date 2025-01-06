@@ -22,7 +22,9 @@ menu: menu-site.md
 - [**A Fake Proof**]({{< relref "/fake-proof.md" >}}) that `1 = 2`
 - **How long is a lunar?** (upcoming)
 
-#### Algebra (rough draft)
+#### Algebra
+
+(rough draft)
 
 Solutions to typical algebra problems --- or solutions to sets of
 equations --- are typically mathematical statements equivalent to the
