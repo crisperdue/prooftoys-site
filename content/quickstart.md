@@ -5,9 +5,10 @@ description: >
 ---
 
 <!--
-# <center>A Computer Partner</center>
 
-## <center>for mathematics</center>
+# <center>The Computer as a</center>
+
+## <center>Mathematics Partner</center>
 
 
 
