@@ -1,4 +1,4 @@
-# Some contents are specific to this copy of repo
+# File .git/info/exclude lists items to just ignore in this copy
 go.mod
 # Generated site goes here.
 /public/
@@ -12,8 +12,8 @@ go.mod
 /static/lib/
 # The themes are downloaded from elsewhere.
 /themes/
-# Items not yet ready for version control, mainly .md files.
-/content/drafts/
+# Items not yet ready for version control
+/scraps/
 # Miscellaneous stuff just in case.
 /tmp/
 .DS_Store
