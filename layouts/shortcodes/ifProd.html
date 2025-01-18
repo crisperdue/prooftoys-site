@@ -1,0 +1,6 @@
+<!-- Process the inner only in production -->
+{{ if not (eq hugo.Environment "production") }}
+{{ printf "<!-- OK in production: %s -->" .Inner | safeHTML }}
+{{ else }}
+{{- .Inner | $.Page.RenderString -}}
+{{ end }}
