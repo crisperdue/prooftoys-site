@@ -21,23 +21,19 @@ Conversion notes:
 
 * Docs to Markdown version 1.0β34
 * Wed Jul 26 2023 22:20:00 GMT-0700 (PDT)
-* Source doc: Mathtoys Technical Notes
 ----->
 
 
 
 
-The notes here are generally on the fundamental concepts, terminology, mathematics, and system design to support the mathematics for Mathtoys. Notes on handling of numbers in Mathtoys, solving equations, and such are in the Mathtoys Algebra notes.
+The notes here are generally on the fundamental concepts, terminology, mathematics, and system design to support the mathematics for Prooftoys. Notes on handling of numbers, solving equations, and such are in the Algebra notes.
 
 **See also:**
 
 
 
-* [Mathtoys Algebra Notes](https://docs.google.com/document/d/167ZD4SS6d7TYupkL-8YSxLP30HsbADd5D385-wjJD9U/edit?usp=sharing)
-* [Mathtoys Project Notes](https://docs.google.com/document/d/1z84aUw_5o5tyVYLz3jgOe5ya8k6CTFfVU0clEZDP6pE/edit?usp=sharing)
+* [Algebra Notes](https://docs.google.com/document/d/167ZD4SS6d7TYupkL-8YSxLP30HsbADd5D385-wjJD9U/edit?usp=sharing)
 * [Creating Usable Computer Tools for Math](http://drive.google.com/open?id=1kodTzr0VsfaseUN-st5RGNkipPIFBc6nLQzPS-H7hhg)
-* [Mathtoys Posts](http://drive.google.com/open?id=1YNwhhC0WApTCkKkFOhcDTlzrFRqgKqvif-uKvQMMow4)
-* [Mathtoys Community](https://plus.google.com/communities/114988124375826899091)
 * [Mathtoys folder](https://drive.google.com/open?id=0B0Lyx0sEqeeNcXFiaW5zdXZuSTQ)
 
 
@@ -73,19 +69,19 @@ If potentially equal, then “as narrow/wide as”.
 
 This section covers semantic differences, not notational differences.
 
-All of Andrews’ basic definitions are abbreviations in which a symbol (which may have type parameters) abbreviates a term with no free variables. In Mathtoys these are merely stated as identities, and there is no metalinguistic demonstration that they are eliminable.
+All of Andrews’ basic definitions are abbreviations in which a symbol (which may have type parameters) abbreviates a term with no free variables. In Prooftoys these are merely stated as identities, and there is no metalinguistic demonstration that they are eliminable.
 
-Andrews’ Axiom 5 applies only to definite description for sets of individuals. For all other types the operator is defined, and proves the related properties metamathematically, outside Q<sub>0</sub> itself. Unlike Mathtoys, Andrews also defines ℩<sub>0(00)</sub> so the “null” boolean value is F, though this particular constant is never used.
+Andrews’ Axiom 5 applies only to definite description for sets of individuals. For all other types the operator is defined, and proves the related properties metamathematically, outside Q<sub>0</sub> itself. Unlike Prooftoys, Andrews also defines ℩<sub>0(00)</sub> so the “null” boolean value is F, though this particular constant is never used.
 
-Mathtoys (currently) has Andrews’ theorem 5300 as its Axiom 2, but this difference could easily be removed.
+Prooftoys (currently) has Andrews’ theorem 5300 as its Axiom 2, but this difference could easily be removed.
 
-Andrews divides Axiom 4 into sub-cases, where Mathtoys does not. Furthermore, the Mathtoys substitution operation automatically renames bound variables to avoid capturing, avoiding some restrictions on substitution that Q<sub>0</sub> has. The automatically generated names in Mathtoys are reserved for bound variables only.
+Andrews divides Axiom 4 into sub-cases, where Prooftoys does not. Furthermore, the Prooftoys substitution operation automatically renames bound variables to avoid capturing, avoiding some restrictions on substitution that Q<sub>0</sub> has. The automatically generated names in Prooftoys are reserved for bound variables only.
 
-In Mathtoys, terms that differ only in names of bound variables are deemed to be equal without proving them to be so.
+In Prooftoys, terms that differ only in names of bound variables are deemed to be equal without proving them to be so.
 
-In general Mathtoys does not support metalinguistic reasoning. So where Andrews shows theorem schemas, in Mathtoys there are only rules of inference that generate instances of the schemas given actual terms.
+In general Prooftoys does not support metalinguistic reasoning. So where Andrews shows theorem schemas, in Prooftoys there are only rules of inference that generate instances of the schemas given actual terms.
 
-Mathtoys is fundamentally a Hilbert-style system, where Andrews’ Q<sub>0</sub> becomes a natural deduction system with a deduction theorem.
+Prooftoys is fundamentally a Hilbert-style system, where Andrews’ Q<sub>0</sub> becomes a natural deduction system with a deduction theorem.
 
 Prooftoys has no deduction theorem.  Instead the Prooftoys version of Andrews' crucial Rule R' is a derived rule of inference that takes |- A => (t1 = t2) and |- A => C to |- A => D, where D is like C, with an occurrence of t1 replaced by t2 (under conditions described by Andrews). This description of course is metalinguistic. Prooftoys has no ability to reason metalinguistically.  All schemas in Andrews' description of Q0 become functions that generate theorems in Prooftoys.
 
@@ -252,7 +248,7 @@ Mario had similar comments in the same forum on September 9, 2017:
 
     Even type theory, which was invented *specifically for avoiding junk theorems*, fought this demon and lost in some places, specifically division by zero. Most of the type theory systems I know, like Isabelle, Coq, and Lean, made the deliberate choice to totalize the division function so that x / 0 = 0, because it's just more convenient. Ironically, Metamath is one of the few systems that bucks this trend, and properly states that division is undefined at zero. For example, 1/(1/x) = x is true for x =/= 0, but is "coincidentally" true for x = 0 if you define 1/0 = 0, which saves you having to prove that x =/= 0 when applying this theorem. 
 
-It is interesting to me that HOL Light (and probably HOL 4?) also treat division by zero this way, though I don’t think it is acceptable for Mathtoys, because it is too unconventional.
+It is interesting to me that HOL Light (and probably HOL 4?) also treat division by zero this way, though I don’t think it is acceptable for Prooftoys, because it is too unconventional.
 
 
 #### Alternative: null set as null value
@@ -278,17 +274,17 @@ Z is a similar language with a classical logic.
 IMPS (Lutins) is a classical type theory modified with a concept of definedness. Predicates return false when the input is undefined.
 
 
-### Mathtoys system notes
+### Prooftoys system notes
 
 
-#### Using ES6 modules in Mathtoys
+#### Using ES6 modules in Prooftoys
 
 As of December 2017, Chrome, Safari, and Edge support modules, but Firefox and IE11 do not. Unfortunately at this time no browsers support modules for Web Workers, and in particular web workers can only use the importScripts function to load code, which means that they themselves are not modules and cannot consume modules either.
 
-All of this suggests that Mathtoys will be using traditional JS scripts for some time to come.
+All of this suggests that Prooftoys will be using traditional JS scripts for some time to come.
 
 
-#### Variable naming conventions for Mathtoys
+#### Variable naming conventions
 
 All numbers are individuals and in that sense have the same type.
 
@@ -313,7 +309,7 @@ Functions: f, g, h
 
 #### Syntax Issues
 
-How to write the equivalent of f(x + y, z + w) in Mathtoys?
+How to write the equivalent of f(x + y, z + w)?
 
 f (x + y) (z + w)
 
