@@ -5,7 +5,6 @@ description: >
   Concepts and terms used on the Prooftoys website
   to describe logic, the system, and its user interface.
 ---
-
 # Prooftoys logic concepts
 
 ### Types of values
@@ -126,4 +125,3 @@ is a _bound occurrence_.
 
 **Free occurrence.**  A _free occurrence_ of a variable name
 in a term is an occurrence that is not a _bound occurrence_.
-
