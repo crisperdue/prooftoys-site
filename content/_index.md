@@ -72,34 +72,6 @@ demonstration of the Prooftoys [**proof builder**]({{< relref
 
 <details>
 {{% summary %}}
-### **The Prooftoys Vision**
-{{% /summary %}}
-
-On the one hand, Prooftoys is for learning **core ideas** of
-mathematical proof, general **concepts of reasoning** rather than
-cookbook procedures, in a way that is approachable to ordinary people.
-
-In a larger sense though, Prooftoys is an effort to find better ways
-to learn these great ideas in our modern era.  Far too much of math
-education is still about people doing procedures that may have been
-useful three hundred years ago, but pointless to do by hand now.
-
-Computers can do the procedures for us, but without the concepts
-we are still lost.  Luckily, there are now powerful systems of
-mathematical reasoning that are based on simple principles used
-throughout ordinary high school mathematics, and Prooftoys uses
-one of these for all of its reasoning.
-
-Prooftoys is an example of a new way of introducing mathematics where
-the computer does things it is very good at, and human beings learn
-concepts and key ideas.  It also aims to do this in a way that is
-stimulating and interesting, not boring and a waste of time.  It is
-the result of ongoing experimentation, and will evolve based on the
-experience and input of people like you.
-</details>
-
-<details>
-{{% summary %}}
 ### **Why try it?**
 {{% /summary %}}
 
@@ -158,6 +130,34 @@ The [Prooftoys](http://prooftoys.org) website and its software are
 ongoing experiments in creating computer aids to help human beings do
 mathematics.  Its knowledge of mathematics is quite limited, but we
 aim to grow it as users advance.
+</details>
+
+<details>
+{{% summary %}}
+### **The Prooftoys Vision**
+{{% /summary %}}
+
+On the one hand, Prooftoys is for learning **core ideas** of
+mathematical proof, general **concepts of reasoning** rather than
+cookbook procedures, in a way that is approachable to ordinary people.
+
+In a larger sense though, Prooftoys is an effort to find better ways
+to learn these great ideas in our modern era.  Far too much of math
+education is still about people doing procedures that may have been
+useful three hundred years ago, but pointless to do by hand now.
+
+Computers can do the procedures for us, but without the concepts
+we are still lost.  Luckily, there are now powerful systems of
+mathematical reasoning that are based on simple principles used
+throughout ordinary high school mathematics, and Prooftoys uses
+one of these for all of its reasoning.
+
+Prooftoys is an example of a new way of introducing mathematics where
+the computer does things it is very good at, and human beings learn
+concepts and key ideas.  It also aims to do this in a way that is
+stimulating and interesting, not boring and a waste of time.  It is
+the result of ongoing experimentation, and will evolve based on the
+experience and input of people like you.
 </details>
 
 <hr>
