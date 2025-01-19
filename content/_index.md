@@ -32,7 +32,7 @@ need a background in mathematics or logic.  The **graphical user
 interface** will work with you to:
 
 - **construct correct proofs** with no holes and no handwaving, and
-- **solve math problems** through proof.
+- **solve math problems easily** through proof.
 
 Reasoning in Prooftoys is based on principles from basic algebra.  These
 same principles extend to higher mathematics as well.
@@ -63,7 +63,8 @@ tables to support your intuitive sense of concepts such as *and*,
   principles of proof, with a potential surprise or two.
 
   [**Basic algebra problems**]({{< relref "/hands-on.md" >}}) solved
-  through proof.  Your steps will be mathematically correct.
+  through proof.  Be assured that your steps will be *mathematically
+  correct*.
 
 - ***Documentation:*** Read about [***the mathematics and the
 system***]({{< relref "/documentation.md" >}}). Watch a video
@@ -72,7 +73,7 @@ demonstration of the Prooftoys [**proof builder**]({{< relref
 
 <details>
 {{% summary %}}
-### **Why try it?**
+### **Reasons to try**
 {{% /summary %}}
 
 - Build your skills and develop your understanding of rock-solid
@@ -134,7 +135,7 @@ aim to grow it as users advance.
 
 <details>
 {{% summary %}}
-### **The Prooftoys Vision**
+### **The Vision**
 {{% /summary %}}
 
 On the one hand, Prooftoys is for learning **core ideas** of
