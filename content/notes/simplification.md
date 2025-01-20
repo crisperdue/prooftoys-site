@@ -1,6 +1,8 @@
 ---
 title: Simplification
 menu: menu-docs.md
+sitemap:
+  disable: true
 ---
 # Simplification in Prooftoys
 

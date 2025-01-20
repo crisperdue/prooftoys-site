@@ -1,5 +1,7 @@
 ---
 title: Miscellaneous notes
+sitemap:
+  disable: true
 ---
 ## Tiny proofs
 

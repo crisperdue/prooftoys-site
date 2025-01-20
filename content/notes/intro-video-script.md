@@ -1,5 +1,7 @@
 ---
 title: Prooftoys intro video -- script
+sitemap:
+  disable: true
 ---
 ## Prooftoys intro script
 

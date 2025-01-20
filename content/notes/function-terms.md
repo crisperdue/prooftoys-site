@@ -1,6 +1,8 @@
 ---
 title: Function and set terms
 menu: menu-docs.md
+sitemap:
+  disable: true
 ---
 
 <!-- Not linked, where should this content appear? -->

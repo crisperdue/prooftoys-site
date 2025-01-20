@@ -1,5 +1,7 @@
 ---
 title: On learning mathematics
+sitemap:
+  disable: true
 ---
 ## Getting a mathematical start
 

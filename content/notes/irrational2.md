@@ -2,6 +2,8 @@
 title: The irrational number
 description: >
   Prooftoys proof that the square root of 2 is not rational.
+sitemap:
+  disable: true
 ---
 
 ## The square root of 2 is not rational

@@ -4,6 +4,8 @@ menu: menu-docs.md
 description: >
   Prooftoys definitions introduce new constants while maintaining
   logical consistency.
+sitemap:
+  disable: true
 ---
 
 # Definitions

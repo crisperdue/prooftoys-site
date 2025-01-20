@@ -1,5 +1,7 @@
 ---
 title: Programming the logic
+sitemap:
+  disable: true
 ---
 
 ## Principles

@@ -1,6 +1,8 @@
 ---
 title: Facts
 menu: menu-docs.md
+sitemap:
+  disable: true
 ---
 # Facts
 

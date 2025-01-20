@@ -1,5 +1,7 @@
 ---
 title: Prooftoys technical notes
+sitemap:
+  disable: true
 ---
 ## Technical Notes
 

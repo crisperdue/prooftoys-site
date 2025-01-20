@@ -1,5 +1,7 @@
 ---
 title: Fake proof in Markdown format
+sitemap:
+  disable: true
 ---
 
 Let x = y.  Then:
