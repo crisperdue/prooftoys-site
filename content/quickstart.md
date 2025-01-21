@@ -3,9 +3,6 @@ title: QuickStart
 description: >
   Quick introduction to Prooftoys through basic algebra
 ---
-
-<!--
-
 # <center>The Computer as a</center>
 
 ## <center>Mathematics Partner</center>
