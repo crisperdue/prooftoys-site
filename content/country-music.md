@@ -12,57 +12,62 @@ We will prove that in a world where everyone loves either rock music
 or country music (or both), and there is someone who does not love
 rock music, there is definitely someone who loves country.
 
-In this proof the variables such as `x` represent people such as
-Garth, or Jimmy, or Dolly.
+In this proof the variables such as `x` represent people --
+Garth, Jimmy, or Dolly, or whoever.
 
 - `Rock x` means that person x loves rock music.  
 - `Country x` means that person x loves country music.  
 - `forall {x. Rock x | Country x}` means that every person loves rock
   music or country music (or both!). We read the symbol `forall` as
   "for all".
-- `exists {x. Country x}`
-  means that some person exists who loves country music.  We read the
-  symbol `exists` as "there exists".
+- `exists {x. Country x}` means that some person exists who loves
+  country music.  We read the symbol `exists` as "there exists".  This
+  has the same meaning as `exists Country`, but has a more familiar look
+  to it.
 
 <div class=proof-editor data-exercise="nat/CountryMusic"></div>
 
-We start proof in the usual way.  You should see a first step that
-says `exists {x. Country x} => exists {x. Country x}`.  If not press
-the "Clear Work" button.  Selecting the `exists {x. Country x}` on the
-**left** side of the formula, several options show up as suggestions.
-Choose the one that uses the fact that:
+We start the proof in the usual way.  You should see a first step that
+says:
 
-`forall {x. p x => q x} & exists  p => exists  q`
+{{% preblock %}}
+`forall {x. Rock x | Country x} & exists {x. not (Rock x)} & exists
+{x. Country x} => exists {x. Country x}`.
+{{% /preblock %}}
 
-Wow, what does this mean?  It says, "suppose that everything with
-property `p` also has property `q`, and suppose that something exists
-with property `p`.  If that is all true, then there also exists
-something with property q.
+If not press the "Clear Work" button.  Select the `exists {x. Country
+x}` on the **left** side of the formula -- it is highlighed in red.
+Several options will show up as suggestions. Choose the one that uses
+the fact that:
 
-This step fills in `q` as `exists {x. Country x}`.
-Soon `p` will become `{x. not (Rock x)}`, but not yet.
+`forall {x. p x => q x} & exists p => exists  q`
 
-For the condition `exists p`, choose specifically
-`exists {x. not (Rock x)}`, one of the two conditions
-expected to be in the result of the proof.  This choice is
-offered in the menu.
+Wow, what does this mean?  It says, "suppose that everyone who has
+property `p` also has property `q`, and suppose that someone has
+property `p`.  If that is all true, then there is also someone with
+property q.  In this situation property `q` is "person who likes country
+music".
 
-Now check the tautology that `not a => b == a | b` with the plan
-to use it in the next step.  You will need to enter the formula,
-typing `\not a => b == a | b`.
+This step fills in `q` as `exists {x. Country x}`. Soon `p` will become
+`{x. not (Rock x)}` ("person who does not love rock music"), but not
+yet.
+
+For the condition `exists p`, from the menu choose the item `exists {x.
+not (Rock x)}`.  The result will not be highlighted because it is part
+of the desired final result.
 
 Finally, select the part of step 3 that says `not (Rock x) => Country
-x`.  Now the menu should offer "`Rock x | Country x` using step 4" as
-one of the options.  Selecting this, you should get the desired
-result, and the proof editor should indicate "&check; Proof
-complete.".
+x`.  Now the menu offers "`not (not Rock) x | Country x`" as one of the
+options.  When you select this, the proof editor will remove the "not
+not" double negation by simplifying, and it should indicate "&check;
+Proof complete.".
 
 #### Alternative
 
-This proof works "backward", starting with the desired conclusion.
-It transforms the assumptions into the ones expected, step-by-step
-removing ones that are not desired.  It is also possible to work
-"forward", starting with the expected assumptions, e.g.
+This proof works "backward", starting with the desired conclusion *(the
+goal)*. It transforms the assumptions into the ones expected,
+step-by-step removing ones that are not desired.  It is also possible to
+work "forward", starting with the expected assumptions, e.g.
 
 `((exists {x. (not (Rock x))}) & (forall {x. ((Rock x) | (Country x))}))
     => ((exists {x. (not (Rock x))}) & (forall {x. ((Rock x) | (Country x))}))`
