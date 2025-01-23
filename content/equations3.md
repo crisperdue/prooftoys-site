@@ -1,6 +1,6 @@
 ---
 title: Simultaneous eqns (no solution)
-menu: menu-docs.md
+menu: menu-docs-plus.md
 description: >
   Solve algebra problems using Prooftoys.
 ---

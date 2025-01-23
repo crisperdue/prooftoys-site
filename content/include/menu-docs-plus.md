@@ -17,3 +17,6 @@ headless: true
   - [Real number facts]({{< relref "/real-number-facts.md" >}})
   - [Live logic facts list]({{< relref "/live-logic-facts.md" >}})
   - [Advanced quantifier laws]({{< relref "/quantifiers.md" >}})
+
+
+{{< include "menu-site.md" >}}

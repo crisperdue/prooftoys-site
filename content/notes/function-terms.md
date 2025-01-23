@@ -1,6 +1,6 @@
 ---
 title: Function and set terms
-menu: menu-docs.md
+menu: menu-docs-plus.md
 sitemap:
   disable: true
 ---

@@ -1,6 +1,6 @@
 ---
 title: "More reasoning"
-menu: menu-docs.md
+menu: menu-docs-plus.md
 description: >
   Digging a little deeper into practical deductive
   reasoning with Prooftoys.

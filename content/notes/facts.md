@@ -1,6 +1,6 @@
 ---
 title: Facts
-menu: menu-docs.md
+menu: menu-docs-plus.md
 sitemap:
   disable: true
 ---
