@@ -1,4 +1,5 @@
 # The file .git/info/exclude lists items to just ignore in this copy
+/.vscode*
 /.hugo_build.lock
 go.mod
 # Generated site goes here.
