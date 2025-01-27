@@ -1,6 +1,6 @@
 ---
 title: Solving equations
-menu: menu-docs.md
+menu: menu-eqns.md
 description: >
   Solve algebra problems with help from Prooftoys.
 ---

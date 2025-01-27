@@ -21,9 +21,9 @@ Garth, Jimmy, or Dolly, or whoever.
   music or country music (or both!). We read the symbol `forall` as
   "for all".
 - `exists {x. Country x}` means that some person exists who loves
-  country music.  We read the symbol `exists` as "there exists".  This
-  has the same meaning as `exists Country`, but has a more familiar look
-  to it.
+  country music.  We read the symbol `exists` as "there exists".  
+  It is sometimes written as `exists Country`, but this way has a more
+  familiar look.
 
 <div class=proof-editor data-exercise="nat/CountryMusic"></div>
 
@@ -36,7 +36,7 @@ says:
 {{% /preblock %}}
 
 If not press the "Clear Work" button.  Select the `exists {x. Country
-x}` on the **left** side of the formula -- it is highlighed in red.
+x}` on the **left** side of the formula -- it is highlighted in red.
 Several options will show up as suggestions. Choose the one that uses
 the fact that:
 
@@ -74,4 +74,3 @@ work "forward", starting with the expected assumptions, e.g.
 
 and transforming the *conclusion* into the desired one.  Would
 you be able to create a version of this proof that works forward?
-

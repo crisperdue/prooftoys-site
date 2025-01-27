@@ -34,7 +34,6 @@ almost any proof needs many steps.
 
 Most Prooftoys proof steps use some combination of:
 
-- tautologies
 - substitution
 - rewriting
 - "forward" reasoning
@@ -56,31 +55,6 @@ the "algebra" mode there.
 If your immediate goal is solving equations, you may want to focus
 right now on replacement and rewriting, as they are the most-used
 for this kind of task.
-
-### Tautologies
-
-Tautologies are true statements containing only the boolean
-constants (`T` for true and `F` for false), boolean variables, and
-functions with boolean inputs and outputs.
-
-To decide whether a boolean statement is true, it is enough to check
-every combination of values for all variables in the statement.
-Prooftoys does this in a straightforward way, and if the statement is
-true the result is a proof using substitution and replacement.  If you
-inspect a Prooftoys proof of a tautology you will see some inference
-rules not described here, but if you break them down to the smallest
-level of detail you will see that in the end they only use replacement
-and substitution.
-
-Prooftoys lets you enter a boolean statement of this kind.  If it is
-true, Prooftoys proves it for you; or if not it lets you know.  It can
-also prove or disprove formulas that are _instances_ of tautologies,
-using its matching abilities.
-
-Tautologies are extremely useful in mathematical reasoning.  Some
-typical examples are `A | A == A`, `A & B => A`, `A & B == B & A`.
-A more complex but still common tautology is `(A => B) & (B => A) ==
-(A == B)`.
 
 ### Substitution
 
@@ -286,3 +260,28 @@ of step 4, so we can replace that entire step, giving
 {{% preblock %}}
 `5) odd (17 * 17)`
 {{% /preblock %}}
+
+### Tautologies
+
+Tautologies are true statements containing only the boolean
+constants (`T` for true and `F` for false), boolean variables, and
+functions with `T` and `F` as their inputs and outputs.
+
+To decide whether a boolean statement is true, it is enough to check
+every combination of values for all variables in the statement.
+Prooftoys does this in a straightforward way, and if the statement is
+true the result is a proof using substitution and replacement.  If you
+inspect a Prooftoys proof of a tautology you will see some inference
+rules not described here, but if you break them down to the smallest
+level of detail you will see that in the end they only use replacement
+and substitution.
+
+Prooftoys lets you enter a boolean statement of this kind.  If it is
+true, Prooftoys proves it for you; or if not it lets you know.  It can
+also prove or disprove formulas that are _instances_ of tautologies,
+using its matching abilities.
+
+Tautologies are extremely useful in mathematical reasoning.  Some
+typical examples are `A | A == A`, `A & B => A`, `A & B == B & A`.
+A more complex but still common tautology is `(A => B) & (B => A) ==
+(A == B)`.
