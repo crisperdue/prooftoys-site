@@ -71,7 +71,10 @@ The initial statement in this case is `0 = 0 => 0 = 0`.
 ### Taking your first step
 
 First steps are big milestones!  This proof will have just one step.
-Start by selecting the assumption, the first `0 = 0` --- for an
+To do this proof step you will select a part of the initial step, then
+choose one of the suggested actions in the menu.
+
+Start by selecting the assumption, the first `0 = 0`.  For an
 ultra-quick demo <b videotip="/images/select-0-0.mp4">click
 here</b>.  As you hover the mouse over different parts of the step,
 they highlight, and when you click there is a stronger highlight that
@@ -82,6 +85,8 @@ After selecting the first `0 = 0`, move the mouse down into the
 using x = x == T` by clicking on it.  <b
 videotip="/images/select-x-x.mp4">another tiny demo</b> The `➭ T` in
 the menu item means that it will replace the selected term with `T`.
+In proofs we like to replace assumptions with `T` because that removes
+the assumption from the list, which usually brings us closer to the goal.
 
 If the "Basic" section of the menu is not already displayed, show it
 by pausing the mouse cursor over the word "Basic".
