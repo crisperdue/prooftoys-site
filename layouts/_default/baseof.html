@@ -27,9 +27,9 @@
   <link rel="stylesheet" href="{{ $pt.RelPermalink }}">
   {{ $_ := (resources.Get "scss/proofs.scss" | toCSS (dict "targetPath" "css/proofs.css")).RelPermalink }}
 
-  <style type="text/css">
   <!-- Style anchors in the menus with a solid background. -->
-  .docs-menu ul {{ printf "a[href=%q]" .RelPermalink | safeCSS }} {
+  <style type="text/css">
+  .logicZone .docs-menu ul {{ printf "a[href=%q]" .RelPermalink | safeCSS }} {
       background-color: lightgreen;
   }
   .tippy-box {
