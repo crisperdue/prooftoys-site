@@ -30,7 +30,7 @@ with this [**Side Trip**]({{< relref "/number-game/tutorial6.md" >}}).
 
 #### ➭ [***Next***]({{< relref "/number-game/tutorial8.md" >}})
 
-##### ➭ [***Side trip: closure property and adding one***]({{< relref
+##### ➭ [***Side trip: closure property of addition***]({{< relref
  "/number-game/tutorial7.5.md" >}})
 
 <!-- Use simplification. -->

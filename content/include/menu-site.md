@@ -6,6 +6,8 @@ headless: true
 
 ### *Site*
 
+<div style="margin-left: 1em">
+
 - [***Home***]({{< relref "/_index.md" >}})
 - [**Hands-on**]({{< relref "/hands-on.md" >}})
 - [**Documentation**]({{< relref "/documentation.md" >}})
@@ -13,3 +15,5 @@ headless: true
 - [Privacy information]({{< relref "/privacy.md" >}})
 - [FAQ]({{< relref "/faq.md" >}})
 - [**News**]({{< relref "/news.md" >}})
+
+</div>
