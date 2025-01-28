@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# Run this to submit this repo for public user review.
+
+run() {
+  echo '$' $@
+  eval "$@"
+}
+
+run hugo
+
+run netlify deploy --site prooftoys.netlify.app --dir public --alias review
