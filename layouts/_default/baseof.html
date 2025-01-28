@@ -28,8 +28,9 @@
   {{ $_ := (resources.Get "scss/proofs.scss" | toCSS (dict "targetPath" "css/proofs.css")).RelPermalink }}
 
   <style type="text/css">
+  <!-- Style anchors in the menus with a solid background. -->
   .docs-menu ul {{ printf "a[href=%q]" .RelPermalink | safeCSS }} {
-      color: #1dc996;
+      background-color: lightgreen;
   }
   .tippy-box {
     background-color: darkolivegreen;
