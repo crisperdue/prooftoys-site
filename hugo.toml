@@ -2,6 +2,7 @@ baseURL = "https://prooftoys.org"
 languageCode = "en-us"
 title = "Prooftoys"
 theme = "hugo-whisper-theme"
+themesDir = "../hugo-themes"
 
 enableInlineShortcodes = true
 
