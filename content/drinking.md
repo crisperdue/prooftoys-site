@@ -71,10 +71,14 @@ regardless of the value of `x`.)
 can see that it rewrites using `A | not A == T`, leaving just `T`
 as the only assumption, which it removes with another rewrite.
 
-***Tip:*** *Matching in Prooftoys has some extra cleverness that is
-used in steps 4 and 5 here.  The Proof Builder uses it when making
-suggestions, so you may be happy just looking at the suggestions.  But
-if you would like to know more, read on.*
+<details>
+{{% summary %}}
+***Tip:*** *Matching in Prooftoys has some extra
+cleverness that is used in steps 4 and 5 here.
+The Proof Builder uses it when making suggestions, so you may be happy
+just looking at the suggestions.  But if you would like to know more,
+read on.* **(click for details)**
+{{% /summary %}}
 
 *Step 4 uses a fact with free variables `p` and `q`, and step 5 uses a
 fact with free variable `a`.  They match parts of the steps that are
@@ -88,6 +92,7 @@ In step 5, `a` matches the term `not (exists {y. not (drinker y)})`,
 which is OK because that term does not contain the bound variable `x`.
 See the [technical notes]({{< relref "/tech-notes.md#substitution"
 >}}) for more information.*
+</details>
 
 <!--
 matching facts like these with parts of a step, the match can
