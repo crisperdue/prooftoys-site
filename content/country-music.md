@@ -36,9 +36,9 @@ says:
 {{% /preblock %}}
 
 If not press the "Clear Work" button.  Select the `exists {x. Country
-x}` on the **left** side of the formula -- it is highlighted in red.
-Several options will show up as suggestions. Choose the one that uses
-the fact that:
+x}` to the *left* of the `=>` in the formula (on the *first line*). It
+is highlighted in red. Several options will show in the "Basic" section
+of the menu as suggestions. Choose the one that uses the fact that:
 
 `forall {x. p x => q x} & exists p => exists  q`
 

@@ -24,18 +24,20 @@ noSideBar: true
 
 > Simplicity is the ultimate sophistication.  -- Leonardo da Vinci
 
-Prooftoys is software and a set of resources for applying mathematical
+Prooftoys is software and a set of resources for mathematical
 reasoning.
 
-It has been designed to be **approachable for beginners**.  You won't
-need a background in mathematics or logic.  The **graphical user
-interface** will work with you to:
+It has been designed to be **approachable for beginners** and **quick to
+learn**.  Reasoning in Prooftoys is entirely built on principles from
+basic algebra that handle higher mathematics as well.  You won't need a
+background in mathematics or logic.
 
-- **construct correct proofs** with no holes and no handwaving, and
+The **graphical user interface** will work with you to:
+
+- **read and construct correct proofs** with no holes and no handwaving
 - **solve math problems easily** through proof.
 
-Reasoning in Prooftoys is based on principles from basic algebra.  These
-same principles extend to higher mathematics as well.
+
 
 ### **Ways to start**
 
@@ -46,13 +48,9 @@ same principles extend to higher mathematics as well.
 </a>
 {{% /divstyle %}}
 
-- ***Pictures:*** The [***logic through pictures***]({{< relref
-"/logic-pix-intro.md" >}}) section introduces some universal basics
-of logic.  These are interactive diagrams with explanation, and truth
-tables to support your intuitive sense of concepts such as *and*,
-*or*, *not*, and *implies*).
+- ***Taste it:*** worked examples.
 
-- ***Hands on:*** with an extensive
+- ***Try it:*** with an extensive
   and self-contained [***Natural Numbers Game***]({{< relref
   "/number-game/tutorial1.md" >}}) tutorial that takes you
   step-by-step through proofs of important properties of numbers
@@ -66,10 +64,17 @@ tables to support your intuitive sense of concepts such as *and*,
   through proof.  Be assured that your steps will be *mathematically
   correct*.
 
-- ***Documentation:*** Read about [***the mathematics and the
-system***]({{< relref "/documentation.md" >}}). Watch a video
-demonstration of the Prooftoys [**proof builder**]({{< relref
-"/proofbuilder.md" >}}).
+- ***Look:*** The [***logic through pictures***]({{< relref
+"/logic-pix-intro.md" >}}) section introduces some universal basics
+of logic.  These are interactive diagrams with explanation, and truth
+tables to support your intuitive sense of concepts such as *and*,
+*or*, *not*, and *implies*).
+
+- ***Read:*** about [***the system and its
+mathematics***]({{< relref "/documentation.md" >}}).
+
+- ***Watch:*** a video demonstration of the Prooftoys [**proof
+builder**]({{< relref "/proofbuilder.md" >}}).
 
 <details>
 {{% summary %}}
