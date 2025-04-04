@@ -5,7 +5,7 @@ description: >
   An easy, practical system of deductive reasoning
   with open source implementation
 menu: menu-none.md
-noSideBar: true
+noSidebar: true
 ---
 
 <style>
