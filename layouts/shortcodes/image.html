@@ -4,5 +4,5 @@
 
 {{ with $image }}
   <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{.Height }}"
-   title="{{$tag.Get "title"}}">
+   title="{{$tag.Get "title"}}" alt="{{$tag.Get "alt"}}">
 {{ end }}
