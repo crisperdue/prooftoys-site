@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 110 110">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-2 {
+        isolation: isolate;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+        mix-blend-mode: screen;
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="53.57" cy="71.02" fx="53.57" fy="89.55" r="55" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#92e5f9"/>
+      <stop offset=".2" stop-color="#8ee2f8"/>
+      <stop offset=".36" stop-color="#84d8f4"/>
+      <stop offset=".52" stop-color="#72c9ef"/>
+      <stop offset=".67" stop-color="#5ab3e8"/>
+      <stop offset=".81" stop-color="#3a97de"/>
+      <stop offset=".95" stop-color="#1376d3"/>
+      <stop offset="1" stop-color="#0569cf"/>
+    </radialGradient>
+    <linearGradient id="linear-gradient" x1="-142.67" y1="76.28" x2="-70.21" y2="76.28" gradientTransform="translate(161.44 -35.1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#000"/>
+    </linearGradient>
+  </defs>
+  <g class="cls-2">
+    <g id="Layer_2" data-name="Layer 2">
+      <g id="Icon_Set" data-name="Icon Set">
+        <rect class="cls-1" width="110" height="110" rx="25" ry="25"/>
+        <rect class="cls-3" x="18.77" y="-8.49" width="72.45" height="99.34" rx="25" ry="25" transform="translate(96.18 -13.82) rotate(90)"/>
+      </g>
+    </g>
+  </g>
+</svg>

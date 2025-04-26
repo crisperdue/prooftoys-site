@@ -1,0 +1,3 @@
+Goodbye, farewell, aufwiedersehen, goodnight!
+And so on, and so on, and doobee doobee doobee.
+Different strokes ...

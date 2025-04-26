@@ -29,7 +29,7 @@ layout: home2
       width: 100%;
       justify-content: center;
       background-color: var(--bg-color);
-      padding: 0 24px;
+      margin: 0 24px 90px;
     }
     
     .header-content {
@@ -79,15 +79,9 @@ layout: home2
     
     .nav-links {
       display: flex;
-      padding: 8px 0px;
+      margin: 8px 0px;
       align-items: center;
       gap: 32px;
-    }
-    
-    @media (max-width: 991px) {
-      .nav-links {
-        display: none;
-      }
     }
     
     .nav-link {
@@ -97,22 +91,12 @@ layout: home2
       line-height: 20px;
     }
     
-    .menu-button {
-      display: none;
-    }
-    
-    @media (max-width: 991px) {
-      .menu-button {
-        display: block;
-      }
-    }
-    
     .hero-section {
       display: flex;
       flex-direction: column;
       align-items: center;
       background-color: #fff;
-      padding: 80px 24px;
+      margin: 0 24px 70px;
     }
     
     .hero-content {
@@ -129,7 +113,7 @@ layout: home2
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 48px;
+      gap: 0;
       max-width: 720px;
     }
     
@@ -140,6 +124,11 @@ layout: home2
       align-items: center;
       gap: 24px;
       width: 100%;
+      padding-bottom: 10px;
+    }
+
+    .hero-heading h1 {
+      margin-bottom: 0;
     }
     
     .hero-subtitle {
@@ -192,10 +181,11 @@ layout: home2
     .features-section {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: start;
       gap: 30px;
       background-color: #fff;
       padding: 128px 60px;
+      padding-top: 0;
     }
     
     @media (max-width: 991px) {
@@ -215,7 +205,6 @@ layout: home2
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 8px;
       width: 270px;
     }
     
@@ -224,6 +213,14 @@ layout: home2
       height: 150px;
       border-radius: 30px;
       background-color: #d9d9d9;
+      margin-bottom: 20px;
+      cursor: pointer;
+      position: relative;
+    }
+    
+    .feature-icon:hover {
+      left: 3px;
+      top: 3px;
     }
     
     .feature-content {
@@ -232,6 +229,7 @@ layout: home2
       align-items: flex-start;
       gap: 24px;
       padding: 24px;
+      padding-top: 0;
       width: 100%;
     }
     
@@ -239,20 +237,23 @@ layout: home2
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 16px;
       width: 100%;
+    }
+
+    .feature-text p {
+      margin-top: 0;
     }
     
     .feature-title {
       color: #344054;
       text-align: center;
       font-size: 24px;
-      font-weight: 600;
       line-height: 32px;
       width: 100%;
+      margin-bottom: 6px;
     }
     
-    .feature-description {
+    .feature-description, .feature-text {
       color: #667085;
       text-align: center;
       font-size: 14px;
@@ -526,6 +527,7 @@ layout: home2
       align-items: center;
       background-color: #fff;
       padding: 128px 24px;
+      padding-top: 0;
     }
     
     @media (max-width: 991px) {
@@ -702,6 +704,7 @@ layout: home2
     
     footer {
       display: flex;
+      xdisplay: none;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -802,24 +805,10 @@ layout: home2
           <div class="logo-container">
             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4fb208e10c34c35f8a002d28c2e1b5a4817d9c3b" alt="Logo" />
           </div>
-          <form style="display: none" class="search-container" role="search">
-            <div class="search-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-[15px] h-[15px] fill-[#000]" viewBox="0 0 24 24">
-                <path d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"></path>
-              </svg>
-            </div>
-            <label for="search-input" class="visually-hidden">Search topics</label>
-            <input id="search-input" type="search" placeholder="Search topics" class="search-input" />
-          </form>
           <nav class="nav-links">
             <a href="#" class="nav-link">About</a>
             <a href="#" class="nav-link">Contact</a>
           </nav>
-          <button class="menu-button" aria-label="Open menu">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
         </div>
       </header>
     
@@ -827,25 +816,29 @@ layout: home2
         <div class="hero-content">
           <div class="hero-text">
             <div class="hero-heading">
-              <h1 class="hero-title">Put the Reasoning Back in Your Mathematics</h1>
+              <h1 class="hero-title">A Fresh Take<br> on Mathematics</h1>
             </div>
-            <p class="hero-description">Welcome to a free and open-source math tool! Point-and-click your way to solve math problems and build simple proofs with deduction and logic.</p>
+            <p class="hero-description">Put the Reasoning Back in Your
+            Mathematics. Come Reason with Us. Welcome to a free and
+            open-source math tool! Point-and-click your way to solve
+            math problems and build simple proofs with deduction and
+            logic.</p>
           </div>
         </div>
       </section>
     
       <section class="features-section">
         <div class="feature-card">
-          <div class="feature-icon"></div>
+          <div class="feature-icon"><img src="/Sneak Preview.svg" width=150 height=150></div>
           <div class="feature-content">
             <div class="feature-text">
-              <h2 class="feature-title">Preview</h2>
+              <h2 class="feature-title">Preview</h2>{{< include "preview.md">}}
               <p class="feature-description">Discover math the right way. Learn the basics through examples of how proofs come together and the reasoning behind them.</p>
             </div>
           </div>
         </div>
         <div class="feature-card">
-          <div class="feature-icon"></div>
+          <div class="feature-icon"><img src="/DIY.svg" width=150 height=150></div>
           <div class="feature-content">
             <div class="feature-text">
               <h2 class="feature-title">Solve</h2>
@@ -854,7 +847,7 @@ layout: home2
           </div>
         </div>
         <div class="feature-card">
-          <div class="feature-icon"></div>
+          <div class="feature-icon"><img src="/Orange Button Square.svg" width=150 height=150></div>
           <div class="feature-content">
             <div class="feature-text">
               <h2 class="feature-title">Prove</h2>
@@ -863,7 +856,7 @@ layout: home2
           </div>
         </div>
         <div class="feature-card">
-          <div class="feature-icon"></div>
+          <div class="feature-icon"><img src="/Big Ideas.svg" width=150 height=150></div>
           <div class="feature-content">
             <div class="feature-text">
               <h2 class="feature-title">Learn</h2>
