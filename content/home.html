@@ -1,6 +1,7 @@
 ---
 title: Landing page
 layout: home2
+draft: true
 ---
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&family=Roboto+Flex:wght@300;400;500;700&display=swap');
@@ -17,7 +18,7 @@ layout: home2
     .landing-container {
       display: flex;
       flex-direction: column;
-      max-width: 95%;
+      max-width: 100%;
       min-height: 100vh;
       background-color: var(--bg-color);
       font-family: "Roboto Flex", sans-serif;
@@ -26,10 +27,10 @@ layout: home2
     
     .header {
       display: flex;
-      width: 100%;
+      max-width: 100%;
       justify-content: center;
       background-color: var(--bg-color);
-      margin: 0 24px 90px;
+      margin: 0 24px 80px;
     }
     
     .header-content {
@@ -96,7 +97,7 @@ layout: home2
       flex-direction: column;
       align-items: center;
       background-color: #fff;
-      margin: 0 24px 70px;
+      margin: 0 24px 60px;
     }
     
     .hero-content {
@@ -184,11 +185,10 @@ layout: home2
       align-items: start;
       gap: 30px;
       background-color: #fff;
-      padding: 128px 60px;
-      padding-top: 0;
+      margin: 0 5% 80px 5%;
     }
     
-    @media (max-width: 991px) {
+    @media (max-width: 884px) {
       .features-section {
         flex-wrap: wrap;
         padding: 0 24px;
@@ -205,7 +205,7 @@ layout: home2
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 270px;
+      width: 220px;
     }
     
     .feature-icon {
@@ -530,6 +530,16 @@ layout: home2
       padding-top: 0;
     }
     
+    .faq-section h2 {
+      color: #344054;
+      text-align: center;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 44px;
+      letter-spacing: -0.72px;
+      width: 100%;
+    }
+    
     @media (max-width: 991px) {
       .faq-section {
         padding: 64px 0;
@@ -538,6 +548,7 @@ layout: home2
     
     .faq-content {
       display: flex;
+      display: none;
       flex-direction: column;
       align-items: center;
       gap: 64px;
@@ -557,7 +568,7 @@ layout: home2
     .faq-title {
       color: #344054;
       text-align: center;
-      font-size: 36px;
+      font-size: 42px;
       font-weight: 700;
       line-height: 44px;
       letter-spacing: -0.72px;
@@ -790,6 +801,7 @@ layout: home2
     }
     
     .footer-copyright {
+      display: none;
       height: 20px;
       color: #667085;
       text-align: center;
@@ -797,14 +809,19 @@ layout: home2
       line-height: 18px;
       width: 100%;
     }
+
+    object.logo {
+      width: 170px;
+    }
+    object[data="/Logo1.svg"] {
+      width: 170px;
+    }
     </style>
     
     <div class="landing-container">
       <header class="header">
         <div class="header-content">
-          <div class="logo-container">
-            <img src="/Logo1.svg" width="170" height="auto" alt="Logo" />
-          </div>
+          <object type="image/svg+xml" data="/Logo1.svg"></object>
           <nav class="nav-links">
             <a href="#" class="nav-link">About</a>
             <a href="#" class="nav-link">Contact</a>
@@ -832,7 +849,7 @@ layout: home2
           <div class="feature-icon"><img src="/Sneak Preview.svg" width=150 height=150></div>
           <div class="feature-content">
             <div class="feature-text">
-              <h2 class="feature-title">Preview</h2>{{< include "preview.md">}}
+              <h2 class="feature-title">Preview</h2>
               <p class="feature-description">Discover math the right way. Learn the basics through examples of how proofs come together and the reasoning behind them.</p>
             </div>
           </div>
@@ -847,7 +864,7 @@ layout: home2
           </div>
         </div>
         <div class="feature-card">
-          <div class="feature-icon"><img src="/Orange Button Square.svg" width=150 height=150></div>
+          <div class="feature-icon"><img src="/Prove.svg" width=150 height=150></div>
           <div class="feature-content">
             <div class="feature-text">
               <h2 class="feature-title">Prove</h2>
@@ -956,6 +973,7 @@ layout: home2
       </section>
     
       <section class="faq-section">
+        <h2>What's it all about?</h2>
         <div class="faq-content">
           <div class="faq-header">
             <h2 class="faq-title">Frequently asked questions</h2>
@@ -1010,7 +1028,7 @@ layout: home2
         <div class="footer-content">
           <div class="footer-main">
             <div class="footer-info">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4fb208e10c34c35f8a002d28c2e1b5a4817d9c3b" alt="Logo" />
+              <object type="image/svg+xml" data="/Logo1.svg"></object>
               <p class="footer-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
             </div>
             <div class="footer-links">
@@ -1041,15 +1059,6 @@ layout: home2
                   <a href="#" class="footer-link">Press</a>
                 </div>
               </div>
-              <div class="footer-column">
-                <h3 class="footer-column-title">Column 4</h3>
-                <div class="footer-column-links">
-                  <a href="#" class="footer-link">Blog</a>
-                  <a href="#" class="footer-link">Jobs</a>
-                  <a href="#" class="footer-link">Press</a>
-                  <a href="#" class="footer-link">Accessibility</a>
-                  <a href="#" class="footer-link">Partners</a>
-                </div>
               </div>
             </div>
           </div>
