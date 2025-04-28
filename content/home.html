@@ -162,7 +162,7 @@ draft: true
       }
     }
     
-    .hero-description {
+    .hero-text p {
       color: #344054;
       text-align: center;
       font-size: 18px;
@@ -188,16 +188,16 @@ draft: true
       margin: 0 5% 80px 5%;
     }
     
-    @media (max-width: 884px) {
+    @media (max-width: 800px) {
       .features-section {
         flex-wrap: wrap;
-        padding: 0 24px;
+        margin: 0 24px;
       }
     }
     
     @media (max-width: 640px) {
       .features-section {
-        padding: 64px 0;
+        margin: 0 16px;
       }
     }
     
@@ -208,43 +208,22 @@ draft: true
       width: 220px;
     }
     
-    .feature-icon {
+    .feature-card img {
       width: 150px;
       height: 150px;
       border-radius: 30px;
       background-color: #d9d9d9;
-      margin-bottom: 20px;
+      margin-bottom: 6px;
       cursor: pointer;
       position: relative;
     }
     
-    .feature-icon:hover {
+    .feature-card img:hover {
       left: 3px;
       top: 3px;
     }
     
-    .feature-content {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 24px;
-      padding: 24px;
-      padding-top: 0;
-      width: 100%;
-    }
-    
-    .feature-text {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%;
-    }
-
-    .feature-text p {
-      margin-top: 0;
-    }
-    
-    .feature-title {
+    .feature-card h2 {
       color: #344054;
       text-align: center;
       font-size: 24px;
@@ -253,13 +232,14 @@ draft: true
       margin-bottom: 6px;
     }
     
-    .feature-description, .feature-text {
+    .feature-card p {
       color: #667085;
       text-align: center;
       font-size: 14px;
       line-height: 20px;
       letter-spacing: -0.14px;
       width: 100%;
+      margin-top: 0;
     }
     
     .benefits-section {
@@ -816,6 +796,10 @@ draft: true
     object[data="/Logo1.svg"] {
       width: 170px;
     }
+
+    .display-none {
+      display: none;
+    }
     </style>
     
     <div class="landing-container">
@@ -846,40 +830,32 @@ draft: true
     
       <section class="features-section">
         <div class="feature-card">
-          <div class="feature-icon"><img src="/Sneak Preview.svg" width=150 height=150></div>
-          <div class="feature-content">
-            <div class="feature-text">
-              <h2 class="feature-title">Preview</h2>
-              <p class="feature-description">Discover math the right way. Learn the basics through examples of how proofs come together and the reasoning behind them.</p>
-            </div>
-          </div>
+          <img src="/Sneak Preview.svg" width=150 height=150>
+          <h2>Preview</h2>
+          <p>Discover math the right way. Learn the basics through
+          examples of how proofs come together and the reasoning behind
+          them.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon"><img src="/DIY.svg" width=150 height=150></div>
-          <div class="feature-content">
-            <div class="feature-text">
-              <h2 class="feature-title">Solve</h2>
-              <p class="feature-description">Discover math the right way. Learn the basics through examples of how proofs come together and the reasoning behind them.</p>
-            </div>
-          </div>
+          <img src="/DIY.svg" width=150 height=150>
+          <h2>Solve</h2>
+          <p>Discover math the right way. Learn the basics through
+          examples of how proofs come together and the reasoning
+          behind them.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon"><img src="/Prove.svg" width=150 height=150></div>
-          <div class="feature-content">
-            <div class="feature-text">
-              <h2 class="feature-title">Prove</h2>
-              <p class="feature-description">Discover math the right way. Learn the basics through examples of how proofs come together and the reasoning behind them.</p>
-            </div>
-          </div>
+          <img src="/Prove.svg" width=150 height=150>
+          <h2>Prove</h2>
+          <p>Discover math the right way. Learn the basics through
+          examples of how proofs come together and the reasoning
+          behind them.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon"><img src="/Big Ideas.svg" width=150 height=150></div>
-          <div class="feature-content">
-            <div class="feature-text">
-              <h2 class="feature-title">Learn</h2>
-              <p class="feature-description">Discover math the right way. Learn the basics through examples of how proofs come together and the reasoning behind them.</p>
-            </div>
-          </div>
+          <img src="/Big Ideas.svg" width=150 height=150>
+          <h2>Learn</h2>
+          <p>Discover math the right way. Learn the basics through
+          examples of how proofs come together and the reasoning
+          behind them.</p>
         </div>
       </section>
     
