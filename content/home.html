@@ -19,6 +19,10 @@ sitemap:
   :root {
     --bg-color: white;
   }
+
+  body {
+    margin-top: 0;
+  }
   
     .landing-container {
       display: flex;
@@ -31,11 +35,13 @@ sitemap:
     }
     
     .header {
+      position: fixed;
       display: flex;
-      max-width: 100%;
-      justify-content: center;
+      width: 100%;
       background-color: var(--bg-color);
-      margin: 0 24px 80px;
+      padding: 0 24px;
+      border-bottom: 3px solid #ddd;
+      z-index: 2;
     }
     
     .header-content {
@@ -103,6 +109,7 @@ sitemap:
       align-items: center;
       background-color: #fff;
       margin: 0 24px 60px;
+      padding-top: 120px;
     }
     
     .hero-content {
