@@ -1,0 +1,5 @@
+#!/bin/bash
+# 
+# Netlify deploy this workspace to next-prooftoys.netlify.app
+
+netlify deploy --site next-prooftoys --dir public --prod
