@@ -44,21 +44,15 @@ sitemap:
     position: fixed;
     display: flex;
     width: 100%;
-    background-color: var(--bg-color);
-    padding: 0 24px;
-    border-bottom: 3px solid #ddd;
-    opacity: .9;
-  }
-  
-  .header-content {
-    display: flex;
     max-width: 1200px;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 16px;
-    width: 100%;
-    padding: 10px 0;
+    background-color: var(--bg-color);
+    padding: 10px 24px;
+    border-bottom: 3px solid #ddd;
+    opacity: .9;
   }
   
   .nav-links {
@@ -298,14 +292,12 @@ sitemap:
 </style>
     
 <header class="header">
-  <div class="header-content">
-    <object type="image/svg+xml" data="/Logo1.svg"></object>
-    <nav class="nav-links">
-      <a href="/about/" class="nav-link">What and Why</a>
-      <a href="/about/" class="nav-link">About</a>
-      <a href="#" class="nav-link">Contact</a>
-    </nav>
-  </div>
+  <object type="image/svg+xml" data="/Logo1.svg"></object>
+  <nav class="nav-links">
+    <a href="/about/" class="nav-link">What and Why</a>
+    <a href="/about/" class="nav-link">About</a>
+    <a href="#" class="nav-link">Contact</a>
+  </nav>
 </header>
 
 <div class="landing-container">
