@@ -4,11 +4,10 @@ headless: true
 
 <p>
 
-### *Site*
+### [**Home**]({{< relref "/_index.md" >}})
 
 <div style="margin-left: 1em">
 
-- [***Home***]({{< relref "/_index.md" >}})
 - [**Hands-on**]({{< relref "/hands-on.md" >}})
 - [**Documentation**]({{< relref "/documentation.md" >}})
 - [About Prooftoys]({{< relref "/about.md" >}})
