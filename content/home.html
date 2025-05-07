@@ -146,14 +146,26 @@ sitemap:
     }
   }
 
-  .features-section {
+  .options-section {
     margin: 0 5% 80px 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
+  .options-section .head {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+
+  .builder-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
   
-  .features-cards {
+  .options-cards {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
@@ -162,48 +174,51 @@ sitemap:
   }
   
   @media (max-width: 870px) {
-    .features-cards {
+    .options-cards {
       flex-wrap: wrap;
       margin: 0 24px;
     }
   }
   
   @media (max-width: 640px) {
-    .features-section {
+    .options-section {
       margin: 0 16px;
     }
   }
   
-  .feature-card {
+  .option-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 220px;
   }
+
+  .option-card .head {
+    margin: 16px 0 5px;
+    font-weight: normal;
+  }
   
-  .feature-card img {
-    width: 150px;
-    height: 150px;
+  .option-card img {
+    width: 124px;
+    height: 124px;
     border-radius: 30px;
     margin-bottom: 6px;
     cursor: pointer;
   }
   
-  .feature-card img:hover {
+  .option-card img:hover {
     left: 3px;
     top: 3px;
   }
   
-  .feature-card h2 {
+  .option-card h2 {
     color: #344054;
     text-align: center;
-    font-size: 24px;
     line-height: 32px;
-    width: 100%;
     margin-bottom: 6px;
   }
   
-  .feature-card p {
+  .option-card p {
     color: #667085;
     text-align: center;
     font-size: 14px;
@@ -213,7 +228,13 @@ sitemap:
     margin-top: 0;
   }
 
-  .side-by-side {
+  .builder-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .builder-cards {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
@@ -222,11 +243,7 @@ sitemap:
     gap: 60px;
   }
 
-  .side-by-side > * {
-    width: fit-content;
-  }
-
-  .side-by-side img {
+  .builder-cards img {
     border: 1px solid lightgray;
     border-radius: 20px;
     box-shadow: #ccc 5px 5px 15px;
@@ -336,39 +353,38 @@ sitemap:
     </div>
   </section>
 
-  <section class="features-section">
-    <div class="features-cards">
-     <div class="feature-card">
+  <section class="options-section">
+    <div class="options-cards">
+     <div class="option-card">
        <img src="/Sneak Preview.svg" width=150 height=150>
-       <h2>Preview</h2>
+       <div class="head">Peek</div>
        <p>Video introduction and live examples that are live
        and let you see as much detail as you like.</p>
      </div>
-     <div class="feature-card">
+     <div class="option-card">
        <img src="/DIY.svg" width=150 height=150>
-       <h2>Solve</h2>
+       <div class="head">Try</div>
        <p>Textbook-style math problems with familiar steps
        using clear mathematical reasoning.</p>
      </div>
-     <div class="feature-card">
+     <div class="option-card">
        <img src="/Prove.svg" width=150 height=150>
-       <h2>Prove</h2>
+       <div class="head">Prove</div>
        <p>With a user interface that makes suggestions and prevents
        errors.</p>
      </div>
-     <div class="feature-card">
+     <div class="option-card">
        <img src="/Big Ideas.svg" width=150 height=150>
-       <h2>Learn</h2>
+       <div class="head">Learn</div>
        <p>A simplified system of deduction and tools for using
        it.</p>
      </div>
     </div>
-    <div class="hero-text">
-      <br>
-      <br>
-      <p><i>The proof builder tool</i></p>
-    </div>
-    <div class="side-by-side">
+  </section>
+  
+  <section class="builder-section">
+    <h2>The Proof Builder Tool</h2>
+    <div class="builder-cards">
       <div>
         <h4 class="center">Presents reasoning in a readable style</h4>
         <img src="/ProofStepsShot.png" width="373" height="251">
@@ -383,7 +399,7 @@ sitemap:
   <section class="faq-section">
     <br><br>
     <h2 class="center">Reasons to check it out</h2
-    <div class="side-by-side">
+    <div class="builder-cards">
     <div>
     <h3 class="center">For learning</h3>
     <ul class="benefits-list">
