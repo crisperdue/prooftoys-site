@@ -35,6 +35,10 @@ sitemap:
   .center {
     text-align: center;
   }
+
+.display-none {
+  display: none;
+}
     
     .header {
       position: fixed;
@@ -55,11 +59,6 @@ sitemap:
       gap: 16px;
       width: 100%;
       padding: 10px 0;
-    }
-    
-    .logo-container {
-      display: flex;
-      align-items: flex-start;
     }
     
     .nav-links {
@@ -243,12 +242,13 @@ sitemap:
 
     .side-by-side img {
       border: 1px solid lightgray;
-      box-shadow: #ccc 15px 10px 15px;
+      border-radius: 20px;
+      box-shadow: #ccc 5px 5px 15px;
     }
 
     .faq-section {
       background-color: #fff;
-      xmax-width: 700px;
+      max-width: 900px;
       margin: 0 auto 128px;
       font-size: 16px;
       line-height: 1.5;
@@ -279,88 +279,22 @@ sitemap:
     
     footer {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      background-color: var(--bg-color);
-      padding: 64px 24px;
-    }
-    
-    .footer-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 40px;
-      max-width: 1200px;
-      width: 100%;
-    }
-    
-    .footer-main {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      gap: 40px;
-      max-width: 1200px;
-      width: 100%;
+      margin: 0 24px 64px;
     }
     
     .footer-info {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 24px;
-      min-width: 256px;
-      max-width: 400px;
-      flex: 1;
     }
-    
-    .footer-description {
-      color: #667085;
-      font-size: 14px;
-      line-height: 20px;
-      letter-spacing: -0.14px;
-      width: 100%;
-    }
-    
     .footer-links {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: center;
       gap: 32px;
+      width: 25%;
       min-width: 256px;
-      flex: 1;
-      padding: 8px 0;
-    }
-    
-    .footer-column {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 16px;
-      min-width: 150px;
-    }
-    
-    .footer-column-title {
-      color: #344054;
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 20px;
-    }
-    
-    .footer-column-links {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 8px;
-    }
-    
-    .footer-link {
-      color: #667085;
-      font-size: 14px;
-      line-height: 20px;
-      letter-spacing: -0.14px;
     }
 
     object.logo {
@@ -368,10 +302,6 @@ sitemap:
     }
     object[data="/Logo1.svg"] {
       width: 170px;
-    }
-
-    .display-none {
-      display: none;
     }
     </style>
     
@@ -468,39 +398,39 @@ sitemap:
 
         <div class="side-by-side">
         <div>
-        <h3>For learning</h3>
+        <h3 class="center">For learning</h3>
         <ul class="benefits-list">
           <li>
-            want to do math by reasoning, not just following rules.
+            do math by reasoning, not just following rules.
           </li>
           <li>
-            want to grasp true math fundamentals.
+            grasp true math fundamentals.
           </li>
           <li>
-            want to see computer-based deduction in action.
+            see computer-based deduction in action.
           </li>
           <li>
-            wish for proofs with no holes and no handwaving.
+            build proofs with no holes and no handwaving.
           </li>
           <li>
-            would like to learn logic without taking a semester class.
+            learn logic without taking a semester class.
           </li>
           <li>
-            wish for a tool that prevents careless mistakes.
+            avoid careless mistakes.
           </li>
           <li>
-            like textbook-like presentation.
+            textbook-like presentation.
           </li>
         </ul>
         </div>
 
         <div>
-        <h3>For teaching</h3>
+        <h3 class="center">For teaching</h3>
         <ul class="benefits-list">
-          <li>want to understand your mathematics better.</li>
-          <li>want to promote understanding of mathematical
+          <li>understand your mathematics better.</li>
+          <li>promote understanding of mathematical
           principles.</li>
-          <li>desire mathematical reasoning based on familiar
+          <li>mathematical reasoning based on familiar
           principles.</li>
         </ul>
         </div>
@@ -520,48 +450,14 @@ sitemap:
           <p>Et cetera.</p>
         </div>
       </section>
-    
-      <footer class="footer">
-        <div class="footer-content">
-          <div class="footer-main">
+      <footer>
             <div class="footer-info">
               <object type="image/svg+xml" data="/Logo1.svg"></object>
-              <p class="footer-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse varius enim in eros elementum tristique.
-              </p>
             </div>
             <div class="footer-links">
-              <div class="footer-column">
-                <h3 class="footer-column-title">Column 1</h3>
-                <div class="footer-column-links">
-                  <a href="#" class="footer-link">Blog</a>
-                  <a href="#" class="footer-link">Jobs</a>
-                  <a href="#" class="footer-link">Press</a>
-                  <a href="#" class="footer-link">Accessibility</a>
-                </div>
-              </div>
-              <div class="footer-column">
-                <h3 class="footer-column-title">Column 2</h3>
-                <div class="footer-column-links">
-                  <a href="#" class="footer-link">Blog</a>
-                  <a href="#" class="footer-link">Jobs</a>
-                  <a href="#" class="footer-link">Press</a>
-                  <a href="#" class="footer-link">Accessibility</a>
-                  <a href="#" class="footer-link">Partners</a>
-                </div>
-              </div>
-              <div class="footer-column">
-                <h3 class="footer-column-title">Column 3</h3>
-                <div class="footer-column-links">
-                  <a href="#" class="footer-link">Blog</a>
-                  <a href="#" class="footer-link">Jobs</a>
-                  <a href="#" class="footer-link">Press</a>
-                </div>
-              </div>
-              </div>
+              <a href="#">one</a>
+              <a href="#">two</a>
+              <a href="#">three</a>
             </div>
-          </div>
-        </div>
       </footer>
     </div>
