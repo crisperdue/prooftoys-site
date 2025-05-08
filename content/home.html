@@ -102,11 +102,13 @@ sitemap:
     max-width: 720px;
   }
   
-  .hero-text p {
+  .hero-text p,
+  .builder-section p {
+    max-width: 700px;
     color: #344054;
     text-align: center;
     font-size: 16px;
-    line-height: 28px;
+    line-height: 24px;
   }
   
   .hero-heading {
@@ -147,22 +149,10 @@ sitemap:
   }
 
   .options-section {
-    margin: 0 5% 80px 5%;
+    margin: 0 5% 140px 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .options-section .head {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 1em;
-  }
-
-  .builder-section h2 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 1em;
   }
   
   .options-cards {
@@ -194,6 +184,7 @@ sitemap:
   }
 
   .option-card .head {
+    font-size: 20px;
     margin: 16px 0 5px;
     font-weight: normal;
   }
@@ -232,18 +223,38 @@ sitemap:
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 120px;
+  }
+
+  .builder-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+
+  .builder-card .head {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 1em;
   }
 
   .builder-cards {
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: start;
     flex-wrap: wrap;
-    gap: 60px;
+    gap: 40px;
+    margin-top: 40px;
   }
 
-  .builder-cards img {
+  .builder-card {
+    padding: 24px;
+    background-color: #f6f6f6;
+    border-radius: 16px;
+  }
+
+  .builder-card img {
     border: 1px solid lightgray;
     border-radius: 20px;
     box-shadow: #ccc 5px 5px 15px;
@@ -281,8 +292,10 @@ sitemap:
   
   footer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    gap: 20px 60px;
     margin: 0 24px 64px;
   }
   
@@ -329,25 +342,10 @@ sitemap:
           Whether you're <b>solving equations</b> or <b>proving
           theorems</b>, the Prooftoys simplified system of deduction
           lets you work effectively, following precise but general
-          mathematical laws.
+          <b>mathematical laws</b>.
         </p>
         <p>
           Where would you like to go from here?
-        </p>
-        <p class="nodisplay">
-          Whether you are solving equations or proving theorems, the
-          proof builder tool and a simplified practical system of
-          deduction help you do your mathematics in a natural way
-          according to simple, general, and precise mathematical
-          laws.
-        </p>
-        <p class="nodisplay">
-          The reasoning is based on modern simple type theory.
-          Familiar facts such as associativity and distributivity
-          appear very much as in any basic textbook. Familiar steps
-          for solving simple equations are right here, and a little
-          bit of generalization expands their reach to much higher
-          mathematics.
         </p>
       </div>
     </div>
@@ -384,13 +382,19 @@ sitemap:
   
   <section class="builder-section">
     <h2>The Proof Builder Tool</h2>
+    <p>
+      The reasoning is based on modern <b>simple type theory</b>.
+      Familiar facts like associativity and distributivity appear just
+      as they do in basic textbooks, and simple <b>equation-solving</b> steps
+      extend naturally to more <b>advanced mathematics</b>.
+    </p>
     <div class="builder-cards">
-      <div>
-        <h4 class="center">Presents reasoning in a readable style</h4>
+      <div class="builder-card">
+        <div class="head">Presents reasoning in a readable style</div>
         <img src="/ProofStepsShot.png" width="373" height="251">
       </div>
-      <div>
-        <h4 class="center">Suggests next step options</h4>
+      <div class="builder-card">
+        <div class="head">Suggests next step options</div>
         <img src="/StepSuggestionsShot.png" width="474" height="160">
       </div>
     </div>
