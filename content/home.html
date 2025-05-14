@@ -37,6 +37,23 @@ sitemap:
     margin-top: 0;
   }
 
+  img-left {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  img-left > * {
+    width: 300px;
+  }
+
+  img-left img {
+    aspect-ratio: auto;
+  }
+
   .center {
     text-align: center;
   }
@@ -371,6 +388,8 @@ sitemap:
        <p>Textbook-style math problems with familiar steps
        using clear mathematical reasoning.</p>
      </div>
+    </div>
+    <div class="options-cards">
      <div class="option-card">
        <img src="/Prove.svg" width=150 height=150>
        <div class="heading">Prove</div>
@@ -396,6 +415,46 @@ sitemap:
     </p>
     <div class="one-card">
       <div class="heading center">Solving equations</div>
+      <img-left>
+        <img src="/images/ProofStepsShot.png">
+        <u-l>
+          <l-i>Meaningful steps in familiar style</l-i>
+          <l-i>Use familiar laws of algebra and trigonometry directly</l-i>
+          <l-i>Concepts carry over 100% to proofs.</l-i>
+          <l-i>Built-in simplification</l-i>
+        </u-l>
+      </img-left>
+    </div>
+
+    <div class="one-card">
+      <div class="heading center">Proofs</div>
+      <img-left>
+        <img src="/images/ProofStepsShot.png">
+        <u-l>
+          <l-i>Fubar</l-i>
+          <l-i>Proofs that look like proofs
+            <l-i>Numbered formula and explanation</l-i>
+          </l-i>
+          <l-i>Every step is a proved statement</l-i>
+          <l-i>Complete transparency in reasoning -- </l-i>
+        </u-l>
+      </img-left>
+    </div>
+
+    <div class="two-card">
+      <div class="card">
+        <div class="heading">Readable presentation</div>
+        <img src="/images/ProofStepsShot.png">
+      </div>
+      <div class="card">
+        <div class="heading">Suggests next steps</div>
+        <img src="/images/StepSuggestionsShot.png">
+      </div>
+    </div>
+
+    <div class="two-card">
+      <div class="card">
+        <div class="heading">Transparency</div>
       </div>
       <div class="card">
         <div class="heading">Flamingos</div>
