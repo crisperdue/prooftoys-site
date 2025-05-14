@@ -58,6 +58,33 @@ sitemap:
     margin-left: 1em;
   }
 
+  .one-card {
+    max-width: 1100px;
+    border-radius: 16px;
+    box-shadow: 0px 0px 15px 5px rgba(225, 225, 225, 1);
+    padding: 32px;
+    margin-bottom: 24px;
+
+    list-style-type: none;
+  }
+
+  .two-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 95%;
+    min-width: 800px;
+    max-width: 1100px;
+  }
+
+  .card {
+    max-width: 500px;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0px 0px 15px 5px rgba(225, 225, 225, 1);
+    padding: 32px;
+    margin-bottom: 24px;
+  }
     
   .header {
     position: fixed;
@@ -236,7 +263,7 @@ sitemap:
     margin-bottom: 1em;
   }
   
-  .builder-card img {
+  .builder-section .card img {
     aspect-ratio: 1.9;
     object-fit: contain;
     object-position: center;
@@ -367,13 +394,10 @@ sitemap:
       as they do in basic textbooks, and simple <b>equation-solving</b> steps
       extend naturally to more <b>advanced mathematics</b>.
     </p>
-    <div class="builder-cards">
-      <div class="builder-card">
-        <img src="/ProofStepsShot.png" width="373" height="251">
+    <div class="one-card">
       <div class="heading center">Solving equations</div>
       </div>
-      <div class="builder-card">
-        <img src="/StepSuggestionsShot.png" width="474" height="160">
+      <div class="card">
         <div class="heading">Flamingos</div>
       </div>
     </div>
