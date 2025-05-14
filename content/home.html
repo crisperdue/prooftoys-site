@@ -42,6 +42,7 @@ sitemap:
     
   .header {
     position: fixed;
+    top: 0;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -84,30 +85,18 @@ sitemap:
     margin: 150px 24px 24px;
   }
   
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1200px;
-    gap: 64px;
-    width: 100%;
-  }
-  
   .hero-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 0;
-    max-width: 720px;
   }
   
   .hero-text p,
   .builder-section p {
-    max-width: 700px;
+    max-width: 720px;
     color: #344054;
-    text-align: center;
-    font-size: 16px;
     line-height: 24px;
   }
   
@@ -149,33 +138,22 @@ sitemap:
   }
 
   .options-section {
-    margin: 0 5% 140px 5%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 90%;
+    margin-bottom: 140px;
   }
   
   .options-cards {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;  /* This enables vertical alignment. */
     justify-content: center;
     align-items: start;
     gap: 30px;
   }
-  
-  @media (max-width: 870px) {
-    .options-cards {
-      flex-wrap: wrap;
-      margin: 0 24px;
-    }
-  }
-  
-  @media (max-width: 640px) {
-    .options-section {
-      margin: 0 16px;
-    }
-  }
-  
+
   .option-card {
     display: flex;
     flex-direction: column;
@@ -223,38 +201,20 @@ sitemap:
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 120px;
+    margin-bottom: 180px;
   }
 
   .builder-section h2 {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 1em;
+    text-align: center;
   }
 
   .builder-section .heading {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 1em;
-  }
-
-  .builder-cards {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-wrap: wrap;
-    gap: 48px;
-    margin-top: 44px;
-  }
-
-  .builder-card {
-    width: 500px;
-    min-width: 256px;
-    max-width: 600px;
-    border-radius: 24px;
-    border: 2px solid #5377ef;
-    padding: 32px;
-    background-color: #fff;
   }
   
   .builder-card img {
@@ -265,7 +225,6 @@ sitemap:
   }
 
   .faq-section {
-    background-color: #fff;
     max-width: 900px;
     margin: 0 auto 128px;
     font-size: 16px;
