@@ -52,23 +52,24 @@ sitemap:
     list-style-type: none;
     padding-left: 0;
     margin: 0;
-    margin-left: -1em;
   }
 
   l-i {
     display: block;
     margin-left: 1em;
+    line-height: 1.4;
+    margin-bottom: .3em;
   }
 
   /* Page-specific utilities */
 
   .one-card {
+    width: 800px;
     max-width: 1100px;
     border-radius: 16px;
     box-shadow: 0px 0px 15px 5px rgba(225, 225, 225, 1);
     padding: 32px;
     margin-bottom: 24px;
-
     list-style-type: none;
   }
 
@@ -96,11 +97,11 @@ sitemap:
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 16px;
   }
   
   img-left > * {
-    width: 300px;
+    width: 50%;
+    flex: 1 1 auto;
   }
   
   img-left img {
@@ -109,7 +110,7 @@ sitemap:
 
   /* Major divisions of the document */
     
-  .header {
+  header {
     position: fixed;
     top: 0;
     display: flex;
@@ -191,10 +192,11 @@ sitemap:
 
   .options-section {
     display: flex;
+    width: 1200px;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    max-width: 90%;
+    max-width: 95vw;
     margin-bottom: 140px;
   }
   
@@ -331,7 +333,7 @@ sitemap:
   }
 </style>
     
-<header class="header">
+<header>
   <object type="image/svg+xml" data="/Logo1.svg"></object>
   <nav class="nav-links">
     <a href="/about/" class="nav-link">What and Why</a>
