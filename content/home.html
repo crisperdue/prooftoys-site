@@ -82,11 +82,11 @@ sitemap:
   /* Page-specific utilities */
 
   .one-card {
-    width: 800px;
-    max-width: 1100px;
+    width: 900px;
+    max-width: 95vw;
     border-radius: 16px;
     box-shadow: 0px 0px 15px 5px rgba(225, 225, 225, 1);
-    padding: 32px;
+    padding: 16px;
     margin-bottom: 24px;
     list-style-type: none;
   }
@@ -119,14 +119,20 @@ sitemap:
   
   img-left > * {
     width: 50%;
+    min-width: 300px;
     flex: 1 1 auto;
   }
-  
-  img-left img {
-    aspect-ratio: auto;
+
+  img-left > img {
+    max-width: 400px;
   }
 
   /* Major divisions of the document */
+
+  main > * {
+    width: 720px;
+    max-width: 95vw;
+  }
     
   header {
     position: fixed;
@@ -163,10 +169,6 @@ sitemap:
     max-width: 100%;
     min-height: 100vh;
     align-items: center;
-  }
-
-  main > * {
-    width: 720px;
   }
     
   .hero-section {
@@ -215,7 +217,7 @@ sitemap:
     justify-content: center;
     gap: 30px;
     max-width: 95vw;
-    margin-bottom: 140px;
+    margin-bottom: 100px;
   }
   
   .options-cards {
