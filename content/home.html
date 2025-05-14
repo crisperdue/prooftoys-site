@@ -19,6 +19,13 @@ sitemap:
     scrollbar-gutter: stable;
   }
 
+  @media (prefers-reduced-motion: no-preference) {
+    :has(:target) {
+      scroll-behavior: smooth;
+      scroll-padding-top: 3rem;
+    }
+  }
+
   :root {
       --bg-color: white;
       background-color: var(--bg-color);
@@ -35,8 +42,19 @@ sitemap:
     margin-top: 0;
   }
 
+  /* Nice defaults; keeps the aspect ratio. */
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
   h1, h2, h3, h4, h5, h6, p {
     margin-top: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
   }
 
   .center {
