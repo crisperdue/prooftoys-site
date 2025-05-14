@@ -11,6 +11,11 @@ sitemap:
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&family=Roboto+Flex:wght@300;400;500;700&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+  
+  /* On latest browsers this makes 100vw avoid scrollbars. */
+  html {
+    scrollbar-gutter: stable;
+  }
 
   :root {
       --bg-color: white;
@@ -39,6 +44,20 @@ sitemap:
   .nodisplay {
     display: none;
   }
+
+  u-l {
+    display: block;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    margin-left: -1em;
+  }
+
+  l-i {
+    display: block;
+    margin-left: 1em;
+  }
+
     
   .header {
     position: fixed;
