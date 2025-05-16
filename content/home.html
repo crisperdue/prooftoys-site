@@ -69,7 +69,6 @@ sitemap:
     display: block;
     list-style-type: none;
     padding-left: 0;
-    margin: 0;
   }
 
   l-i {
@@ -111,20 +110,24 @@ sitemap:
 
   img-left {
     max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    place-items: center;
+  }
+
+  img-left > :nth-child(2) {
+    width: 100%;
+    /* Alternatively: */
+    /* justify-self: left; */
   }
   
   img-left > * {
-    width: 50%;
-    min-width: 300px;
-    flex: 0 1 0%;
+    /* Balance the space for the heading. */
+    padding-bottom: 20px;
   }
 
   img-left > img {
-    max-width: 400px;
+    max-width: 450px;
   }
 
   /* Major divisions of the document */
@@ -288,7 +291,6 @@ sitemap:
   .builder-section .heading {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 1em;
   }
   
   .builder-section .card img {
