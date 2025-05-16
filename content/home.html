@@ -65,6 +65,17 @@ sitemap:
     display: none;
   }
 
+  main > section {
+    margin-bottom: 100px;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
   u-l {
     display: block;
     list-style-type: none;
@@ -119,11 +130,6 @@ sitemap:
     width: 100%;
     /* Alternatively: */
     /* justify-self: left; */
-  }
-  
-  img-left > * {
-    /* Balance the space for the heading. */
-    padding-bottom: 20px;
   }
 
   img-left > img {
@@ -278,19 +284,13 @@ sitemap:
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 180px;
   }
 
-  .builder-section h2 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 1em;
-    text-align: center;
-  }
-
-  .builder-section .heading {
+  .builder-section .heading,
+  .builder-section h3 {
     font-size: 18px;
     font-weight: bold;
+    margin-bottom: 20px;
   }
   
   .builder-section .card img {
@@ -392,7 +392,7 @@ sitemap:
       extend naturally to more <b>advanced mathematics</b>.
     </p>
     <div class="one-card">
-      <div class="heading center">Solving equations</div>
+      <h3 class="center">Solving equations</h3>
       <img-left>
         <img src="/images/ProofStepsShot.png">
         <u-l>
@@ -406,7 +406,7 @@ sitemap:
     </div>
 
     <div class="one-card">
-      <div class="heading center">Proofs</div>
+      <h3 class="center">Proofs</h3>
       <img-left>
         <img src="/images/ProofStepsShot.png">
         <u-l>
