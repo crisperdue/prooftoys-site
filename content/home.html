@@ -66,15 +66,13 @@ sitemap:
     display: none;
   }
 
-  main > section {
-    margin-bottom: 100px;
-  }
-
   h2 {
     font-size: 36px;
     font-weight: bold;
+    margin-top: 100px;
     margin-bottom: 1em;
     text-align: center;
+    max-width: 600px;
   }
 
   u-l {
@@ -211,6 +209,10 @@ sitemap:
       font-size: 48px;
       line-height: 56px;
     }
+
+    h2 {
+      font-size: 30px;
+    }
   }
   
   @media (max-width: 640px) {
@@ -227,7 +229,6 @@ sitemap:
     justify-content: center;
     gap: 30px;
     max-width: 95vw;
-    margin-bottom: 100px;
   }
   
   .options-cards {
@@ -245,7 +246,7 @@ sitemap:
     width: 220px;
   }
 
-  .option-card .option-heading {
+  .option-card .heading {
     font-size: 20px;
     margin: 16px 0 5px;
     font-weight: normal;
@@ -287,11 +288,14 @@ sitemap:
     align-items: center;
   }
 
-  section.features .heading,
   section.features h3 {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 20px;
+  }
+
+  section.features h3 {
+    margin-bottom: 0;
   }
   
   section.features .card img {
@@ -307,7 +311,7 @@ sitemap:
     justify-content: space-between;
     align-items: center;
     gap: 20px 60px;
-    margin: 0 24px 16px 5%;
+    margin: 100px 24px 16px 5%;
   }
   
   .footer-logo {
@@ -355,13 +359,13 @@ sitemap:
     <div class="options-cards">
      <div class="option-card">
        <img src="/Sneak Preview.svg" width=150 height=150>
-       <div class="option-heading">Peek</div>
+       <div class="heading">Peek</div>
        <p>Video introduction and live examples that are live
        and let you see as much detail as you like.</p>
      </div>
      <div class="option-card">
        <img src="/DIY.svg" width=150 height=150>
-       <div class="option-heading">Try</div>
+       <div class="heading">Try</div>
        <p>Textbook-style math problems with familiar steps
        using clear mathematical reasoning.</p>
      </div>
@@ -369,21 +373,21 @@ sitemap:
     <div class="options-cards">
      <div class="option-card">
        <img src="/Prove.svg" width=150 height=150>
-       <div class="option-heading">Prove</div>
+       <div class="heading">Prove</div>
        <p>With a user interface that makes suggestions and prevents
        errors.</p>
      </div>
      <div class="option-card">
        <img src="/Big Ideas.svg" width=150 height=150>
-       <div class="option-heading">Learn</div>
+       <div class="heading">Learn</div>
        <p>A simplified system of deduction and tools for using
        it.</p>
      </div>
     </div>
   </section>
   
-    <h2>The Proof Builder Tool</h2>
   <section class="features">
+    <h2>Familiar Presentation<br> with Computer Support</h2>
     <p class="center">
       The reasoning is based on modern <b>simple type theory</b>.
       Familiar facts like associativity and distributivity appear just
