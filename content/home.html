@@ -96,6 +96,7 @@ sitemap:
     border-radius: 16px;
     box-shadow: 0px 0px 15px 5px rgba(225, 225, 225, 1);
     padding: 16px;
+    padding-bottom: 24px;
     margin-bottom: 24px;
     list-style-type: none;
   }
@@ -106,23 +107,21 @@ sitemap:
     align-items: center;
   }
 
+  img-left > u-l {
+    margin-top: 16px;
+  }
+
+  img-left > * {
+    max-width: 450px;
+  }
+
   @media (max-width: 850px) {
     img-left {
       flex-direction: column;
     }
-    img-left > :nth-child(2) {
-      max-width: fit-content;
+    img-left > u-l {
+      margin-top: 0;
     }
-  }
-
-  img-left > :nth-child(2) {
-    width: 100%;
-    /* Alternatively: */
-    /* justify-self: left; */
-  }
-
-  img-left > img {
-    max-width: 450px;
   }
 
   /* Major divisions of the document */
