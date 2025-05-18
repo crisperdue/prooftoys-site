@@ -102,9 +102,17 @@ sitemap:
 
   img-left {
     max-width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    place-items: center;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: 850px) {
+    img-left {
+      flex-direction: column;
+    }
+    img-left > :nth-child(2) {
+      max-width: fit-content;
+    }
   }
 
   img-left > :nth-child(2) {
