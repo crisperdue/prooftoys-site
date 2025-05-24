@@ -57,7 +57,13 @@ sitemap:
     text-wrap: balance;
   }
 
+  p {
+    max-width: 75ch;
+    text-wrap: pretty;
+  }
+
   .center {
+    display: block;
     text-align: center;
     text-wrap: balance;
   }
@@ -84,8 +90,14 @@ sitemap:
   l-i {
     display: block;
     margin-left: 1em;
+    text-indent: -1em;
     line-height: 1.4;
     margin-bottom: .3em;
+  }
+
+  code.language-logic {
+    font-family: StixGeneral, times, serif;
+    font-size:18px;
   }
 
   /* Page-specific utilities */
@@ -101,10 +113,20 @@ sitemap:
     list-style-type: none;
   }
 
+  .one-card > p {
+    margin: 0 auto;
+    font-weight: bold;
+    text-wrap: balance;
+  }
+
   img-left {
     max-width: 100%;
     display: flex;
     align-items: center;
+  }
+
+  img-left > :first-child {
+    justify-self: center;
   }
 
   img-left > u-l {
@@ -116,6 +138,7 @@ sitemap:
   }
 
   img-left > * {
+    width: 50%;
     max-width: 450px;
   }
 
@@ -177,7 +200,7 @@ sitemap:
     flex-direction: column;
     align-items: center;
     background-color: #fff;
-    margin: 150px 24px 24px;
+    margin: 150px 24px 0;
   }
   
   .hero-section p,
@@ -222,13 +245,14 @@ sitemap:
     justify-content: center;
     gap: 30px;
     max-width: 95vw;
+    margin-top: 60px;
   }
 
   .option-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 220px;
+    width: 250px;
   }
 
   .option-card .heading {
