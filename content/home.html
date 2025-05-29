@@ -62,6 +62,10 @@ sitemap:
     text-wrap: pretty;
   }
 
+  .smaller {
+    font-size: smaller;
+  }
+
   .center {
     display: block;
     text-align: center;
@@ -104,7 +108,7 @@ sitemap:
 
   .one-card {
     width: 900px;
-    max-width: 95vw;
+    max-width: calc(90vw - 16px);
     border-radius: 16px;
     box-shadow: 0px 0px 15px 5px rgba(225, 225, 225, 1);
     padding: 16px;
@@ -120,9 +124,11 @@ sitemap:
   }
 
   img-left {
+    margin-top: 12px;
     max-width: 100%;
     display: flex;
     align-items: center;
+    gap: 16px;
   }
 
   img-left > :first-child {
@@ -319,20 +325,14 @@ sitemap:
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 20px 60px;
+    gap: 20px 20px;
     margin: 100px 24px 16px 5%;
   }
   
   .footer-logo {
-    display: flex;
+    flex: 100 1 min-content;
   }
-  .footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 32px;
-  }
+
   object[data="/Logo1.svg"] {
     width: 140px;
   }
@@ -499,11 +499,9 @@ sitemap:
       <div class="footer-logo">
         <object type="image/svg+xml" data="/Logo1.svg"></object>
       </div>
-      <div class="footer-links">
-        <a href="#">one</a>
-        <a href="#">two</a>
-        <a href="#">three</a>
-      </div>
+      <a href="#">one</a>
+      <a href="#">two</a>
+      <a href="#">three</a>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
