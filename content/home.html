@@ -28,6 +28,7 @@ sitemap:
 
   :root {
       --bg-color: white;
+      --link-color: #344054;
       background-color: var(--bg-color);
       font-family: "Roboto Flex", sans-serif;
       font-family: "Manrope", sans-serif;
@@ -79,10 +80,24 @@ sitemap:
   h2 {
     font-size: 36px;
     font-weight: bold;
-    margin-top: 100px;
+    xmargin-top: 100px;
     margin-bottom: 1em;
     text-align: center;
     max-width: 600px;
+  }
+
+  h2.memoriam {
+    font-size: 28px;
+  }
+
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+
+  a:hover {
+    cursor: pointer;
+    text-decoration: underline;
   }
 
   u-l {
@@ -167,6 +182,7 @@ sitemap:
   header {
     position: fixed;
     top: 0;
+    z-index: 2;  /* This keeps it above SVG images */
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -186,9 +202,8 @@ sitemap:
     gap: 32px;
   }
   
-  .nav-link {
-    color: #344054;
-    font-size: 14px;
+  .nav-links a {
+    font-size: 16px;
     font-weight: 600;
     line-height: 20px;
   }
@@ -210,8 +225,8 @@ sitemap:
   }
   
   .hero-section p,
-  section.features p {
-    color: #344054;
+  section.top-level p {
+    color: #444;
     line-height: 24px;
     text-align: center;
   }
@@ -224,6 +239,10 @@ sitemap:
     line-height: 64px;
     letter-spacing: -1.12px;
     margin-bottom: 20px;
+  }
+
+  .hero-section h2 {
+    margin: .5em 0;
   }
   
   @media (max-width: 991px) {
@@ -251,7 +270,7 @@ sitemap:
     justify-content: center;
     gap: 30px;
     max-width: 95vw;
-    margin-top: 60px;
+    margin-top: 30px;
   }
 
   .option-card {
@@ -277,8 +296,8 @@ sitemap:
   }
   
   .option-card img:hover {
-    left: 3px;
-    top: 3px;
+    left: 2px;
+    top: 2px;
   }
   
   .option-card h2 {
@@ -298,23 +317,24 @@ sitemap:
     margin-top: 0;
   }
 
-  section.features {
+  section.top-level {
+    margin-top: 72px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  section.features h3 {
+  section.top-level h3 {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 20px;
   }
 
-  section.features h3 {
+  section.top-level h3 {
     margin-bottom: 0;
   }
   
-  section.features .card img {
+  section.top-level .card img {
     aspect-ratio: 1.9;
     object-fit: contain;
     object-position: center;
@@ -326,7 +346,7 @@ sitemap:
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 20px 20px;
+    gap: 16px;
     margin: 100px 24px 16px 5%;
   }
 
@@ -334,14 +354,16 @@ sitemap:
     flex: 100 1 min-content;
   }
 
-  object[data="/Logo1.svg"] {
+  img[src="/Logo1.svg"] {
     width: 140px;
   }
 
 </style>
     
 <header>
-  <object type="image/svg+xml" data="/Logo1.svg"></object>
+  <a href="/">
+    <img src="/Logo1.svg">
+  </a>
   <nav class="nav-links">
     <a href="/about/" class="nav-link">The project</a>
     <a href="/about/" class="nav-link">The mission</a>
@@ -362,35 +384,65 @@ sitemap:
       <b>A computer tool</b> that makes smart suggestions and prevents
       errors.
     </p>
+
+  <h2>Is it for You?</h2>
+  <p class="center">
+    Are you comfortable with basic algebra?<br>
+    Would you like to learn more about the real principles of
+    mathematics?<br>
+    And would you like to do this in a systematic and easier way?<br>
+    Or would you like to learn how computers do mathematical reasoning?<br>
+    If so, the information and tools on this website might be for you.
+  </p>
+  <p class="center">
+    <b>Here are some ways to move ahead.</b>
+  </p>
   </section>
 
   <section class="options-section">
     <div class="option-card">
-      <img src="/Sneak Preview.svg">
-      <div class="heading">Peek</div>
+      <a href="/view">
+        <img src="/Sneak Preview.svg">
+      </a>
+      <div class="heading">
+        <a href="/view">Peek</a>
+      </div>
       <p>
-        Video preview and examples that show the principles behind
-        everyday algebra.
+        Examples and video preview that demonstrate the principles and
+        the tool.
       </p>
     </div>
     <div class="option-card">
-      <img src="/DIY.svg">
-      <div class="heading">Try</div>
+      <a href="/hands-on">
+        <img src="/DIY.svg">
+      </a>
+      <div class="heading">
+        <a href="/hands-on">Try</a>
+      </div>
       <p>
-        Try the experiment with textbook-style math problems and simple
-        proofs.
+        Experiment with textbook-style math problems and simple proofs.
       </p>
     </div>
     <div class="option-card">
-      <img src="/Big Ideas.svg">
-      <div class="heading">Learn</div>
+      <a href="/documentation">
+        <img src="/Big Ideas.svg">
+      </a>
+      <div class="heading">
+        <a href="/documentation">Learn</a>
+      </div>
       <p>
-        Learn the principles and how to use the system.
+        Detailed information about the logic and how to use the system.
       </p>
     </div>
   </section>
+
+  <br>
+  <br>
+  <p class="center">
+    <b>And some reasons you might like it.</b>
+  </p>
   
-  <section class="features">
+  <section class="top-level">
 
     <h2>A Live Medium</h2>
     <div class="one-card">
@@ -427,13 +479,15 @@ sitemap:
       <img-left>
         <img src="/images/StepDetails.webp">
         <u-l>
-          <l-i>Open up a step to see the details to any level of detail.</l-i>
-          <l-i>Details of simplifications are just a click away.</l-i>
-          <l-i>View the proof of any proved fact.</l-i>
+          <l-i>Open up a step to see the details to any level.</l-i>
+          <l-i>Even details of extensive simplifications are just a click away.</l-i>
+          <l-i>View the proof of any stated fact.</l-i>
         </u-l>
       </img-left>
     </div>
+  </section>
 
+  <section class="top-level">
     <h2>Smart</h2>
     <div class="one-card">
       <p>
@@ -443,13 +497,15 @@ sitemap:
       <img-left>
         <img src="/images/StepSuggestionsShot.png">
         <u-l>
-          <l-i>The tool offers menus of options</l-i>
-          <l-i>Suggestions must match your selected target term</l-i>
-          <l-i>No need to memorize names of rules</l-i>
+          <l-i>The tool offers menus of suggestions</l-i>
+          <l-i>Suggestions match your selected target term</l-i>
+          <l-i>No memorizing names of rules</l-i>
           <l-i>
-            The system ensures correct reasoning without limiting
-            freedom of choice.
-        </l-i>
+            The user is in control
+          </l-i>
+          <l-i>
+            The logic ensures correct reasoning
+          </l-i>
         </u-l>
       </img-left>
     </div>
@@ -472,13 +528,14 @@ sitemap:
         </u-l>
       </img-left>
     </div>
+  </section>
 
+  <section class="top-level">
     <h2>Approachable</h2>
     <div class="one-card">
       <p>
-        The principles are the same. Here are some examples working with
-        different types of values.  These examples are all equations;
-        the "<code>==</code>" symbol is for equality of truth
+        All reasoning uses equations, as in these examples.
+        The "<code>==</code>" symbol is for equality of truth
         values.
       </p>
       <img-left>
@@ -501,34 +558,28 @@ sitemap:
         </div>
         <u-l>
           <l-i>
-            Minimizes complexities.
-            <l-i>Simple, uniform notation</l-i>
-          </l-i>
-          <l-i>
             Builds directly on basic algebra
           </l-i>
           <l-i>
-            Many higher-level inferences combine just a handful of
-            these.
+            Minimal additional concepts
           </l-i>
           <l-i>
-            Accretive and direct path to learning.
-          </l-i>
-          <l-i>
-            Gets things done.  Gets you straight to work.
+            Many higher-level inferences are simple combinations.
           </l-i>
           <l-i>
             Choose your own path:
-            Prove or apply mathematical knowledge at your pace and in
+            prove theorems or apply them at your pace and in
             your order.
           </l-i>
         </u-l>
       </img-left>
     </div>
+  </section>
 
-    <h2><span class="smaller">
+  <section class="top-level">
+    <h2 class="memoriam">
       In memoriam: Peter B. Andrews<br>
-      <span class=smaller>1937 - 2025</span></span>
+      <span class=smaller>1937 - 2025</span>
     </h2>
     <p class="center">
       Professor Peter Andrews developed the formulation of simple type
@@ -548,11 +599,11 @@ sitemap:
 </main>
 
 <footer>
-  <div class="footer-logo">
-    <object type="image/svg+xml" data="/Logo1.svg"></object>
-  </div>
+  <a href="/">
+    <img src="/Logo1.svg">
+  </a>
   <a href="#">Privacy</a>
-<a href="#">How you can help</a>
+  <a href="#">You can help!</a>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
