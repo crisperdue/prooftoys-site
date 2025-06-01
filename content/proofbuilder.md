@@ -20,7 +20,7 @@ what inference rules do and how they work.
 
 <div style="margin-bottom: 2em">
 <a href="https://youtube.com/watch?v=WLvGFIHqL88">
-{{< image src="PBPreview.jpg" title="Youtube quickstart video" >}}
+{{< image src="ProofBuilderFrame.png" title="Youtube quickstart video" >}}
 </a>
 </div>
 
