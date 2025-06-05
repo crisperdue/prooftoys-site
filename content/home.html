@@ -110,6 +110,26 @@ sitemap:
     text-decoration: underline;
   }
 
+  /* Call to action buttons / links */
+  a.cta {
+    display: inline-block;
+    padding: .5em 1em;
+    border-radius: 1.4em;
+    text-decoration: none;
+  }
+
+  a.cta.peek {
+    background-color: #edeeb8;
+  }
+
+  a.cta.try {
+    background-color: #84d7f4;
+  }
+
+  a.cta.learn {
+    background-color: #cdf3fc;
+  }
+
   u-l {
     display: block;
     list-style-type: none;
@@ -491,7 +511,7 @@ sitemap:
       </img-left>
       <br>
       <p>
-        <a href="#">See for yourself.</a>
+        <a class="cta peek" href="#">See for yourself.</a>
       </p>
     </div>
   </section>
@@ -538,7 +558,7 @@ sitemap:
       </img-left>
       <br>
       <p>
-        <a href="#">
+        <a class="cta try" href="#">
           Try it.
         </a>
       </p>
@@ -590,7 +610,7 @@ sitemap:
       </img-left>
       <br>
       <p>
-        <a href="#">Learn how.</a>
+        <a class="cta learn" href="#">Learn how.</a>
       </p>
     </div>
   </section>
