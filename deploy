@@ -7,7 +7,6 @@
 # https://next--prooftoys.netlify.app/
 
 PUB=~/src/publish
-TREE=~/tmp/prooftoys-site-tree
 
 run() {
   echo '$' $@
