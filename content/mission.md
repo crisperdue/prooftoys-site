@@ -8,44 +8,97 @@ Desccription: >
 <style>
   
   p {
-    max-width: 80ch;
+    max-width: 75ch;
+    text-wrap: pretty;
+  }
+  
+  li {
+    max-width: 72ch;
     text-wrap: pretty;
   }
 
 </style>
 
+# Prooftoys misssion and vision
 
-# The Prooftoys mission
+## The mission
 
-The Prooftoys project exists to demonstrate how simple and familiar
-styles of reasoning combined with computer support can make mathematical
-proof easier to grasp.
+The Prooftoys project aims to demonstrate how a simplified system of
+deductive reasoning can support effective and natural use of proof in
+the study of mathematics, starting with basic algebra and extending
+naturally to much of mathematics.
 
-Modern formal logic with a suitable user interface can make it practical
-to start using precise reasoning before college-level mathematics.  And
-the style of reasoning extends smoothly to more advanced mathematics.
+## The vision
 
-The information and tools on this website demonstrate the approach,
-starting with basic pre-college mathematics and showing how the
-reasoning extends naturally to working with more advanced concepts such
-quantifiers, functions, collections, and in the end a wide variety of
-mathematical objects.
+The practical and intellectual successes of mathematics are primary
+reasons for the high regard mathematics has had at least since the times
+of the ancient Greeks.  Because mathematical reasoning is at the core
+of mathematical thinking, it is key to every branch of mathematics.
+
+It turns out that the kind of reasoning gently introduced in any basic
+algebra course enables the deduction needed for solving many typical
+math problems in the sequence of topics from algebra and leading up to
+calculus, and more.  Modest though conceptually significant extensions
+enable the system to work with much more advanced mathematics.
+
+The Prooftoys effort is based on the belief that with modern technology,
+learning to use precise mathematical reasoning quite soon after basic
+algebra has the potential to help students of mathematics more than
+conventional approaches.
+
+### An implementation
+
+The proof builder implements the logic with a user-friendly interface
+design to help the user succeed while learning the details of the logic
+along the way.  The tool lets the user focus on a step or part of a
+step, and offers next steps that apply to the focused part.
+
+The content on this website demonstrates the approach, starting with
+basic pre-college mathematics and showing how the reasoning extends
+naturally to working with more advanced concepts such quantifiers,
+functions, and collections.
 
 ## You might be wondering
 
+**Q:** *Why focus on reasoning rather than conventional techniques?*
+
+**A:** This question is worth a longer answer, but here is my point of
+view in brief.
+
+- Computers, especially computer algebra systems, easily carry out all
+  of the techniques taught in the standard curriculum, and this has been
+  true for a number of years.  In reality they can solve many harder
+  problems as well, and some can make available step-by-step solutions
+  that show how the solution can be derived.
+  When you learn standard techniques, you are just learning things
+  computers have known how to do for years.
+- Mathematical reasoning is a skill that carries over beyond
+  standard techniques.  It is essential to reading explanations produced
+  by a computer.  Along with mathematical intuition, it gives you the
+  potential to solve different kinds of problems and create new
+  mathematical knowledge.  These things will be relevant as long as
+  human beings are involved in mathematics.
+
+**Q:** *Surely you aren't trying to change our mathematics curriculum?*
+
+**A:** No, I believe that changes to the curriculum can only occur in
+the event of overwhelming demand for change, and then only with much
+pain.  This project only aims to give some people the chance to try a
+fresh approach and hopefully to help point a way forward.
+
 **Q:** *You seem to believe that I can "pick up" Prooftoys without a lot
-of studying.  Surely you can't be serious??*
+of studying.  Seriously??*
 
-**A:** Yes, I am serious!  Try a few of the simplest sample problems and
+**A:** Yes, seriously!  Try a few of the simplest sample problems and
 see how it feels.  You may find that getting simple things done is not
-hard at all. The proof builder is designed to get around some key
-difficulties of learning logic.  If it falls short, please [contact the
-author]({{< relref "/about.md" >}}).  I would love to hear from you.
+hard at all. You can use the proof builder without understanding a lot
+about logic.  If it fails in this, please [contact the author]({{<
+relref "/about.md" >}}).  I would love to hear from you.
 
-Properly grasping the meaning of mathematical
-statements may take a bit longer.  You can start by ignoring the parts
-that aren't shown in a typical textbook, but those parts are important,
-too, because they reveal mathematical ideas.
+Properly grasping the meaning of mathematical statements may take a bit
+longer.  You can start by ignoring the parts that aren't shown in a
+typical textbook.  As you understand the language of mathematics better
+you can pay more attention to them. 
 
 **Q:** *But is it useful for "textbook" math problems?*
 
@@ -57,16 +110,15 @@ familiar with explicit mathematical reasoning.
 
 **A:** If you are just trying to get today's homework done today,
 Prooftoys is probably not worth the effort.  If you would like help
-getting through your homework for the rest of the year, then probably
+getting through your homework for the rest of the year, then perhaps
 yes.  Once you get familiar with the basics, the same concepts carry
-over directly to new topics in math.
-
+over directly to other topics.
 And if you want to strengthen your mathematical skills and your grasp of
 mathematical concepts, then Prooftoys should be able to really shine for
 you.
 
 **Q:** *Why should I spend time here when there are Khan Academy,
-Geogebra, Wolfram Alpha, and many other mathematics help websites?*
+Geogebra, Wolfram Alpha, and many other mathematics websites?*
 
 **A:** Prooftoys is about mathematical reasoning. The user interface
 keeps you always in control while assuring that your reasoning is
@@ -80,28 +132,27 @@ implementation of mathematical logic.
 
 **Q:** *Is Prooftoys or its logic really that unique?*
 
-**A:** Well, yes and no.  The simple type theory used in Prooftoys has
-essentially the same theorems as the logics behind "research-grade"
-proof assistants such based on higher-order logic such as HOL4, HOL
-Light, Isabelle/HOL, and others.
+**A:** Well, yes and no.  A number of textbooks present logic, but
+almost always limited to propositional logic or first-order logic.
 
-Some textbooks present first-order logic.  In contrast with first-order
-logic, functions, collections, and quantifiers have natural forms of
-expression in the language of Prooftoys.  The system works directly with
-functions and collections without the need to add set theory.
+By contrast with first-order logic, simple type theory expresses ideas
+about functions, collections, and more simply and directly in the logic.
+Unfortunately, hardly any textbooks present this kind of logic, but it
+is widely used in "research-grade" proof assistants such as HOL4, HOL
+Light, Isabelle/HOL, and others.  
 
 **Q:** *My interest is learning about mathematical proof using a
-textbook such as "The Book of Proof" or similar resource. Why should I
-spend my time learning to use Prooftoys instead of learning from a well
-thought-out book?*
+textbook such as "The Book of Proof" or similar resource. Why shouldn't
+I learn about proof from my well thought-out book?*
 
-**A:** You may be very happy with your book.  In fact some of the types
-of reasoning steps available in Prooftoys are directly inspired by books
-of this kind.  If you are teaching yourself, you may find that Prooftoys
-helps to "keep you honest", not skipping steps or waving your hands.
-The downside can be that computers and computer implementations of logic
-are very precise and explicit, so Prooftoys may feel nit-picky about
-some things.
+**A:** You may be very happy with your book.  In fact, support for
+reasoning in the style of books of this kind is an important goal for
+Prooftoys and the proof builder.
+
+If you are teaching yourself, you may find that Prooftoys helps to "keep
+you honest", not skipping steps or waving your hands. The downside can
+be that computers and computer implementations of logic are very precise
+and explicit, so Prooftoys may feel nit-picky at times.
 
 
 <!--
