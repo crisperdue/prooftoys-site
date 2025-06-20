@@ -16,6 +16,27 @@ noSidebar: true
 .content h3 {
   margin-top: 1em;
 }
+
+.logicZone section.memoriam {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  max-width: 800px;
+  border: 2px solid wheat;
+  border-radius: 12px;
+  padding: 1.5rem .5rem .5rem;
+}
+
+.logicZone section.memoriam h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.logicZone section.memoriam h2 .name {
+  font-size: 32px;
+}
+
 </style>
 
 <br>
@@ -166,7 +187,25 @@ the result of ongoing experimentation, and will evolve based on the
 experience and input of people like you.
 </details>
 
-<hr>
+<section class="memoriam">
+  <h2>
+    In memoriam<br>
+    <span class=name>Peter B. Andrews</span><br>
+    <span class=smaller>1937 - 2025</span>
+  </h2>
+  <p class="center">
+    Professor Peter Andrews developed the formulation of simple type
+    theory (or "higher-order logic") that he called
+    <b>Q<sub><span class=smaller>0</span></sub></b>.  Everything
+    here is based on that system, and the internal development of
+    the logic here closely follows his.
+  </p>
+  <p class="center">
+    His book, <b>An Introduction to Mathematical Logic and Type
+    Theory: To Truth Through Proof</b>, is a principal source for
+    the theory behind the logic used here.
+  </p>
+</section>
 
 {{< divstyle class="flexBox"
  style="justify-content: space-evenly; margin: 2em 0 8em 0; font-weight: bold; font-size: larger;" >}}
