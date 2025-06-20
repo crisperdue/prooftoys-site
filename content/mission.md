@@ -19,7 +19,7 @@ Desccription: >
 
 </style>
 
-# Prooftoys misssion and vision
+# Prooftoys mission and vision
 
 ## The mission
 
