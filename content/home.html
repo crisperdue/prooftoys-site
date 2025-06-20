@@ -105,6 +105,10 @@ sitemap:
     text-decoration: none;
   }
 
+  a.logo {
+    flex: auto 1 100;
+  }
+
   a:hover {
     cursor: pointer;
     text-decoration: underline;
@@ -236,7 +240,7 @@ sitemap:
     display: flex;
     margin: 8px 0px;
     align-items: center;
-    gap: 32px;
+    gap: 16px;
   }
   
   .nav-links a {
@@ -407,15 +411,13 @@ sitemap:
 
 </style>
     
-<header>
-  <a href="/">
+<header class="nav-links">
+  <a class="logo" href="/">
     <img src="/Logo1.svg">
   </a>
-  <nav class="nav-links">
-    <a href="/about/" class="nav-link">The project</a>
-    <a href="/mission/" class="nav-link">The mission</a>
-    <a href="#" class="nav-link">Contact</a>
-  </nav>
+    <a href="/documentation/">Documentation</a>
+    <a href="#">Contact</a>
+    <a href="/mission/">Mission and vision</a>
 </header>
 <main>
 
@@ -641,9 +643,8 @@ sitemap:
     <p class="center">
       His book, <b>An Introduction to Mathematical Logic and Type
       Theory: To Truth Through Proof</b>, is a principal source for
-      the theory behind implementations of logics of this kind.
+      the theory behind the logic here.
     </p>
-
   </section>
 
 </main>
