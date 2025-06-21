@@ -46,7 +46,7 @@ learning to use precise mathematical reasoning quite soon after basic
 algebra has the potential to help students of mathematics more than
 conventional approaches.
 
-### An implementation
+### Implementation
 
 The proof builder implements the logic with a user-friendly interface
 design to help the user succeed while learning the details of the logic
@@ -132,14 +132,14 @@ implementation of mathematical logic.
 
 **Q:** *Is Prooftoys or its logic really that unique?*
 
-**A:** Well, yes and no.  A number of textbooks present logic, but
-almost always limited to propositional logic or first-order logic.
+**A:** Well, yes and no.  Relatively minor variants of the simple type
+theory used here are implemented in "research-grade" proof assistant
+software, but hardly any textbooks present this kind of logic.
 
-By contrast with first-order logic, simple type theory expresses ideas
-about functions, collections, and more simply and directly in the logic.
-Unfortunately, hardly any textbooks present this kind of logic, but it
-is widely used in "research-grade" proof assistants such as HOL4, HOL
-Light, Isabelle/HOL, and others.  
+First-order logic is presented in many textbooks. Simple type theory has
+important practical and technical advantages, but the user interfaces
+for other systems that implement it are much more oriented toward
+experts.
 
 **Q:** *My interest is learning about mathematical proof using a
 textbook such as "The Book of Proof" or similar resource. Why shouldn't
