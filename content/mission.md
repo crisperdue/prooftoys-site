@@ -132,14 +132,13 @@ implementation of mathematical logic.
 
 **Q:** *Is Prooftoys or its logic really that unique?*
 
-**A:** Well, yes and no.  Relatively minor variants of the simple type
+**A:** Well, yes and no.  Very close relatives of the simple type
 theory used here are implemented in "research-grade" proof assistant
 software, but hardly any textbooks present this kind of logic.
 
 First-order logic is presented in many textbooks. Simple type theory has
 important practical and technical advantages, but the user interfaces
-for other systems that implement it are much more oriented toward
-experts.
+for other systems that implement it are much more suitable for experts.
 
 **Q:** *My interest is learning about mathematical proof using a
 textbook such as "The Book of Proof" or similar resource. Why shouldn't
