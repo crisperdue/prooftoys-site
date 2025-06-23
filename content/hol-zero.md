@@ -3,6 +3,12 @@ title: HOL Zero primitives
 ---
 ## HOL Zero primitive inference rules
 
+The descriptions below come from comments in the file thm.ml. The HOL
+Zero primitive inference rules are very similar to the HOL Light
+primitive rules, and both have exactly 10.
+
+------------
+<br>
 HOL Zero has 10 primitive inference rules.  These give basic
 properties about equality, lambda abstraction, propositional deduction
 and instantiation, and correspond to classic rules of typed lambda
