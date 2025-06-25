@@ -82,6 +82,14 @@ sitemap:
     font-size: smaller;
   }
 
+  .bigger {
+    font-size: larger;
+  }
+
+  .biggish {
+    font-size: var(--18px);
+  }
+
   .center {
     display: block;
     text-align: center;
@@ -239,7 +247,6 @@ sitemap:
   
   .nav-links {
     display: flex;
-    margin: 8px 0px;
     align-items: center;
     gap: 16px;
   }
@@ -426,22 +433,18 @@ sitemap:
     <h1>
       A Logical Path to Mathematics
     </h1>
-    <p>
+    <p class="biggish">
+      A modern road to <b>the whole world</b> of mathematics<br>
       <b>A system of deduction</b> built on simple concepts<br>
-      <b>Universal</b> across mathematical domains<br>
       <b>Explicit, practical,</b> and <b>transparent</b><br>
       <b>A computer tool</b> that makes smart suggestions and prevents
       errors
     </p>
-
-  <h2>Is it for You?</h2>
-  <p class="center">
-    Are you comfortable using basic algebra?<br>
-    Do you want to refine your mathematical problem-solving?<br>
-    Or would you like to learn how computers reason mathematically?<br>
-    If so, the information and tools on this <i><a
-    href="/contact/">experimental website</a></i> might be for you.
-  </p>
+    <h2>Can You handle it?</h2>
+    <p class="biggish">
+      Are you comfortable using basic algebra?  Motivated to learn?<br>
+      Then give it a try.
+    </p>
   </section>
 
   <section class="options-section">
@@ -485,7 +488,7 @@ sitemap:
 
     <h2>A Live Medium</h2>
       <p>
-        The reasoning is right in your browser.
+        The reasoning is right in front of you.
       </p>
     <div class="one-card">
       <img-left>
@@ -498,10 +501,6 @@ sitemap:
             Computer deduction behind each step
           </l-i>
           <l-i>
-            Solutions also are not just "answers" -- they are true
-            statements like all other steps.
-          </l-i>
-          <l-i>
             All assumptions and the problem statement are fully laid out.
           </l-i>
           <l-i>
@@ -512,15 +511,24 @@ sitemap:
     </div>
 
     <p>
-      Keeps you on track through leaps of logic.
+      Details are available when you need them.
     </p>
     <div class="one-card">
       <img-left>
-        <img src="/images/StepDetails.webp">
+        <img src="/images/StepDetails.png">
         <u-l>
           <l-i>Open up a step to see the details to any level.</l-i>
           <l-i>Even details of extensive simplifications are just a click away.</l-i>
-          <l-i>View the proof of any stated fact.</l-i>
+          <l-i>
+            In Prooftoys, theorems and useful variants are considered
+            "facts", and can be looked up for use as proof steps.  You
+            can view the proof of any fact just like details of other
+            kinds of steps.
+        </l-i>
+          <l-i>
+            Step 14 here is a fact proved from another fact using
+            commutativity of addition.
+          </l-i>
         </u-l>
       </img-left>
       <br>
@@ -532,39 +540,24 @@ sitemap:
 
   <section class="top-level">
     <h2>Smart</h2>
-    <p>
-      The menu suggests steps such as using the distributive law here.
-    </p>
-    <div class="one-card">
-      <img-left>
-        <img src="/images/StepSuggestionsShot.png">
-        <u-l>
-          <l-i>The tool offers menus of suggestions</l-i>
-          <l-i>Suggestions match your selected target term</l-i>
-          <l-i>No memorizing names of rules</l-i>
-          <l-i>
-            The user is in control
-          </l-i>
-          <l-i>
-            The logic ensures correct reasoning
-          </l-i>
-        </u-l>
-      </img-left>
-    </div>
 
     <p>
-      This display highlights the input and result of the step.
+      The user interface is syntax-aware.
     </p>
     <div class="one-card">
       <img-left>
         <img src="/images/ProofStepsHilit.png">
         <u-l>
           <l-i>
-            Highlighting and selections reflect the syntax
-            including operator precedence.
+            You select a step or part to transform.
           </l-i>
           <l-i>
-            Displays know the inputs and outputs of transformations.
+            Only meaningful selections are possible.
+          </l-i>
+          <l-i>
+            For completed steps, the display can highlight the term that
+            was transformed, and tries to also highligh the result of
+            the transformation.
           </l-i>
         </u-l>
       </img-left>
@@ -575,14 +568,34 @@ sitemap:
         </a>
       </p>
     </div>
+    <p>
+      The menu suggests steps that can apply to your selection.
+    </p>
+    <div class="one-card">
+      <img-left>
+        <img src="/images/StepSuggestionsShot.png">
+        <u-l>
+          <l-i>Suggestions appear in the menu</l-i>
+          <l-i>
+            Inapplicable actions are filtered out</l-i>
+          <l-i>
+            Freely choose what to do next at all times
+          </l-i>
+          <l-i>
+            The logic ensures correct reasoning
+          </l-i>
+        </u-l>
+      </img-left>
+    </div>
+
   </section>
 
   <section class="top-level">
     <h2>Simple and Approachable</h2>
       <p>
-        All reasoning uses equations, as in these examples.
-        The "<code>==</code>" symbol is for equality of truth
-        values.
+        All reasoning ultimately uses equations, as below. The
+        "<code>==</code>" symbol is for <i>logical equivalence</i>
+        (equality of truth values).
       </p>
     <div class="one-card">
       <img-left>
@@ -611,12 +624,8 @@ sitemap:
             Minimal additional concepts
           </l-i>
           <l-i>
-            Many higher-level inferences are simple combinations.
-          </l-i>
-          <l-i>
-            Choose your own path:
-            prove theorems or apply them at your pace and in
-            your order.
+            Many higher-level inferences are simple combinations of the
+            basic kinds of inferences
           </l-i>
         </u-l>
       </img-left>
