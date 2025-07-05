@@ -25,8 +25,8 @@ Desccription: >
 
 The Prooftoys project aims to demonstrate how a simplified system of
 deductive reasoning can support effective and natural use of proof in
-the study of mathematics, starting with basic algebra and extending
-naturally to much of mathematics.
+learning mathematics, starting with basic algebra and extending naturally
+to much of mathematics.
 
 ## The vision
 
