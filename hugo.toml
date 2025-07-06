@@ -49,7 +49,7 @@ enableInlineShortcodes = true
     # ~/src/prooftoys.
     path = "example.com/prooftoys"
     [[module.imports.mounts]]
-      # Path to mount:
+      # Location of files relative to path above.
       source = "js"
       # Where to mount it within this workspace:
       # TODO: Remove this when superseded by assets/js.
@@ -57,7 +57,7 @@ enableInlineShortcodes = true
     [[module.imports.mounts]]
       # Path to mount:
       source = "js"
-      # Also make js/* "resources" available as /js/* here.
+      # This also makes js/* "resources" available as /js/* here.
       target = "assets/js"
     [[module.imports.mounts]]
       source = "node_modules"
