@@ -35,6 +35,8 @@ what inference rules do and how they work.
 <div id=proofEditor></div>
 {{% /divstyle %}}
 
+<div class=footer-spacer></div>
+
 {{% /divstyle %}}
 
 <script defer>
