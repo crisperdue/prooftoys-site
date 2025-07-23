@@ -47,7 +47,14 @@ of this kind for now.
 
 ## Reading solution steps
 
-A typical
+Every step has a line number like `[1]`, followed by a statement in the
+language of mathematics.  This is followed by a brief description such
+as `considering ... ` or `using ... ` that is there to remind you what
+you and the computeer did to get to the current step.
+
+## Using the tool
+
+[[See Supademo]]
 
 ## Basic linear equations
 
@@ -60,24 +67,6 @@ Pressing "Clear work" removes all but the problem statement, and "Solve" generat
 <div class=proof-editor data-one-doc data-steps=
  "(steps (1 consider
             (t (((4 * ((2 * x) - 3)) + 7) = ((3 * x) + 5)))))"
-></div>
-
-### Another linear equation
-
-<div class=proof-editor data-one-doc data-steps=
- "(steps (1 consider (t (8 * (2 - t) = -5 * t))))"
-></div>
-
-### Working with fractions
-
-<div class=proof-editor data-one-doc data-steps=
- "(steps (1 consider (t (5 * x - 6 = 2 / 3))))"
-></div>
-
-### Common denominators
-
-<div class=proof-editor data-one-doc data-steps=
- "(steps (1 consider (t (((5 * x) - (5 / 4)) = (2 / 3)))))"
 ></div>
 
 <div class=footer-spacer></div>
