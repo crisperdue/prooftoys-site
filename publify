@@ -1,30 +1,30 @@
 #!/bin/bash
 #
-# Deploy prooftoys.org to Netlify from the ~/src/publish area.  
+# Deploy prooftoys.org to Netlify from ~/src/
 #
 # You can run this with arg -p or --prod to push to production.
 # Or use --alias next to publish to
 # https://next--prooftoys.netlify.app/
 
-PUB=~/src/publish
+PUB=~/src
 
 run() {
   echo '$' $@
   eval "$@"
 }
 
-PSITE=$PUB/prooftoys-site
+PSITE=$PUB/psite
 PROOFTOYS=$PUB/prooftoys
 
-echo ==== DEPLOYING FROM $PSITE ====
+echo ==== DEPLOYING TO "next--prooftoys" FROM $PSITE ====
 echo ==== USING $PROOFTOYS ====
 sleep 1
 
 run cd $PROOFTOYS
-run git pull
+# run git pull
 
 # Update node_modules to match config files.
-npm install
+# npm install
 
 echo
 errcount=$(tsc | grep -w error | wc -l)
@@ -37,7 +37,7 @@ fi
 echo
 
 run cd $PSITE
-run git pull
+# run git pull
 
 echo
 echo ==== BUILD SITE ====
@@ -45,7 +45,7 @@ if run hugo; then
 
   echo
   echo ==== NETLIFY DEPLOY ====
-  run netlify deploy --site prooftoys.netlify.app --dir public "$@"
+  run netlify deploy --site prooftoys.netlify.app --dir public --alias next "$@"
 
   if [ -n "$1" ]; then
     echo ==== PUBLISHED ====
