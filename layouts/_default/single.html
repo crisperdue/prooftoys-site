@@ -1,5 +1,4 @@
 {{ define "header_css" }}{{ end }}
-{{ define "body_classes" }}page-default-single{{ end }}
 {{ define "header_classes" }}{{ end }}
 {{ define "footer_js" }}
 <!--
@@ -36,7 +35,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-
 {{ end }}
 
 {{ define "main" }}
-<div class="mainContent invisible content mb-md-6">
+<section id="main" class="invisible">
   {{ .Content }}
-</div>
+</section>
 {{ end }}

@@ -45,12 +45,12 @@
 
 <body class='page {{ block "body_classes" . }}{{ end }}'>
 {{block "banner" . }}{{partial "banner.html" . }}{{end}}
-<div class="wrapper ml-1 mr-1 ml-md-4 mr-md-6 mr-lg-8">
+<div class="wrapper ml-1 mr-1 mt-7">
   {{ $displaySidebar := not .Params.noSidebar }}
   {{ if $displaySidebar }}
-  <div class="container-fluid">
-    <div class="row">
-      <div style="text-align: left" class="mt-10 mt-md-5">
+  <!-- <div class="container-fluid"> -->
+    <div id=main-row class="row">
+      <div style="text-align: left">
         {{partial "hamburger.html" . }}
       </div>
       <div class="col-12 col-md-4 col-lg-3">
@@ -67,7 +67,7 @@
         {{ end }}
       {{ end }}
     </div>
-  </div>
+  <!-- </div> -->
   {{ else }}
     {{ block "main" . }}{{ end }}
   {{ end }}
@@ -110,7 +110,7 @@ $(function() {
 });
 // Make the content visible all at once.
 // The mainContent DIV is created in single.html.
-$('.mainContent').removeClass('invisible');
+$('#main').removeClass('invisible');
 </script>
 
 </body>
