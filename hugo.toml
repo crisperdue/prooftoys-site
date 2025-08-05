@@ -39,6 +39,9 @@ enableInlineShortcodes = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+    [markup.highlight]
+      # See https://gohugo.io/quick-reference/syntax-highlighting-styles/
+      style = 'borland'
 
 [module]
   # To interpret all of these, look at go.mod
