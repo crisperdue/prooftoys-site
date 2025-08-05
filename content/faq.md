@@ -1,5 +1,5 @@
 ---
-title: Questions and Answers | Prooftoys
+title: Questions and Answers
 ---
 
 # Questions and answers
