@@ -39,7 +39,7 @@ function body in a call to an anonymous function, e.g. `({x. T} y)`.
 
 Invoking a rule of inference (or theorem) is done by calling `Toy.rules.<ruleName>` and passing all needed inputs as arguments.  In source files, normally a constant "rules" is defined with the value of `Toy.rules`. 
 So for example if "equation1" and "step2" have been proved, and the variable "path" is a Path to the desired subexpression of step2, use of Rule R could look like:
-```
+```javascript
 var step3 = rules.r(equation1, step2, path);
 ```
 

@@ -69,7 +69,7 @@ The precedences of Prooftoys infix operators in order from lowest to
 highest, in the input syntax, are:
 
 ```\
-  ==
+ ==
   =>
   |
   &

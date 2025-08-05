@@ -64,9 +64,8 @@ functions, and collections.
 
 Please take a look at the [Questions and Answers](/faq/) page if any of
 this raises questions in your mind.  Or feel free to contact the author.
-[Email](mailto:cris@perdues.com) is good, or
-[GitHub](https://github.com/crisperdue/prooftoys/issues) could be fine,
-too.
+[Email](mailto:cris@perdues.com) is good, and
+[GitHub](https://github.com/crisperdue/prooftoys/issues) is fine, too.
 
 <!--
 

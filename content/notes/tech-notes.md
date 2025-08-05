@@ -136,9 +136,7 @@ For teaching and learning purposes this is unfortunate, because now division by 
 
 ---
 
-
-
-```
+```none
 Am Mittwoch, den 27.02.2019, 17:00 +0100 schrieb Chun Tian (binghe):
 > Hi,
 > 
@@ -166,29 +164,17 @@ It can be easily proved in HOL4 and HOL Light.:
 
 In HOL4:
   First, by definition: `x / y = x * inv y`
-```
 
+https://github.com/HOL-Theorem-Prover/HOL/blob/master/src/real/realScript.sml#L85
 
-<code>   [ https://github.com/HOL-Theorem-Prover/HOL/blob/master/src/real/realScript.sml#L85](https://github.com/HOL-Theorem-Prover/HOL/blob/master/src/real/realScript.sml#L85)</code>
-
-
-```
   and then `inv 0 = 0` (REAL_INV_EQ_0)
-```
 
+https://github.com/HOL-Theorem-Prover/HOL/blob/master/src/real/realScript.sml#L687
 
-<code>   [ https://github.com/HOL-Theorem-Prover/HOL/blob/master/src/real/realScript.sml#L687](https://github.com/HOL-Theorem-Prover/HOL/blob/master/src/real/realScript.sml#L687)</code>
-
-
-```
 In HOL Light:
-```
 
+https://github.com/jrh13/hol-light/blob/master/real.ml#L812
 
-<code> [ https://github.com/jrh13/hol-light/blob/master/real.ml#L812](https://github.com/jrh13/hol-light/blob/master/real.ml#L812)</code>
-
-
-```
     let REAL_DIV_EQ_0 = prove
       (`!x y. x / y = &0 <=> x = &0 \/ y = &0`,
     REWRITE_TAC[real_div; REAL_INV_EQ_0; REAL_ENTIRE]);;

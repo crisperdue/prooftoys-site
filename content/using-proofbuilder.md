@@ -7,7 +7,7 @@ description: >
 
 # Using the Proof Builder
 
-##### Contents
+##### **Contents**
 
 {{< TOC >}}
 
