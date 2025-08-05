@@ -1,6 +1,5 @@
 ---
 title: Proof builder
-menu: menu-docs-plus.md
 description: >
   The Prooftoys proof builder helps you interactively
   build proofs with its graphical user interface.

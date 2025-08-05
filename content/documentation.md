@@ -1,6 +1,5 @@
 ---
 title: Documentation
-menu: menu-site.md
 ---
 
 ### Documentation

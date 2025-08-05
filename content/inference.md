@@ -1,6 +1,5 @@
 ---
 title: "Reasoning"
-menu: menu-docs-plus.md
 description: >
   The nuts and bolts of the exceptionally simple
   and easy Prooftoys system for deductive reasoning.

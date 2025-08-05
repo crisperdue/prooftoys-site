@@ -1,6 +1,5 @@
 ---
 title: 'Concepts'
-menu: menu-docs-plus.md
 description: >
   Concepts and terms used on the Prooftoys website
   to describe logic, the system, and its user interface.

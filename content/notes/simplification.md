@@ -1,6 +1,5 @@
 ---
 title: Simplification
-menu: menu-docs-plus.md
 sitemap:
   disable: true
 ---

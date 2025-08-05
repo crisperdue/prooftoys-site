@@ -1,6 +1,5 @@
 ---
 title: Quickref
-menu: menu-docs-plus.md
 ---
 
 # Prooftoys syntax quick reference

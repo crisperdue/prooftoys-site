@@ -1,6 +1,5 @@
 ---
 title: Axioms and theorems
-menu: menu-docs-plus.md
 description: >
   Summary of the axioms and theorems of pure logic
   available in Prooftoys.  Theorems that apply across

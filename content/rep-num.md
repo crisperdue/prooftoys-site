@@ -1,6 +1,5 @@
 ---
 title: "Repetitious number"
-menu: menu.md
 ---
 
 ## The problem of the repetitious number

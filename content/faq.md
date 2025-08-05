@@ -1,6 +1,5 @@
 ---
 title: Questions and Answers | Prooftoys
-menu: menu-site.md
 ---
 
 # Questions and answers

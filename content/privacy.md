@@ -1,7 +1,6 @@
 ---
 title: Privacy policy
 type: custom
-menu: menu-site.md
 description: >
   Prooftoys takes care to protect your privacy
   with transparent policies.

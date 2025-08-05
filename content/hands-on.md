@@ -1,6 +1,5 @@
 ---
 title: Hands-on
-menu: menu-site.md
 ---
 
 ### Hands-on with Prooftoys

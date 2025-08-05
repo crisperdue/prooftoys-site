@@ -2,7 +2,6 @@
 title: 2 - Adding to zero
 menus:
   - menu-tut.md
-menu: menu-docs-plus.md
 description: >
   A first induction proof
 ---

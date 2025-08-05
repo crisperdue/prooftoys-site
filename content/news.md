@@ -1,6 +1,5 @@
 ---
 title: News
-menu: menu-site.md
 description: >
   What is new and upcoming with Prooftoys
 ---

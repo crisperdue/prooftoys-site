@@ -1,6 +1,5 @@
 ---
 title: "Using the Proof Builder"
-menu: menu-docs-plus.md
 description: >
   A gentle introduction to the Prooftoys user interface
   that helps you build proofs and solve math problems.

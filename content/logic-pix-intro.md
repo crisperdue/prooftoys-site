@@ -1,6 +1,5 @@
 ---
 title: "Pix - introduction"
-menu: "/menu-logic-pix.md"
 description: >
   Introduction to explanation to basics of logic
   through Venn diagram pictures.

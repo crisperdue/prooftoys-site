@@ -1,6 +1,5 @@
 ---
 title: How long is a lunar?
-menu: menu.md
 ---
 
 ## How long is a lunar?

@@ -1,6 +1,5 @@
 ---
 title: "Definitions"
-menu: menu-docs-plus.md
 description: >
   Prooftoys definitions introduce new constants while maintaining
   logical consistency.
