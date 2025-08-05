@@ -5,9 +5,9 @@ description: >
   and easy Prooftoys system for deductive reasoning.
 ---
 
-# Principles of reasoning in Prooftoys
+# Principles of reasoning<br> in Prooftoys
 
-##### Contents
+##### **Contents**
 
 {{< TOC >}}
 
