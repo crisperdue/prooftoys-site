@@ -43,18 +43,20 @@
 {{ partial "matomo.html" . }}
 </head>
 
-<body class='page {{ block "body_classes" . }}{{ end }}'>
+<body class='{{ block "body_classes" . }}{{ end }}'>
 {{block "banner" . }}{{partial "banner.html" . }}{{end}}
-<div class="wrapper ml-1 mr-1 mt-7">
+  {{/* noSidebar supports the old home page.
+       Consider pure flex layout for the future, with a sidebar
+       that does not shrink.
+    */}}
   {{ $displaySidebar := not .Params.noSidebar }}
   {{ if $displaySidebar }}
-  <!-- <div class="container-fluid"> -->
-    <div id=main-row class="row">
+    <div class="main-row row ml-1 mr-1 mt-7">
       <div style="text-align: left">
         {{partial "hamburger.html" . }}
       </div>
       <div class="col-12 col-md-4 col-lg-3">
-	      <div class="sidebar {{ .Params.sidebarStyle }}">
+	      <div class="sidebar floating {{ .Params.sidebarStyle }}">
 	        {{ partial "sidebar.html" . }}
 	      </div>
       </div>
@@ -67,11 +69,9 @@
         {{ end }}
       {{ end }}
     </div>
-  <!-- </div> -->
   {{ else }}
     {{ block "main" . }}{{ end }}
   {{ end }}
-</div>
 
 {{ partial "page-footer.html" . }}
 
