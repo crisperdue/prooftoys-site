@@ -69,7 +69,7 @@ $hamburger-active-layer-color: $primary;
 // @import 'components/whitebox';
 // @import 'components/overview';
 
-// @import 'banner';
+@import 'banner';  // Remove this along with the old home page.
 
 // Pages
 // @import 'pages/home';
