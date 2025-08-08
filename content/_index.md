@@ -58,8 +58,6 @@ The **graphical user interface** will work with you to:
 - **read and construct correct proofs** with no holes and no handwaving
 - **solve math problems easily** through proof.
 
-
-
 ### **Ways to start**
 
 {{% divstyle style="float: right; margin: 0 1em 0 1em" %}}
@@ -69,9 +67,10 @@ The **graphical user interface** will work with you to:
 </a>
 {{% /divstyle %}}
 
-- ***Taste it:*** worked examples.
+- [***Taste it:***]({{< relref "/preview.md" >}}) demos and a video
+  preview.
 
-- ***Try it:*** with an extensive
+- [***Try it:***]({{< relref "/hands-on.md" >}}) with an extensive
   and self-contained [***Natural Numbers Game***]({{< relref
   "/number-game/tutorial1.md" >}}) tutorial that takes you
   step-by-step through proofs of important properties of numbers
@@ -85,17 +84,14 @@ The **graphical user interface** will work with you to:
   through proof.  Be assured that your steps will be *mathematically
   correct*.
 
-- ***Look:*** The [***logic through pictures***]({{< relref
-"/logic-pix-intro.md" >}}) section introduces some universal basics
-of logic.  These are interactive diagrams with explanation, and truth
-tables to support your intuitive sense of concepts such as *and*,
-*or*, *not*, and *implies*).
+- [***Look:***]({{< relref "/logic-pix-intro.md" >}}) The [***logic
+through pictures***]({{< relref "/logic-pix-intro.md" >}}) section
+introduces some universal basics of logic.  These are interactive
+diagrams with explanation, and truth tables to support your intuitive
+sense of concepts such as *and*, *or*, *not*, and *implies*).
 
-- ***Read:*** about [***the system and its
-mathematics***]({{< relref "/documentation.md" >}}).
-
-- ***Watch:*** a video demonstration of the Prooftoys [**proof
-builder**]({{< relref "/proofbuilder.md" >}}).
+- ***Read:*** about [***the system and the principles behind it***]({{<
+  relref "/documentation.md" >}}).
 
 <details>
 {{% summary %}}
