@@ -4,7 +4,8 @@ title = "Prooftoys"
 theme = "hugo-whisper-theme"
 themesDir = "../hugo-themes"
 
-enableInlineShortcodes = true
+[security]
+  enableInlineShortcodes = true
 
 [sitemap]
   # Give a reasonable default priority to all pages.
