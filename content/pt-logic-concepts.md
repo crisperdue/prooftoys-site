@@ -63,7 +63,8 @@ statement has parts and a part of a statement may also have parts.
 For example the (true) statement `(x = y) == (y = x)` has three parts:
 `x = y`, `==`, and `y = x`.  The part `x = y` also has three parts:
 `x`, `=`, and `y`.  In the language of Prooftoys each of these parts,
-whether large or small, is a _term_.
+whether large or small, is a _term_.  By design the proof builder only
+ever highlights complete terms.
 
 **Instance, substitution instance.** A _substitution instance_ of a
 term is simply the result of applying some substitution to the term.
@@ -74,12 +75,13 @@ of Prooftoys often uses just _instance_ with the same meaning.
 syntactic pattern `A => B`.  Many proof steps are conditional
 statements, the whole statement having this form.
 
-**Assumption(s), antecedent.** The left side of a conditional term is
-its antecedent.  If the left side has the form `A1 & A2 & ... => C`,
-all of the `A`s can be called assumptions.
+**Assumption(s), antecedent, condition.** The left side of a conditional
+term is its *antecedent*, also known as its *condition*.  If the left
+side has the form `A1 & A2 & ... => C`, all of the `A`s are
+*assumptions*.
 
 **Conclusion, consequent.** The right side of a conditional term is
-known as its conclusion or consequent.
+known as its *conclusion* or *consequent*.
 
 ###### Related to function terms
 
