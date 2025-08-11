@@ -41,13 +41,13 @@ university-level math.
 
 ### Will it be hard?
 
-***If you have studied basic high school algebra, you have the
-concepts you will need!*** In fact it turns out that there are
-fundamentally only *two ways* in Prooftoys to go from one true
-statement to another, and these are both part of ordinary high school
-algebra.  We will review the principles with you in the next few
-sections, and Prooftoys will provide you with the guidance and
-suggestions to help you succeed.
+***If you have studied basic high school algebra, you have encountered
+the concepts you will need!*** In fact it turns out that there are
+fundamentally only *two ways* for Prooftoys to deduce one true statement
+to another, and these are both part of ordinary high school algebra. You
+will probably recognize the principles when you see them in action, and
+Prooftoys will provide you with guidance and suggestions to help you
+succeed.
 
 *Your first mission, should you decide to accept it, is to prove that*
 `0 = 0` --- about as simple as it gets.
@@ -58,8 +58,6 @@ using Prooftoys.
 
 ### What is this?
 
-<div class=proof-editor data-exercise="nat/nat0"></div>
-
 In front of you is a Prooftoys proof editor.  It displays a proof in
 progress, and lets you interactively add to or modify the proof,
 experimenting with different proof steps and approaches.
@@ -67,6 +65,20 @@ experimenting with different proof steps and approaches.
 You should see the beginning of a proof, with just one line.  If not,
 click on "Clear work", then confirm that you want to clear your work.
 The initial statement in this case is `0 = 0 => 0 = 0`.
+
+This will be a goal-directed proof.  The proofs in this whole section
+are generally set up in this style, so we show this one in the
+goal-directed style to introduce you to the style even though being
+goal-directed does not really help you here.  The first line of
+this proof says that if `0 = 0` then `0 = 0`.  
+
+The idea of goal-directed proof in Prooftoys is that you work with a
+sequence of true statements, each with the desired _conclusion_, but
+having extra _assumptions_ that are not in the goal statement.  In your
+proof you eliminate undesired assumptions until only the stated goal
+remains.
+
+<div class=proof-editor data-exercise="nat/nat0"></div>
 
 ### Taking your first step
 
