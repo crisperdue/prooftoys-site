@@ -12,8 +12,7 @@ description: >
 > bottom of the page)
 
 The math challenge here is to prove that `NN n => 0 + n = n` -- that
-the result of adding any natural number `n` to 0 is `n`.  We will do
-this by proving that 
+the result of adding any natural number `n` to 0 is `n`. 
 
 *But hold on: didn't we already know that `n + 0 = n`?* Yes,
 we did, but the question now is adding n to zero.  Remember that a
@@ -23,8 +22,6 @@ the `n` and the 0.
 Because this is the first use of the principle of induction, we will
 go through this proof in detail and take the training wheels off for the
 next mission.
-
-<div class=proof-editor data-exercise="nat/add1"></div>
 
 #### Setting up the induction proof
 
@@ -48,6 +45,8 @@ known as the **inductive case**.
 Many basic properties of the natural numbers are proved by induction,
 and this setup step will be our standard way to start induction proofs.
 
+<div class=proof-editor data-exercise="nat/add1"></div>
+
 #### The proof
 
 We will prove the goal statement by proving that the *base case* and
@@ -58,19 +57,25 @@ You might choose to prove the *base case* (`0 + 0 = 0`) first, to get
 it out of the way.  If you select that whole assumption and ask for
 simplification, that will take care of it.
 
-The *inductive case* has its own proof, which starts by turning it
-into a subgoal.  (Creating a subgoal for the inductive case is usual
-in inductive proofs.)  Any statement made this way is definitely true.
+The *inductive case* has its own proof, which starts by turning it into
+a subgoal.  (Creating a subgoal for the inductive case is usual in
+inductive proofs.)  Select the `forall {n. ... }` or its "body":
+
+`ℕ n & 0 + n = n ⇒ 0 + succ n = succ n`
+
+and ask to "use as a subgoal" in the menu. Either way sets up the body
+as a subgoal to be proved.  A proof of that shows the whole assumption
+to be true --- the *inductive case*.
 
 In the assumptions of the subgoal, you can change the part `0 + succ
 n` to `succ (0 + n)` and then use the assumption that `0 + n = n`
 to change `succ (0 + n)` to `succ n`.  From here, simplification does
 the cleanups to prove the inductive case.
 
-Look back at the step before you made the subgoal.  The inductive case
-in this step is now proved true, so select that part.  Use the menu to
-replace that inductive case with `T`, make sure the result is
-simplified, and the proof will be complete.
+Look back at the step before you made the subgoal.  The body of the
+inductive case in this step is now proved true, so select that part.
+Use the menu to replace that inductive case with `T`, make sure the
+result is simplified, and the proof will be complete.
 
 > Why is a ham sandwich better than paradise?<br><br>
 > Well, nothing is better than paradise, right?
