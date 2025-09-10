@@ -3,7 +3,7 @@ title: Prooftoys project mission
 Desccription: >
   The Prooftoys project is an effort to demonstrate how
   computer support can make learning mathematics less painful 
-  and more productive.
+  and more rewarding.
 ---
 <style>
   
@@ -27,6 +27,9 @@ The Prooftoys project aims to demonstrate how a simplified system of
 deductive reasoning can support effective and natural use of proof in
 learning mathematics, starting with basic algebra and extending to much
 more.
+
+In a broader sense, Prooftoys aims to promote the understanding,
+appreciation, and practice of mathematical proof.
 
 ## The vision
 

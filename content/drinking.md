@@ -6,7 +6,7 @@ description: >
 
 # The drinking theorem
 
-This theorem was popularised by
+This theorem was popularised by logician
 [Raymond Smullyan](https://wikipedia.org/wiki/Raymond_Smullyan).
 Because its truth can seem puzzling, it is also known
 as the ["drinker paradox"](https://wikipedia.org/wiki/Drinker_paradox).
@@ -27,7 +27,7 @@ I think of this theorem as a variant of the statement that there is
 someone who drinks as little as anyone else.  We can then consider
 whether it is true when everyone drinks and whether it is true when at
 least one person does not drink at all.  In fact, every non-drinker
-has the extraordinary-sounding property in the theorem's statement.
+has the exceptional-sounding property in the theorem's statement.
 
 Our computer-based proof works backward from the goal, transforming
 the assumptions until they are known to be true.  It uses some of the
@@ -55,9 +55,10 @@ modifying the assumptions part until it is just `T`.
 
 [2] Rewrite the conditional into an "or".
 
-[3] Convert the "forall" into "not exists".  This rewrites with the
-rule `forall p == not (exists {x. not (p x)})`, matching `p` with
-`{y. drinker y}`.  Click on the word "use" in line 3 to see details.
+[3] Convert the "forall" into "not exists".  This rewrites with the rule
+`forall p == not (exists {x. not (p x)})`, matching `p` with `{y.
+drinker y}`.  Look for this fact in the "More" menu.  You might like to
+click on the word "use" in line 3 to see details.
 
 [4] Distribute the "or" over the two existentially quantified terms.
 This step uses a fancier kind of matching, known as "higher-order"
@@ -124,6 +125,6 @@ details of these steps, you can see this maneuver at work.
 Here is a worksheet you can use to try building this proof yourself,
 or your own alternative version.
 
-<div class="proof-editor mb-4" data-steps='(steps
+<div class="proof-editor mb-4" data-one-doc data-steps='(steps
 (1 assumeExplicitly (t (exists {x. ((drinker x) => (forall {y. (drinker y)}))})))
 )'></div>

@@ -7,7 +7,7 @@ title: Preview
 
 {{< TOC >}}
 
-## Video preview
+## Video intro
 
 <div style="margin-bottom: 2em">
 <a href="/ProoftoysPreview.mp4">
@@ -30,7 +30,10 @@ been asserted.
 In step 1, `x` is a variable, and the proof will substitute the constant
 `Socrates` for `x` there.
 
-<div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 0.7420435510887772; padding: 40px 0 40px 0;"><iframe src="https://app.supademo.com/embed/cme06oavx008byjyix35lqinf?embed_v=2&utm_source=embed" loading="lazy" title="Socrates redux" allow="clipboard-write" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<div style="position: relative; box-sizing: content-box; max-height: 80vh; max-height: 80svh; width: 100%; aspect-ratio: 0.7420435510887772; padding: 40px 0 40px 0;">
+  <iframe src="https://app.supademo.com/demo/cme06oavx008byjyix35lqinf" loading="lazy" title="Socrates redux" allow="clipboard-write" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+  </iframe>
+</div>
 
 ## Reasoning backward
 
@@ -45,14 +48,14 @@ href="/country-music/">Country Music Theorem.</a>
 
 Prooftoys generates an initial statement from a goal statement by
 including the desired conclusion as an assumption.  This is guaranteed
-to make it true, and Prooftoys proves it for you behind the scenes
+to make it true, and Prooftoys proves it for you behind the scenes.
 
 <div style="position: relative; box-sizing: content-box; max-height:
-80vh; max-height: 80svh; width: 100%; aspect-ratio: 0.974293059125964;
+80vh; max-height: 80svh; width: 100%; aspect-ratio: 0.7420435510887772;
 padding: 40px 0 40px 0;
 margin-bottom: 40px;">
   <iframe
-  src="https://app.supademo.com/demo/cmczcu0sd009nzg0io848eqx1"
+  src="https://app.supademo.com/demo/cme06oavx008byjyix35lqinf?step=5"
   loading="lazy" title="Supademo Demo" allow="clipboard-write"
   frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true"
   allowfullscreen style="position: absolute; top: 0; left: 0; width:

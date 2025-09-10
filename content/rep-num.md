@@ -11,12 +11,11 @@ Gardner</a>, author of numerous books of entertaining and puzzling
 mathematics and, for 25 years, the Mathematical Games column in
 Scientific American magazine.
 
-It is problem 20 in the book, a little mathematical parlor trick.
-In this parlor trick you ask *spectator A* to write down any three-digit
-number, then to copy the number to a new piece of paper, followed by
-the same digits again, making a six-digit number.  Without looking,
-instruct *spectator A* to pass the paper to *spectator B* without
-revealing the number to you.
+In this little parlor trick you ask *spectator A* to write down any
+three-digit number, then to copy the number to a new piece of paper,
+followed by the same digits again, making a six-digit number.  Without
+looking, instruct *spectator A* to pass the paper to *spectator B*
+without revealing the number to you.
 
 *Spectator B* is to divide the resulting number by 7, and then pass the
 result to a *spectator C*, who divides the result by 11. (Tell them not
@@ -46,10 +45,10 @@ So we can ask, is it true that
 Here is a solution built with Prooftoys.
 
 <div class="proof-display mb-4" data-steps='
-(1 consider (t ((((1001 * x) / 7) / 11) / 13)))
-(2 simplifyFocalPart (s 1))
-(3 arrangeTerm (s 2) (path "/right/right"))
-(4 display (s 3))
+(1 given (t ((((1001 * x) / 7) / 11) / 13)))
+(2 simplifySite (s 1) (path "/right"))
+(3 rewrite (s 2) (path "/right/right") (t (((((c != 0) & (R c)) & (R a)) & (R b)) => (((a * b) / c) = (b * (a / c))))))
+(4 simplifyFocalPart (s 3))
 '></div>
 
 {{% /faded %}}

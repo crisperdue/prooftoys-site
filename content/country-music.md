@@ -6,7 +6,28 @@ description: >
 
 # The country music theorem
 
-### What are we proving?
+{{< TOC >}}
+
+## Interactive Demo
+
+Here is an interactive demo walkthrough of the proof with some
+explanation.  You can refer to it as you work the proof yourself further
+below using the proof builder tool.
+
+<div style="position: relative; box-sizing: content-box; max-height:
+80vh; max-height: 80svh; width: 100%; aspect-ratio: 0.7420435510887772;
+padding: 40px 0 40px 0;
+margin-bottom: 40px;">
+  <iframe
+  src="https://app.supademo.com/demo/cme06oavx008byjyix35lqinf?step=5"
+  loading="lazy" title="Supademo Demo" allow="clipboard-write"
+  frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true"
+  allowfullscreen style="position: absolute; top: 0; left: 0; width:
+  100%; height: 100%; border: 2px solid blue;">
+  </iframe>
+</div>
+
+## What are we proving?
 
 We will prove that in a world where everyone loves either rock music
 or country music (or both), and there is someone who does not love
@@ -25,7 +46,11 @@ Garth, Jimmy, or Dolly, or whoever.
   It is sometimes written as `exists Country`, but this way has a more
   familiar look.
 
+## Doing it yourself
+
 <div class=proof-editor data-exercise="nat/CountryMusic"></div>
+
+## Step by step walkthrough
 
 We start the proof in the usual way.  You should see a first step that
 says:
@@ -62,7 +87,7 @@ options.  When you select this, the proof editor will remove the "not
 not" double negation by simplifying, and it should indicate "&check;
 Proof complete.".
 
-#### Alternative
+## Alternative
 
 This proof works "backward", starting with the desired conclusion *(the
 goal)*. It transforms the assumptions into the ones expected,
