@@ -12,9 +12,10 @@ description: >
 > Karr.<br>
 > "Plus ça change, plus c'est la même chose." (original French)
 
-The conditionals in both directions are true, so you can solve this
-one by breaking it down into the two conditionals.  You have almost
-reached our final challenge about addition.
+The conditionals in both directions are true, so you can solve this one
+by breaking down the assumed equivalence (`==`) into the two
+conditionals.  You have almost reached our final challenge about
+addition.
 
 <div class=proof-editor data-exercise="nat/addx4"></div>
 

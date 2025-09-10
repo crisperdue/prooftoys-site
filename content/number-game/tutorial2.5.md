@@ -28,10 +28,9 @@ throughout the proof, so the initial step has the planned assumptions
 as the initial conclusion, making it a true statement.
 
 The variable `y` is assumed equal to `f x`, so we can replace its
-occurrence in the conclusion.  Then the `y = f x` is not needed in the
-conclusion, and it can be replaced by `T` because it is assumed.
-Prooftoys has convenient commands ("*tactics*") for using assumptions
-of the current step in these ways.
+occurrence in `z = f y` in the conclusion.  Then the `y = f x` is not
+needed in the conclusion, and it can be replaced by `T` because it is
+assumed.
 
 #### ➭ [***Back to the main track***]({{< relref "/number-game/tutorial3.md" >}})
 

@@ -4,7 +4,11 @@ title: Questions and Answers
 
 # Questions and answers
 
+**Q: I still have a question on my mind.  What can I do about that?**
 
+**A:** Please don't be shy to start a [GitHub discussion](
+  https://github.com/crisperdue/prooftoys/discussions) or contact the
+  [author](https://github.com/crisperdue).
 
 **Q: What makes you think it is worthwhile to be so formal about
 reasoning?**

@@ -6,6 +6,14 @@ description: >
 
 ### News
 
+#### 09/2025
+
+- Updated site structure for clarity of purpose and navigation.
+- Proof builder performance and resource usage both greatly improved.
+- Many incremental improvements in proof builder user interface.
+- Interactive demos of forward and goal-directed proof.
+- Miscellaneous updates to content.
+
 ##### 07/2024
 
 - The entire proof builder system is now converted from JavaScript to Typescript and compiles with minimal errors.
