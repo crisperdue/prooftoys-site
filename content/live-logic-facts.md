@@ -15,7 +15,7 @@ anyone interested in seeing proofs of these theorems.  To view a proof
 to any desired level of detail, click on one of the bits of text
 displayed in blue like hyperlinks.
 
-Furthermore, all tautologies are also theorems of the logic.
+In addition, all tautologies are also theorems of the logic.
 
 <div id=proofDisplay style="margin-bottom: 1em"></div>
 
