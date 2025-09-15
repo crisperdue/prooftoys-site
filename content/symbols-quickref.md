@@ -28,7 +28,7 @@ infix operators, so `not a & b` means the same as `(not a) & b`.
 ## Basic math
 
 Basic binary math operations are: <tt>+, -, *, /,
-**</tt> (exponentiation). Exponentiation has the highest precedence,
+^</tt> (exponentiation). Exponentiation has the highest precedence,
 followed by multiplication and division, followed by addition and
 subtraction.  The negative of a number is expressed by the function
 `neg`, which displays as a prefix `-`.

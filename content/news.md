@@ -11,6 +11,8 @@ description: >
 - Updated site structure for clarity of purpose and navigation.
 - Proof builder performance and resource usage both greatly improved.
 - Many incremental improvements in proof builder user interface.
+- Full user interface support for exponentiation.  While '**' is still
+  accepted, '^' is the official symbol for it.
 - Interactive demos of forward and goal-directed proof.
 - Miscellaneous updates to content.
 

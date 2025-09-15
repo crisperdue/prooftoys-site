@@ -12,7 +12,7 @@ The ancient Greeks were very familiar with fractions, and the
 Pythagoren Theorem proves that some lengths are determined by square
 roots.  For example in a right triangle with sides A and B, and
 hypoteneuse (the long side) C, the length of C is
-`sqrt (a ** 2 + b ** 2)`.  So if sides A and B both have length 1,
+`sqrt (a^2 + b^2)`.  So if sides A and B both have length 1,
 the length of side C is `sqrt 2`.
 
 According to one legend, the discoverer of this fact made his
@@ -44,6 +44,6 @@ Proof
 
 Consider \(\sqrt{2}\), which is irrational. Then, \(\sqrt{2}^{\sqrt{2}}\) is either rational or irrational. If it is rational, then we are done. If it is irrational, then consider \(\left(\sqrt{2}^{\sqrt{2}}\right)^{\sqrt{2}} = \sqrt{2}^{\sqrt{2} \cdot \sqrt{2}} = \sqrt{2}^2 = 2\).
 
-#### Nim
+#### Chomp
 
 There is a nonconstructive proof that one player can always win with a "strategy-stealing" strategy.

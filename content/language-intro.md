@@ -76,7 +76,7 @@ highest, in the input syntax, are:
   =, !=, <, <=, >, >=
   +, -
   *, /
-  **
+  ^
 ```
 
 Items on the same line have equal precedence.  All are
