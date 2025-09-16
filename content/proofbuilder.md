@@ -15,20 +15,18 @@ publicly-available theorems and rules of inference.  It can make
 working with proofs easier, apply rules of inference correctly, show
 what inference rules do and how they work.
 
-## Quickstart video
+## Overview and demos
 
-<div style="margin-bottom: 2em">
-<a href="https://youtube.com/watch?v=WLvGFIHqL88">
-{{< image src="ProofBuilderFrame.png" title="Youtube quickstart video" >}}
-</a>
-</div>
+See the [preview page]({{< relref "/preview.md">}}) for introductory
+information.
 
-#### &#x27aa; [***Or read about it***]({{< relref
-"/using-proofbuilder.md" >}})
+## Proofbuilder usage
+
+See the [proof builder guide]({{< relref "/using-proofbuilder.md">}}).
+
+## Proof Builder Tool
 
 {{% divstyle class="outdented" %}}
-
-## The Proof Builder
 
 {{% divstyle style="margin-top: 1.5em" %}}
 <div id=proofEditor></div>

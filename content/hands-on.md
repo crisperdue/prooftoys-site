@@ -10,6 +10,8 @@ title: Hands-on
 - [**The repetitious number**]({{< relref "/rep-num.md" >}})
 
   Super-simple puzzle that can be solved with simplification alone.
+  Demonstrates setup for a goal-directed proof and use of
+  simplification.
 
 - [**Country Music Theorem**]({{< relref "/country-music.md" >}})
 
@@ -30,17 +32,17 @@ title: Hands-on
 
 - **How long is a lunar?** (upcoming)
 
-### Tutorial
+### Extended Tutorial
 
 - [**The Natural Numbers Game**]({{< relref
   "/number-game/tutorial1.md" >}})
 
   Extended tutorial that develops some basic propertiess of the natural
   numbers from first principles.  Uses mathematical induction and
-  goal-directed proof.  *Note: A simple example such as the Country
-  Music Theorem can be an equally good starting point for working with
-  Prooftoys, but this tutorial also introduces proof by induction and
-  takes you through several proofs.*
+  goal-directed proof throughout.  *Note: A simple example such as the
+  Country Music Theorem can be an equally good starting point for
+  working with Prooftoys, but this tutorial also introduces proof by
+  induction and takes you through several proofs.*
 
 #### Tool
 

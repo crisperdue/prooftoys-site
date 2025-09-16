@@ -10,6 +10,10 @@ send questions or report issues by email to the author or on
 [Github](https://github.com/crisperdue/prooftoys/issues) with the
 "docs" label.
 
+##### Using the tool
+
+- [**Introduction to the proof builder tool**]({{< relref "/using-proofbuilder.md">}})
+
 ##### Logic concepts
 
 - [**Logic through pictures**]({{< relref "/logic-pix-intro.md" >}})

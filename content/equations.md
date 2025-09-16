@@ -64,7 +64,7 @@ Pressing "Clear work" removes all but the problem statement, and "Solve" generat
 ### Linear equation
 
 <div class=proof-editor data-one-doc data-steps=
- "(steps (1 consider
+ "(steps (1 solveReal
             (t (((4 * ((2 * x) - 3)) + 7) = ((3 * x) + 5)))))"
 ></div>
 

@@ -5,16 +5,21 @@ description: >
   that helps you build proofs and solve math problems.
 ---
 
-# Using the Proof Builder
+# Introduction to the Proof Builder
 
 ##### **Contents**
 
 {{< TOC >}}
 
-**This page and the [Youtube
-video](https://www.youtube.com/watch?v=WYcJBE6ZCgA) explain use of the
-proof builder user interface.  Go to the [principles of reasoning]({{<
-relref "/inference.md" >}}) page for more understanding.**
+**Go to the [principles of reasoning]({{<
+relref "/inference.md" >}}) page for more understanding
+of the concepts of reasoning in the tool.**
+
+### Status
+
+Many specific commands have been added since this document was written.
+Most commands show previews of their output when you hover the mouse
+over their menu items.  Don't hesitate to make use of them.
 
 ### The worksheet
 
@@ -265,3 +270,15 @@ the logic.
 ### Managing worksheets
 
 ##### `TBD`
+
+## Proof Builder Tool
+
+For a page with just a "standalone" proof builder, see
+[the proof builder page]({{< relref "/proofbuilder.md">}}).
+
+{{% divstyle style="margin-top: 1.5em" %}}
+<div id=proofEditor></div>
+{{% /divstyle %}}
+
+<div class=footer-spacer></div>
+
