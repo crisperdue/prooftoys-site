@@ -3,15 +3,50 @@ title: Hands-on
 ---
 # Hands-on with Prooftoys
 
+## Contents
+
+{{< TOC >}}
+
 ## Proving
 
-### Simple puzzles and examples
+Mathematical reasoning --- in other words *proof* --- is the core of
+everything Prooftoys does. It can be explicit, visible to you
+step-by-step, or behind the scenes.  The hands-on pages show simple and
+useful forms of reasoning that you can use anywhere in your larger
+mathematical journey.
+
+### Simplification
+
+Simplification is a basic and powerful tool that we often take for
+granted in mathematics.  It is just as important and valuable for
+computer-supported proving as for doing math by hand.
 
 - [**The repetitious number**]({{< relref "/rep-num.md" >}})
 
   Super-simple puzzle that can be solved with simplification alone.
-  Demonstrates setup for a goal-directed proof and use of
-  simplification.
+  Gives a taste of simplification as a mathematical super-power.
+
+### Textbook-style proof ("forward" proof)
+
+- [**Simple classic examples**]({{< relref "/zero-products.md" >}})
+
+  Direct proof uses a familiar and simple process, starting from things already
+  known to create new knowlege.  It is a great way to start with proof
+  in Prooftoys.  Apply classic proof techniques here to prove essential
+  properties of zero.
+
+- [**A Fake Proof**]({{< relref "/fake-proof.md" >}}) that `1 = 2`
+
+  This longer forward-style proof uses simple algebraic manipulations,
+  showing one way proper formal reasoning wins out over fallacious
+  informal reasoning.
+
+### Goal-directed proof
+
+Goal-directed proof is often used with computer proof assistant
+software. Having a stated goal enables the Prooftoys proof builder to
+highlight assumptions in the current result that still need to be proved
+to reach 
 
 - [**Country Music Theorem**]({{< relref "/country-music.md" >}})
 
@@ -24,15 +59,9 @@ title: Hands-on
   Sometimes known as the "drinker paradox".  Another goal-directed proof
   using quantifiers.
 
-- [**A Fake Proof**]({{< relref "/fake-proof.md" >}}) that `1 = 2`
-
-  This proof uses simple algebraic manipulations, leading to a result
-  that illustrates what fallacious informal reasoning can lead to in a
-  system that reasons properly
-
 - **How long is a lunar?** (upcoming)
 
-### Extended Tutorial
+### Proof by induction --- extended tutorial
 
 - [**The Natural Numbers Game**]({{< relref
   "/number-game/tutorial1.md" >}})
@@ -44,9 +73,11 @@ title: Hands-on
   working with Prooftoys, but this tutorial also introduces proof by
   induction and takes you through several proofs.*
 
-#### Tool
+### Proof builder tool
 
-- [**Proof builder**]({{< relref "/proofbuilder.md" >}})
+- [**Proof builder page**]({{< relref "/proofbuilder.md" >}})
+
+  Just the tool by itself, a playground for trying whatever you like.
 
 ## Solving
 

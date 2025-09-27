@@ -215,17 +215,26 @@ simply `x + y = y + x`.
 It doesn't matter which names you use when entering a fact.  Entering
 the fact as `w + z = z + w` would have the same effect.
 
+#### Combining multiple steps
+
+Some common inferences are based on more than one step, as in proofs of
+the "biconditional" (logical equivalencc), and proof by cases.  For
+these situations you will want to start with the "combine" rule, which
+joins them with "and", while also moving type declarations, e.g. `R x`,
+`NN y`, out to the front.  To use this rule, select any whole step.  The
+proof builder will offer to combine it with the last step in the proof
+so far.
+
 #### About matching
 
-Practical reasoning in Prooftoys is built primarily on **rewriting**
-and **forward reasoning**.
-
-These both match a selected term in a proof step with part of some
-other registered fact or step in your proof.  This is the same kind of
-matching taught in any basic algebra textbook.  There is more detailed
-information in the section on principles of reasoning in Prooftoys at
-[rewriting]({{< relref "/inference.md#rewriting" >}}) and [forward
-reasoning]({{< relref "/inference.md#forward-reasoning" >}}).
+Practical reasoning in Prooftoys is built on substitution and replacing
+terms by other equal terms.  In most cases the substitutions are found
+by *matching* a step or part of one with a term that can be used to
+replace it.  This is the same kind of matching taught in any basic
+algebra textbook.  There is more detailed information in the section on
+principles of reasoning in Prooftoys at [rewriting]({{< relref
+"/inference.md#rewriting" >}}) and [forward reasoning]({{< relref
+"/inference.md#forward-reasoning" >}}).
 
 ### Reading and understanding proof displays
 

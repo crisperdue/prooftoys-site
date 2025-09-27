@@ -51,7 +51,7 @@ Here is a solution built with Prooftoys.
 **The steps.** A proof consists of a sequence of *true statements*
 connected by inference rules, each producing a new step.  You can
 produce this proof yourself using the proof builder tool, available
-below
+below.
 
 1. "Starting the proof" -- If this (step 1) does not appear
    automatically, press the button labeled "Clear Work" and confirm in

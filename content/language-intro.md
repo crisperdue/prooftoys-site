@@ -14,23 +14,28 @@ description: >
 
 The language has only expressions, which are often referred to as
 _terms_.  A statement in the language is just an expression whose
-value is boolean, so either true or false.
+value is boolean --- either true or false.
 
 ## Expression syntax
 
-The language syntax is pretty conventional.  It has infix operators,
-each having a certain precedence, and function calls.  (Remember that
-predicates and relations are also functions.)
-
-The concept of precedence is the same as the concept of "order of
-operations" in math textbooks, extended to include the additional
-operators used in logic.  It is also the same idea as precedence in
-computer languages.  When an operator has higher precedence, it comes
-earlier in the order of operations.
-
 There are only three kinds of expressions: _atomic_ expressions, which
 are either a variable or a constant; function calls, which are either
-in function call form or infix form; and functional expressions.
+in function call form or operator form; and functional expressions.
+
+If `plus` is a function that adds two numbers, then an expression such
+as `x + y` is equivalent to `plus x y`.  An operator can always be used
+without its special precedence handling by directly surrounding it with
+parentheses, as in `(+) x y`, which represents the same term as `x + y`.
+
+There are infix operators such as `+` and `-` for addition and
+subtraction, each having a certain precedence; unary prefix operators
+such as the `-` for the negative of a number; and function calls.
+(Predicates and relations are functions that return true/false values.)
+
+The concept of precedence is the same as the concept of "order of
+operations" in textbooks, extended to include the additional operators
+used in logic.  It is also the same idea as precedence in computer
+languages.
 
 ### Constants and variables
 
@@ -41,13 +46,8 @@ letters, digits, and underscores ("_").
 All variable names are identifiers.  A name that is a single letter,
 optionally followed by an underscore and one or more digits, is a
 variable name.  If there are any digits, they will display as a
-subscript on the identifier.  The names "T", "F", "R", and "e" are
-reserved for constants and cannot be used as variable names.
-
-Every variable has a type, such as boolean or individual.  Prooftoys
-does not currently provide a way to declare the type of a variable or
-constant, but infers them.  Types of some constants such as `T`, `F`,
-and numeric literals, are predefined.
+subscript on the identifier.  The names "T", "F", and "R" are reserved
+for constants and cannot be used as variable names.
 
 An operator name is a sequence of printing (currently ASCII)
 characters that are not letters or digits, brackets, braces,
@@ -79,11 +79,17 @@ highest, in the input syntax, are:
   ^
 ```
 
-Items on the same line have equal precedence.  All are
-left-associative, so `a + b - c` is the same as `(a + b) - c` and `a
-=> b => c` is the same as `(a => b) => c`.  The `\==`, which displays
-as `≡`, is for boolean equivalence, which is equality of true/false
-values.
+Items on the same line have equal precedence.  *All infix operators are
+left-associative*, so `a + b - c` is the same as `(a + b) - c` and `a =>
+b => c` is the same as `(a => b) => c`.  The `\==`, which displays as
+`≡`, is for boolean equivalence, which is equality of true/false values.
+
+### Unary operators
+
+The operator name `\~*` represents the multiplicative inverse, and
+`\~*x` is equal to `1 / x`.  The operator name `!` is reserved for
+boolean negation, and all operators with names beginning with `~` are
+unary.
 
 ### Function calls
 
