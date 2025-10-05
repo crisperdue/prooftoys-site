@@ -4,12 +4,35 @@ title: "Direct proof"
 
 # Direct proof in Prooftoys
 
-Direct proof is the classic style familiar from mathematics textbooks
-everywhere.
+##### Contents
+
+{{< TOC >}}
+
+Direct proof is the classic style familiar from mathematics textbooks.
 
 Here is a direct proof built with Prooftoys, proving an essential fact
-about zero.  This fact, and the two that it depends on, are key to doing
-things like solving polynomials.
+about zero.  It proves that
+
+```
+R x & R y => (x = 0 | y = 0) == x * y = 0)
+```
+
+This fact, and the two that it depends on, are key to solving
+polynomials and other kinds of equations as well.
+
+## The meaning
+
+This statement can properly be read as saying that for any real numbers
+`x` and `y`, `x * y = 0` exactly when either `x` is zero or `y` is zero,
+or both.  In slightly different words, whenever `x` and `y` are real
+numbers, the value of the expression `x * y = 0` (true or false) is the
+same as the value of the expression.
+
+We prove it here using the fact that `a => b & b => a == (a == b)`.
+When each statement implies the other, they are always either both true
+or both false.
+
+## The proof
 
 <div class="proof-display mb-4" data-steps='
 (steps
@@ -19,18 +42,13 @@ things like solving polynomials.
 (4 rewrite (s 3) (path "/right") (t ((((a => b) & (b => a)) == (a == b)))))
 )
 '></div>
-
-The first step here says that if either of two numbers is zero, their
-product is zero.  The second step says that if the product of two
-numbers is zero, then one or the other (or both) must also be zero. The
-proved result is that the two conditions are mathematically equivalent.
 	
-#### Try it yourself
+## Proving it with the interactive proof builder
 
-Can you build the same proof yourself from just the given statement?
-Here is a workspace you can use to do the experiment.
+You can prove this yourself using the proof builder in the workspace
+below. Here are the steps.
 
-**The steps.**. A proof consists of a sequence of *true statements*
+**The steps.** A proof consists of a sequence of *true statements*
 connected by inference rules, each producing a new step.  You can
 produce this proof yourself using the proof builder tool, available
 below.
@@ -65,13 +83,28 @@ below.
    you click on the menu item you will see step 4, which is what we were
    trying to prove.
 
-   `R x & R y => (x = 0 | y = 0 == x * y = 0)`
+<details>
+{{% summary %}}
+<h2 id="interactive-walkthrough">Interactive walkthrough</h2>
 
-   Congratulations!
+Open this section for a guided interactive walkthrough constructing the
+proof in the proof builder.
+{{% /summary %}}
+<div style="position: relative; box-sizing: content-box; max-height: 80vh;    
+ max-height: 80svh; width: 100%; aspect-ratio: 0.6218274111675127;
+ padding: 40px 0 40px 0;">
+  <iframe src="https://app.supademo.com/embed/cmgb8pze740pi2nomq25dykug?embed_v=2&utm_source=embed" loading="lazy" title="Direct proof" allow="clipboard-write" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+  </iframe>
+</div>
+</details>
+
+## In the proof builder
+
+**Proving:** `R x & R y => (x = 0 | y = 0) == x * y = 0)`.
 
 <div class="proof-editor mb-4" data-one-doc></div>
 
-### Seeing details
+## Viewing proof step details
 
 Prooftoys encourages you to dig down into any step to see details for
 it.  To see the next level of detail, click on the blue text in the
@@ -81,7 +114,7 @@ same text again or on the box labeled "hide" to hide the details again.
 If there are many levels of detail you can repeat this process on steps
 in the detailed display.
 
-### What's next?
+## What's next?
 
 There are more logical puzzles and examples in the
 "[**hands-on**]({{< relref "/hands-on.md" >}})" section.
