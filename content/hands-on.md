@@ -28,18 +28,22 @@ computer-supported proving as for doing math by hand.
 
 ### Textbook-style proof ("forward" proof)
 
-- [**Simple classic examples**]({{< relref "/zero-products.md" >}})
+- [**Direct proof**]({{< relref "/direct-proof.md" >}})
 
-  Direct proof uses a familiar and simple process, starting from things already
-  known to create new knowlege.  It is a great way to start with proof
-  in Prooftoys.  Apply classic proof techniques here to prove essential
-  properties of zero.
+  Direct proof uses a familiar and simple process, starting from things
+  already known to create new knowlege.  It is a great way to start with
+  proof in Prooftoys.  Apply classic proof techniques here to prove
+  essential properties of zero.
+
+- [**Proof by cases**]({{< relref "/proof-by-cases.md" >}})
+
+  A simple example of proof by cases, showing a fact about
+  multiplication by zero.
 
 - [**A Fake Proof**]({{< relref "/fake-proof.md" >}}) that `1 = 2`
 
-  This longer forward-style proof uses simple algebraic manipulations,
-  showing one way proper formal reasoning wins out over fallacious
-  informal reasoning.
+  This longer forward-style proof shows one way proper formal reasoning
+  wins out over fallacious informal reasoning.
 
 ### Goal-directed proof
 

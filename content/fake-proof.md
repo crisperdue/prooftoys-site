@@ -55,8 +55,8 @@ is done.
 
 #### Playing around
 
-Feel free to play around with the proof editor, below.  Pressing the
-"Solve" button enters the entire proof into the proof builder.  That may
-take a moment, so be patient.
+Try playing around with the proof editor, below.  Pressing the "Solve"
+button enters the entire proof into the proof builder.  That may take a
+moment, so please be patient.
 
 <div class="proof-editor mb-4"></div>
