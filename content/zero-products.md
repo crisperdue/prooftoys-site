@@ -1,20 +1,24 @@
 ---
 title: "Direct proof"
+description: >
+  Direct proof is basic and traditional, proceeding from
+  the known and onward to new knowlege.
 ---
 
-# Direct proof in Prooftoys
+# Direct proof
 
 ##### Contents
 
 {{< TOC >}}
 
-Direct proof is the classic style familiar from mathematics textbooks.
+Direct proof is a basic classic style familiar from mathematics
+textbooks.
 
 Here is a direct proof built with Prooftoys, proving an essential fact
 about zero.  It proves that
 
 ```
-R x & R y => (x = 0 | y = 0) == x * y = 0)
+R x & R y => (x = 0 | y = 0 == x * y = 0)
 ```
 
 This fact, and the two that it depends on, are key to solving
