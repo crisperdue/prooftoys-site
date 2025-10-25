@@ -1,10 +1,8 @@
 #!/bin/bash
 #
-# Deploy prooftoys.org to Netlify from ~/src/
+# Deploy prooftoys.org to https://next--prooftoys.netlify.app/ from ~/src/
+# This does not pull from github.  It does concatenate scripts.
 #
-# You can run this with arg -p or --prod to push to production.
-# Or use --alias next to publish to
-# https://next--prooftoys.netlify.app/
 
 PUB=~/src
 
