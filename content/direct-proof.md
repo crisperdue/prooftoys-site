@@ -89,7 +89,7 @@ below.
 
 <details>
 {{% summary %}}
-<h2 id="interactive-walkthrough">Interactive walkthrough</h2>
+<h2 id="interactive-walkthrough">Interactive demo walkthrough</h2>
 
 Open this section for a guided interactive walkthrough constructing the
 proof in the proof builder.

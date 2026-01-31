@@ -18,8 +18,7 @@ sequence of proof steps applied to two arbitrary nonzero, equal numbers
 `x` and `y`.  Although Prooftoys reaches something closely resembling
 the incorrect conclusion, the end result is based on assumptions that
 are false.  Prooftoys keeps track of them, and they turn out to be
-important to the meaning of the proof. proving the final result above in
-a single step.
+important to the meaning of the proof.
 
 Here is the entire proof in glorious detail:
 

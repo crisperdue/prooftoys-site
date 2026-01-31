@@ -32,11 +32,33 @@ learning to understand and use mathematics.
 
 ### About the logic
 
-The logic of Prooftoys is a form of <a target=_blank href=
-"https://imps.mcmaster.ca/doc/seven-virtues.pdf"> simple
-type theory</a>, based rather directly on the theory **Q<sub>0</sub>**
-of Carnegie Mellon University Professor Peter B. Andrews.  See the
-[tech notes]({{< relref "/tech-notes.md" >}}) for more details.
+At its core, the reasoning in Prooftoys is **equational**, in other
+words based on equations.  In particular Leibniz's principle of
+replacing a term with an equal term is fundamental, as applied in
+algebra from the basic high school level and up.
+
+Prooftoys implements a form of logic known as <a target=_blank href=
+"https://imps.mcmaster.ca/doc/seven-virtues.pdf">simple type theory</a>.
+Anything provable in "first-order" logic remains provable.  Furthermore,
+reasoning about equality is not an add-on, in fact it is the core.
+General statements about functions and predicates can also be expressed
+and proved here, unlike first-order logic.
+
+This particular system is based rather directly on the
+**Q<sub>0</sub>** system of Carnegie Mellon University Professor Peter B.
+Andrews.  See the [tech notes]({{< relref "/tech-notes.md" >}}) for more
+details.
+
+### Working with a logic textbook
+
+Yes, you should be able to use the Proof Builder tool with your logic
+textbook.  If your textbook presents problems to solve by formally
+proving or disproving statements in pure logic, the intention is that
+you will solve the problems using the rules laid out in the textbook.
+
+To do this, you will need to be careful to limit the inference steps and
+logic facts you use.  [This page]({{< relref "/emulating-logics.md" >}})
+has details for a couple of examples I have seen reference.
 
 ### Getting in touch
 
