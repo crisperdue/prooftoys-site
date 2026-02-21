@@ -35,11 +35,9 @@ of the list of proofs.
 
 This is a proof that the negative of zero is zero.  It uses the fact
 that a real number plus its negative is zero, but both of these facts
-ultimately rely only on standard axioms for the real numbers (the
-[field axioms]({{< relref "/real-number-facts.md#field-axioms" >}}).
-It may seem obvious, but we don't have to just assume it is true.  And
-because it depends only on a handful of carefully-chosen axioms,
-it can be applied in situations that may be surprising.
+ultimately rely only on standard axioms for the real numbers (the [field
+axioms]({{< relref "/real-number-facts.md#field-axioms" >}}). It may
+seem obvious, but we don't just assume it is true.
 
 <div id=demoProof style="margin-bottom: 1em"></div>
 
@@ -69,10 +67,23 @@ and [inference in Prooftoys](/inference/).
 
 <div id=proofDisplay style="margin-bottom: 1em"></div>
 
-## Definitions
+## Proof playground
 
-All of the facts about real numbers rely on these constant
-definitions.
+Here is a proof builder tool you can use to try replicating some of the
+proofs above, or otherwise playing around with the real numbers.
+
+{{% divstyle style="margin-top: 1.5em" %}}
+<div class=proof-editor></div>
+{{% /divstyle %}}
+
+## The real number axioms
+
+The axioms for the real numbers here are as stated in the book "Analysis
+with an Introduction to Proof" by Steven R. Lay.
+
+### Definitions
+
+All of the facts about real numbers rely on these definitions.
 
 {{% preblock %}}
 `isAddIdentity x == R x & forall {y. R y => y + x = y}`
@@ -90,37 +101,39 @@ have this sort of definition.  Instead, it is appropriate to think of
 them as shorthands for expressions that build up the appropriate
 number from 0, 1, addition, and multiplication.*
 
-## Field axioms
+### Field axioms
 
-The field axioms here are as stated in the book "Analysis with an
-Introduction to Proof" by Steven R. Lay.  Many important mathematical
-structures obey the field axioms.  In addition to the real numbers,
-the rational numbers, the complex numbers, and even polynomials
-follow these laws.  Each of these axioms assumes that the variables
-are elements of the field, in this case the real numbers.
-There are other possible axiomatizations, all equivalent.
+Many important mathematical structures obey the field axioms.  In
+addition to the real numbers, the rational numbers, the complex numbers,
+and even polynomials follow these laws.  There are other possible
+axiomatizations, all equivalent.
+
+Each of these axioms assumes that the variables in it are elements of
+the field, in this case the real numbers.  Those assumptions are omitted
+in the presentation here.
 
 {{% preblock %}}
 `R (x + y)`
 `(x + y) + z = x + (y + z)`
 `x + y = y + x`
-`exists1 isAddIdentity`
+`exists1  isAddIdentity`
 `R (x * y)`
 `(x * y) * z = x * (y * z)`
 `x * y = y * x`
-`exists1 isMulIdentity`
+`exists1  isMulIdentity`
 `x * (y + z) = x * y + x * z`
-`R x => exists1 (addInverses x)`
-`R x & x != 0 => exists1 (mulInverses x)`
+`exists1 (addInverses x)`
+`x != 0 => exists1 (mulInverses x)`
 `1 != 0`
 {{% /preblock %}}
 
-## Ordering
+### Ordering axioms
 
 Again, each of these axioms assumes that the variables are members of
 the field, in this case the real numbers.  Adding these axioms to the
 first set makes the domain into an _ordered field_.  Not all fields
-are ordered.
+are ordered.  For example the complex numbers form a field, but not an
+ordered field.
 
 {{% preblock %}}
 `not (x < x)`
@@ -140,25 +153,55 @@ Effects of addition and multiplication on ordering:
 Ordering: more definitions
 
 {{% preblock %}}
-`x > y == y < x`
 `x <= y == x < y | x = y`
+`x > y == y < x`
 `x >= y == x > y | x = y`
 {{% /preblock %}}
 
-## Dedekind completeness
+### Dedekind completeness axiom
 
-Upper bounds
+This additional axiom distinguishes the real numbers from all other
+mathematical structures.  Any structure obeying the full set of real
+number axioms is known to behave exactly like the real numbers, no
+matter how it is built.
+
+Definition of upper bound
 
 {{% preblock %}}
-`isUB x S == R x & S subset R & not (empty S) & forall {y. S y => y <= x}`
+`isUB x S == R x & S subset R & S != emptyset & forall {y. S y => y <= x}`
 {{% /preblock %}}
 
-
-Least upper bounds
+Definition of least upper bound
 
 {{% preblock %}}
 `isLUB x S == isUB x S & forall {y. isUB y S => x <= y}`
 {{% /preblock %}}
+
+Definition of supremum
+
+{{% preblock %}}
+`sup S == the {x. isLUB x S}}`
+{{% /preblock %}}
+
+Completeness axiom
+
+{{% preblock %}}
+`S subset R & S != emptyset & exists {x. isUB x S} => R (sup S)`
+{{% /preblock %}}
+
+For the ultra-picky
+
+You might wonder what is the supremum of a set of real numbers that has
+no upper bound, like the set of real numbers itself.  If there is no
+upper bound, then there cannot be a least upper bound either.  In that
+case what is the supremum?
+
+Mathematics textbooks universally skirt this isssue, but computer-based
+systems cannot.  In Prooftoys the _definite description_ operator, shown
+here as `the`, yields a special value when given an empty set.  This
+special value is not a number of any kind --- in effect something not
+useful for any other purpose.  And that is the supremum of a set with no
+upper bound.
 
 {{< hereScript >}}
 // On DOM ready:
