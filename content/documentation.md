@@ -28,6 +28,13 @@ send questions or report issues by email to the author or on
   "/practical-reasoning.md" >}})
 - [**Technical notes**]({{< relref "/tech-notes.md" >}})
 
+##### The Wiki
+
+Draft documentation in progress and notes may be found in the
+[**Prooftoys Wiki**](https://github.com/crisperdue/prooftoys/wiki) (on
+GitHub). Community collaboration in Wiki pages, and questions are
+encouraged!
+
 ##### Reference
 
 - [**Syntax quick reference**]({{< relref "/symbols-quickref.md" >}})

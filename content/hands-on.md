@@ -15,6 +15,32 @@ step-by-step, or behind the scenes.  The hands-on pages show simple and
 useful forms of reasoning that you can use anywhere in your larger
 mathematical journey.
 
+### Proof builder tool
+
+- [**Proof builder page**]({{< relref "/proofbuilder.md" >}})
+
+  Just [the tool by itself]({{< relref "/proofbuilder.md" >}}), a
+  playground for trying whatever you like.
+
+  If you are just starting out, please consider starting with simple
+  examples or a section with detailed tutorials such as these:
+  
+  - [**Direct proof**]({{< relref "/direct-proof.md" >}})
+    (tutorial)
+  - [**The Country Music Theorem**]({{< relref "/country-music.md" >}})
+    (tutorial for goal-directed proof)
+  - [**The Natural Numbers Game**]({{< relref
+  "/number-game/tutorial1.md" >}}) (extended tutorial on mathematical
+  induction)
+
+**Background:** The proof builder uses a formal mathematical language of
+the same kind used in textbooks that express mathematical ideas
+formally.  To work well with the proof builder, you will need to develop
+a good working relationship with this language and its meaning. The
+detailed tutorials offer some explanations about the way they use this
+language, and you can learn more in the Prooftoys
+[**documentation**]({{< relref "/documentation.md" >}}).
+
 ### Simplification
 
 Simplification is a basic and powerful tool that we often take for
@@ -76,12 +102,6 @@ to reach
   Country Music Theorem can be an equally good starting point for
   working with Prooftoys, but this tutorial also introduces proof by
   induction and takes you through several proofs.*
-
-### Proof builder tool
-
-- [**Proof builder page**]({{< relref "/proofbuilder.md" >}})
-
-  Just the tool by itself, a playground for trying whatever you like.
 
 ## Solving
 

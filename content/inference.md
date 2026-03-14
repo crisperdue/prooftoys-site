@@ -36,6 +36,7 @@ Most Prooftoys proof steps use some combination of:
 - substitution
 - rewriting
 - "forward" reasoning
+- goal-directed "backward" reasoning
 - simplification
 
 Probably at least 80% of the steps in typical Prooftoys proofs use
@@ -185,6 +186,9 @@ instance of the left side of a conditional tautology such as `(a => b)
 Other patterns of reasoning also work this way, including proof by
 contradiction, for example using the tautology `(not a => F) => a`.
 
+In the proof builder, the word "chain" in a menu item usually indicate
+some form of forward reasoning.
+
 ### About true statements and T
 
 Replacing an expression with something equal to it is a fundamental
@@ -284,3 +288,10 @@ Tautologies are extremely useful in mathematical reasoning.  Some
 typical examples are `A | A == A`, `A & B => A`, `A & B == B & A`.
 A more complex but still common tautology is `(A => B) & (B => A) ==
 (A == B)`.
+
+### More information
+
+There is work in progress toward more detailed information about all
+available inferences in the [Prooftoys
+Wiki](https://github.com/crisperdue/prooftoys/wiki/Inference-rules).
+Your questions or participation is welcome.

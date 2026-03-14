@@ -35,9 +35,9 @@ of the list of proofs.
 
 This is a proof that the negative of zero is zero.  It uses the fact
 that a real number plus its negative is zero, but both of these facts
-ultimately rely only on standard axioms for the real numbers (the [field
-axioms]({{< relref "/real-number-facts.md#field-axioms" >}}). It may
-seem obvious, but we don't just assume it is true.
+ultimately rely only on standard axioms for the real numbers: the [field
+axioms]({{< relref "/real-number-facts.md#field-axioms" >}}). The
+conclusion may feel obvious, but we don't just assume it is true.
 
 <div id=demoProof style="margin-bottom: 1em"></div>
 
@@ -89,9 +89,9 @@ All of the facts about real numbers rely on these definitions.
 `isAddIdentity x == R x & forall {y. R y => y + x = y}`
 `0 = the1 isAddIdentity`
 `isMulIdentity x == R x & forall {y. R y => y * x = y}`
-`1 = the1 isMulIdentity`
+`1 = the isMulIdentity`
 `addInverses x = {y. R x & R y & x + y = 0}`
-`neg x = the1 (addInverses x)`
+`neg x = the (addInverses x)`
 `mulInverses x = {y. R x & R y & x * y = 1}`
 `recip x = the1 (mulInverses x)`
 {{% /preblock %}}
@@ -189,7 +189,7 @@ Completeness axiom
 `S subset R & S != emptyset & exists {x. isUB x S} => R (sup S)`
 {{% /preblock %}}
 
-For the ultra-picky
+#### For the ultra-picky
 
 You might wonder what is the supremum of a set of real numbers that has
 no upper bound, like the set of real numbers itself.  If there is no

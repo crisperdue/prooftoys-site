@@ -4,7 +4,7 @@ description: >
   The language of Prooftoys.
 ---
 
-# The Prooftoys Language
+# The Language
 
 > _The universe ... cannot be understood unless one first learns to
 > comprehend the language in which it is written.  It is written in
@@ -19,8 +19,8 @@ value is boolean --- either true or false.
 ## Expression syntax
 
 There are only three kinds of expressions: _atomic_ expressions, which
-are either a variable or a constant; function calls, which are either
-in function call form or operator form; and functional expressions.
+are either a variable or a constant; function calls, which are either in
+(prefix) function call form or infix form; and functional expressions.
 
 If `plus` is a function that adds two numbers, then an expression such
 as `x + y` is equivalent to `plus x y`.  An operator can always be used
@@ -41,28 +41,32 @@ languages.
 
 The logic has two kinds of names: identifiers and operator names.  An
 identifier is an alphabetic character possibly followed by additional
-letters, digits, and underscores ("_").
+letters, digits, and finally underscores ("_"), which render as "prime"
+marks ("'").
 
 All variable names are identifiers.  A name that is a single letter,
-optionally followed by an underscore and one or more digits, is a
-variable name.  If there are any digits, they will display as a
-subscript on the identifier.  The names "T", "F", and "R" are reserved
-for constants and cannot be used as variable names.
+optionally followed by one or more digits, possibly followed by
+underscores, is a variable name.  If there are any digits, they will
+display as a subscript on the identifier.  The names "T", "F", and "R"
+are reserved for constants and cannot be used as variable names.
 
-An operator name is a sequence of printing (currently ASCII)
+An infix operator name is a sequence of printing (currently ASCII)
 characters that are not letters or digits, brackets, braces,
-parentheses, colon (":") or (".").
+parentheses, colon (":"), "~", or (".").
 
 Numeric literals are a sequence of digits optionally preceded by "-".
-(In all other situations "-" is an operator.)  Numeric literals are
-always integers.
+(In all other situations "-" is an infix operator.)  Numeric literals
+are always integers.  Numeric literals as arguments to prefix-style
+function calls or operators must be enclosed in parentheses, like `(-5)`
+to avoid ambiguity with subtraction.
 
 ### Operators and infix
 
-Constants named as operators are treated as infix operators, and infix
-expressions are parsed according to their precedence.
+Except as noted, constants named as operators are treated as infix
+operators, and infix expressions are parsed according to their
+precedence.
 
-To suppress the infix nature of an operator, enclose just its name in
+To suppress the infix nature of an operator, enclose its name in
 parentheses, as in `(+)`.
 
 The precedences of Prooftoys infix operators in order from lowest to
@@ -73,10 +77,14 @@ highest, in the input syntax, are:
   =>
   |
   &
+  ??
   =, !=, <, <=, >, >=
+  divides, in, notin, subset?, mapsFrom, mapsTo
+  intersect, union, @@
   +, -
-  *, /
+  *, /, div, mod
   ^
+  user-defined operators
 ```
 
 Items on the same line have equal precedence.  *All infix operators are
@@ -86,28 +94,30 @@ b => c` is the same as `(a => b) => c`.  The `\==`, which displays as
 
 ### Unary operators
 
-The operator name `\~*` represents the multiplicative inverse, and
-`\~*x` is equal to `1 / x`.  The operator name `!` is reserved for
-boolean negation, and all operators with names beginning with `~` are
-unary.
+The operator name `~` represents boolean negation.  Similarly, `\~*`
+represents the multiplicative inverse, so `\~*x` is equal to `1/x`.
+All operators with names beginning with `~` are unary.  Calls to unary
+operators are the same syntactically as ordinary calls to functions.
 
 ### Function calls
 
-Calls to other functions, using a constant or variable name, or a
-functional expression (see below), use the ordinary function call
-syntax.  In this syntax, to call a function `f` with argument `x`,
-write `f x`, where `f` could be any expresssion, though it should have
-a function as its value.  For example `R x` means "x is a real
-number".  To call a function with more arguments, just write the
-expressions for all the arguments following the expression for the
-function, e.g.  `log x 10`.
+Ordinary calls to functions, using a constant or variable name, or a
+functional expression (see below), use prefix syntax with the function
+before its arguments.  In this syntax, to call a function `f` with
+argument `x`, write `f x`, where `f` could be any expresssion, though it
+should have a function as its value.  For example `R x` means "x is a
+real number". 
+
+To call a function with more arguments, just write the expressions for
+all the arguments following the expression for the function, e.g.  `log
+x 10`. An expression `f g x` represents a call to `f` with two
+arguments, `g` and `x`.  A call to `f` with argument `g x` is written as
+`f (g x)`.
 
 Function calls have precedence over all infix operators, so `sin x/2`
 means the same as `(sin x) / 2`.
 
-On the other hand, an expression `f g x` represents a call to `f` with
-two arguments, `g` and `x`.  A call to `f` with argument `g x` is
-written as `f (g x)`.
+### Examples
 
 For example, a statement that might be conventionally
 written as
@@ -166,11 +176,11 @@ This is equivalent to the definition `greater x y == y < x`.
 #### Displaying functional expressions
 
 If a function does not return a boolean value, Prooftoys may also
-display it surrounded with parentheses, with an arrow rather than a
-".".
+display it surrounded with parentheses, or with a "pointer-like" marker
+rather than ".".
 
 {{% preblock %}}
-`square = (x → x * x)`
+`square = (x ▹ x * x)`
 {{% /preblock %}}
 
 ### Quantifiers

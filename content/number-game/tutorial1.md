@@ -22,6 +22,17 @@ problem-solving with Prooftoys.  The Prooftoys [**documentation**]({{<
 relref "/documentation.md" >}}) has more systematic and in-depth
 explanations.
 
+### A modest proposal
+
+If you are here to learn about the natural numbers, or proof by
+induction, or to try out an interactive tool that can help with these
+things, please continue right here!
+
+If your interests are broader though, consider starting with a shorter
+tutorial or two as described in the Prooftoys [**☺ hands-on overview
+page ☺**]({{< relref "/hands-on.md">}}).  Prooftoys can help enlighten
+you and build your skills in many kinds of proofs.
+
 ### What is this about?
 
 You will start with just the bare essentials of knowledge about the
@@ -80,7 +91,7 @@ remains.
 
 <div class=proof-editor data-exercise="nat/nat0"></div>
 
-### Taking your first step
+### Baby steps
 
 First steps are big milestones!  This proof will have just one step.
 To do this proof step you will select a part of the initial step, then

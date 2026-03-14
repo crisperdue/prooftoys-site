@@ -6,6 +6,33 @@ description: >
 
 ### News
 
+#### 03/2026
+- Significantly extended support for forward reasoning:
+  - More flexible "forward chaining".  Starts from user-selected
+    conjuncts in the conclusion of a step.
+  - "Conclude" tactics to move assumptions into a step's conclusion.
+  - "Splitting out" selected assumptions
+- Extensions to support for numeric types
+  - `QQ` / QQ (rationals)
+  - `ZZ` / ZZ (integers)
+  - `ZZ1` / ZZ1 (positive integers)
+  - Simplification understands the subset/superset relationships among
+    these.
+- Initial "official" support for mod, div, divides, even, odd, floor.
+- More exponent laws
+- Forms data entry now makes it easier to correct your errors.
+- Additional support for working with existential quantifiers.
+  - New user interface for converting a term into a "redex" application
+    of a lambda function to an argument.
+- Various new measures to reduce over-enthusiastic auto-simplification
+  in the user interface.
+- Cleanup of parsing and its documentation.
+- New rendering of lambda functions.
+- For exponentiation, support for "**" is removed.  Use "^".
+- New [**Wiki**](https://github.com/crisperdue/prooftoys/wiki) with
+  drafts of notes and documentation in progress.<br>
+  Community participation and questions encouraged!
+
 #### 10/2025
 
 - Interactive demo walkthrough of basic direct proof.
