@@ -14,18 +14,11 @@ Here is an interactive demo walkthrough of the proof with some
 explanation.  You can refer to it as you work the proof yourself further
 below using the proof builder tool.
 
-<div style="position: relative; box-sizing: content-box; max-height:
-80vh; max-height: 80svh; width: 100%; aspect-ratio: 0.7420435510887772;
-padding: 40px 0 40px 0;
-margin-bottom: 40px;">
-  <iframe
-  src="https://app.supademo.com/demo/cme06oavx008byjyix35lqinf?step=5"
-  loading="lazy" title="Supademo Demo" allow="clipboard-write"
-  frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true"
-  allowfullscreen style="position: absolute; top: 0; left: 0; width:
-  100%; height: 100%; border: 2px solid blue;">
-  </iframe>
-</div>
+
+<h2 id="interactive-walkthrough" class="demo-link"
+onclick="Supademo.open('cmczcu0sd009nzg0io848eqx1')">
+☞ Click for interactive demo!
+</h2>
 
 ## What are we proving?
 
@@ -99,3 +92,5 @@ work "forward", starting with the expected assumptions, e.g.
 
 and transforming the *conclusion* into the desired one.  Would
 you be able to create a version of this proof that works forward?
+
+<script src="https://script.supademo.com/supademo.js"></script>

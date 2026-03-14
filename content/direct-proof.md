@@ -87,20 +87,10 @@ below.
    you click on the menu item you will see step 4, which is what we were
    trying to prove.
 
-<details>
-{{% summary %}}
-<h2 id="interactive-walkthrough">Interactive demo walkthrough</h2>
-
-Open this section for a guided interactive walkthrough constructing the
-proof in the proof builder.
-{{% /summary %}}
-<div style="position: relative; box-sizing: content-box; max-height: 80vh;    
- max-height: 80svh; width: 100%; aspect-ratio: 0.6218274111675127;
- padding: 40px 0 40px 0;">
-  <iframe src="https://app.supademo.com/embed/cmgb8pze740pi2nomq25dykug?embed_v=2&utm_source=embed" loading="lazy" title="Direct proof" allow="clipboard-write" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-  </iframe>
-</div>
-</details>
+<h2 id="interactive-walkthrough" class="demo-link"
+onclick="Supademo.open('cmgb8pze740pi2nomq25dykug')">
+☞ Click for interactive demo!
+</h2>
 
 ## In the proof builder
 
@@ -128,3 +118,4 @@ And if some things here interest you, please check out the
 touch.
 
 <div class=footer-spacer>
+<script src="https://script.supademo.com/supademo.js"></script>
