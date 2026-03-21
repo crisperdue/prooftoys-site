@@ -528,7 +528,7 @@ Then q*(sqrt(2) - 1) is a smaller one, contradiction.
 
 (In a bit more detail: Because q*sqrt(2) is an integer, so are
 
-q*(sqrt(2) - 1) and q*(sqrt(2) - 1)*sqrt(2) = 2q - q*sqrt(2).  The
+q*(sqrt(2) - 1) and q*(sqrt(2) - 1) * sqrt(2) = 2q - q*sqrt(2).  The
 
 other thing to check is that 0 &lt; sqrt(2) - 1 &lt; 1.  To generalize to
 
