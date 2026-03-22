@@ -10,44 +10,72 @@
 const CACHE_NAME = 'app-cache';
 const URL_LIST = '/cache-urls.txt';
 
-// ── Install: take over without waiting for old worker to finish ───────────────
+function swLog(msg) {
+  console.log('[SW]', msg);
+}
+
+swLog('loading');
+
+// ── Install: take over without waiting for old worker to finish
 
 self.addEventListener('install', () => self.skipWaiting());
 
-// ── Activate: cache all URLs, then claim clients ──────────────────────────────
+// ── Activate: cache all URLs, then claim clients
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    refreshCache(/* replyPort= */ null)
-      .then(() => self.clients.claim())
+    self.clients.claim()
+      .then(() => swLog('controlling client tabs'))
   );
 });
 
-// ── Fetch: serve from cache, fall back to network ────────────────────────────
+// ── Fetch: serve from cache, fall back to network
 
+// Fetch event listener that also checks for non-GET requests and caches
+// on demand.
 self.addEventListener('fetch', (event) => {
+  const req = event.request;
+  if (req.method !== 'GET') {
+    swLog(`Ignoring ${req.method} for ${req.url}`);
+    return;
+  }
   event.respondWith(
     caches.match(event.request).then((cached) => {
-      if (cached) return cached;
-      return fetch(event.request).catch(() => new Response(
-        'Offline — resource not available in cache.',
-        { status: 503, statusText: 'Service Unavailable' }
-      ));
+      if (cached) {
+        return cached;
+      } else {
+        return fetch(event.request).then((response) => {
+          const clone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, clone);
+          });
+          return response;
+        }).catch(() => new Response(
+          'Offline — resource not available in cache.',
+          { status: 503, statusText: 'Service Unavailable' }
+        ));
+      }
     })
   );
 });
 
-// ── Message: handle REFRESH_CACHE command from any client ────────────────────
+// ── Message: handle REFRESH_CACHE command from any client
 
 self.addEventListener('message', (event) => {
-  if (event.data?.type !== 'REFRESH_CACHE') return;
-  const replyPort = event.ports[0]; // optional — caller may omit
-  event.waitUntil(refreshCache(replyPort));
+  const type = event.data?.type;
+  if (type === 'REFRESH_CACHE') {
+    const replyPort = event.ports[0]; // optional — caller may omit
+    event.waitUntil(refreshCache(replyPort));
+  } else if (type === 'FLUSH_CACHE') {
+    event.waitUntil(flushCache());
+  }
 });
 
-// ── Core logic ────────────────────────────────────────────────────────────────
+// ── Core logic
+
 
 async function fetchUrlList() {
+  swLog('fetching URL list');
   const response = await fetch(
     new Request(URL_LIST, { cache: 'reload' })
   );
@@ -64,17 +92,31 @@ async function fetchUrlList() {
     .filter((line) => line.length > 0 && !line.startsWith('#'));
 }
 
+/**
+ * Flush the cache, in fact delete it.
+ * 
+ * TODO: Make the cache global, and flush by deleting and reopening it.
+ */
+async function flushCache() {
+  await caches.delete(CACHE_NAME);
+  swLog('cache flushed');
+}
+
 async function refreshCache(replyPort) {
+  swLog('refreshing the snapshot');
   const reply = (msg) => {
     replyPort?.postMessage(msg);
-    console.log('[sw]', msg);
+    swLog(msg);
   };
 
   let urls;
   try {
     urls = await fetchUrlList();
   } catch (err) {
-    reply({ status: 'error', message: `Unable to read URL list: ${err.message}` });
+    reply({
+      status: 'error',
+      message: `Unable to read URL list: ${err.message}`
+    });
     return;
   }
 
