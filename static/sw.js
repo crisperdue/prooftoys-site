@@ -1,15 +1,14 @@
 // /sw.js
 // Caching service worker — simplicity-first implementation.
-// Fetches the list of URLs to cache from /cache-urls.txt at runtime.
-// Caches all listed URLs automatically on activation.
-// Accepts a REFRESH_CACHE message from clients to re-cache on demand.
-// Notifies all clients after caching completes so they can reload.
-// Guarantees network consultation on every refresh via fetch()
-// with cache: 'reload', storing responses manually with cache.put().
 
 const CACHE_NAME = 'app-cache';
 const URL_LIST = '/cache-urls.txt';
 
+var cacheEnabled = false;
+
+/**
+ * Logs the message to the console with SW prefix.
+ */
 function swLog(msg) {
   console.log('[SW]', msg);
 }
@@ -20,20 +19,28 @@ swLog('loading');
 
 self.addEventListener('install', () => self.skipWaiting());
 
-// ── Activate: cache all URLs, then claim clients
+// ── Activate: claim clients
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     self.clients.claim()
-      .then(() => swLog('controlling client tabs'))
+      .then(() => swLog('controlling all clients'))
   );
 });
 
+
 // ── Fetch: serve from cache, fall back to network
 
-// Fetch event listener that also checks for non-GET requests and caches
-// on demand.
+/**
+ * This fetch listener does nothing unless cacheEnabled is truthy and
+ * the method is GET. If enabled and a matching URL is in the cache, it
+ * simply returns it. It greedily caches everything it fetches for
+ * future use.
+ */
 self.addEventListener('fetch', (event) => {
+  if (!cacheEnabled) {
+    return;
+  }
   const req = event.request;
   if (req.method !== 'GET') {
     swLog(`Ignoring ${req.method} for ${req.url}`);
@@ -59,21 +66,42 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
-// ── Message: handle REFRESH_CACHE command from any client
 
+// ── Handler for messages from clients.
+
+/**
+ * Message event handler.
+ */
 self.addEventListener('message', (event) => {
+  // Note that service worker message events are
+  // ExtendableMessageEvents.
   const type = event.data?.type;
-  if (type === 'REFRESH_CACHE') {
-    const replyPort = event.ports[0]; // optional — caller may omit
-    event.waitUntil(refreshCache(replyPort));
+  const replyPort = event.ports[0]; // optional — caller may omit
+
+  // Completely refills the cache with the latest data.
+  // Does not complete handling until done.
+  // In the future support only REFILL_CACHE.
+  if (type === 'REFRESH_CACHE' || type === 'REFILL_CACHE') {
+    event.waitUntil(refillCache(replyPort));
+
   } else if (type === 'FLUSH_CACHE') {
     event.waitUntil(flushCache());
+
+  } else if (type === 'ENABLE_CACHE') {
+    cacheEnabled = true;
+
+  } else if (type === 'DISABLE_CACHE') {
+    cacheEnabled = false;
   }
 });
 
+
 // ── Core logic
 
-
+/**
+ * This fetches the URL list from the net.  The URL of the list must not
+ * be included in the list.
+ */
 async function fetchUrlList() {
   swLog('fetching URL list');
   const response = await fetch(
@@ -102,13 +130,26 @@ async function flushCache() {
   swLog('cache flushed');
 }
 
-async function refreshCache(replyPort) {
-  swLog('refreshing the snapshot');
+/**
+ * Completely refills the cache with a new snapshot. If the requestor
+ * sets up a channel, the worker may reply to it multiple times, and
+ * when successfully completed, notifies all of its clients through
+ * another channel.
+ * 
+ * If a reply port is given, responds to the caller when it starts,
+ * and with more details after attempting all URLs.
+ * 
+ * If completely successful, reports to all clients that the cache is
+ * refreshed.
+ */
+async function refillCache(replyPort=undefined) {
+  swLog('refilling the snapshot');
   const reply = (msg) => {
     replyPort?.postMessage(msg);
     swLog(msg);
   };
 
+  // Fetch the URL list.
   let urls;
   try {
     urls = await fetchUrlList();
@@ -127,8 +168,7 @@ async function refreshCache(replyPort) {
   const cache = await caches.open(CACHE_NAME);
 
   // Fetch every URL directly from the network, bypassing the HTTP
-  // cache, then store the response manually. This is the only way
-  // to reliably guarantee network consultation across all browsers.
+  // cache, then store the response manually.
   //
   // fetch() and cache.put() are caught separately so the reason
   // for each failure is recorded clearly.
@@ -137,7 +177,7 @@ async function refreshCache(replyPort) {
   // assume the network is down, abort the remaining iterations,
   // and report a network outage rather than a long list of
   // individual URL failures.
-  const NETWORK_DOWN_THRESHOLD = 100;
+  const NETWORK_DOWN_THRESHOLD = 10;
   const failed = [];
   let consecutiveFetchFailures = 0;
   let networkDown = false;
@@ -187,12 +227,13 @@ async function refreshCache(replyPort) {
     });
   }
 
-  // Notify all open clients on this origin to refresh themselves.
-  const clients = await self.clients.matchAll({
-    includeUncontrolled: true,
-  });
-  for (const client of clients) {
-    client.postMessage({ type: 'CACHE_REFRESHED', cacheName: CACHE_NAME });
+  if (failed.length === 0){
+    // Notify all clients that the snapshot is refilled.
+    const clients = await self.clients.matchAll({
+      includeUncontrolled: true,
+    });
+    for (const client of clients) {
+      client.postMessage({ type: 'CACHE_REFRESHED', cacheName: CACHE_NAME });
+    }
   }
 }
-
