@@ -4,6 +4,7 @@
 const CACHE_NAME = 'app-cache';
 const URL_LIST = '/cache-urls.txt';
 
+/** If not truthy, the SW cache is not consulted or updated. */
 var cacheEnabled = false;
 
 /**
@@ -11,6 +12,38 @@ var cacheEnabled = false;
  */
 function swLog(msg) {
   console.log('[SW]', msg);
+}
+
+/**
+ * Since messages are handled one at a time, the port for sending
+ * replies to a client can be stored in a global variable.
+ */
+var replyPort;
+
+/**
+ * Reply through the replyPort and log with swLog.
+ */
+function reply(msg) {
+  replyPort?.postMessage(msg);
+  swLog(msg);
+};
+
+/**
+ * Adds a message handler and serializes calls to it by chaining
+ * Promises together.  Should accept any handler suitable for
+ * addEventListener for 'message'.  Thank you Claude for the concept.
+ */
+function addMessageHandler(handler) {
+  let queue = Promise.resolve();
+
+  self.addEventListener('message', (event) => {
+    // The queue points to the last Promise in the chain to be run.  If
+    // some have not yet executed, the handler will run after they
+    // finish.
+    queue = queue
+      .then(() => handler(event))
+      .catch((err) => console.error('[SW] message handler error:', err));
+  });
 }
 
 swLog('loading');
@@ -72,26 +105,28 @@ self.addEventListener('fetch', (event) => {
 /**
  * Message event handler.
  */
-self.addEventListener('message', (event) => {
+addMessageHandler(async (event) => {
   // Note that service worker message events are
   // ExtendableMessageEvents.
   const type = event.data?.type;
-  const replyPort = event.ports[0]; // optional — caller may omit
+  replyPort = event.ports[0]; // optional — caller may omit
 
   // Completely refills the cache with the latest data.
   // Does not complete handling until done.
   // In the future support only REFILL_CACHE.
   if (type === 'REFRESH_CACHE' || type === 'REFILL_CACHE') {
-    event.waitUntil(refillCache(replyPort));
+    event.waitUntil(refillCache());
 
   } else if (type === 'FLUSH_CACHE') {
     event.waitUntil(flushCache());
 
   } else if (type === 'ENABLE_CACHE') {
     cacheEnabled = true;
+    reply('cache enabled');
 
   } else if (type === 'DISABLE_CACHE') {
     cacheEnabled = false;
+    reply('cache disabled');
   }
 });
 
@@ -127,7 +162,7 @@ async function fetchUrlList() {
  */
 async function flushCache() {
   await caches.delete(CACHE_NAME);
-  swLog('cache flushed');
+  reply('cache flushed');
 }
 
 /**
@@ -142,12 +177,8 @@ async function flushCache() {
  * If completely successful, reports to all clients that the cache is
  * refreshed.
  */
-async function refillCache(replyPort=undefined) {
+async function refillCache() {
   swLog('refilling the snapshot');
-  const reply = (msg) => {
-    replyPort?.postMessage(msg);
-    swLog(msg);
-  };
 
   // Fetch the URL list.
   let urls;
