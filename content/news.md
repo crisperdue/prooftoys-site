@@ -7,6 +7,11 @@ description: >
 ### News
 
 #### 03/2026
+- New inference for regrouping of chains of +, -, *, /, and, or.
+- Offer "as chain" rather than "flattening" for these same operators,
+  and take more care to just offer them when relevant.
+- New prototype user interface for controlling aggressive application
+  page caching.
 - Significantly extended support for forward reasoning:
   - More flexible "forward chaining".  Starts from user-selected
     conjuncts in the conclusion of a step.
