@@ -256,7 +256,7 @@ breaks down into just `R x`.
 
 ### About the Prooftoys logic
 
-The core of [Mathtoys](http://mathtoys.org) is a Web-based, visual
+The core of [Prooftoys](http://prooftoys.org) is a Web-based, visual
 proof assistant based on [Alonzo Church's simple type
 theory](http://plato.stanford.edu/entries/type-theory-church/) as
 developed by [Peter Andrews](http://gtps.math.cmu.edu/andrews.html)

@@ -72,7 +72,7 @@ Cris Perdue
 
 <!--
 Or you can reach him on Slack.com with <a target=_blank href=
-"https://join.slack.com/t/mathtoys/shared_invite/zt-hfjkerk4-Am67OX60KEHycW9WEKFbxQ">
+"https://join.slack.com/t/prooftoys/shared_invite/zt-hfjkerk4-Am67OX60KEHycW9WEKFbxQ">
 <b>this link</b></a>.
 
 Today there are wonderful tools for practitioners who need answers to

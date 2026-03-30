@@ -36,7 +36,7 @@ The notes here are generally on the fundamental concepts, terminology, mathemati
 
 * [Algebra Notes](https://docs.google.com/document/d/167ZD4SS6d7TYupkL-8YSxLP30HsbADd5D385-wjJD9U/edit?usp=sharing)
 * [Creating Usable Computer Tools for Math](http://drive.google.com/open?id=1kodTzr0VsfaseUN-st5RGNkipPIFBc6nLQzPS-H7hhg)
-* [Mathtoys folder](https://drive.google.com/open?id=0B0Lyx0sEqeeNcXFiaW5zdXZuSTQ)
+* [Prooftoys folder](https://drive.google.com/open?id=0B0Lyx0sEqeeNcXFiaW5zdXZuSTQ)
 
 
 ### Terminology

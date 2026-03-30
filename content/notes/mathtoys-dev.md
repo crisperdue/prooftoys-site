@@ -1,7 +1,7 @@
 ---
 draft: true
 ---
-## Mathtoys (and Prooftoys) development practices and projects
+## Prooftoys development practices and projects
 
 ### Setting up development
 
@@ -32,13 +32,12 @@ allowed, though I am open to potential future conversion to TypeScript.
 
 ### Coding practices
 
-
-
 Closely follow my indentation.  I use Java mode in Emacs, specifically
-Aquamacs (for Mac OS).  Also follow my comment style.  Each function, method,
-and public variable or constant requires careful, clear comments describing
-its specification.  Complete sentences are required, except for summaries
-of functions and methods, which omit the subject of the sentence.
+Aquamacs (for Mac OS).  Also follow my comment style.  Each function,
+method, and public variable or constant requires careful, clear comments
+describing its specification.  Complete sentences are required, except
+for summaries of functions and methods, which omit the subject of the
+sentence.
 
 Also follow my naming practices as far as possible, though they are not
 entirely self-consistent.
@@ -71,80 +70,69 @@ http://mathtoys.org/ website, using the prooftoys engine.
 
 ### Development status
 
-The current system is the result of a long series of experiments and refinements
-going back several years.  I believe that the most recent developments to the proof engine
-(which does not depend on the UI) are now technically ready to support substantial public use,
-with documentation to get users started.  For example the relevant parts of
-the Metamath Proof Explorer (http://us.metamath.org/) are proving straightforward
-to translate into Mathtoys.
+The current system is the result of a long series of experiments and
+refinements going back several years.  I believe that the most recent
+developments to the proof engine (which does not depend on the UI) are
+now technically ready to support substantial public use, with
+documentation to get users started.  For example the relevant parts of
+the Metamath Proof Explorer (http://us.metamath.org/) are proving
+straightforward to translate into Mathtoys.
 
 ### Projects
 
-These are anticipated projects deemed suitable for contractors or others not already
-highly familiar with the Mathtoys/Prooftoys codebase.
+These are anticipated projects deemed suitable for contractors or others
+not already highly familiar with the Mathtoys/Prooftoys codebase.
 
 #### Restructuring engine.js
 
-My top-priority for a contract task at this time is a code restructuring that splits engine.js
-into two parts, leaving tautology checking, rules of inference, and proofs of 
-the few theorems they depend on in engine.js, but moving the rest of the
-definitions and theorems into a new file logic.js, structured in a natural order
-with fundamental definitions and theorems first, followed by ones that depend on them.
+My top-priority for a contract task at this time is a code restructuring
+that splits engine.js into two parts, leaving tautology checking, rules
+of inference, and proofs of the few theorems they depend on in
+engine.js, but moving the rest of the definitions and theorems into a
+new file logic.js, structured in a natural order with fundamental
+definitions and theorems first, followed by ones that depend on them.
 
-As theorems (and "facts") are moved (probably before moving them),
-they need to be converted to the current format.
-Names of many theorems are given as keys of object literals.  Use Toy.addRules and
-give the name as a name: property of the rule information object literal.  Similarly,
-many facts have their statements given as object literal keys.  Use Toy.addRules
-and supply the fact statement as a statement: property of the object literal.
+As theorems (and "facts") are moved (probably before moving them), they
+need to be converted to the current format. Names of many theorems are
+given as keys of object literals.  Use Toy.addRules and give the name as
+a name: property of the rule information object literal.  Similarly,
+many facts have their statements given as object literal keys.  Use
+Toy.addRules and supply the fact statement as a statement: property of
+the object literal.
 
-The changes along the way would need to pass the system test suite, accessed in
-the local "prooftoys" site at /tests/index.html.  These take about 30 seconds to run
-on my MacBook Air.
+The changes along the way would need to pass the system test suite,
+accessed in the local "prooftoys" site at /tests/index.html.  These take
+about 30 seconds to run on my MacBook Air.
 
-This project may require significant interaction between the developer doing the
-work and the author of the entire system.  If parts of the restructuring result in
-failures, the developer should push the last working version and the failing version
-as commits on a branch and contact the system author for advice or a fix, to be
-supplied ASAP to minimize the disruption to the work.
+This project may require significant interaction between the developer
+doing the work and the author of the entire system.  If parts of the
+restructuring result in failures, the developer should push the last
+working version and the failing version as commits on a branch and
+contact the system author for advice or a fix, to be supplied ASAP to
+minimize the disruption to the work.
 
 #### Consistently naming logic/math variables
 
-In future development Mathtoys will use names of variables in mathematical formulas
-as a cue to their proper type.  Fundamental types in Mathtoys are booleans, individuals
-including numbers, collections of values of a specific type, and functions from values
-of a specific type to another specific type.  Current use of names is inconsistent
-with this, so variables in logic literals in Mathtoys code need to be made consistent
-with conventions to be specified.
+In future development Mathtoys will use names of variables in
+mathematical formulas as a cue to their proper type.  Fundamental types
+in Mathtoys are booleans, individuals including numbers, collections of
+values of a specific type, and functions from values of a specific type
+to another specific type.  Current use of names is inconsistent with
+this, so variables in logic literals in Mathtoys code need to be made
+consistent with conventions to be specified.
 
 This will be a fairly straightforward project of converting formulas and testing that
 the system still functions and passes tests.
 
 #### Systematizing runtime typechecking and conversions
 
-Mathtoys uses a few JavaScript datatypes in its inference rules, and also has
-string representations for them.  Checking and conversions are currently ad hoc.
-Adding descriptors to each JavaScript inference function indicating the appropriate
-datatype and related information would make the checking more reliable, and should
-enable automated generation of the inputs to Step.justify.
+Prooftoys uses a few JavaScript datatypes in its inference rules, and
+also has string representations for them.  Checking and conversions are
+currently ad hoc. Adding descriptors to each JavaScript inference
+function indicating the appropriate datatype and related information
+would make the checking more reliable, and should enable automated
+generation of the inputs to Step.justify.
 
-All inference rules (indicated by action: properties in the source code) would need
-to be converted to work this way, provided that the runtime overhead is acceptable.
-
-#### Separating Step objects from Expr objects
-
-Step objects (proved statements) should be a separate datatype from Expr objects,
-but currently are not.  Splitting out a separate datatype would be a useful
-refactoring.
-
-#### Converting system to TypeScript
-
-An experiment of running the TypeScript compiler on Mathtoys resulted in a lot
-of error messages, but also looked like a promising direction.  Converting the
-whole system seems a promising thing to do.
-
-
-
-
-
-
+All inference rules (indicated by action: properties in the source code)
+would need to be converted to work this way, provided that the runtime
+overhead is acceptable.
