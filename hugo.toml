@@ -38,6 +38,11 @@ themesDir = "../hugo-themes"
 [markup]
   defaultMarkdownHandler = "goldmark"
   [markup.goldmark]
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false
+    [markup.goldmark.parser.attribute]
+      # Allow {#my-id} just after the element
+      block = true
     [markup.goldmark.renderer]
       unsafe = true
     [markup.highlight]
